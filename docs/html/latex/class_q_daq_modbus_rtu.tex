@@ -1,0 +1,220 @@
+\hypertarget{class_q_daq_modbus_rtu}{}\doxysection{Q\+Daq\+Modbus\+Rtu Class Reference}
+\label{class_q_daq_modbus_rtu}\index{QDaqModbusRtu@{QDaqModbusRtu}}
+
+
+A class for accesing a M\+O\+D\+B\+U\+S/\+R\+TU connection.  
+
+
+
+
+{\ttfamily \#include $<$qdaqmodbus.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Modbus\+Rtu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_q_daq_modbus_rtu}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE \mbox{\hyperlink{class_q_daq_modbus_rtu_aca2b5b80fc9ba1680d12d3cef7a3f042}{Q\+Daq\+Modbus\+Rtu}} (const Q\+String \&name, const Q\+String \&\mbox{\hyperlink{class_q_daq_serial_a957633620afa44457610f23d0a7343e5}{port\+Name}}=Q\+String())
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_q_daq_modbus_rtu}{Q\+Daq\+Modbus\+Rtu}} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_q_daq_modbus_rtu_ab00130142a787a2e6f787da514fbb895}{$\sim$\+Q\+Daq\+Modbus\+Rtu}} ()
+\item 
+virtual int \mbox{\hyperlink{class_q_daq_modbus_rtu_a5986fa0b1cf6658cb6bbf201e26192ed}{read}} (uint port, char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Read data from a port. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_q_daq_modbus_rtu_a6a568b627a79489bf5cb0f1077f51330}{write}} (uint port, const char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Write data to a port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_modbus_rtu_a81f61f5940e654235a2d4884b1496e52}{open\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface open. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_modbus_rtu_a3b1d268c54aa24fecbff67356252401c}{close\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface close. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{class_q_daq_modbus_rtu_a21a428c314ad88035dfdeb4c4349f754}{ctx\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class for accesing a M\+O\+D\+B\+U\+S/\+R\+TU connection. 
+
+Used to access M\+O\+D\+B\+US devices connected to a serial port. A separate \mbox{\hyperlink{class_q_daq_modbus_rtu}{Q\+Daq\+Modbus\+Rtu}} object must be used per device.
+
+Implementation of M\+O\+D\+B\+US in \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} is based on libmodbus. 
+
+Definition at line 19 of file qdaqmodbus.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_modbus_rtu_aca2b5b80fc9ba1680d12d3cef7a3f042}\label{class_q_daq_modbus_rtu_aca2b5b80fc9ba1680d12d3cef7a3f042}} 
+\index{QDaqModbusRtu@{QDaqModbusRtu}!QDaqModbusRtu@{QDaqModbusRtu}}
+\index{QDaqModbusRtu@{QDaqModbusRtu}!QDaqModbusRtu@{QDaqModbusRtu}}
+\doxysubsubsection{\texorpdfstring{QDaqModbusRtu()}{QDaqModbusRtu()}}
+{\footnotesize\ttfamily Q\+Daq\+Modbus\+Rtu\+::\+Q\+Daq\+Modbus\+Rtu (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{const Q\+String \&}]{port\+Name = {\ttfamily QString()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_q_daq_modbus_rtu}{Q\+Daq\+Modbus\+Rtu}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} name \\
+\hline
+{\em port\+Name} & OS name for the serial port, eg, \textquotesingle{}C\+O\+M1\textquotesingle{} in windows, \textquotesingle{}/dev/tty\+S0\textquotesingle{} in linux. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_rtu_ab00130142a787a2e6f787da514fbb895}\label{class_q_daq_modbus_rtu_ab00130142a787a2e6f787da514fbb895}} 
+\index{QDaqModbusRtu@{QDaqModbusRtu}!````~QDaqModbusRtu@{$\sim$QDaqModbusRtu}}
+\index{````~QDaqModbusRtu@{$\sim$QDaqModbusRtu}!QDaqModbusRtu@{QDaqModbusRtu}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqModbusRtu()}{~QDaqModbusRtu()}}
+{\footnotesize\ttfamily Q\+Daq\+Modbus\+Rtu\+::$\sim$\+Q\+Daq\+Modbus\+Rtu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 10 of file qdaqmodbus.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_modbus_rtu_a3b1d268c54aa24fecbff67356252401c}\label{class_q_daq_modbus_rtu_a3b1d268c54aa24fecbff67356252401c}} 
+\index{QDaqModbusRtu@{QDaqModbusRtu}!close\_@{close\_}}
+\index{close\_@{close\_}!QDaqModbusRtu@{QDaqModbusRtu}}
+\doxysubsubsection{\texorpdfstring{close\_()}{close\_()}}
+{\footnotesize\ttfamily void Q\+Daq\+Modbus\+Rtu\+::close\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface close. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_serial_a32d7cf226a3ce3092d17fb90e9281bcf}{Q\+Daq\+Serial}}.
+
+
+
+Definition at line 47 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_rtu_a81f61f5940e654235a2d4884b1496e52}\label{class_q_daq_modbus_rtu_a81f61f5940e654235a2d4884b1496e52}} 
+\index{QDaqModbusRtu@{QDaqModbusRtu}!open\_@{open\_}}
+\index{open\_@{open\_}!QDaqModbusRtu@{QDaqModbusRtu}}
+\doxysubsubsection{\texorpdfstring{open\_()}{open\_()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Modbus\+Rtu\+::open\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface open. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_serial_af0e10ef60591e57db77e85b1a009ff1c}{Q\+Daq\+Serial}}.
+
+
+
+Definition at line 14 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_rtu_a5986fa0b1cf6658cb6bbf201e26192ed}\label{class_q_daq_modbus_rtu_a5986fa0b1cf6658cb6bbf201e26192ed}} 
+\index{QDaqModbusRtu@{QDaqModbusRtu}!read@{read}}
+\index{read@{read}!QDaqModbusRtu@{QDaqModbusRtu}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Q\+Daq\+Modbus\+Rtu\+::read (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read data from a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Allocated number of bytes. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes read. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_serial_a3c5fb97b95ae12e1b0ecc5f837ece7b9}{Q\+Daq\+Serial}}.
+
+
+
+Definition at line 61 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_rtu_a6a568b627a79489bf5cb0f1077f51330}\label{class_q_daq_modbus_rtu_a6a568b627a79489bf5cb0f1077f51330}} 
+\index{QDaqModbusRtu@{QDaqModbusRtu}!write@{write}}
+\index{write@{write}!QDaqModbusRtu@{QDaqModbusRtu}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily int Q\+Daq\+Modbus\+Rtu\+::write (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{const char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write data to a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Number of bytes to write. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes written. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_serial_a82da8757cc194227beef531f552b7c7d}{Q\+Daq\+Serial}}.
+
+
+
+Definition at line 79 of file qdaqmodbus.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_modbus_rtu_a21a428c314ad88035dfdeb4c4349f754}\label{class_q_daq_modbus_rtu_a21a428c314ad88035dfdeb4c4349f754}} 
+\index{QDaqModbusRtu@{QDaqModbusRtu}!ctx\_@{ctx\_}}
+\index{ctx\_@{ctx\_}!QDaqModbusRtu@{QDaqModbusRtu}}
+\doxysubsubsection{\texorpdfstring{ctx\_}{ctx\_}}
+{\footnotesize\ttfamily void$\ast$ Q\+Daq\+Modbus\+Rtu\+::ctx\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file qdaqmodbus.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{qdaqmodbus_8h}{qdaqmodbus.\+h}}\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{qdaqmodbus_8cpp}{qdaqmodbus.\+cpp}}\end{DoxyCompactItemize}

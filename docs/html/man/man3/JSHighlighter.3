@@ -1,0 +1,92 @@
+.TH "JSHighlighter" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JSHighlighter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits QSyntaxHighlighter\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJSHighlighter\fP (QTextDocument *parent=0)"
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (\fBJSEdit::ColorComponent\fP component, const QColor &color)"
+.br
+.ti -1c
+.RI "void \fBmark\fP (const QString &str, Qt::CaseSensitivity caseSensitivity)"
+.br
+.ti -1c
+.RI "QStringList \fBkeywords\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetKeywords\fP (const QStringList &\fBkeywords\fP)"
+.br
+.ti -1c
+.RI "QStringList \fBextraIDs\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddExtraIDs\fP (const QStringList &ids)"
+.br
+.ti -1c
+.RI "void \fBclearExtraIDs\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBhighlightBlock\fP (const QString &text)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 41 of file jsedit\&.cpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JSHighlighter::JSHighlighter (QTextDocument * parent = \fC0\fP)"
+
+.PP
+Definition at line 67 of file jsedit\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void JSHighlighter::addExtraIDs (const QStringList & ids)"
+
+.PP
+Definition at line 457 of file jsedit\&.cpp\&.
+.SS "void JSHighlighter::clearExtraIDs ()"
+
+.PP
+Definition at line 463 of file jsedit\&.cpp\&.
+.SS "QStringList JSHighlighter::extraIDs () const"
+
+.PP
+Definition at line 452 of file jsedit\&.cpp\&.
+.SS "void JSHighlighter::highlightBlock (const QString & text)\fC [protected]\fP"
+
+.PP
+Definition at line 264 of file jsedit\&.cpp\&.
+.SS "QStringList JSHighlighter::keywords () const"
+
+.PP
+Definition at line 441 of file jsedit\&.cpp\&.
+.SS "void JSHighlighter::mark (const QString & str, Qt::CaseSensitivity caseSensitivity)"
+
+.PP
+Definition at line 434 of file jsedit\&.cpp\&.
+.SS "void JSHighlighter::setColor (\fBJSEdit::ColorComponent\fP component, const QColor & color)"
+
+.PP
+Definition at line 258 of file jsedit\&.cpp\&.
+.SS "void JSHighlighter::setKeywords (const QStringList & keywords)"
+
+.PP
+Definition at line 446 of file jsedit\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

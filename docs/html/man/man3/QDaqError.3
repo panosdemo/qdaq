@@ -1,0 +1,103 @@
+.TH "QDaqError" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqError
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqObject\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqError\fP ()"
+.br
+.ti -1c
+.RI "\fBQDaqError\fP (const QString &aname, const QString &atype, const QString &adesc=QString(), const QDateTime &at=QDateTime::currentDateTime())"
+.br
+.ti -1c
+.RI "\fBQDaqError\fP (const \fBQDaqError\fP &e)"
+.br
+.ti -1c
+.RI "QString \fBtoString\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QDateTime \fBt\fP"
+.br
+.RI "Date/time of occurence\&. "
+.ti -1c
+.RI "QString \fBobjectName\fP"
+.br
+.RI "(Full)Name of object causing the error "
+.ti -1c
+.RI "QString \fBtype\fP"
+.br
+.RI "Error type description\&. "
+.ti -1c
+.RI "QString \fBdescr\fP"
+.br
+.RI "Extended description (optional) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure containing error data\&.
+.PP
+It is emitted every time an error occurs in a \fBQDaqObject\fP\&. Errors are gathered centrally on a \fBQDaqErrorQueue\fP object that lives in \fBQDaqRoot\fP\&. The error queue is accesible through \fBQDaqObject::root()\fP->errorQueue()\&. 
+.PP
+Definition at line 42 of file QDaqObject\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqError::QDaqError ()\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file QDaqObject\&.h\&.
+.SS "QDaqError::QDaqError (const QString & aname, const QString & atype, const QString & adesc = \fCQString()\fP, const QDateTime & at = \fCQDateTime::currentDateTime()\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file QDaqObject\&.h\&.
+.SS "QDaqError::QDaqError (const \fBQDaqError\fP & e)\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file QDaqObject\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "QString QDaqError::toString () const\fC [inline]\fP"
+
+.PP
+Definition at line 62 of file QDaqObject\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QString QDaqError::descr"
+
+.PP
+Extended description (optional) 
+.PP
+Definition at line 51 of file QDaqObject\&.h\&.
+.SS "QString QDaqError::objectName"
+
+.PP
+(Full)Name of object causing the error 
+.PP
+Definition at line 47 of file QDaqObject\&.h\&.
+.SS "QDateTime QDaqError::t"
+
+.PP
+Date/time of occurence\&. 
+.PP
+Definition at line 45 of file QDaqObject\&.h\&.
+.SS "QString QDaqError::type"
+
+.PP
+Error type description\&. 
+.PP
+Definition at line 49 of file QDaqObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

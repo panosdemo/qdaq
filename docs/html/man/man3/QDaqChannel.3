@@ -1,0 +1,689 @@
+.TH "QDaqChannel" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqChannel \- A class that represent a stream of numerical data, a signal\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqChannel\&.h>\fP
+.PP
+Inherits \fBQDaqJob\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBChannelType\fP { \fBNormal\fP, \fBClock\fP, \fBRandom\fP, \fBInc\fP, \fBDec\fP }"
+.br
+.ti -1c
+.RI "enum \fBAveragingType\fP { \fBNone\fP, \fBRunning\fP, \fBDelta\fP, \fBForgettingFactor\fP, \fBMedian\fP }"
+.br
+.ti -1c
+.RI "enum \fBNumberFormat\fP { \fBGeneral\fP, \fBFixedPoint\fP, \fBScientific\fP, \fBTime\fP }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBpush\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "double \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "double \fBstd\fP () const"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqChannel\fP (const QString &name)"
+.br
+.ti -1c
+.RI "virtual \fB~QDaqChannel\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBdetach\fP ()"
+.br
+.ti -1c
+.RI "\fBChannelType\fP \fBtype\fP () const"
+.br
+.ti -1c
+.RI "QString \fBsignalName\fP () const"
+.br
+.ti -1c
+.RI "QString \fBunit\fP () const"
+.br
+.ti -1c
+.RI "\fBNumberFormat\fP \fBformat\fP () const"
+.br
+.ti -1c
+.RI "int \fBdigits\fP () const"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBrange\fP () const"
+.br
+.ti -1c
+.RI "\fBAveragingType\fP \fBaveraging\fP () const"
+.br
+.ti -1c
+.RI "double \fBforgettingFactor\fP () const"
+.br
+.ti -1c
+.RI "double \fBoffset\fP () const"
+.br
+.ti -1c
+.RI "double \fBmultiplier\fP () const"
+.br
+.ti -1c
+.RI "uint \fBmemsize\fP () const"
+.br
+.ti -1c
+.RI "uint \fBdepth\fP () const"
+.br
+.ti -1c
+.RI "bool \fBdataReady\fP () const"
+.br
+.ti -1c
+.RI "QString \fBparserExpression\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetType\fP (\fBChannelType\fP t)"
+.br
+.ti -1c
+.RI "void \fBsetSignalName\fP (QString v)"
+.br
+.ti -1c
+.RI "void \fBsetUnit\fP (QString v)"
+.br
+.ti -1c
+.RI "void \fBsetFormat\fP (\fBNumberFormat\fP v)"
+.br
+.ti -1c
+.RI "void \fBsetDigits\fP (int n)"
+.br
+.ti -1c
+.RI "void \fBsetRange\fP (const \fBQDaqVector\fP &v)"
+.br
+.ti -1c
+.RI "void \fBsetOffset\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetMultiplier\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetAveraging\fP (\fBAveragingType\fP t)"
+.br
+.ti -1c
+.RI "void \fBsetForgettingFactor\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetDepth\fP (uint d)"
+.br
+.ti -1c
+.RI "void \fBsetParserExpression\fP (const QString &s)"
+.br
+.ti -1c
+.RI "void \fBforceProcces\fP ()"
+.br
+.ti -1c
+.RI "double \fBlast\fP () const"
+.br
+.ti -1c
+.RI "virtual QString \fBformatedValue\fP ()"
+.br
+.RI "Returns the channel value formatted according to format/digits\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBarm_\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBrun\fP ()"
+.br
+.RI "Perform channel tasks\&. "
+.ti -1c
+.RI "bool \fBaverage\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBChannelType\fP \fBchanneltype_\fP"
+.br
+.ti -1c
+.RI "QString \fBsignalName_\fP"
+.br
+.ti -1c
+.RI "QString \fBunit_\fP"
+.br
+.ti -1c
+.RI "\fBAveragingType\fP \fBtype_\fP"
+.br
+.ti -1c
+.RI "\fBNumberFormat\fP \fBfmt_\fP"
+.br
+.ti -1c
+.RI "int \fBdigits_\fP"
+.br
+.ti -1c
+.RI "double \fBv_\fP"
+.br
+.ti -1c
+.RI "double \fBdv_\fP"
+.br
+.ti -1c
+.RI "double \fBoffset_\fP"
+.br
+.ti -1c
+.RI "double \fBmultiplier_\fP"
+.br
+.ti -1c
+.RI "mu::Parser * \fBparser_\fP"
+.br
+.ti -1c
+.RI "bool \fBdataReady_\fP"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBrange_\fP"
+.br
+.ti -1c
+.RI "uint \fBcounter_\fP"
+.br
+.ti -1c
+.RI "uint \fBdepth_\fP"
+.br
+.ti -1c
+.RI "double \fBff_\fP"
+.br
+.ti -1c
+.RI "double \fBffw_\fP"
+.br
+.ti -1c
+.RI "\fBmath::circular_buffer\fP< double > \fBbuff_\fP"
+.br
+.ti -1c
+.RI "std::vector< double > \fBsorted_buffer\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBChannelType\fP \fBtype\fP"
+.br
+.RI "Type of the channel\&. 
+.br
+ "
+.ti -1c
+.RI "QString \fBsignalName\fP"
+.br
+.ti -1c
+.RI "QString \fBunit\fP"
+.br
+.ti -1c
+.RI "\fBNumberFormat\fP \fBformat\fP"
+.br
+.ti -1c
+.RI "int \fBdigits\fP"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBrange\fP"
+.br
+.ti -1c
+.RI "double \fBoffset\fP"
+.br
+.ti -1c
+.RI "double \fBmultiplier\fP"
+.br
+.ti -1c
+.RI "\fBAveragingType\fP \fBaveraging\fP"
+.br
+.ti -1c
+.RI "double \fBforgettingFactor\fP"
+.br
+.ti -1c
+.RI "uint \fBdepth\fP"
+.br
+.ti -1c
+.RI "uint \fBmemsize\fP"
+.br
+.ti -1c
+.RI "bool \fBdataReady\fP"
+.br
+.ti -1c
+.RI "QString \fBparserExpression\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A class that represent a stream of numerical data, a signal\&. 
+
+Real time data is handeled in QSaq through the \fBQDaqChannel\fP class\&. E\&.g\&., an instrument provides measurement data through \fBQDaqChannel\fP objects\&.
+.PP
+\fBQDaqChannel\fP provides tools for displaying, transforming, averaging the data of the channel\&. 
+.PP
+Definition at line 28 of file QDaqChannel\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBQDaqChannel::AveragingType\fP"
+Type of channel averaging\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+No averaging\&. 
+.TP
+\fB\fIRunning \fP\fP
+Running (box) averaging\&. 
+.TP
+\fB\fIDelta \fP\fP
+Running average for signals of alternating sign\&. 
+.TP
+\fB\fIForgettingFactor \fP\fP
+Running average with forgetting (exponential weighting)\&. 
+.TP
+\fB\fIMedian \fP\fP
+Running median filter\&. 
+.PP
+Definition at line 104 of file QDaqChannel\&.h\&.
+.SS "enum \fBQDaqChannel::ChannelType\fP"
+Type of the channel\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINormal \fP\fP
+Normal channel - nothing special\&. 
+.TP
+\fB\fIClock \fP\fP
+Records time in each repetition\&. Can be used for time measurement\&. 
+.TP
+\fB\fIRandom \fP\fP
+Generates random samples\&. 
+.TP
+\fB\fIInc \fP\fP
+Starting from an initial value increments by 1 in each repetition\&. 
+.TP
+\fB\fIDec \fP\fP
+Starting from an initial value decrements by 1 in each repetition\&. 
+.PP
+Definition at line 93 of file QDaqChannel\&.h\&.
+.SS "enum \fBQDaqChannel::NumberFormat\fP"
+Type of format for textual representation of channel data\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIGeneral \fP\fP
+No special formating\&. 
+.TP
+\fB\fIFixedPoint \fP\fP
+No special formating\&. 
+.TP
+\fB\fIScientific \fP\fP
+No special formating\&. 
+.TP
+\fB\fITime \fP\fP
+No special formating\&. 
+.PP
+Definition at line 115 of file QDaqChannel\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqChannel::QDaqChannel (const QString & name)\fC [explicit]\fP"
+
+.PP
+Definition at line 7 of file QDaqChannel\&.cpp\&.
+.SS "QDaqChannel::~QDaqChannel (void)\fC [virtual]\fP"
+
+.PP
+Definition at line 27 of file QDaqChannel\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool QDaqChannel::arm_ ()\fC [protected]\fP, \fC [virtual]\fP"
+Performs internal initialization for the job\&.
+.PP
+It is called by the \fBsetArmed()\fP function\&.
+.PP
+This function can be reimplemented to perform specific initialization for a job\&. The parent class \fBarm_()\fP function should be called afterwards\&.
+.PP
+In the default implementation, if a \fBloopEngine()\fP exists the script code is checked against the script engine for errors\&.
+.PP
+If initialization is sucessfull it returns true, otherwise the function returns false\&. 
+.PP
+Reimplemented from \fBQDaqJob\fP\&.
+.PP
+Definition at line 130 of file QDaqChannel\&.cpp\&.
+.SS "bool QDaqChannel::average ()\fC [protected]\fP"
+
+.PP
+Definition at line 136 of file QDaqChannel\&.cpp\&.
+.SS "\fBAveragingType\fP QDaqChannel::averaging () const\fC [inline]\fP"
+
+.PP
+Definition at line 181 of file QDaqChannel\&.h\&.
+.SS "void QDaqChannel::clear ()\fC [slot]\fP"
+Clear internal channel memory\&. 
+.PP
+Definition at line 297 of file QDaqChannel\&.cpp\&.
+.SS "bool QDaqChannel::dataReady () const\fC [inline]\fP"
+
+.PP
+Definition at line 187 of file QDaqChannel\&.h\&.
+.SS "uint QDaqChannel::depth () const\fC [inline]\fP"
+
+.PP
+Definition at line 186 of file QDaqChannel\&.h\&.
+.SS "void QDaqChannel::detach ()\fC [virtual]\fP"
+Detach this \fBQDaqObject\fP from the \fBQDaq\fP tree\&.
+.PP
+This function is called just before the object becomes detached from the \fBQDaq\fP tree\&.
+.PP
+In the base class implementation it first calls \fBdetach()\fP for each child \fBQDaqObject\fP and then signal root that the object is removed from the qdaq tree\&.
+.PP
+Subclasses may reimplement this function to perform needed actions before detaching\&. 
+.PP
+Reimplemented from \fBQDaqJob\fP\&.
+.PP
+Definition at line 32 of file QDaqChannel\&.cpp\&.
+.SS "int QDaqChannel::digits () const\fC [inline]\fP"
+
+.PP
+Definition at line 179 of file QDaqChannel\&.h\&.
+.SS "void QDaqChannel::forceProcces ()"
+
+.SS "double QDaqChannel::forgettingFactor () const\fC [inline]\fP"
+
+.PP
+Definition at line 182 of file QDaqChannel\&.h\&.
+.SS "\fBNumberFormat\fP QDaqChannel::format () const\fC [inline]\fP"
+
+.PP
+Definition at line 178 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::formatedValue ()\fC [virtual]\fP"
+
+.PP
+Returns the channel value formatted according to format/digits\&. 
+.PP
+Definition at line 277 of file QDaqChannel\&.cpp\&.
+.SS "double QDaqChannel::last () const\fC [inline]\fP"
+
+.PP
+Definition at line 207 of file QDaqChannel\&.h\&.
+.SS "uint QDaqChannel::memsize () const\fC [inline]\fP"
+
+.PP
+Definition at line 185 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::multiplier () const\fC [inline]\fP"
+
+.PP
+Definition at line 184 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::offset () const\fC [inline]\fP"
+
+.PP
+Definition at line 183 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::parserExpression () const"
+
+.PP
+Definition at line 305 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::push (double v)\fC [inline]\fP, \fC [slot]\fP"
+Insert a value into the channel\&. 
+.PP
+Definition at line 214 of file QDaqChannel\&.h\&.
+.SS "\fBQDaqVector\fP QDaqChannel::range () const\fC [inline]\fP"
+
+.PP
+Definition at line 180 of file QDaqChannel\&.h\&.
+.SS "bool QDaqChannel::run ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Perform channel tasks\&. The tasks are performed in the following order:
+.PP
+.IP "\(bu" 2
+If channel is of a special type, then its function is performed\&. E\&.g\&. if the type is Random a random number is generated\&.
+.IP "\(bu" 2
+averaging is performed
+.IP "\(bu" 2
+the mean value goes through muParser
+.IP "\(bu" 2
+the mean value is scaled and shifted (multiplier*v + offset)
+.IP "\(bu" 2
+the mean value is checked for under/over range
+.PP
+.PP
+If new data is available the updateWidgets signal is emitted\&.
+.PP
+\fBReturns\fP
+.RS 4
+always return true\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqJob\fP\&.
+.PP
+Definition at line 214 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setAveraging (\fBAveragingType\fP t)"
+
+.PP
+Definition at line 95 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setDepth (uint d)"
+
+.PP
+Definition at line 116 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setDigits (int n)\fC [inline]\fP"
+
+.PP
+Definition at line 195 of file QDaqChannel\&.h\&.
+.SS "void QDaqChannel::setForgettingFactor (double v)"
+
+.PP
+Definition at line 314 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setFormat (\fBNumberFormat\fP v)\fC [inline]\fP"
+
+.PP
+Definition at line 194 of file QDaqChannel\&.h\&.
+.SS "void QDaqChannel::setMultiplier (double v)"
+
+.PP
+Definition at line 90 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setOffset (double v)"
+
+.PP
+Definition at line 85 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setParserExpression (const QString & s)"
+
+.PP
+Definition at line 324 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setRange (const \fBQDaqVector\fP & v)"
+
+.PP
+Definition at line 69 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setSignalName (QString v)"
+
+.PP
+Definition at line 59 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setType (\fBChannelType\fP t)"
+
+.PP
+Definition at line 37 of file QDaqChannel\&.cpp\&.
+.SS "void QDaqChannel::setUnit (QString v)"
+
+.PP
+Definition at line 64 of file QDaqChannel\&.cpp\&.
+.SS "QString QDaqChannel::signalName () const\fC [inline]\fP"
+
+.PP
+Definition at line 176 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::std () const\fC [inline]\fP, \fC [slot]\fP"
+Get the current channel value standard deviation\&. 
+.PP
+Definition at line 220 of file QDaqChannel\&.h\&.
+.SS "\fBChannelType\fP QDaqChannel::type () const\fC [inline]\fP"
+
+.PP
+Definition at line 175 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::unit () const\fC [inline]\fP"
+
+.PP
+Definition at line 177 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::value () const\fC [inline]\fP, \fC [slot]\fP"
+Get the current channel value\&. 
+.PP
+Definition at line 218 of file QDaqChannel\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBmath::circular_buffer\fP<double> QDaqChannel::buff_\fC [protected]\fP"
+
+.PP
+Definition at line 139 of file QDaqChannel\&.h\&.
+.SS "\fBChannelType\fP QDaqChannel::channeltype_\fC [protected]\fP"
+
+.PP
+Definition at line 124 of file QDaqChannel\&.h\&.
+.SS "uint QDaqChannel::counter_\fC [protected]\fP"
+
+.PP
+Definition at line 134 of file QDaqChannel\&.h\&.
+.SS "bool QDaqChannel::dataReady_\fC [protected]\fP"
+
+.PP
+Definition at line 131 of file QDaqChannel\&.h\&.
+.SS "uint QDaqChannel::depth_\fC [protected]\fP"
+
+.PP
+Definition at line 135 of file QDaqChannel\&.h\&.
+.SS "int QDaqChannel::digits_\fC [protected]\fP"
+
+.PP
+Definition at line 128 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::dv_\fC [protected]\fP"
+
+.PP
+Definition at line 129 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::ff_\fC [protected]\fP"
+
+.PP
+Definition at line 136 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::ffw_\fC [protected]\fP"
+
+.PP
+Definition at line 136 of file QDaqChannel\&.h\&.
+.SS "\fBNumberFormat\fP QDaqChannel::fmt_\fC [protected]\fP"
+
+.PP
+Definition at line 127 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::multiplier_\fC [protected]\fP"
+
+.PP
+Definition at line 129 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::offset_\fC [protected]\fP"
+
+.PP
+Definition at line 129 of file QDaqChannel\&.h\&.
+.SS "mu::Parser* QDaqChannel::parser_\fC [protected]\fP"
+
+.PP
+Definition at line 130 of file QDaqChannel\&.h\&.
+.SS "\fBQDaqVector\fP QDaqChannel::range_\fC [protected]\fP"
+
+.PP
+Definition at line 132 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::signalName_\fC [protected]\fP"
+
+.PP
+Definition at line 125 of file QDaqChannel\&.h\&.
+.SS "std::vector<double> QDaqChannel::sorted_buffer\fC [protected]\fP"
+
+.PP
+Definition at line 142 of file QDaqChannel\&.h\&.
+.SS "\fBAveragingType\fP QDaqChannel::type_\fC [protected]\fP"
+
+.PP
+Definition at line 126 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::unit_\fC [protected]\fP"
+
+.PP
+Definition at line 125 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::v_\fC [protected]\fP"
+
+.PP
+Definition at line 129 of file QDaqChannel\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "\fBAveragingType\fP QDaqChannel::averaging\fC [read]\fP, \fC [write]\fP"
+Type of on-line averaging\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "bool QDaqChannel::dataReady\fC [read]\fP"
+True if valid data exist on the channel\&. If dataReady is true, then \fBvalue()\fP & \fBstd()\fP return valid numbers\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "uint QDaqChannel::depth\fC [read]\fP, \fC [write]\fP"
+Averaging depth\&. Number of past data values used in averaging\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "int QDaqChannel::digits\fC [read]\fP, \fC [write]\fP"
+Number of decimal digits to display\&. Used when displaying the channel in fixed or scientific format\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::forgettingFactor\fC [read]\fP, \fC [write]\fP"
+Forgetting factor value\&. Only used when this type of averaging is active\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "\fBNumberFormat\fP QDaqChannel::format\fC [read]\fP, \fC [write]\fP"
+Option for formatting channel data for textual representation\&. Used when displaying the channel\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "uint QDaqChannel::memsize\fC [read]\fP"
+Channel memory used\&. Number of values stored in internal channel memory\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::multiplier\fC [read]\fP, \fC [write]\fP"
+Channel multiplier\&. Applied imediately when data is inserted in the channel by the transformation y=a*x+b\&. b is the offset and a is the multiplier\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "double QDaqChannel::offset\fC [read]\fP, \fC [write]\fP"
+Channel offset\&. Applied imediately when data is inserted in the channel by the transformation y=a*x+b\&. b is the offset and a is the multiplier\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::parserExpression\fC [read]\fP, \fC [write]\fP"
+muParser Expression\&. If set the expression is executed on the channel data\&. Note that the data goes first through muParser and then they are scaled with multiplier and offset\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "\fBQDaqVector\fP QDaqChannel::range\fC [read]\fP, \fC [write]\fP"
+Signal range\&. When the signal is outside the range an error is raised\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::signalName\fC [read]\fP, \fC [write]\fP"
+User supplied signal name\&. Used when displaying the channel\&. It is different from the object name\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "\fBChannelType\fP QDaqChannel::type\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Type of the channel\&. 
+.br
+ 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+.SS "QString QDaqChannel::unit\fC [read]\fP, \fC [write]\fP"
+User supplied unit of measurement\&. Used when displaying the channel\&. 
+.PP
+Definition at line 1 of file QDaqChannel\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

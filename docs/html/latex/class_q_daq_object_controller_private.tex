@@ -1,0 +1,326 @@
+\hypertarget{class_q_daq_object_controller_private}{}\doxysection{Q\+Daq\+Object\+Controller\+Private Class Reference}
+\label{class_q_daq_object_controller_private}\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_object_controller_private_a1f179bfd71d4c5fc7cab227f70a904cd}{add\+Class\+Properties}} (const Q\+Meta\+Object $\ast$meta\+Object)
+\item 
+void \mbox{\hyperlink{class_q_daq_object_controller_private_ad0df0e21f504de5f4895abc623881bbf}{update\+Class\+Properties}} (const Q\+Meta\+Object $\ast$meta\+Object, bool recursive)
+\item 
+void \mbox{\hyperlink{class_q_daq_object_controller_private_a7456bff6d1fff0345f3840027d9c7b58}{add\+Dyn\+Properties}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_object_controller_private_ad4425f3eb07a7082565da7c91f75b6c3}{update\+Dyn\+Properties}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_object_controller_private_aaaad27a5de88ef721a549926cdbf50c3}{save\+Expanded\+State}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_object_controller_private_af8a6fcd816dcd4573eb3303da5352b13}{restore\+Expanded\+State}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_object_controller_private_ac20111b0529eaac3907f7cb104df93ca}{slot\+Value\+Changed}} (Qt\+Property $\ast$property, const Q\+Variant \&value)
+\item 
+int \mbox{\hyperlink{class_q_daq_object_controller_private_ae6e68ce6d5e17e8581eb58e37d52abfd}{enum\+To\+Int}} (const Q\+Meta\+Enum \&meta\+Enum, int enum\+Value) const
+\item 
+int \mbox{\hyperlink{class_q_daq_object_controller_private_a5f76b4d6895e90d0d391c67688983144}{int\+To\+Enum}} (const Q\+Meta\+Enum \&meta\+Enum, int int\+Value) const
+\item 
+int \mbox{\hyperlink{class_q_daq_object_controller_private_ad63be89f82184d8bf056634a4d2ee77b}{flag\+To\+Int}} (const Q\+Meta\+Enum \&meta\+Enum, int flag\+Value) const
+\item 
+int \mbox{\hyperlink{class_q_daq_object_controller_private_a6133b4caaeac54627009559130e11016}{int\+To\+Flag}} (const Q\+Meta\+Enum \&meta\+Enum, int int\+Value) const
+\item 
+bool \mbox{\hyperlink{class_q_daq_object_controller_private_ac87639a96447bf4c211a0ae23f157a26}{is\+Sub\+Value}} (int value, int sub\+Value) const
+\item 
+bool \mbox{\hyperlink{class_q_daq_object_controller_private_a6051c0310f67a22d3dc5d188c343e7d7}{is\+Power\+Of2}} (int value) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_controller_private_a82a61958287696200eae7403d71bc3b7}{m\+\_\+object}}
+\item 
+Q\+Map$<$ const Q\+Meta\+Object $\ast$, Qt\+Property $\ast$ $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_a32c9688e608e61a20b57f2cedbc5a035}{m\+\_\+class\+To\+Property}}
+\item 
+Q\+Map$<$ Qt\+Property $\ast$, const Q\+Meta\+Object $\ast$ $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_abed693ee9f774a2eaabfeae8e6298b64}{m\+\_\+property\+To\+Class}}
+\item 
+Q\+Map$<$ Qt\+Property $\ast$, int $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_a421042e947190f31a841b2e44d402357}{m\+\_\+property\+To\+Index}}
+\item 
+Q\+Map$<$ const Q\+Meta\+Object $\ast$, Q\+Map$<$ int, Qt\+Variant\+Property $\ast$ $>$ $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_a92a08cbbdea96c7f97c4e02e65aedc08}{m\+\_\+class\+To\+Index\+To\+Property}}
+\item 
+Q\+Map$<$ Qt\+Property $\ast$, bool $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_ae3d84a15737df009e52578bc06ef7604}{m\+\_\+property\+To\+Expanded}}
+\item 
+Q\+Map$<$ Q\+Byte\+Array, Qt\+Variant\+Property $\ast$ $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_a695cc8f4431191d6d66839ab05557ee7}{m\+\_\+dyn\+Prop\+Name\+To\+Property}}
+\item 
+Q\+Map$<$ Qt\+Variant\+Property $\ast$, Q\+Byte\+Array $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_a232e3f387b181f9f66df048ca50a0fc7}{m\+\_\+property\+To\+Dyn\+Prop\+Name}}
+\item 
+Q\+List$<$ Qt\+Property $\ast$ $>$ \mbox{\hyperlink{class_q_daq_object_controller_private_a38a7cb63d0fc02f9c19f2d2cdf0be41c}{m\+\_\+top\+Level\+Properties}}
+\item 
+Qt\+Abstract\+Property\+Browser $\ast$ \mbox{\hyperlink{class_q_daq_object_controller_private_af179281fde7aea3028e7f39f6becdb95}{m\+\_\+browser}}
+\item 
+\mbox{\hyperlink{class_variant_manager}{Variant\+Manager}} $\ast$ \mbox{\hyperlink{class_q_daq_object_controller_private_a72470a59ab42dfa0dff09312239f0758}{m\+\_\+manager}}
+\item 
+\mbox{\hyperlink{class_variant_manager}{Variant\+Manager}} $\ast$ \mbox{\hyperlink{class_q_daq_object_controller_private_a50436a4a2afb1911f365f251dfa9b757}{m\+\_\+read\+Only\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 212 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a1f179bfd71d4c5fc7cab227f70a904cd}\label{class_q_daq_object_controller_private_a1f179bfd71d4c5fc7cab227f70a904cd}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!addClassProperties@{addClassProperties}}
+\index{addClassProperties@{addClassProperties}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{addClassProperties()}{addClassProperties()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Controller\+Private\+::add\+Class\+Properties (\begin{DoxyParamCaption}\item[{const Q\+Meta\+Object $\ast$}]{meta\+Object }\end{DoxyParamCaption})}
+
+
+
+Definition at line 402 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a7456bff6d1fff0345f3840027d9c7b58}\label{class_q_daq_object_controller_private_a7456bff6d1fff0345f3840027d9c7b58}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!addDynProperties@{addDynProperties}}
+\index{addDynProperties@{addDynProperties}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{addDynProperties()}{addDynProperties()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Controller\+Private\+::add\+Dyn\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 508 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_ae6e68ce6d5e17e8581eb58e37d52abfd}\label{class_q_daq_object_controller_private_ae6e68ce6d5e17e8581eb58e37d52abfd}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!enumToInt@{enumToInt}}
+\index{enumToInt@{enumToInt}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{enumToInt()}{enumToInt()}}
+{\footnotesize\ttfamily int Q\+Daq\+Object\+Controller\+Private\+::enum\+To\+Int (\begin{DoxyParamCaption}\item[{const Q\+Meta\+Enum \&}]{meta\+Enum,  }\item[{int}]{enum\+Value }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 253 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_ad63be89f82184d8bf056634a4d2ee77b}\label{class_q_daq_object_controller_private_ad63be89f82184d8bf056634a4d2ee77b}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!flagToInt@{flagToInt}}
+\index{flagToInt@{flagToInt}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{flagToInt()}{flagToInt()}}
+{\footnotesize\ttfamily int Q\+Daq\+Object\+Controller\+Private\+::flag\+To\+Int (\begin{DoxyParamCaption}\item[{const Q\+Meta\+Enum \&}]{meta\+Enum,  }\item[{int}]{flag\+Value }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 311 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a5f76b4d6895e90d0d391c67688983144}\label{class_q_daq_object_controller_private_a5f76b4d6895e90d0d391c67688983144}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!intToEnum@{intToEnum}}
+\index{intToEnum@{intToEnum}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{intToEnum()}{intToEnum()}}
+{\footnotesize\ttfamily int Q\+Daq\+Object\+Controller\+Private\+::int\+To\+Enum (\begin{DoxyParamCaption}\item[{const Q\+Meta\+Enum \&}]{meta\+Enum,  }\item[{int}]{int\+Value }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 268 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a6133b4caaeac54627009559130e11016}\label{class_q_daq_object_controller_private_a6133b4caaeac54627009559130e11016}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!intToFlag@{intToFlag}}
+\index{intToFlag@{intToFlag}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{intToFlag()}{intToFlag()}}
+{\footnotesize\ttfamily int Q\+Daq\+Object\+Controller\+Private\+::int\+To\+Flag (\begin{DoxyParamCaption}\item[{const Q\+Meta\+Enum \&}]{meta\+Enum,  }\item[{int}]{int\+Value }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 329 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a6051c0310f67a22d3dc5d188c343e7d7}\label{class_q_daq_object_controller_private_a6051c0310f67a22d3dc5d188c343e7d7}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!isPowerOf2@{isPowerOf2}}
+\index{isPowerOf2@{isPowerOf2}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{isPowerOf2()}{isPowerOf2()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+Controller\+Private\+::is\+Power\+Of2 (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 300 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_ac87639a96447bf4c211a0ae23f157a26}\label{class_q_daq_object_controller_private_ac87639a96447bf4c211a0ae23f157a26}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!isSubValue@{isSubValue}}
+\index{isSubValue@{isSubValue}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{isSubValue()}{isSubValue()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+Controller\+Private\+::is\+Sub\+Value (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{int}]{sub\+Value }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 284 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_af8a6fcd816dcd4573eb3303da5352b13}\label{class_q_daq_object_controller_private_af8a6fcd816dcd4573eb3303da5352b13}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!restoreExpandedState@{restoreExpandedState}}
+\index{restoreExpandedState@{restoreExpandedState}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{restoreExpandedState()}{restoreExpandedState()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Controller\+Private\+::restore\+Expanded\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 562 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_aaaad27a5de88ef721a549926cdbf50c3}\label{class_q_daq_object_controller_private_aaaad27a5de88ef721a549926cdbf50c3}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!saveExpandedState@{saveExpandedState}}
+\index{saveExpandedState@{saveExpandedState}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{saveExpandedState()}{saveExpandedState()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Controller\+Private\+::save\+Expanded\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 557 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_ac20111b0529eaac3907f7cb104df93ca}\label{class_q_daq_object_controller_private_ac20111b0529eaac3907f7cb104df93ca}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!slotValueChanged@{slotValueChanged}}
+\index{slotValueChanged@{slotValueChanged}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{slotValueChanged()}{slotValueChanged()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Controller\+Private\+::slot\+Value\+Changed (\begin{DoxyParamCaption}\item[{Qt\+Property $\ast$}]{property,  }\item[{const Q\+Variant \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 567 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_ad0df0e21f504de5f4895abc623881bbf}\label{class_q_daq_object_controller_private_ad0df0e21f504de5f4895abc623881bbf}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!updateClassProperties@{updateClassProperties}}
+\index{updateClassProperties@{updateClassProperties}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{updateClassProperties()}{updateClassProperties()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Controller\+Private\+::update\+Class\+Properties (\begin{DoxyParamCaption}\item[{const Q\+Meta\+Object $\ast$}]{meta\+Object,  }\item[{bool}]{recursive }\end{DoxyParamCaption})}
+
+
+
+Definition at line 354 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_ad4425f3eb07a7082565da7c91f75b6c3}\label{class_q_daq_object_controller_private_ad4425f3eb07a7082565da7c91f75b6c3}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!updateDynProperties@{updateDynProperties}}
+\index{updateDynProperties@{updateDynProperties}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{updateDynProperties()}{updateDynProperties()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Controller\+Private\+::update\+Dyn\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 389 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_object_controller_private_af179281fde7aea3028e7f39f6becdb95}\label{class_q_daq_object_controller_private_af179281fde7aea3028e7f39f6becdb95}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_browser@{m\_browser}}
+\index{m\_browser@{m\_browser}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_browser}{m\_browser}}
+{\footnotesize\ttfamily Qt\+Abstract\+Property\+Browser$\ast$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+browser}
+
+
+
+Definition at line 248 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a92a08cbbdea96c7f97c4e02e65aedc08}\label{class_q_daq_object_controller_private_a92a08cbbdea96c7f97c4e02e65aedc08}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_classToIndexToProperty@{m\_classToIndexToProperty}}
+\index{m\_classToIndexToProperty@{m\_classToIndexToProperty}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_classToIndexToProperty}{m\_classToIndexToProperty}}
+{\footnotesize\ttfamily Q\+Map$<$const Q\+Meta\+Object $\ast$, Q\+Map$<$int, Qt\+Variant\+Property $\ast$$>$ $>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+class\+To\+Index\+To\+Property}
+
+
+
+Definition at line 239 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a32c9688e608e61a20b57f2cedbc5a035}\label{class_q_daq_object_controller_private_a32c9688e608e61a20b57f2cedbc5a035}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_classToProperty@{m\_classToProperty}}
+\index{m\_classToProperty@{m\_classToProperty}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_classToProperty}{m\_classToProperty}}
+{\footnotesize\ttfamily Q\+Map$<$const Q\+Meta\+Object $\ast$, Qt\+Property $\ast$$>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+class\+To\+Property}
+
+
+
+Definition at line 236 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a695cc8f4431191d6d66839ab05557ee7}\label{class_q_daq_object_controller_private_a695cc8f4431191d6d66839ab05557ee7}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_dynPropNameToProperty@{m\_dynPropNameToProperty}}
+\index{m\_dynPropNameToProperty@{m\_dynPropNameToProperty}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_dynPropNameToProperty}{m\_dynPropNameToProperty}}
+{\footnotesize\ttfamily Q\+Map$<$Q\+Byte\+Array, Qt\+Variant\+Property $\ast$$>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+dyn\+Prop\+Name\+To\+Property}
+
+
+
+Definition at line 243 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a72470a59ab42dfa0dff09312239f0758}\label{class_q_daq_object_controller_private_a72470a59ab42dfa0dff09312239f0758}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_manager@{m\_manager}}
+\index{m\_manager@{m\_manager}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_manager}{m\_manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_variant_manager}{Variant\+Manager}}$\ast$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+manager}
+
+
+
+Definition at line 249 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a82a61958287696200eae7403d71bc3b7}\label{class_q_daq_object_controller_private_a82a61958287696200eae7403d71bc3b7}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_object@{m\_object}}
+\index{m\_object@{m\_object}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_object}{m\_object}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}$\ast$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+object}
+
+
+
+Definition at line 234 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_abed693ee9f774a2eaabfeae8e6298b64}\label{class_q_daq_object_controller_private_abed693ee9f774a2eaabfeae8e6298b64}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_propertyToClass@{m\_propertyToClass}}
+\index{m\_propertyToClass@{m\_propertyToClass}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_propertyToClass}{m\_propertyToClass}}
+{\footnotesize\ttfamily Q\+Map$<$Qt\+Property $\ast$, const Q\+Meta\+Object $\ast$$>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+property\+To\+Class}
+
+
+
+Definition at line 237 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a232e3f387b181f9f66df048ca50a0fc7}\label{class_q_daq_object_controller_private_a232e3f387b181f9f66df048ca50a0fc7}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_propertyToDynPropName@{m\_propertyToDynPropName}}
+\index{m\_propertyToDynPropName@{m\_propertyToDynPropName}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_propertyToDynPropName}{m\_propertyToDynPropName}}
+{\footnotesize\ttfamily Q\+Map$<$Qt\+Variant\+Property $\ast$, Q\+Byte\+Array$>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+property\+To\+Dyn\+Prop\+Name}
+
+
+
+Definition at line 244 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_ae3d84a15737df009e52578bc06ef7604}\label{class_q_daq_object_controller_private_ae3d84a15737df009e52578bc06ef7604}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_propertyToExpanded@{m\_propertyToExpanded}}
+\index{m\_propertyToExpanded@{m\_propertyToExpanded}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_propertyToExpanded}{m\_propertyToExpanded}}
+{\footnotesize\ttfamily Q\+Map$<$Qt\+Property $\ast$, bool$>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+property\+To\+Expanded}
+
+
+
+Definition at line 241 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a421042e947190f31a841b2e44d402357}\label{class_q_daq_object_controller_private_a421042e947190f31a841b2e44d402357}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_propertyToIndex@{m\_propertyToIndex}}
+\index{m\_propertyToIndex@{m\_propertyToIndex}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_propertyToIndex}{m\_propertyToIndex}}
+{\footnotesize\ttfamily Q\+Map$<$Qt\+Property $\ast$, int$>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+property\+To\+Index}
+
+
+
+Definition at line 238 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a50436a4a2afb1911f365f251dfa9b757}\label{class_q_daq_object_controller_private_a50436a4a2afb1911f365f251dfa9b757}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_readOnlyManager@{m\_readOnlyManager}}
+\index{m\_readOnlyManager@{m\_readOnlyManager}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_readOnlyManager}{m\_readOnlyManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_variant_manager}{Variant\+Manager}}$\ast$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+read\+Only\+Manager}
+
+
+
+Definition at line 250 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_controller_private_a38a7cb63d0fc02f9c19f2d2cdf0be41c}\label{class_q_daq_object_controller_private_a38a7cb63d0fc02f9c19f2d2cdf0be41c}} 
+\index{QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}!m\_topLevelProperties@{m\_topLevelProperties}}
+\index{m\_topLevelProperties@{m\_topLevelProperties}!QDaqObjectControllerPrivate@{QDaqObjectControllerPrivate}}
+\doxysubsubsection{\texorpdfstring{m\_topLevelProperties}{m\_topLevelProperties}}
+{\footnotesize\ttfamily Q\+List$<$Qt\+Property $\ast$$>$ Q\+Daq\+Object\+Controller\+Private\+::m\+\_\+top\+Level\+Properties}
+
+
+
+Definition at line 246 of file Q\+Daq\+Object\+Controller.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/gui/\mbox{\hyperlink{_q_daq_object_controller_8cpp}{Q\+Daq\+Object\+Controller.\+cpp}}\end{DoxyCompactItemize}

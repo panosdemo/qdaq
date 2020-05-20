@@ -1,0 +1,376 @@
+.TH "ByteArrayPrototype" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ByteArrayPrototype \- The prototype for the ByteArray class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bytearrayprototype\&.h>\fP
+.PP
+Inherits QObject, and QScriptable\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBchop\fP (int n)"
+.br
+.RI "Removes n bytes from the end of the byte array\&. "
+.ti -1c
+.RI "void \fBtruncate\fP (int pos)"
+.br
+.RI "Truncates the array at pos\&. "
+.ti -1c
+.RI "bool \fBequals\fP (const QByteArray &other)"
+.br
+.RI "Returns true if this ByteArray is equal to other\&. "
+.ti -1c
+.RI "QByteArray \fBleft\fP (int len) const"
+.br
+.RI "Returns a ByteArray with the len leftmost bytes\&. "
+.ti -1c
+.RI "QByteArray \fBmid\fP (int pos, int len=\-1) const"
+.br
+.RI "Returns the middle part of the array from pos with length len\&. "
+.ti -1c
+.RI "QScriptValue \fBremove\fP (int pos, int len)"
+.br
+.RI "Removes len bytes starting at pos\&. "
+.ti -1c
+.RI "QByteArray \fBright\fP (int len) const"
+.br
+.RI "Returns the rightmost len bytes\&. "
+.ti -1c
+.RI "QString \fBtoLatin1String\fP () const"
+.br
+.RI "Convert to a String\&. "
+.ti -1c
+.RI "QScriptValue \fBvalueOf\fP () const"
+.br
+.RI "Return the data stored by the object\&. "
+.in -1c
+.PP
+.RI "\fBFunctions for reading numbers in binary form out of a ByteArray\&.\fP"
+.br
+Similar to functions in \fCnode\&.js Buffer class\&.\fP
+.PP
+It is assumed that the number to be read is written in binary representation in the ByteArray\&. The functions access the buffer bytes and convert to the corresponding numeric value\&.
+.PP
+The functions support double (64bit), float(32bit), int (32bit, 16bit, signed and unsigned) and the 8bit signed int\&. The unsigned 8bit value is the native storage type of the class and can be read with the [] operator\&.
+.PP
+Little- and big-endian number formats (LE or BE in the function name) are supported\&.
+.PP
+An offset in bytes may be passed as an argument\&. It defines the index of the byte where the stored number starts\&. If not given it defaults to 0\&.
+.PP
+If the read operation exeeds the buffer length a RangeError is thrown in the QScriptEngine\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "double \fBreadDoubleLE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "double \fBreadDoubleBE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "float \fBreadFloatLE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "float \fBreadFloatBE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "int \fBreadInt32LE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "int \fBreadInt32BE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "uint \fBreadUInt32LE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "uint \fBreadUInt32BE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "int \fBreadInt16LE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "int \fBreadInt16BE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "uint \fBreadUInt16LE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "uint \fBreadUInt16BE\fP (int offset=0) const"
+.br
+.ti -1c
+.RI "int \fBreadInt8\fP (int offset=0) const"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBFunctions for writing numbers in binary format into the ByteArray\fP"
+.br
+Similar to functions in \fCnode\&.js Buffer class\&.\fP
+.PP
+The number passed as a 1st argument is written in binary representation in the ByteArray\&.
+.PP
+The functions support double (64bit), float(32bit), int (32bit, 16bit, signed and unsigned) and the 8bit signed int\&. The unsigned 8bit value is the native storage type of the class and can be written using the [] operator\&.
+.PP
+Little- and big-endian number formats (LE or BE in the function name) are supported\&.
+.PP
+An offset in bytes may be given as an argument\&. It defines the index of the starting byte where the number is stored\&.
+.PP
+If the write operation exeeds the buffer length a RangeError is thrown in the QScriptEngine\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "void \fBwriteDoubleLE\fP (double v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteDoubleBE\fP (double v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteFloatLE\fP (float v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteFloatBE\fP (float v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteInt32LE\fP (int v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteInt32BE\fP (int v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteUInt32LE\fP (uint v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteUInt32BE\fP (uint v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteInt16LE\fP (int v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteInt16BE\fP (int v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteUInt16LE\fP (uint v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteUInt16BE\fP (uint v, int offset=0)"
+.br
+.ti -1c
+.RI "void \fBwriteInt8\fP (int v, int offset=0)"
+.br
+.in -1c
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBByteArrayPrototype\fP (QObject *parent=0)"
+.br
+.ti -1c
+.RI "\fB~ByteArrayPrototype\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The prototype for the ByteArray class\&. 
+
+The ByteArray javascript class represents an array of bytes\&. It is essentially a QtScript wrapper for the QByteArray C++ class\&. Thus, when Qt-slots of \fBQDaq\fP classes are called from QtScript code, a QByteArray passed as an argument or as return value is converted to a JS object of ByteArray class\&.
+.PP
+Elements of a ByteArray can be accesed by the [] operator and the 'length' property gives the number of elements\&.
+.PP
+A ByteArray can be created in \fBQDaq\fP scripts by the new operator in 3 possible ways: 
+.PP
+.nf
+var b1 = new ByteArray(10); // An empty ByteArray of length 10
+var b2 = new ByteArray("abcdef"); // A ByteArray from a string
+var b3 = new ByteArray(b2); // b3 is a copy of b2
+b2[3] // returns ASCII code of character 'c'
+b3\&.length // returns 6
+
+.fi
+.PP
+.PP
+The \fBByteArrayPrototype\fP class defines a number of usefull functions for handling ByteArray objects in script code\&. 
+.PP
+Definition at line 37 of file bytearrayprototype\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ByteArrayPrototype::ByteArrayPrototype (QObject * parent = \fC0\fP)"
+
+.PP
+Definition at line 8 of file bytearrayprototype\&.cpp\&.
+.SS "ByteArrayPrototype::~ByteArrayPrototype ()"
+
+.PP
+Definition at line 13 of file bytearrayprototype\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ByteArrayPrototype::chop (int n)\fC [slot]\fP"
+
+.PP
+Removes n bytes from the end of the byte array\&. 
+.PP
+Definition at line 22 of file bytearrayprototype\&.cpp\&.
+.SS "bool ByteArrayPrototype::equals (const QByteArray & other)\fC [slot]\fP"
+
+.PP
+Returns true if this ByteArray is equal to other\&. 
+.PP
+Definition at line 27 of file bytearrayprototype\&.cpp\&.
+.SS "QByteArray ByteArrayPrototype::left (int len) const\fC [slot]\fP"
+
+.PP
+Returns a ByteArray with the len leftmost bytes\&. 
+.PP
+Definition at line 32 of file bytearrayprototype\&.cpp\&.
+.SS "QByteArray ByteArrayPrototype::mid (int pos, int len = \fC\-1\fP) const\fC [slot]\fP"
+
+.PP
+Returns the middle part of the array from pos with length len\&. 
+.PP
+Definition at line 38 of file bytearrayprototype\&.cpp\&.
+.SS "double ByteArrayPrototype::readDoubleBE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 117 of file bytearrayprototype\&.cpp\&.
+.SS "double ByteArrayPrototype::readDoubleLE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 122 of file bytearrayprototype\&.cpp\&.
+.SS "float ByteArrayPrototype::readFloatBE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 127 of file bytearrayprototype\&.cpp\&.
+.SS "float ByteArrayPrototype::readFloatLE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 132 of file bytearrayprototype\&.cpp\&.
+.SS "int ByteArrayPrototype::readInt16BE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 206 of file bytearrayprototype\&.cpp\&.
+.SS "int ByteArrayPrototype::readInt16LE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 201 of file bytearrayprototype\&.cpp\&.
+.SS "int ByteArrayPrototype::readInt32BE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 164 of file bytearrayprototype\&.cpp\&.
+.SS "int ByteArrayPrototype::readInt32LE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 159 of file bytearrayprototype\&.cpp\&.
+.SS "int ByteArrayPrototype::readInt8 (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 243 of file bytearrayprototype\&.cpp\&.
+.SS "uint ByteArrayPrototype::readUInt16BE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 227 of file bytearrayprototype\&.cpp\&.
+.SS "uint ByteArrayPrototype::readUInt16LE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 222 of file bytearrayprototype\&.cpp\&.
+.SS "uint ByteArrayPrototype::readUInt32BE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 185 of file bytearrayprototype\&.cpp\&.
+.SS "uint ByteArrayPrototype::readUInt32LE (int offset = \fC0\fP) const\fC [slot]\fP"
+
+.PP
+Definition at line 180 of file bytearrayprototype\&.cpp\&.
+.SS "QScriptValue ByteArrayPrototype::remove (int pos, int len)\fC [slot]\fP"
+
+.PP
+Removes len bytes starting at pos\&. 
+.PP
+Definition at line 43 of file bytearrayprototype\&.cpp\&.
+.SS "QByteArray ByteArrayPrototype::right (int len) const\fC [slot]\fP"
+
+.PP
+Returns the rightmost len bytes\&. 
+.PP
+Definition at line 50 of file bytearrayprototype\&.cpp\&.
+.SS "QString ByteArrayPrototype::toLatin1String () const\fC [slot]\fP"
+
+.PP
+Convert to a String\&. 
+.PP
+Definition at line 60 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::truncate (int pos)\fC [slot]\fP"
+
+.PP
+Truncates the array at pos\&. 
+.PP
+Definition at line 55 of file bytearrayprototype\&.cpp\&.
+.SS "QScriptValue ByteArrayPrototype::valueOf () const\fC [slot]\fP"
+
+.PP
+Return the data stored by the object\&. 
+.PP
+Definition at line 66 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeDoubleBE (double v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 138 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeDoubleLE (double v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 143 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeFloatBE (float v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 148 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeFloatLE (float v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 153 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeInt16BE (int v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 216 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeInt16LE (int v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 211 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeInt32BE (int v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 174 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeInt32LE (int v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 169 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeInt8 (int v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 248 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeUInt16BE (uint v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 237 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeUInt16LE (uint v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 232 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeUInt32BE (uint v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 195 of file bytearrayprototype\&.cpp\&.
+.SS "void ByteArrayPrototype::writeUInt32LE (uint v, int offset = \fC0\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 190 of file bytearrayprototype\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

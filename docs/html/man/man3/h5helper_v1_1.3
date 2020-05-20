@@ -1,0 +1,123 @@
+.TH "h5helper_v1_1" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+h5helper_v1_1
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <h5helper_v1_1\&.h>\fP
+.PP
+Inherits \fBh5helper_v1_0\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBh5helper_v1_1\fP (\fBQDaqH5File\fP *f)"
+.br
+.ti -1c
+.RI "virtual void \fBwrite\fP (CommonFG *h5obj, const char *name, const \fBQDaqObject\fP *obj)"
+.br
+.ti -1c
+.RI "virtual void \fBwrite\fP (CommonFG *h5obj, const char *name, const \fBQDaqObjectList\fP &objList)"
+.br
+.ti -1c
+.RI "virtual void \fBlockedPropertyList\fP (QStringList S=QStringList())"
+.br
+.ti -1c
+.RI "virtual void \fBconnectDeferedPointers\fP ()"
+.br
+.ti -1c
+.RI "virtual Group \fBcreateGroup\fP (CommonFG *loc, const char *name)"
+.br
+.ti -1c
+.RI "virtual QByteArrayList \fBgetGroupNames\fP (CommonFG *h5obj, bool isRoot=false)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBwriteDynamicProperties\fP (CommonFG *h5obj, const \fBQDaqObject\fP *m_object)"
+.br
+.ti -1c
+.RI "virtual void \fBreadDynamicProperties\fP (CommonFG *h5obj, \fBQDaqObject\fP *m_object)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QStringList \fBlockedPropertyList_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 7 of file h5helper_v1_1\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "h5helper_v1_1::h5helper_v1_1 (\fBQDaqH5File\fP * f)\fC [inline]\fP"
+
+.PP
+Definition at line 16 of file h5helper_v1_1\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void h5helper_v1_1::connectDeferedPointers ()\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 64 of file h5helper_v1_1\&.cpp\&.
+.SS "Group h5helper_v1_1::createGroup (CommonFG * loc, const char * name)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 123 of file h5helper_v1_1\&.cpp\&.
+.SS "QByteArrayList h5helper_v1_1::getGroupNames (CommonFG * h5obj, bool isRoot = \fCfalse\fP)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 147 of file h5helper_v1_1\&.cpp\&.
+.SS "virtual void h5helper_v1_1::lockedPropertyList (QStringList S = \fCQStringList()\fP)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 26 of file h5helper_v1_1\&.h\&.
+.SS "void h5helper_v1_1::readDynamicProperties (CommonFG * h5obj, \fBQDaqObject\fP * m_object)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 238 of file h5helper_v1_1\&.cpp\&.
+.SS "void h5helper_v1_1::write (CommonFG * h5obj, const char * name, const \fBQDaqObject\fP * obj)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 9 of file h5helper_v1_1\&.cpp\&.
+.SS "void h5helper_v1_1::write (CommonFG * h5obj, const char * name, const \fBQDaqObjectList\fP & objList)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 34 of file h5helper_v1_1\&.cpp\&.
+.SS "void h5helper_v1_1::writeDynamicProperties (CommonFG * h5obj, const \fBQDaqObject\fP * m_object)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBh5helper_v1_0\fP\&.
+.PP
+Definition at line 194 of file h5helper_v1_1\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QStringList h5helper_v1_1::lockedPropertyList_\fC [protected]\fP"
+
+.PP
+Definition at line 13 of file h5helper_v1_1\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

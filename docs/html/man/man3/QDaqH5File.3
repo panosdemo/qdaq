@@ -1,0 +1,124 @@
+.TH "QDaqH5File" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqH5File
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qdaqh5file\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBVersion\fP { \fBV_INVALID\fP, \fBV_1_0\fP, \fBV_1_1\fP, \fBV_LAST\fP = V_1_1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqH5File\fP ()"
+.br
+.ti -1c
+.RI "\fB~QDaqH5File\fP ()"
+.br
+.ti -1c
+.RI "bool \fBh5write\fP (const \fBQDaqObject\fP *obj, const QString &filename)"
+.br
+.RI "Serialize a \fBQDaqObject\fP to a HDF5 file\&. "
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBh5read\fP (const QString &filename)"
+.br
+.RI "Load a \fBQDaqObject\fP from a HDF5 file\&. "
+.ti -1c
+.RI "\fBh5helper\fP * \fBhelper\fP ()"
+.br
+.ti -1c
+.RI "QString \fBlastError\fP () const"
+.br
+.ti -1c
+.RI "const QStringList & \fBwarnings\fP () const"
+.br
+.ti -1c
+.RI "const \fBQDaqObject\fP * \fBgetTopObject\fP () const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBh5helper\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 16 of file qdaqh5file\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBQDaqH5File::Version\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIV_INVALID \fP\fP
+.TP
+\fB\fIV_1_0 \fP\fP
+.TP
+\fB\fIV_1_1 \fP\fP
+.TP
+\fB\fIV_LAST \fP\fP
+.PP
+Definition at line 19 of file qdaqh5file\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqH5File::QDaqH5File ()"
+
+.PP
+Definition at line 13 of file qdaqh5file\&.cpp\&.
+.SS "QDaqH5File::~QDaqH5File ()"
+
+.PP
+Definition at line 18 of file qdaqh5file\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const \fBQDaqObject\fP* QDaqH5File::getTopObject () const\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file qdaqh5file\&.h\&.
+.SS "\fBQDaqObject\fP * QDaqH5File::h5read (const QString & filename)"
+
+.PP
+Load a \fBQDaqObject\fP from a HDF5 file\&. 
+.PP
+Definition at line 139 of file qdaqh5file\&.cpp\&.
+.SS "bool QDaqH5File::h5write (const \fBQDaqObject\fP * obj, const QString & filename)"
+
+.PP
+Serialize a \fBQDaqObject\fP to a HDF5 file\&. 
+.PP
+Definition at line 23 of file qdaqh5file\&.cpp\&.
+.SS "\fBh5helper\fP* QDaqH5File::helper ()\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file qdaqh5file\&.h\&.
+.SS "QString QDaqH5File::lastError () const\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file qdaqh5file\&.h\&.
+.SS "const QStringList& QDaqH5File::warnings () const\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file qdaqh5file\&.h\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBh5helper\fP\fC [friend]\fP"
+
+.PP
+Definition at line 27 of file qdaqh5file\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

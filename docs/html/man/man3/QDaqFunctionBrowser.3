@@ -1,0 +1,76 @@
+.TH "QDaqFunctionBrowser" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqFunctionBrowser
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqObjectBrowser\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetQDaqObject\fP (\fBQDaqObject\fP *obj)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqFunctionBrowser\fP (QWidget *parent=0)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpopulateMethods\fP (const QMetaObject *mobj)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QTreeWidget * \fBmethodsTree\fP"
+.br
+.ti -1c
+.RI "\fBQDaqObjectController\fP * \fBobjectController\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 67 of file QDaqObjectBrowser\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqFunctionBrowser::QDaqFunctionBrowser (QWidget * parent = \fC0\fP)"
+
+.PP
+Definition at line 124 of file QDaqObjectBrowser\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqFunctionBrowser::populateMethods (const QMetaObject * mobj)\fC [protected]\fP"
+
+.PP
+Definition at line 158 of file QDaqObjectBrowser\&.cpp\&.
+.SS "void QDaqFunctionBrowser::setQDaqObject (\fBQDaqObject\fP * obj)\fC [slot]\fP"
+
+.PP
+Definition at line 138 of file QDaqObjectBrowser\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QTreeWidget* QDaqFunctionBrowser::methodsTree\fC [protected]\fP"
+
+.PP
+Definition at line 83 of file QDaqObjectBrowser\&.h\&.
+.SS "\fBQDaqObjectController\fP* QDaqFunctionBrowser::objectController\fC [protected]\fP"
+
+.PP
+Definition at line 84 of file QDaqObjectBrowser\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

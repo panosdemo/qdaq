@@ -1,0 +1,346 @@
+\hypertarget{class_q_daq_ni_gpib}{}\doxysection{Q\+Daq\+Ni\+Gpib Class Reference}
+\label{class_q_daq_ni_gpib}\index{QDaqNiGpib@{QDaqNiGpib}}
+
+
+{\ttfamily \#include $<$nigpib.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Ni\+Gpib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_q_daq_ni_gpib}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} \mbox{\hyperlink{class_q_daq_ni_gpib_a06d9df8e604537fdb880dfd689a12768}{find\+Listeners}} ()
+\begin{DoxyCompactList}\small\item\em Find connected devices on the G\+P\+IB interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE \mbox{\hyperlink{class_q_daq_ni_gpib_a321e167e3d81fcedfa4e05808efc1dab}{Q\+Daq\+Ni\+Gpib}} (const Q\+String \&name)
+\item 
+virtual \mbox{\hyperlink{class_q_daq_ni_gpib_a08a6ec59a38b6ac5b364f920cf7299c1}{$\sim$\+Q\+Daq\+Ni\+Gpib}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_ni_gpib_afed1530b744f134ecac51cc7cfaa8b0f}{open\+\_\+port}} (uint i, \mbox{\hyperlink{class_q_daq_device}{Q\+Daq\+Device}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Open communication port no. i for \mbox{\hyperlink{class_q_daq_device}{Q\+Daq\+Device}} d. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_ni_gpib_abfb2f5c2724198d0b1a8e8da054b6fe4}{close\+\_\+port}} (uint i)
+\begin{DoxyCompactList}\small\item\em Closes port i. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_ni_gpib_a3eec502da88ee7a123f864f308c7a202}{clear\+\_\+port}} (uint i)
+\begin{DoxyCompactList}\small\item\em Clear the communication channel with port i (interface specific). \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_q_daq_ni_gpib_a3ca30b477bc886bbee35e6e6380cf621}{read}} (uint port, char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Read data from a port. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_q_daq_ni_gpib_a84c79e11e9e3b1528a2e2c5fd97b204a}{write}} (uint port, const char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Write data to a port. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_ni_gpib_ad01c1bd95d4408559778aef0afa08611}{trigger}} (uint port)
+\begin{DoxyCompactList}\small\item\em Send the G\+P\+IB T\+RG signal to the device with address port. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_q_daq_ni_gpib_ab6c4d2f2795473dca6956ec7de4187fb}{read\+Status\+Byte}} (uint port)
+\begin{DoxyCompactList}\small\item\em Return the G\+P\+IB status byte for a device with address port. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_q_daq_ni_gpib_a4147b71bf6473db44ce2d064365d30bc}{is\+Valid\+Port}} (uint i)
+\begin{DoxyCompactList}\small\item\em Returns true is i is a valid port number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_ni_gpib_a265c45c959845ec842da1c7eed8711ba}{open\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface open. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_ni_gpib_ad5fd1dbdb169212039a46c10359267a4}{clear\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface clear. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_ni_gpib_a6c232eb1cd8de5fe2a88a789f9bb5cac}{set\+Timeout\+\_\+}} (uint ms)
+\begin{DoxyCompactList}\small\item\em Implementation of setting the timeout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 33 of file nigpib.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a321e167e3d81fcedfa4e05808efc1dab}\label{class_q_daq_ni_gpib_a321e167e3d81fcedfa4e05808efc1dab}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!QDaqNiGpib@{QDaqNiGpib}}
+\index{QDaqNiGpib@{QDaqNiGpib}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{QDaqNiGpib()}{QDaqNiGpib()}}
+{\footnotesize\ttfamily Q\+Daq\+Ni\+Gpib\+::\+Q\+Daq\+Ni\+Gpib (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 19 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a08a6ec59a38b6ac5b364f920cf7299c1}\label{class_q_daq_ni_gpib_a08a6ec59a38b6ac5b364f920cf7299c1}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!````~QDaqNiGpib@{$\sim$QDaqNiGpib}}
+\index{````~QDaqNiGpib@{$\sim$QDaqNiGpib}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqNiGpib()}{~QDaqNiGpib()}}
+{\footnotesize\ttfamily Q\+Daq\+Ni\+Gpib\+::$\sim$\+Q\+Daq\+Ni\+Gpib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 26 of file nigpib.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_ni_gpib_ad5fd1dbdb169212039a46c10359267a4}\label{class_q_daq_ni_gpib_ad5fd1dbdb169212039a46c10359267a4}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!clear\_@{clear\_}}
+\index{clear\_@{clear\_}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{clear\_()}{clear\_()}}
+{\footnotesize\ttfamily void Q\+Daq\+Ni\+Gpib\+::clear\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface clear. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_adb177db6d7b4c5297ce0ab57bacaee4b}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 201 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a3eec502da88ee7a123f864f308c7a202}\label{class_q_daq_ni_gpib_a3eec502da88ee7a123f864f308c7a202}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!clear\_port@{clear\_port}}
+\index{clear\_port@{clear\_port}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{clear\_port()}{clear\_port()}}
+{\footnotesize\ttfamily void Q\+Daq\+Ni\+Gpib\+::clear\+\_\+port (\begin{DoxyParamCaption}\item[{uint}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clear the communication channel with port i (interface specific). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a330fb2285630cc802cb89fb81d914212}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 126 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_abfb2f5c2724198d0b1a8e8da054b6fe4}\label{class_q_daq_ni_gpib_abfb2f5c2724198d0b1a8e8da054b6fe4}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!close\_port@{close\_port}}
+\index{close\_port@{close\_port}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{close\_port()}{close\_port()}}
+{\footnotesize\ttfamily void Q\+Daq\+Ni\+Gpib\+::close\+\_\+port (\begin{DoxyParamCaption}\item[{uint}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Closes port i. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_ac3cb048f8f4b8570ae70cf5584ed3612}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 111 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a06d9df8e604537fdb880dfd689a12768}\label{class_q_daq_ni_gpib_a06d9df8e604537fdb880dfd689a12768}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!findListeners@{findListeners}}
+\index{findListeners@{findListeners}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{findListeners}{findListeners}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} Q\+Daq\+Ni\+Gpib\+::find\+Listeners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Find connected devices on the G\+P\+IB interface. 
+
+If the in interface supports it this function returns the devices that are connected on the interface.
+
+\begin{DoxyReturn}{Returns}
+A vector of G\+P\+IB addresses. 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a4147b71bf6473db44ce2d064365d30bc}\label{class_q_daq_ni_gpib_a4147b71bf6473db44ce2d064365d30bc}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!isValidPort@{isValidPort}}
+\index{isValidPort@{isValidPort}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{isValidPort()}{isValidPort()}}
+{\footnotesize\ttfamily virtual bool Q\+Daq\+Ni\+Gpib\+::is\+Valid\+Port (\begin{DoxyParamCaption}\item[{uint}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns true is i is a valid port number. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a325628a69b7476117a87e89470bf183d}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 53 of file nigpib.\+h.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a265c45c959845ec842da1c7eed8711ba}\label{class_q_daq_ni_gpib_a265c45c959845ec842da1c7eed8711ba}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!open\_@{open\_}}
+\index{open\_@{open\_}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{open\_()}{open\_()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Ni\+Gpib\+::open\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface open. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a608f956ab9ba20af92eaf405ae01a984}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 63 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_afed1530b744f134ecac51cc7cfaa8b0f}\label{class_q_daq_ni_gpib_afed1530b744f134ecac51cc7cfaa8b0f}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!open\_port@{open\_port}}
+\index{open\_port@{open\_port}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{open\_port()}{open\_port()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Ni\+Gpib\+::open\+\_\+port (\begin{DoxyParamCaption}\item[{uint}]{i,  }\item[{\mbox{\hyperlink{class_q_daq_device}{Q\+Daq\+Device}} $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Open communication port no. i for \mbox{\hyperlink{class_q_daq_device}{Q\+Daq\+Device}} d. 
+
+Returns true if the port was succesfully opened. 
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a625e5595190967fa44977e5651ceba08}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 90 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a3ca30b477bc886bbee35e6e6380cf621}\label{class_q_daq_ni_gpib_a3ca30b477bc886bbee35e6e6380cf621}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!read@{read}}
+\index{read@{read}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Q\+Daq\+Ni\+Gpib\+::read (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read data from a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Allocated number of bytes. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes read. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_ad9cc492d038f54a52845c16ab2c4882c}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 139 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_ab6c4d2f2795473dca6956ec7de4187fb}\label{class_q_daq_ni_gpib_ab6c4d2f2795473dca6956ec7de4187fb}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!readStatusByte@{readStatusByte}}
+\index{readStatusByte@{readStatusByte}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{readStatusByte()}{readStatusByte()}}
+{\footnotesize\ttfamily int Q\+Daq\+Ni\+Gpib\+::read\+Status\+Byte (\begin{DoxyParamCaption}\item[{uint}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the G\+P\+IB status byte for a device with address port. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a0d00177b3c4519840f7fdeb65a9a9de1}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 154 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a6c232eb1cd8de5fe2a88a789f9bb5cac}\label{class_q_daq_ni_gpib_a6c232eb1cd8de5fe2a88a789f9bb5cac}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!setTimeout\_@{setTimeout\_}}
+\index{setTimeout\_@{setTimeout\_}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{setTimeout\_()}{setTimeout\_()}}
+{\footnotesize\ttfamily void Q\+Daq\+Ni\+Gpib\+::set\+Timeout\+\_\+ (\begin{DoxyParamCaption}\item[{uint}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of setting the timeout. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a1185c649eab03a3cb0653c09539314b0}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 214 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_ad01c1bd95d4408559778aef0afa08611}\label{class_q_daq_ni_gpib_ad01c1bd95d4408559778aef0afa08611}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!trigger@{trigger}}
+\index{trigger@{trigger}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void Q\+Daq\+Ni\+Gpib\+::trigger (\begin{DoxyParamCaption}\item[{uint}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Send the G\+P\+IB T\+RG signal to the device with address port. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a698160f1b7b759ef84f67e543f215ebf}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 188 of file nigpib.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_ni_gpib_a84c79e11e9e3b1528a2e2c5fd97b204a}\label{class_q_daq_ni_gpib_a84c79e11e9e3b1528a2e2c5fd97b204a}} 
+\index{QDaqNiGpib@{QDaqNiGpib}!write@{write}}
+\index{write@{write}!QDaqNiGpib@{QDaqNiGpib}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily int Q\+Daq\+Ni\+Gpib\+::write (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{const char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write data to a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Number of bytes to write. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes written. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a2bbbb99c82c05732fcba5065bf717c1b}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 171 of file nigpib.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/plugins/ni-\/gpib/\mbox{\hyperlink{nigpib_8h}{nigpib.\+h}}\item 
+D\+:/tixt/corona/qdaq/plugins/ni-\/gpib/\mbox{\hyperlink{nigpib_8cpp}{nigpib.\+cpp}}\end{DoxyCompactItemize}

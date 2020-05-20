@@ -1,0 +1,463 @@
+.TH "QDaqObject" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqObject\&.h>\fP
+.PP
+Inherits QObject, and QScriptable\&.
+.PP
+Inherited by \fBQDaqInterface\fP, \fBQDaqJob\fP, and \fBQDaqRoot\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "QString \fBerrorBacktrace\fP (int maxItems=10) const"
+.br
+.RI "Print a backtrace of recent errors in this \fBQDaqObject\fP\&. "
+.ti -1c
+.RI "QString \fBpath\fP () const"
+.br
+.ti -1c
+.RI "QString \fBobjectTree\fP () const"
+.br
+.RI "Output in a string the object hierarchy beneath this object\&. "
+.ti -1c
+.RI "QString \fBlistProperties\fP () const"
+.br
+.RI "List the objects properties\&. "
+.ti -1c
+.RI "QString \fBlistFunctions\fP () const"
+.br
+.RI "List the objects scriptable functions\&. "
+.ti -1c
+.RI "bool \fBsetQDaqProperty\fP (QString name, const QScriptValue &value)"
+.br
+.in -1c
+.PP
+.RI "\fBDOM Level 1 Node interface\fP"
+.br
+ This group of \fBQDaqObject\fP slots implement the \fBNode\fP interface of DOM API Level 1\&.
+.PP
+The functions are slots, thus available in script code\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBparent\fP () const"
+.br
+.ti -1c
+.RI "\fBQDaqObjectList\fP \fBchildren\fP () const"
+.br
+.RI "Return a list of children of this object\&. "
+.ti -1c
+.RI "bool \fBhasChildren\fP () const"
+.br
+.RI "Returns true if the object has children\&. "
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBappendChild\fP (\fBQDaqObject\fP *obj)"
+.br
+.RI "Adds a new child \fBQDaqObject\fP, as the last child and returns a pointer to it\&. "
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBinsertBefore\fP (\fBQDaqObject\fP *newobj, \fBQDaqObject\fP *existingobj)"
+.br
+.RI "Adds a new child \fBQDaqObject\fP, before an existing child and returns a pointer to it\&. "
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBclone\fP ()"
+.br
+.RI "Clone a \fBQDaqObject\fP with its child objects\&. "
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBremoveChild\fP (\fBQDaqObject\fP *obj)"
+.br
+.RI "Remove a child and return a pointer to it\&. "
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBreplaceChild\fP (\fBQDaqObject\fP *newobj, \fBQDaqObject\fP *oldobj)"
+.br
+.RI "Replace a child and return a pointer to the old child\&. "
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBfindChild\fP (const QString &name) const"
+.br
+.in -1c
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBpropertiesChanged\fP ()"
+.br
+.RI "Fired when object properties have changed\&. "
+.ti -1c
+.RI "void \fBupdateWidgets\fP ()"
+.br
+.RI "Fired when widgets need update\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqObject\fP (const QString &name)"
+.br
+.ti -1c
+.RI "virtual \fB~QDaqObject\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBattach\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdetach\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisAttached\fP () const"
+.br
+.RI "Returns true is this object is attached to the \fBQDaq\fP tree\&. "
+.ti -1c
+.RI "void \fBobjectTree\fP (QString &S, int level) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBQDaqRoot\fP * \fBroot\fP ()"
+.br
+.RI "Obtain a pointer to the one-and-only \fBQDaqRoot\fP object\&. "
+.ti -1c
+.RI "static \fBQDaqObject\fP * \fBfromPath\fP (const QString &\fBpath\fP)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QMutex \fBcomm_lock\fP"
+.br
+.RI "A recursive mutex for synching thread access to this object\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpushError\fP (const QString &type, const QString &descr=QString()) const"
+.br
+.RI "Push an error in the error queue\&. "
+.ti -1c
+.RI "void \fBthrowScriptError\fP (const QString &msg) const"
+.br
+.RI "Throw a script error with message msg\&. "
+.ti -1c
+.RI "bool \fBcheckName\fP (const QString &name) const"
+.br
+.ti -1c
+.RI "bool \fBisNameUnique\fP (const QString &name) const"
+.br
+.ti -1c
+.RI "virtual void \fBwriteh5\fP (H5::Group *g, \fBQDaqH5File\fP *f) const"
+.br
+.RI "Write contents of the object to a \fBH5\fP group\&. "
+.ti -1c
+.RI "virtual void \fBreadh5\fP (H5::Group *g, \fBQDaqH5File\fP *f)"
+.br
+.RI "Read contents of the object from a \fBH5\fP group\&. "
+.ti -1c
+.RI "virtual void \fBchildEvent\fP (QChildEvent *event)"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBisNameValid\fP (const QString &name, int *code=0)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqObjectList\fP \fBchildren_\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBQDaqRoot\fP * \fBroot_\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBQDaqH5File\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Base class of all \fBQDaq\fP objects\&.
+.PP
+\fBQDaqObject\fP is derived from QObject and thus inherits all the Qt machinery, i\&.e\&., properties, meta-objects, signals & slots, etc\&.
+.PP
+\fBQDaq\fP objects are organized in a tree-like structure like QObjects\&. However, the children of a \fBQDaqObject\fP are ordered ,whereas those of a QObject are not\&. The ordering is necessary for \fBQDaq\fP because \fBQDaq\fP objects take part in loops where the order of execution is essential\&.
+.PP
+To create the \fBQDaq\fP object tree structure, the \fBQDaqObject\fP class offers an interface similar to the \fBNode\fP interface of Document Object Model (DOM) Level 1\&. The interface is defined by this \fBgroup of functions\fP\&.
+.PP
+Initially a \fBQDaqObject\fP is created without a parent and only its name needs to be specified\&. The object can than be incorporated into the \fBQDaq\fP hierarchy by one of the \fBDOM API functions\fP\&.
+.PP
+There is a static single root object at the top of the tree structure\&. The root object is accesible by \fBQDaqObject::root()\fP and it of type \fBQDaqRoot\fP\&.
+.PP
+Descendants of \fBQDaqObject\fP can be serialized to \fCHDF5 files\&.\fP A \fBQDaq\fP object with its children can be written/read by means of h5write() and h5read(), respectively\&.
+.PP
+HDF5 serialization is done according to the following rules:
+.IP "\(bu" 2
+Each object is written in the HDF5 file as a \fBH5\fP group\&. The name of the object becomes the name of the group\&.
+.IP "\(bu" 2
+Properties and data of the object are written as datasets of the group\&. \fBQDaqObject\fP descendants reimplement \fBwriteh5()\fP/readh5() where necessary\&.
+.IP "\(bu" 2
+Child objects are written as sub-groups 
+.PP
+
+.PP
+Definition at line 108 of file QDaqObject\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqObject::QDaqObject (const QString & name)\fC [explicit]\fP"
+Construct a \fBQDaqObject\fP with a name\&.
+.PP
+The name is actually the objectName property of the QObject super-class\&. 
+.PP
+Definition at line 25 of file QDaqObject\&.cpp\&.
+.SS "QDaqObject::~QDaqObject (void)\fC [virtual]\fP"
+
+.PP
+Definition at line 32 of file QDaqObject\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBQDaqObject\fP * QDaqObject::appendChild (\fBQDaqObject\fP * obj)\fC [slot]\fP"
+
+.PP
+Adds a new child \fBQDaqObject\fP, as the last child and returns a pointer to it\&. 
+.PP
+Definition at line 321 of file QDaqObject\&.cpp\&.
+.SS "void QDaqObject::attach ()\fC [virtual]\fP"
+Attach this \fBQDaqObject\fP to the \fBQDaq\fP tree\&.
+.PP
+This function is called when the object becomes part of the \fBQDaq\fP tree\&.
+.PP
+In the base class implementation this function signals the root object that a new \fBQDaqObject\fP has been inserted in the tree and then calls \fBattach()\fP for each child \fBQDaqObject\fP\&.
+.PP
+Subclasses may reimplement this function to perform specific initialization\&. 
+.PP
+Reimplemented in \fBQDaqJob\fP\&.
+.PP
+Definition at line 45 of file QDaqObject\&.cpp\&.
+.SS "bool QDaqObject::checkName (const QString & name) const\fC [protected]\fP"
+Check if name is a legal name for an \fBQDaqObject\fP\&. Names should start with a letter and contain letters, numbers or the underscore _\&. This function also checks if there are any sibbling objects with the same name\&. 
+.PP
+Definition at line 111 of file QDaqObject\&.cpp\&.
+.SS "void QDaqObject::childEvent (QChildEvent * event)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 457 of file QDaqObject\&.cpp\&.
+.SS "\fBQDaqObjectList\fP QDaqObject::children () const\fC [inline]\fP, \fC [slot]\fP"
+
+.PP
+Return a list of children of this object\&. 
+.PP
+Definition at line 258 of file QDaqObject\&.h\&.
+.SS "\fBQDaqObject\fP * QDaqObject::clone ()\fC [slot]\fP"
+
+.PP
+Clone a \fBQDaqObject\fP with its child objects\&. 
+.PP
+Definition at line 536 of file QDaqObject\&.cpp\&.
+.SS "void QDaqObject::detach ()\fC [virtual]\fP"
+Detach this \fBQDaqObject\fP from the \fBQDaq\fP tree\&.
+.PP
+This function is called just before the object becomes detached from the \fBQDaq\fP tree\&.
+.PP
+In the base class implementation it first calls \fBdetach()\fP for each child \fBQDaqObject\fP and then signal root that the object is removed from the qdaq tree\&.
+.PP
+Subclasses may reimplement this function to perform needed actions before detaching\&. 
+.PP
+Reimplemented in \fBQDaqJob\fP, \fBQDaqChannel\fP, \fBQDaqDevice\fP, and \fBQDaqInterface\fP\&.
+.PP
+Definition at line 52 of file QDaqObject\&.cpp\&.
+.SS "QString QDaqObject::errorBacktrace (int maxItems = \fC10\fP) const\fC [slot]\fP"
+
+.PP
+Print a backtrace of recent errors in this \fBQDaqObject\fP\&. 
+.PP
+Definition at line 67 of file QDaqObject\&.cpp\&.
+.SS "\fBQDaqObject\fP* QDaqObject::findChild (const QString & name) const\fC [inline]\fP, \fC [slot]\fP"
+Find the first child \fBQDaqObject\fP with objectName equal to name\&. 
+.PP
+Definition at line 275 of file QDaqObject\&.h\&.
+.SS "\fBQDaqObject\fP * QDaqObject::fromPath (const QString & path)\fC [static]\fP"
+Return a pointer to an object given its full path in the \fBQDaq\fP tree\&.
+.PP
+If the specified path is invalid the function returns a null pointer\&. 
+.PP
+Definition at line 179 of file QDaqObject\&.cpp\&.
+.SS "bool QDaqObject::hasChildren () const\fC [inline]\fP, \fC [slot]\fP"
+
+.PP
+Returns true if the object has children\&. 
+.PP
+Definition at line 260 of file QDaqObject\&.h\&.
+.SS "\fBQDaqObject\fP * QDaqObject::insertBefore (\fBQDaqObject\fP * newobj, \fBQDaqObject\fP * existingobj)\fC [slot]\fP"
+
+.PP
+Adds a new child \fBQDaqObject\fP, before an existing child and returns a pointer to it\&. 
+.PP
+Definition at line 339 of file QDaqObject\&.cpp\&.
+.SS "bool QDaqObject::isAttached () const"
+
+.PP
+Returns true is this object is attached to the \fBQDaq\fP tree\&. 
+.PP
+Definition at line 59 of file QDaqObject\&.cpp\&.
+.SS "bool QDaqObject::isNameUnique (const QString & name) const\fC [protected]\fP"
+
+.PP
+Definition at line 133 of file QDaqObject\&.cpp\&.
+.SS "bool QDaqObject::isNameValid (const QString & name, int * code = \fC0\fP)\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 146 of file QDaqObject\&.cpp\&.
+.SS "QString QDaqObject::listFunctions () const\fC [slot]\fP"
+
+.PP
+List the objects scriptable functions\&. 
+.PP
+Definition at line 313 of file QDaqObject\&.cpp\&.
+.SS "QString QDaqObject::listProperties () const\fC [slot]\fP"
+
+.PP
+List the objects properties\&. 
+.PP
+Definition at line 255 of file QDaqObject\&.cpp\&.
+.SS "QString QDaqObject::objectTree () const\fC [inline]\fP, \fC [slot]\fP"
+
+.PP
+Output in a string the object hierarchy beneath this object\&. 
+.PP
+Definition at line 228 of file QDaqObject\&.h\&.
+.SS "void QDaqObject::objectTree (QString & S, int level) const"
+
+.PP
+Definition at line 90 of file QDaqObject\&.cpp\&.
+.SS "\fBQDaqObject\fP* QDaqObject::parent () const\fC [inline]\fP, \fC [slot]\fP"
+Return the object's parent or null if the object does not have a parent\&. 
+.PP
+Definition at line 256 of file QDaqObject\&.h\&.
+.SS "QString QDaqObject::path () const\fC [slot]\fP"
+Return the object's path in the \fBQDaq\fP tree\&.
+.PP
+Example: qdaq\&.x\&.y\&.z\&.obj1 If the object is not attached to the tree, the function returns the name of the object\&. 
+.PP
+Definition at line 166 of file QDaqObject\&.cpp\&.
+.SS "void QDaqObject::propertiesChanged ()\fC [signal]\fP"
+
+.PP
+Fired when object properties have changed\&. 
+.SS "void QDaqObject::pushError (const QString & type, const QString & descr = \fCQString()\fP) const\fC [protected]\fP"
+
+.PP
+Push an error in the error queue\&. 
+.PP
+Definition at line 202 of file QDaqObject\&.cpp\&.
+.SS "void QDaqObject::readh5 (H5::Group * g, \fBQDaqH5File\fP * f)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Read contents of the object from a \fBH5\fP group\&. The base class implementation reads all properties (static & dynamic) from corresponding datasets of the HDF5 file group\&.
+.PP
+Reimplement in \fBQDaqObject\fP descendants to read additional data\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP HDF5 Group object 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBQDaqDataBuffer\fP\&.
+.PP
+Definition at line 17 of file QDaqH5Serialize\&.cpp\&.
+.SS "\fBQDaqObject\fP * QDaqObject::removeChild (\fBQDaqObject\fP * obj)\fC [slot]\fP"
+
+.PP
+Remove a child and return a pointer to it\&. 
+.PP
+Definition at line 479 of file QDaqObject\&.cpp\&.
+.SS "\fBQDaqObject\fP * QDaqObject::replaceChild (\fBQDaqObject\fP * newobj, \fBQDaqObject\fP * oldobj)\fC [slot]\fP"
+
+.PP
+Replace a child and return a pointer to the old child\&. 
+.PP
+Definition at line 498 of file QDaqObject\&.cpp\&.
+.SS "static \fBQDaqRoot\fP* QDaqObject::root ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Obtain a pointer to the one-and-only \fBQDaqRoot\fP object\&. 
+.PP
+Definition at line 168 of file QDaqObject\&.h\&.
+.SS "bool QDaqObject::setQDaqProperty (QString name, const QScriptValue & value)\fC [slot]\fP"
+
+.PP
+Definition at line 366 of file QDaqObject\&.cpp\&.
+.SS "void QDaqObject::throwScriptError (const QString & msg) const\fC [protected]\fP"
+
+.PP
+Throw a script error with message msg\&. 
+.PP
+Definition at line 82 of file QDaqObject\&.cpp\&.
+.SS "void QDaqObject::updateWidgets ()\fC [signal]\fP"
+
+.PP
+Fired when widgets need update\&. 
+.SS "void QDaqObject::writeh5 (H5::Group * g, \fBQDaqH5File\fP * f) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Write contents of the object to a \fBH5\fP group\&. The base class implementation writes all properties (static & dynamic) as datasets of the HDF5 file group\&.
+.PP
+Reimplement in \fBQDaqObject\fP descendants to write additional data\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP HDF5 Group object 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBQDaqDataBuffer\fP\&.
+.PP
+Definition at line 12 of file QDaqH5Serialize\&.cpp\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBQDaqH5File\fP\fC [friend]\fP"
+
+.PP
+Definition at line 151 of file QDaqObject\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQDaqObjectList\fP QDaqObject::children_\fC [protected]\fP"
+
+.PP
+Definition at line 158 of file QDaqObject\&.h\&.
+.SS "QMutex QDaqObject::comm_lock"
+
+.PP
+A recursive mutex for synching thread access to this object\&. 
+.PP
+Definition at line 165 of file QDaqObject\&.h\&.
+.SS "\fBQDaqRoot\fP * QDaqObject::root_\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 161 of file QDaqObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

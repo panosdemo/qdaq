@@ -1,0 +1,174 @@
+\hypertarget{class_q_daq_object_browser}{}\doxysection{Q\+Daq\+Object\+Browser Class Reference}
+\label{class_q_daq_object_browser}\index{QDaqObjectBrowser@{QDaqObjectBrowser}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Object\+Browser.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Object\+Browser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_daq_object_browser}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_object_browser_a7d1bf242f33f15a4846fa76d22a934d3}{current\+Object\+Changed}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_object_browser_a379cd10767dd4b020a227c0f00964f75}{Q\+Daq\+Object\+Browser}} (Q\+Widget $\ast$p=0)
+\item 
+virtual \mbox{\hyperlink{class_q_daq_object_browser_a1df1ca005203e48309ea65cf622f7425}{$\sim$\+Q\+Daq\+Object\+Browser}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_object_browser_a7367fa679afb68238a9ece369e50961b}{on\+Item\+Activated}} (const Q\+Model\+Index \&index)
+\item 
+void \mbox{\hyperlink{class_q_daq_object_browser_ac2efb95d52ec82ec06e33ddddb2e49f3}{on\+Set\+By\+User}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_object_model}{Q\+Daq\+Object\+Model}} $\ast$ \mbox{\hyperlink{class_q_daq_object_browser_a3675409aaf7a939863d395e6681d272f}{model}}
+\item 
+Q\+Tree\+View $\ast$ \mbox{\hyperlink{class_q_daq_object_browser_ab69a83451376099a295e660c6af14371}{tree\+View}}
+\item 
+Q\+Tab\+Widget $\ast$ \mbox{\hyperlink{class_q_daq_object_browser_a2cf263d88173ec63940b2abfc365bb1c}{tab\+Widget}}
+\item 
+\mbox{\hyperlink{class_q_daq_property_browser}{Q\+Daq\+Property\+Browser}} $\ast$ \mbox{\hyperlink{class_q_daq_object_browser_a2a96c4b510b1f1fa2fff886d591c599f}{property\+Browser}}
+\item 
+\mbox{\hyperlink{class_q_daq_function_browser}{Q\+Daq\+Function\+Browser}} $\ast$ \mbox{\hyperlink{class_q_daq_object_browser_ab967f66afe030d47b2ff25efb694f439}{function\+Browser}}
+\item 
+Q\+Line\+Edit $\ast$ \mbox{\hyperlink{class_q_daq_object_browser_a68baa73070418a04ab8cac6a5a4a8824}{current\+Object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 22 of file Q\+Daq\+Object\+Browser.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_object_browser_a379cd10767dd4b020a227c0f00964f75}\label{class_q_daq_object_browser_a379cd10767dd4b020a227c0f00964f75}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{QDaqObjectBrowser()}{QDaqObjectBrowser()}}
+{\footnotesize\ttfamily Q\+Daq\+Object\+Browser\+::\+Q\+Daq\+Object\+Browser (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{p = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Q\+Daq\+Object\+Browser.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_browser_a1df1ca005203e48309ea65cf622f7425}\label{class_q_daq_object_browser_a1df1ca005203e48309ea65cf622f7425}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!````~QDaqObjectBrowser@{$\sim$QDaqObjectBrowser}}
+\index{````~QDaqObjectBrowser@{$\sim$QDaqObjectBrowser}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqObjectBrowser()}{~QDaqObjectBrowser()}}
+{\footnotesize\ttfamily Q\+Daq\+Object\+Browser\+::$\sim$\+Q\+Daq\+Object\+Browser (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 55 of file Q\+Daq\+Object\+Browser.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_object_browser_a7d1bf242f33f15a4846fa76d22a934d3}\label{class_q_daq_object_browser_a7d1bf242f33f15a4846fa76d22a934d3}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!currentObjectChanged@{currentObjectChanged}}
+\index{currentObjectChanged@{currentObjectChanged}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{currentObjectChanged}{currentObjectChanged}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Browser\+::current\+Object\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_q_daq_object_browser_a7367fa679afb68238a9ece369e50961b}\label{class_q_daq_object_browser_a7367fa679afb68238a9ece369e50961b}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!onItemActivated@{onItemActivated}}
+\index{onItemActivated@{onItemActivated}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{onItemActivated}{onItemActivated}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Browser\+::on\+Item\+Activated (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 59 of file Q\+Daq\+Object\+Browser.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_browser_ac2efb95d52ec82ec06e33ddddb2e49f3}\label{class_q_daq_object_browser_ac2efb95d52ec82ec06e33ddddb2e49f3}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!onSetByUser@{onSetByUser}}
+\index{onSetByUser@{onSetByUser}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{onSetByUser}{onSetByUser}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+Browser\+::on\+Set\+By\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 67 of file Q\+Daq\+Object\+Browser.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_object_browser_a68baa73070418a04ab8cac6a5a4a8824}\label{class_q_daq_object_browser_a68baa73070418a04ab8cac6a5a4a8824}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!currentObject@{currentObject}}
+\index{currentObject@{currentObject}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{currentObject}{currentObject}}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Q\+Daq\+Object\+Browser\+::current\+Object\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file Q\+Daq\+Object\+Browser.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_browser_ab967f66afe030d47b2ff25efb694f439}\label{class_q_daq_object_browser_ab967f66afe030d47b2ff25efb694f439}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!functionBrowser@{functionBrowser}}
+\index{functionBrowser@{functionBrowser}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{functionBrowser}{functionBrowser}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_function_browser}{Q\+Daq\+Function\+Browser}}$\ast$ Q\+Daq\+Object\+Browser\+::function\+Browser\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file Q\+Daq\+Object\+Browser.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_browser_a3675409aaf7a939863d395e6681d272f}\label{class_q_daq_object_browser_a3675409aaf7a939863d395e6681d272f}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!model@{model}}
+\index{model@{model}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object_model}{Q\+Daq\+Object\+Model}}$\ast$ Q\+Daq\+Object\+Browser\+::model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Q\+Daq\+Object\+Browser.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_browser_a2a96c4b510b1f1fa2fff886d591c599f}\label{class_q_daq_object_browser_a2a96c4b510b1f1fa2fff886d591c599f}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!propertyBrowser@{propertyBrowser}}
+\index{propertyBrowser@{propertyBrowser}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{propertyBrowser}{propertyBrowser}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_property_browser}{Q\+Daq\+Property\+Browser}}$\ast$ Q\+Daq\+Object\+Browser\+::property\+Browser\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Q\+Daq\+Object\+Browser.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_browser_a2cf263d88173ec63940b2abfc365bb1c}\label{class_q_daq_object_browser_a2cf263d88173ec63940b2abfc365bb1c}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!tabWidget@{tabWidget}}
+\index{tabWidget@{tabWidget}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{tabWidget}{tabWidget}}
+{\footnotesize\ttfamily Q\+Tab\+Widget$\ast$ Q\+Daq\+Object\+Browser\+::tab\+Widget\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file Q\+Daq\+Object\+Browser.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_browser_ab69a83451376099a295e660c6af14371}\label{class_q_daq_object_browser_ab69a83451376099a295e660c6af14371}} 
+\index{QDaqObjectBrowser@{QDaqObjectBrowser}!treeView@{treeView}}
+\index{treeView@{treeView}!QDaqObjectBrowser@{QDaqObjectBrowser}}
+\doxysubsubsection{\texorpdfstring{treeView}{treeView}}
+{\footnotesize\ttfamily Q\+Tree\+View$\ast$ Q\+Daq\+Object\+Browser\+::tree\+View\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Q\+Daq\+Object\+Browser.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/gui/\mbox{\hyperlink{_q_daq_object_browser_8h}{Q\+Daq\+Object\+Browser.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/gui/\mbox{\hyperlink{_q_daq_object_browser_8cpp}{Q\+Daq\+Object\+Browser.\+cpp}}\end{DoxyCompactItemize}

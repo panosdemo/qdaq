@@ -1,0 +1,637 @@
+\hypertarget{class_k_led}{}\doxysection{K\+Led Class Reference}
+\label{class_k_led}\index{KLed@{KLed}}
+
+
+An L\+ED widget.  
+
+
+
+
+{\ttfamily \#include $<$K\+Led$>$}
+
+Inheritance diagram for K\+Led\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_k_led}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}} \{ \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca133c86551c18ae1d0def10cbceac747c}{Off}}, 
+\mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca6d00e86716c2d0bc30d59d3698b4deea}{On}}
+ \}
+\begin{DoxyCompactList}\small\item\em L\+ED on/off. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}} \{ \mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147fade9f208a5109db537f0c7f59503d7244}{Rectangular}}, 
+\mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147fa732f474000173d879261c1d62e908fdd}{Circular}}
+ \}
+\begin{DoxyCompactList}\small\item\em L\+ED shape. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} \{ \mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6ae78600f8e10e52e5f4749e1dba8a01dd}{Flat}}, 
+\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6a1c95118b4329ec5021383d57094f67d0}{Raised}}, 
+\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6a8ccc9504f04ba9fd3a0e8e5e8561b7ac}{Sunken}}
+ \}
+\begin{DoxyCompactList}\small\item\em L\+ED look. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_led_abd1dc18cd0e3b34f120d1a1ad9d9b338}{toggle}} ()
+\item 
+void \mbox{\hyperlink{class_k_led_a0a4a6589bf59312552edabdeef61f2aa}{on}} ()
+\item 
+void \mbox{\hyperlink{class_k_led_aa789f647307cdfdb95a91811ad82afde}{off}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_led_a1743d21629ecb0954f1894a769b6e093}{Private}} ()
+\item 
+\mbox{\hyperlink{class_k_led_aa2ccb1a85872ca0ec3392d56719dc73b}{K\+Led}} (Q\+Widget $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_k_led_ac4fc4d50f642cf220938f49b0fb335c5}{K\+Led}} (const Q\+Color \&\mbox{\hyperlink{class_k_led_a839b20399215cdd2f7a358a7da4de39b}{color}}, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_led_ab33afc1b7fb81b83977aee3bac3de28e}{K\+Led}} (const Q\+Color \&\mbox{\hyperlink{class_k_led_a839b20399215cdd2f7a358a7da4de39b}{color}}, \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{K\+Led\+::\+State}} \mbox{\hyperlink{class_k_led_a16057ea380c4962139869f2a6a3bfb6f}{state}}, \mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{K\+Led\+::\+Look}} \mbox{\hyperlink{class_k_led_afd2799a894358ba8f1d586a02ed9884b}{look}}, \mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{K\+Led\+::\+Shape}} \mbox{\hyperlink{class_k_led_a0ba616d1909ac4bab712ac16ef6b51e0}{shape}}, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_led_a5bfea352cb40b0a357e8eedb75b3e454}{$\sim$\+K\+Led}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Q\+Color \mbox{\hyperlink{class_k_led_a103ee7f7b3d326fce6473f33fdbba85e}{color}} () const
+\item 
+\mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}} \mbox{\hyperlink{class_k_led_abd155478211a5a7e8d50b9af7f937b47}{state}} () const
+\item 
+\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} \mbox{\hyperlink{class_k_led_a70a187d5643bf37fc2452676d2b2cf19}{look}} () const
+\item 
+\mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}} \mbox{\hyperlink{class_k_led_a7a86256a0911054129b6e90a90ab1892}{shape}} () const
+\item 
+int \mbox{\hyperlink{class_k_led_ad8d44131436da738f3af59a85c57142c}{dark\+Factor}} () const
+\item 
+void \mbox{\hyperlink{class_k_led_a0d3b459618ad0b544dd3568ba26f3b73}{set\+Color}} (const Q\+Color \&\mbox{\hyperlink{class_k_led_a839b20399215cdd2f7a358a7da4de39b}{color}})
+\item 
+void \mbox{\hyperlink{class_k_led_aad596242e5b38ec7844e0950527c9749}{set\+State}} (\mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}} \mbox{\hyperlink{class_k_led_a16057ea380c4962139869f2a6a3bfb6f}{state}})
+\item 
+void \mbox{\hyperlink{class_k_led_ac9ac9d738e8e78ca263f4397bd75cde1}{set\+Look}} (\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} \mbox{\hyperlink{class_k_led_afd2799a894358ba8f1d586a02ed9884b}{look}})
+\item 
+void \mbox{\hyperlink{class_k_led_a99818f1a2e79cce792ca63c95b2431e3}{set\+Shape}} (\mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}} \mbox{\hyperlink{class_k_led_a0ba616d1909ac4bab712ac16ef6b51e0}{shape}})
+\begin{DoxyCompactList}\small\item\em Set L\+ED shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_led_a25ae0ad719513f6aed5670fd2c80a01f}{set\+Dark\+Factor}} (int \mbox{\hyperlink{class_k_led_a091fdecd863aa637d8c66da18f039820}{dark\+Factor}})
+\item 
+Q\+Size \mbox{\hyperlink{class_k_led_a769112dd324ecbd7fa0268441a5bc122}{size\+Hint}} () const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\item 
+Q\+Size \mbox{\hyperlink{class_k_led_a9f0d1554ce71e4702e9426aeb96a1b20}{minimum\+Size\+Hint}} () const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_k_led_a091fdecd863aa637d8c66da18f039820}{dark\+Factor}}
+\item 
+Q\+Color \mbox{\hyperlink{class_k_led_a839b20399215cdd2f7a358a7da4de39b}{color}}
+\item 
+\mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}} \mbox{\hyperlink{class_k_led_a16057ea380c4962139869f2a6a3bfb6f}{state}}
+\item 
+\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} \mbox{\hyperlink{class_k_led_afd2799a894358ba8f1d586a02ed9884b}{look}}
+\item 
+\mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}} \mbox{\hyperlink{class_k_led_a0ba616d1909ac4bab712ac16ef6b51e0}{shape}}
+\item 
+Q\+Pixmap \mbox{\hyperlink{class_k_led_ac80396e17613f8eeab22d0a22ce4a0ae}{cached\+Pixmap}} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_led_a63433a6b58cc56e406f97e73fd810393}{paint\+Event}} (Q\+Paint\+Event $\ast$) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\item 
+void \mbox{\hyperlink{class_k_led_a5c22efed24354715b536df3ecaf13d17}{resize\+Event}} (Q\+Resize\+Event $\ast$) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\item 
+void \mbox{\hyperlink{class_k_led_a7ace015d682a686708a1fbe6f8c2d341}{update\+Cached\+Pixmap}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An L\+ED widget. 
+
+Displays a round or rectangular light emitting diode.
+
+It is configurable to arbitrary colors, the two on/off states and three styles (or \char`\"{}looks\char`\"{});
+
+It may display itself in a performant flat view, a round view with light spot or a round view sunken in the screen.
+
+
+
+\begin{DoxyAuthor}{Author}
+Joerg Habenicht, Richard J. Moore (\href{mailto:rich@kde.org}{\texttt{ rich@kde.\+org}}) 1998, 1999 
+\end{DoxyAuthor}
+
+
+Definition at line 29 of file kled.\+cpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}\label{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}} 
+\index{KLed@{KLed}!Look@{Look}}
+\index{Look@{Look}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{Look}{Look}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{K\+Led\+::\+Look}}}
+
+
+
+L\+ED look. 
+
+Displays a flat, round or sunken L\+ED. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flat@{Flat}!KLed@{KLed}}\index{KLed@{KLed}!Flat@{Flat}}}\mbox{\Hypertarget{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6ae78600f8e10e52e5f4749e1dba8a01dd}\label{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6ae78600f8e10e52e5f4749e1dba8a01dd}} 
+Flat&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Raised@{Raised}!KLed@{KLed}}\index{KLed@{KLed}!Raised@{Raised}}}\mbox{\Hypertarget{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6a1c95118b4329ec5021383d57094f67d0}\label{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6a1c95118b4329ec5021383d57094f67d0}} 
+Raised&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sunken@{Sunken}!KLed@{KLed}}\index{KLed@{KLed}!Sunken@{Sunken}}}\mbox{\Hypertarget{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6a8ccc9504f04ba9fd3a0e8e5e8561b7ac}\label{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6a8ccc9504f04ba9fd3a0e8e5e8561b7ac}} 
+Sunken&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 79 of file kled.\+h.
+
+\mbox{\Hypertarget{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}\label{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}} 
+\index{KLed@{KLed}!Shape@{Shape}}
+\index{Shape@{Shape}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{Shape}{Shape}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{K\+Led\+::\+Shape}}}
+
+
+
+L\+ED shape. 
+
+Shades of the lamp. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Rectangular@{Rectangular}!KLed@{KLed}}\index{KLed@{KLed}!Rectangular@{Rectangular}}}\mbox{\Hypertarget{class_k_led_a22a9c2354515733cd4aa2c6efabc147fade9f208a5109db537f0c7f59503d7244}\label{class_k_led_a22a9c2354515733cd4aa2c6efabc147fade9f208a5109db537f0c7f59503d7244}} 
+Rectangular&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Circular@{Circular}!KLed@{KLed}}\index{KLed@{KLed}!Circular@{Circular}}}\mbox{\Hypertarget{class_k_led_a22a9c2354515733cd4aa2c6efabc147fa732f474000173d879261c1d62e908fdd}\label{class_k_led_a22a9c2354515733cd4aa2c6efabc147fa732f474000173d879261c1d62e908fdd}} 
+Circular&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 71 of file kled.\+h.
+
+\mbox{\Hypertarget{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}\label{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}} 
+\index{KLed@{KLed}!State@{State}}
+\index{State@{State}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{K\+Led\+::\+State}}}
+
+
+
+L\+ED on/off. 
+
+Status of the light is on/off. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Off@{Off}!KLed@{KLed}}\index{KLed@{KLed}!Off@{Off}}}\mbox{\Hypertarget{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca133c86551c18ae1d0def10cbceac747c}\label{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca133c86551c18ae1d0def10cbceac747c}} 
+Off&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{On@{On}!KLed@{KLed}}\index{KLed@{KLed}!On@{On}}}\mbox{\Hypertarget{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca6d00e86716c2d0bc30d59d3698b4deea}\label{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca6d00e86716c2d0bc30d59d3698b4deea}} 
+On&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 64 of file kled.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_k_led_aa2ccb1a85872ca0ec3392d56719dc73b}\label{class_k_led_aa2ccb1a85872ca0ec3392d56719dc73b}} 
+\index{KLed@{KLed}!KLed@{KLed}}
+\index{KLed@{KLed}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{KLed()}{KLed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily K\+Led\+::\+K\+Led (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs a green, round L\+ED widget which will initially be turned on.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_ac4fc4d50f642cf220938f49b0fb335c5}\label{class_k_led_ac4fc4d50f642cf220938f49b0fb335c5}} 
+\index{KLed@{KLed}!KLed@{KLed}}
+\index{KLed@{KLed}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{KLed()}{KLed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily K\+Led\+::\+K\+Led (\begin{DoxyParamCaption}\item[{const Q\+Color \&}]{color,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+Constructs a round L\+ED widget with the supplied color which will initially be turned on.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Initial color of the L\+ED. \\
+\hline
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_ab33afc1b7fb81b83977aee3bac3de28e}\label{class_k_led_ab33afc1b7fb81b83977aee3bac3de28e}} 
+\index{KLed@{KLed}!KLed@{KLed}}
+\index{KLed@{KLed}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{KLed()}{KLed()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily K\+Led\+::\+K\+Led (\begin{DoxyParamCaption}\item[{const Q\+Color \&}]{color,  }\item[{\mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{K\+Led\+::\+State}}}]{state,  }\item[{\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{K\+Led\+::\+Look}}}]{look,  }\item[{\mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{K\+Led\+::\+Shape}}}]{shape,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor with the color, state and look.
+
+Differs from above only in the parameters, which configure all settings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Initial color of the L\+ED. \\
+\hline
+{\em state} & Sets the State. \\
+\hline
+{\em look} & Sets the Look. \\
+\hline
+{\em shape} & Sets the Shape (rectangular or circular). \\
+\hline
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a5bfea352cb40b0a357e8eedb75b3e454}\label{class_k_led_a5bfea352cb40b0a357e8eedb75b3e454}} 
+\index{KLed@{KLed}!````~KLed@{$\sim$KLed}}
+\index{````~KLed@{$\sim$KLed}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{$\sim$KLed()}{~KLed()}}
+{\footnotesize\ttfamily K\+Led\+::$\sim$\+K\+Led (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Destroys the L\+ED widget. 
+
+Definition at line 76 of file kled.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_k_led_a103ee7f7b3d326fce6473f33fdbba85e}\label{class_k_led_a103ee7f7b3d326fce6473f33fdbba85e}} 
+\index{KLed@{KLed}!color@{color}}
+\index{color@{color}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}}
+{\footnotesize\ttfamily Q\+Color K\+Led\+::color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current color of the widget.
+
+\begin{DoxyReturn}{Returns}
+L\+ED color 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a0d3b459618ad0b544dd3568ba26f3b73}{set\+Color()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_k_led_ad8d44131436da738f3af59a85c57142c}\label{class_k_led_ad8d44131436da738f3af59a85c57142c}} 
+\index{KLed@{KLed}!darkFactor@{darkFactor}}
+\index{darkFactor@{darkFactor}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{darkFactor()}{darkFactor()}}
+{\footnotesize\ttfamily int K\+Led\+::dark\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the factor to darken the L\+ED. \begin{DoxyReturn}{Returns}
+dark factor
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a25ae0ad719513f6aed5670fd2c80a01f}{set\+Dark\+Factor()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_k_led_a70a187d5643bf37fc2452676d2b2cf19}\label{class_k_led_a70a187d5643bf37fc2452676d2b2cf19}} 
+\index{KLed@{KLed}!look@{look}}
+\index{look@{look}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{look()}{look()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} K\+Led\+::look (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current look of the widget. \begin{DoxyReturn}{Returns}
+L\+ED look
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_k_led_a9f0d1554ce71e4702e9426aeb96a1b20}\label{class_k_led_a9f0d1554ce71e4702e9426aeb96a1b20}} 
+\index{KLed@{KLed}!minimumSizeHint@{minimumSizeHint}}
+\index{minimumSizeHint@{minimumSizeHint}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{minimumSizeHint()}{minimumSizeHint()}}
+{\footnotesize\ttfamily Q\+Size K\+Led\+::minimum\+Size\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 187 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_aa789f647307cdfdb95a91811ad82afde}\label{class_k_led_aa789f647307cdfdb95a91811ad82afde}} 
+\index{KLed@{KLed}!off@{off}}
+\index{off@{off}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{off}{off}}
+{\footnotesize\ttfamily void K\+Led\+::off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Sets the state of the widget to Off.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a0a4a6589bf59312552edabdeef61f2aa}{on()}} \mbox{\hyperlink{class_k_led_abd1dc18cd0e3b34f120d1a1ad9d9b338}{toggle()}} \mbox{\hyperlink{class_k_led_aad596242e5b38ec7844e0950527c9749}{set\+State()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 169 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a0a4a6589bf59312552edabdeef61f2aa}\label{class_k_led_a0a4a6589bf59312552edabdeef61f2aa}} 
+\index{KLed@{KLed}!on@{on}}
+\index{on@{on}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily void K\+Led\+::on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Sets the state of the widget to On.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_aa789f647307cdfdb95a91811ad82afde}{off()}} \mbox{\hyperlink{class_k_led_abd1dc18cd0e3b34f120d1a1ad9d9b338}{toggle()}} \mbox{\hyperlink{class_k_led_aad596242e5b38ec7844e0950527c9749}{set\+State()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 164 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a63433a6b58cc56e406f97e73fd810393}\label{class_k_led_a63433a6b58cc56e406f97e73fd810393}} 
+\index{KLed@{KLed}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void K\+Led\+::paint\+Event (\begin{DoxyParamCaption}\item[{Q\+Paint\+Event $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 214 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a1743d21629ecb0954f1894a769b6e093}\label{class_k_led_a1743d21629ecb0954f1894a769b6e093}} 
+\index{KLed@{KLed}!Private@{Private}}
+\index{Private@{Private}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{Private()}{Private()}}
+{\footnotesize\ttfamily K\+Led\+::\+Private (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a5c22efed24354715b536df3ecaf13d17}\label{class_k_led_a5c22efed24354715b536df3ecaf13d17}} 
+\index{KLed@{KLed}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily void K\+Led\+::resize\+Event (\begin{DoxyParamCaption}\item[{Q\+Resize\+Event $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 174 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a0d3b459618ad0b544dd3568ba26f3b73}\label{class_k_led_a0d3b459618ad0b544dd3568ba26f3b73}} 
+\index{KLed@{KLed}!setColor@{setColor}}
+\index{setColor@{setColor}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void K\+Led\+::set\+Color (\begin{DoxyParamCaption}\item[{const Q\+Color \&}]{color }\end{DoxyParamCaption})}
+
+Set the color of the widget.
+
+The L\+ED is shown with {\ttfamily color} when in the \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca6d00e86716c2d0bc30d59d3698b4deea}{K\+Led\+::\+On}} state or with the darken color in \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca133c86551c18ae1d0def10cbceac747c}{K\+Led\+::\+Off}} state.
+
+The widget calls the update() method, so it will be updated when entering the main event loop.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & New color of the L\+ED.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a839b20399215cdd2f7a358a7da4de39b}{color()}} \mbox{\hyperlink{class_k_led_a091fdecd863aa637d8c66da18f039820}{dark\+Factor()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 122 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a25ae0ad719513f6aed5670fd2c80a01f}\label{class_k_led_a25ae0ad719513f6aed5670fd2c80a01f}} 
+\index{KLed@{KLed}!setDarkFactor@{setDarkFactor}}
+\index{setDarkFactor@{setDarkFactor}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{setDarkFactor()}{setDarkFactor()}}
+{\footnotesize\ttfamily void K\+Led\+::set\+Dark\+Factor (\begin{DoxyParamCaption}\item[{int}]{dark\+Factor }\end{DoxyParamCaption})}
+
+Sets the factor to darken the L\+ED in \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca133c86551c18ae1d0def10cbceac747c}{K\+Led\+::\+Off}} state.
+
+The {\ttfamily dark\+Factor} should be greater than 100, otherwise the L\+ED becomes lighter in \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0ca133c86551c18ae1d0def10cbceac747c}{K\+Led\+::\+Off}} state.
+
+Defaults to 300.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dark\+Factor} & Sets the factor to darken the L\+ED.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a0d3b459618ad0b544dd3568ba26f3b73}{set\+Color}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 132 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_ac9ac9d738e8e78ca263f4397bd75cde1}\label{class_k_led_ac9ac9d738e8e78ca263f4397bd75cde1}} 
+\index{KLed@{KLed}!setLook@{setLook}}
+\index{setLook@{setLook}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{setLook()}{setLook()}}
+{\footnotesize\ttfamily void K\+Led\+::set\+Look (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}}}]{look }\end{DoxyParamCaption})}
+
+Sets the look of the widget.
+
+The look may be Flat, Raised or Sunken.
+
+The widget calls the update() method, so it will be updated when entering the main event loop.
+
+
+\begin{DoxyParams}{Parameters}
+{\em look} & New look of the L\+ED.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 147 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a99818f1a2e79cce792ca63c95b2431e3}\label{class_k_led_a99818f1a2e79cce792ca63c95b2431e3}} 
+\index{KLed@{KLed}!setShape@{setShape}}
+\index{setShape@{setShape}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{setShape()}{setShape()}}
+{\footnotesize\ttfamily void K\+Led\+::set\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}}}]{shape }\end{DoxyParamCaption})}
+
+
+
+Set L\+ED shape. 
+
+Set the shape of the L\+ED.
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & The L\+ED shape. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_aad596242e5b38ec7844e0950527c9749}\label{class_k_led_aad596242e5b38ec7844e0950527c9749}} 
+\index{KLed@{KLed}!setState@{setState}}
+\index{setState@{setState}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void K\+Led\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}}}]{state }\end{DoxyParamCaption})}
+
+Sets the state of the widget to On or Off.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The L\+ED state\+: on or off.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a0a4a6589bf59312552edabdeef61f2aa}{on()}} \mbox{\hyperlink{class_k_led_aa789f647307cdfdb95a91811ad82afde}{off()}} \mbox{\hyperlink{class_k_led_abd1dc18cd0e3b34f120d1a1ad9d9b338}{toggle()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 101 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a7a86256a0911054129b6e90a90ab1892}\label{class_k_led_a7a86256a0911054129b6e90a90ab1892}} 
+\index{KLed@{KLed}!shape@{shape}}
+\index{shape@{shape}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}} K\+Led\+::shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current shape of the widget. \begin{DoxyReturn}{Returns}
+L\+ED shape
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_k_led_a769112dd324ecbd7fa0268441a5bc122}\label{class_k_led_a769112dd324ecbd7fa0268441a5bc122}} 
+\index{KLed@{KLed}!sizeHint@{sizeHint}}
+\index{sizeHint@{sizeHint}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{sizeHint()}{sizeHint()}}
+{\footnotesize\ttfamily Q\+Size K\+Led\+::size\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 179 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_abd155478211a5a7e8d50b9af7f937b47}\label{class_k_led_abd155478211a5a7e8d50b9af7f937b47}} 
+\index{KLed@{KLed}!state@{state}}
+\index{state@{state}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}} K\+Led\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current state of the widget (on/off). \begin{DoxyReturn}{Returns}
+L\+ED state
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_k_led_abd1dc18cd0e3b34f120d1a1ad9d9b338}\label{class_k_led_abd1dc18cd0e3b34f120d1a1ad9d9b338}} 
+\index{KLed@{KLed}!toggle@{toggle}}
+\index{toggle@{toggle}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{toggle}{toggle}}
+{\footnotesize\ttfamily void K\+Led\+::toggle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Toggles the state of the led from Off to On or vice versa. 
+
+Definition at line 157 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a7ace015d682a686708a1fbe6f8c2d341}\label{class_k_led_a7ace015d682a686708a1fbe6f8c2d341}} 
+\index{KLed@{KLed}!updateCachedPixmap@{updateCachedPixmap}}
+\index{updateCachedPixmap@{updateCachedPixmap}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{updateCachedPixmap()}{updateCachedPixmap()}}
+{\footnotesize\ttfamily void K\+Led\+::update\+Cached\+Pixmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 207 of file kled.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_k_led_ac80396e17613f8eeab22d0a22ce4a0ae}\label{class_k_led_ac80396e17613f8eeab22d0a22ce4a0ae}} 
+\index{KLed@{KLed}!cachedPixmap@{cachedPixmap}}
+\index{cachedPixmap@{cachedPixmap}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{cachedPixmap}{cachedPixmap}}
+{\footnotesize\ttfamily Q\+Pixmap K\+Led\+::cached\+Pixmap\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 44 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a839b20399215cdd2f7a358a7da4de39b}\label{class_k_led_a839b20399215cdd2f7a358a7da4de39b}} 
+\index{KLed@{KLed}!color@{color}}
+\index{color@{color}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily Q\+Color K\+Led\+::color\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 39 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a091fdecd863aa637d8c66da18f039820}\label{class_k_led_a091fdecd863aa637d8c66da18f039820}} 
+\index{KLed@{KLed}!darkFactor@{darkFactor}}
+\index{darkFactor@{darkFactor}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{darkFactor}{darkFactor}}
+{\footnotesize\ttfamily int K\+Led\+::dark\+Factor\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 38 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_afd2799a894358ba8f1d586a02ed9884b}\label{class_k_led_afd2799a894358ba8f1d586a02ed9884b}} 
+\index{KLed@{KLed}!look@{look}}
+\index{look@{look}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{look}{look}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_k_led_a92553d6cca9c224b0aaaeafee0d9a8d6}{Look}} K\+Led\+::look\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 41 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a0ba616d1909ac4bab712ac16ef6b51e0}\label{class_k_led_a0ba616d1909ac4bab712ac16ef6b51e0}} 
+\index{KLed@{KLed}!shape@{shape}}
+\index{shape@{shape}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_k_led_a22a9c2354515733cd4aa2c6efabc147f}{Shape}} K\+Led\+::shape\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 42 of file kled.\+cpp.
+
+\mbox{\Hypertarget{class_k_led_a16057ea380c4962139869f2a6a3bfb6f}\label{class_k_led_a16057ea380c4962139869f2a6a3bfb6f}} 
+\index{KLed@{KLed}!state@{state}}
+\index{state@{state}!KLed@{KLed}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_k_led_a14ea238119f6332b71c1ac4ec9ac0d0c}{State}} K\+Led\+::state\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 40 of file kled.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/3rdparty/kled/\mbox{\hyperlink{kled_8cpp}{kled.\+cpp}}\item 
+D\+:/tixt/corona/qdaq/lib/3rdparty/kled/\mbox{\hyperlink{kled_8h}{kled.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,498 @@
+\hypertarget{class_j_s_edit}{}\doxysection{J\+S\+Edit Class Reference}
+\label{class_j_s_edit}\index{JSEdit@{JSEdit}}
+
+
+{\ttfamily \#include $<$jsedit.\+h$>$}
+
+Inheritance diagram for J\+S\+Edit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_j_s_edit}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213}{Color\+Component}} \{ \newline
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a79b93a41435ddfd6b670821e7be31306}{Background}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a51b1886888e6bf8841064a795bd6ab8d}{Normal}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a430947e4b883553d04f618a799095f4d}{Comment}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213aeebc6c595d9a8bc74d3b03bd4c8f2d1f}{Number}}, 
+\newline
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a60b69a2cc0268b2048fceadf7067e231}{String}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a7cf7fcdce0c49ff9995b8d8a02a3b127}{Operator}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a06246136a94298b2d147a9d3dea7fd89}{Identifier}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213ad70548abdd876f2648764b7924b90251}{Keyword}}, 
+\newline
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a8b227288b9e8c72ccb15968f3127f6c2}{Built\+In}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213acda2a01a6da3090252b320a2c4b99133}{Sidebar}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a43eb7503aa3a0f0520a2ad5c71b4d419}{Line\+Number}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a5438637d9a462daaa47e0fdea5f342cc}{Cursor}}, 
+\newline
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a098e62a1854a46cb2b58c49ee5d78208}{Marker}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a0c0c2038c38e75704e991bcf7c63dc7f}{Bracket\+Match}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213af2e19200abafb0bf0534dd89fd73c63b}{Bracket\+Error}}, 
+\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a364777f3c240e11db6d1d2a8c7b9962d}{Fold\+Indicator}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_j_s_edit_ac51a3a9f7b1e8c5bc98b345bfc3d3b53}{update\+Sidebar}} ()
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a8bf20e989fa0818d2bc32fefd4110821}{mark}} (const Q\+String \&str, Qt\+::\+Case\+Sensitivity sens=Qt\+::\+Case\+Insensitive)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_aa06fb701194696f2b15f28b73dc60b6c}{set\+Brackets\+Matching\+Enabled}} (bool enable)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a3a90bd08f93058ab17d03fe8538802f4}{set\+Code\+Folding\+Enabled}} (bool enable)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_aa4ebbca83d75bf65bd715f162d010e35}{set\+Line\+Numbers\+Visible}} (bool visible)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a4af6d6926d0f98c36432ba44bb080f8d}{set\+Text\+Wrap\+Enabled}} (bool enable)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a44ae8482351f716625bfbe42d0a1d5b3}{fold}} (int line)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a0bdd415108b84306f5c3b86b8e7de0b5}{unfold}} (int line)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_ae2955b517e15a98c85252efef452ae8a}{toggle\+Fold}} (int line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_s_edit_a8f9e2f3aa005871d8eb1a541b8e872cf}{J\+S\+Edit}} (Q\+Widget $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_j_s_edit_a53e969b73a8472fd0f22b504ea68fb29}{$\sim$\+J\+S\+Edit}} ()
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a783833bb402b29457f3ec268e5a8ae57}{set\+Color}} (\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213}{Color\+Component}} component, const Q\+Color \&color)
+\item 
+Q\+String\+List \mbox{\hyperlink{class_j_s_edit_af2a11c0f985403c3cf42143151688500}{keywords}} () const
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a1a77f8ce932ed2654de4ad8a092d2754}{set\+Keywords}} (const Q\+String\+List \&\mbox{\hyperlink{class_j_s_edit_af2a11c0f985403c3cf42143151688500}{keywords}})
+\item 
+Q\+String\+List \mbox{\hyperlink{class_j_s_edit_a1268517a5abe75ed7020f9ee44913857}{extra\+I\+Ds}} () const
+\item 
+void \mbox{\hyperlink{class_j_s_edit_aa0e002a5bfc1ab2943b2a41cabcd353e}{add\+Extra\+I\+Ds}} (const Q\+String\+List \&ids)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a1e5a7748921c9d0c1fb4a4b8805dbb77}{clear\+Extra\+I\+Ds}} ()
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_a4a0ea37124129f1c18d84708c454834c}{is\+Brackets\+Matching\+Enabled}} () const
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_a4ff46404c4277cf3d32b66ee26ff8965}{is\+Code\+Folding\+Enabled}} () const
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_a72262886ceb0918384629a2cc813777c}{is\+Line\+Numbers\+Visible}} () const
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_a7d397d0f91f3829d4897b103a7f238f1}{is\+Text\+Wrap\+Enabled}} () const
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_aa9489a933ccc52750bbcac24d58d284c}{is\+Foldable}} (int line) const
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_af06c6789b9046e6b42ec34e94820291b}{is\+Folded}} (int line) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a3c5fb615d94f736ce8fdbc6288d3d2f8}{resize\+Event}} (Q\+Resize\+Event $\ast$e)
+\item 
+void \mbox{\hyperlink{class_j_s_edit_a66017f13ed0ae775050bfe3e89afd407}{wheel\+Event}} (Q\+Wheel\+Event $\ast$e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_a0092eb93228a3d44df101f741a667686}{brackets\+Matching\+Enabled}}
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_a1442cc5f36a78e5a26e1a88d6b78033d}{code\+Folding\+Enabled}}
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_a5a9f728fcf999d5ff0ef5e3d315d269d}{line\+Numbers\+Visible}}
+\item 
+bool \mbox{\hyperlink{class_j_s_edit_afb27dea3fe4766b77f9f4f2e1c489e56}{text\+Wrap\+Enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 40 of file jsedit.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213}} 
+\index{JSEdit@{JSEdit}!ColorComponent@{ColorComponent}}
+\index{ColorComponent@{ColorComponent}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{ColorComponent}{ColorComponent}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213}{J\+S\+Edit\+::\+Color\+Component}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Background@{Background}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Background@{Background}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a79b93a41435ddfd6b670821e7be31306}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a79b93a41435ddfd6b670821e7be31306}} 
+Background&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Normal@{Normal}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a51b1886888e6bf8841064a795bd6ab8d}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a51b1886888e6bf8841064a795bd6ab8d}} 
+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Comment@{Comment}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Comment@{Comment}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a430947e4b883553d04f618a799095f4d}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a430947e4b883553d04f618a799095f4d}} 
+Comment&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Number@{Number}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Number@{Number}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213aeebc6c595d9a8bc74d3b03bd4c8f2d1f}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213aeebc6c595d9a8bc74d3b03bd4c8f2d1f}} 
+Number&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{String@{String}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!String@{String}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a60b69a2cc0268b2048fceadf7067e231}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a60b69a2cc0268b2048fceadf7067e231}} 
+String&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Operator@{Operator}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Operator@{Operator}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a7cf7fcdce0c49ff9995b8d8a02a3b127}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a7cf7fcdce0c49ff9995b8d8a02a3b127}} 
+Operator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Identifier@{Identifier}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Identifier@{Identifier}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a06246136a94298b2d147a9d3dea7fd89}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a06246136a94298b2d147a9d3dea7fd89}} 
+Identifier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Keyword@{Keyword}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Keyword@{Keyword}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213ad70548abdd876f2648764b7924b90251}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213ad70548abdd876f2648764b7924b90251}} 
+Keyword&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BuiltIn@{BuiltIn}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!BuiltIn@{BuiltIn}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a8b227288b9e8c72ccb15968f3127f6c2}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a8b227288b9e8c72ccb15968f3127f6c2}} 
+Built\+In&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sidebar@{Sidebar}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Sidebar@{Sidebar}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213acda2a01a6da3090252b320a2c4b99133}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213acda2a01a6da3090252b320a2c4b99133}} 
+Sidebar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LineNumber@{LineNumber}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!LineNumber@{LineNumber}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a43eb7503aa3a0f0520a2ad5c71b4d419}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a43eb7503aa3a0f0520a2ad5c71b4d419}} 
+Line\+Number&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cursor@{Cursor}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Cursor@{Cursor}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a5438637d9a462daaa47e0fdea5f342cc}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a5438637d9a462daaa47e0fdea5f342cc}} 
+Cursor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Marker@{Marker}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!Marker@{Marker}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a098e62a1854a46cb2b58c49ee5d78208}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a098e62a1854a46cb2b58c49ee5d78208}} 
+Marker&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BracketMatch@{BracketMatch}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!BracketMatch@{BracketMatch}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a0c0c2038c38e75704e991bcf7c63dc7f}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a0c0c2038c38e75704e991bcf7c63dc7f}} 
+Bracket\+Match&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BracketError@{BracketError}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!BracketError@{BracketError}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213af2e19200abafb0bf0534dd89fd73c63b}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213af2e19200abafb0bf0534dd89fd73c63b}} 
+Bracket\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FoldIndicator@{FoldIndicator}!JSEdit@{JSEdit}}\index{JSEdit@{JSEdit}!FoldIndicator@{FoldIndicator}}}\mbox{\Hypertarget{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a364777f3c240e11db6d1d2a8c7b9962d}\label{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213a364777f3c240e11db6d1d2a8c7b9962d}} 
+Fold\+Indicator&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 50 of file jsedit.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_s_edit_a8f9e2f3aa005871d8eb1a541b8e872cf}\label{class_j_s_edit_a8f9e2f3aa005871d8eb1a541b8e872cf}} 
+\index{JSEdit@{JSEdit}!JSEdit@{JSEdit}}
+\index{JSEdit@{JSEdit}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{JSEdit()}{JSEdit()}}
+{\footnotesize\ttfamily J\+S\+Edit\+::\+J\+S\+Edit (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 674 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a53e969b73a8472fd0f22b504ea68fb29}\label{class_j_s_edit_a53e969b73a8472fd0f22b504ea68fb29}} 
+\index{JSEdit@{JSEdit}!````~JSEdit@{$\sim$JSEdit}}
+\index{````~JSEdit@{$\sim$JSEdit}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{$\sim$JSEdit()}{~JSEdit()}}
+{\footnotesize\ttfamily J\+S\+Edit\+::$\sim$\+J\+S\+Edit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 708 of file jsedit.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_s_edit_aa0e002a5bfc1ab2943b2a41cabcd353e}\label{class_j_s_edit_aa0e002a5bfc1ab2943b2a41cabcd353e}} 
+\index{JSEdit@{JSEdit}!addExtraIDs@{addExtraIDs}}
+\index{addExtraIDs@{addExtraIDs}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{addExtraIDs()}{addExtraIDs()}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::add\+Extra\+I\+Ds (\begin{DoxyParamCaption}\item[{const Q\+String\+List \&}]{ids }\end{DoxyParamCaption})}
+
+
+
+Definition at line 771 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a1e5a7748921c9d0c1fb4a4b8805dbb77}\label{class_j_s_edit_a1e5a7748921c9d0c1fb4a4b8805dbb77}} 
+\index{JSEdit@{JSEdit}!clearExtraIDs@{clearExtraIDs}}
+\index{clearExtraIDs@{clearExtraIDs}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{clearExtraIDs()}{clearExtraIDs()}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::clear\+Extra\+I\+Ds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 766 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a1268517a5abe75ed7020f9ee44913857}\label{class_j_s_edit_a1268517a5abe75ed7020f9ee44913857}} 
+\index{JSEdit@{JSEdit}!extraIDs@{extraIDs}}
+\index{extraIDs@{extraIDs}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{extraIDs()}{extraIDs()}}
+{\footnotesize\ttfamily Q\+String\+List J\+S\+Edit\+::extra\+I\+Ds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 761 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a44ae8482351f716625bfbe42d0a1d5b3}\label{class_j_s_edit_a44ae8482351f716625bfbe42d0a1d5b3}} 
+\index{JSEdit@{JSEdit}!fold@{fold}}
+\index{fold@{fold}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{fold}{fold}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::fold (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 864 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a4a0ea37124129f1c18d84708c454834c}\label{class_j_s_edit_a4a0ea37124129f1c18d84708c454834c}} 
+\index{JSEdit@{JSEdit}!isBracketsMatchingEnabled@{isBracketsMatchingEnabled}}
+\index{isBracketsMatchingEnabled@{isBracketsMatchingEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{isBracketsMatchingEnabled()}{isBracketsMatchingEnabled()}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::is\+Brackets\+Matching\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 798 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a4ff46404c4277cf3d32b66ee26ff8965}\label{class_j_s_edit_a4ff46404c4277cf3d32b66ee26ff8965}} 
+\index{JSEdit@{JSEdit}!isCodeFoldingEnabled@{isCodeFoldingEnabled}}
+\index{isCodeFoldingEnabled@{isCodeFoldingEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{isCodeFoldingEnabled()}{isCodeFoldingEnabled()}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::is\+Code\+Folding\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 809 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_aa9489a933ccc52750bbcac24d58d284c}\label{class_j_s_edit_aa9489a933ccc52750bbcac24d58d284c}} 
+\index{JSEdit@{JSEdit}!isFoldable@{isFoldable}}
+\index{isFoldable@{isFoldable}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{isFoldable()}{isFoldable()}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::is\+Foldable (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 842 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_af06c6789b9046e6b42ec34e94820291b}\label{class_j_s_edit_af06c6789b9046e6b42ec34e94820291b}} 
+\index{JSEdit@{JSEdit}!isFolded@{isFolded}}
+\index{isFolded@{isFolded}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{isFolded()}{isFolded()}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::is\+Folded (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 853 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a72262886ceb0918384629a2cc813777c}\label{class_j_s_edit_a72262886ceb0918384629a2cc813777c}} 
+\index{JSEdit@{JSEdit}!isLineNumbersVisible@{isLineNumbersVisible}}
+\index{isLineNumbersVisible@{isLineNumbersVisible}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{isLineNumbersVisible()}{isLineNumbersVisible()}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::is\+Line\+Numbers\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 776 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a7d397d0f91f3829d4897b103a7f238f1}\label{class_j_s_edit_a7d397d0f91f3829d4897b103a7f238f1}} 
+\index{JSEdit@{JSEdit}!isTextWrapEnabled@{isTextWrapEnabled}}
+\index{isTextWrapEnabled@{isTextWrapEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{isTextWrapEnabled()}{isTextWrapEnabled()}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::is\+Text\+Wrap\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 787 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_af2a11c0f985403c3cf42143151688500}\label{class_j_s_edit_af2a11c0f985403c3cf42143151688500}} 
+\index{JSEdit@{JSEdit}!keywords@{keywords}}
+\index{keywords@{keywords}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{keywords()}{keywords()}}
+{\footnotesize\ttfamily Q\+String\+List J\+S\+Edit\+::keywords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 751 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a8bf20e989fa0818d2bc32fefd4110821}\label{class_j_s_edit_a8bf20e989fa0818d2bc32fefd4110821}} 
+\index{JSEdit@{JSEdit}!mark@{mark}}
+\index{mark@{mark}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{mark}{mark}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::mark (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{str,  }\item[{Qt\+::\+Case\+Sensitivity}]{sens = {\ttfamily Qt\+:\+:CaseInsensitive} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 1073 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a3c5fb615d94f736ce8fdbc6288d3d2f8}\label{class_j_s_edit_a3c5fb615d94f736ce8fdbc6288d3d2f8}} 
+\index{JSEdit@{JSEdit}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::resize\+Event (\begin{DoxyParamCaption}\item[{Q\+Resize\+Event $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 916 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_aa06fb701194696f2b15f28b73dc60b6c}\label{class_j_s_edit_aa06fb701194696f2b15f28b73dc60b6c}} 
+\index{JSEdit@{JSEdit}!setBracketsMatchingEnabled@{setBracketsMatchingEnabled}}
+\index{setBracketsMatchingEnabled@{setBracketsMatchingEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{setBracketsMatchingEnabled}{setBracketsMatchingEnabled}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::set\+Brackets\+Matching\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 803 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a3a90bd08f93058ab17d03fe8538802f4}\label{class_j_s_edit_a3a90bd08f93058ab17d03fe8538802f4}} 
+\index{JSEdit@{JSEdit}!setCodeFoldingEnabled@{setCodeFoldingEnabled}}
+\index{setCodeFoldingEnabled@{setCodeFoldingEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{setCodeFoldingEnabled}{setCodeFoldingEnabled}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::set\+Code\+Folding\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 814 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a783833bb402b29457f3ec268e5a8ae57}\label{class_j_s_edit_a783833bb402b29457f3ec268e5a8ae57}} 
+\index{JSEdit@{JSEdit}!setColor@{setColor}}
+\index{setColor@{setColor}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_s_edit_a5a465193a1344e5be9b04f5ff7883213}{Color\+Component}}}]{component,  }\item[{const Q\+Color \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 713 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a1a77f8ce932ed2654de4ad8a092d2754}\label{class_j_s_edit_a1a77f8ce932ed2654de4ad8a092d2754}} 
+\index{JSEdit@{JSEdit}!setKeywords@{setKeywords}}
+\index{setKeywords@{setKeywords}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{setKeywords()}{setKeywords()}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::set\+Keywords (\begin{DoxyParamCaption}\item[{const Q\+String\+List \&}]{keywords }\end{DoxyParamCaption})}
+
+
+
+Definition at line 756 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_aa4ebbca83d75bf65bd715f162d010e35}\label{class_j_s_edit_aa4ebbca83d75bf65bd715f162d010e35}} 
+\index{JSEdit@{JSEdit}!setLineNumbersVisible@{setLineNumbersVisible}}
+\index{setLineNumbersVisible@{setLineNumbersVisible}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{setLineNumbersVisible}{setLineNumbersVisible}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::set\+Line\+Numbers\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 781 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a4af6d6926d0f98c36432ba44bb080f8d}\label{class_j_s_edit_a4af6d6926d0f98c36432ba44bb080f8d}} 
+\index{JSEdit@{JSEdit}!setTextWrapEnabled@{setTextWrapEnabled}}
+\index{setTextWrapEnabled@{setTextWrapEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{setTextWrapEnabled}{setTextWrapEnabled}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::set\+Text\+Wrap\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 792 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_ae2955b517e15a98c85252efef452ae8a}\label{class_j_s_edit_ae2955b517e15a98c85252efef452ae8a}} 
+\index{JSEdit@{JSEdit}!toggleFold@{toggleFold}}
+\index{toggleFold@{toggleFold}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{toggleFold}{toggleFold}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::toggle\+Fold (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 908 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a0bdd415108b84306f5c3b86b8e7de0b5}\label{class_j_s_edit_a0bdd415108b84306f5c3b86b8e7de0b5}} 
+\index{JSEdit@{JSEdit}!unfold@{unfold}}
+\index{unfold@{unfold}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{unfold}{unfold}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::unfold (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 887 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_ac51a3a9f7b1e8c5bc98b345bfc3d3b53}\label{class_j_s_edit_ac51a3a9f7b1e8c5bc98b345bfc3d3b53}} 
+\index{JSEdit@{JSEdit}!updateSidebar@{updateSidebar}}
+\index{updateSidebar@{updateSidebar}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{updateSidebar}{updateSidebar}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::update\+Sidebar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 1016 of file jsedit.\+cpp.
+
+\mbox{\Hypertarget{class_j_s_edit_a66017f13ed0ae775050bfe3e89afd407}\label{class_j_s_edit_a66017f13ed0ae775050bfe3e89afd407}} 
+\index{JSEdit@{JSEdit}!wheelEvent@{wheelEvent}}
+\index{wheelEvent@{wheelEvent}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{wheelEvent()}{wheelEvent()}}
+{\footnotesize\ttfamily void J\+S\+Edit\+::wheel\+Event (\begin{DoxyParamCaption}\item[{Q\+Wheel\+Event $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 922 of file jsedit.\+cpp.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_s_edit_a0092eb93228a3d44df101f741a667686}\label{class_j_s_edit_a0092eb93228a3d44df101f741a667686}} 
+\index{JSEdit@{JSEdit}!bracketsMatchingEnabled@{bracketsMatchingEnabled}}
+\index{bracketsMatchingEnabled@{bracketsMatchingEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{bracketsMatchingEnabled}{bracketsMatchingEnabled}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::brackets\+Matching\+Enabled\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 1 of file jsedit.\+h.
+
+\mbox{\Hypertarget{class_j_s_edit_a1442cc5f36a78e5a26e1a88d6b78033d}\label{class_j_s_edit_a1442cc5f36a78e5a26e1a88d6b78033d}} 
+\index{JSEdit@{JSEdit}!codeFoldingEnabled@{codeFoldingEnabled}}
+\index{codeFoldingEnabled@{codeFoldingEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{codeFoldingEnabled}{codeFoldingEnabled}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::code\+Folding\+Enabled\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 1 of file jsedit.\+h.
+
+\mbox{\Hypertarget{class_j_s_edit_a5a9f728fcf999d5ff0ef5e3d315d269d}\label{class_j_s_edit_a5a9f728fcf999d5ff0ef5e3d315d269d}} 
+\index{JSEdit@{JSEdit}!lineNumbersVisible@{lineNumbersVisible}}
+\index{lineNumbersVisible@{lineNumbersVisible}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{lineNumbersVisible}{lineNumbersVisible}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::line\+Numbers\+Visible\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 1 of file jsedit.\+h.
+
+\mbox{\Hypertarget{class_j_s_edit_afb27dea3fe4766b77f9f4f2e1c489e56}\label{class_j_s_edit_afb27dea3fe4766b77f9f4f2e1c489e56}} 
+\index{JSEdit@{JSEdit}!textWrapEnabled@{textWrapEnabled}}
+\index{textWrapEnabled@{textWrapEnabled}!JSEdit@{JSEdit}}
+\doxysubsubsection{\texorpdfstring{textWrapEnabled}{textWrapEnabled}}
+{\footnotesize\ttfamily bool J\+S\+Edit\+::text\+Wrap\+Enabled\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Definition at line 1 of file jsedit.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/3rdparty/jsedit/\mbox{\hyperlink{jsedit_8h}{jsedit.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/3rdparty/jsedit/\mbox{\hyperlink{jsedit_8cpp}{jsedit.\+cpp}}\end{DoxyCompactItemize}

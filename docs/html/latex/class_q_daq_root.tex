@@ -1,0 +1,480 @@
+\hypertarget{class_q_daq_root}{}\doxysection{Q\+Daq\+Root Class Reference}
+\label{class_q_daq_root}\index{QDaqRoot@{QDaqRoot}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Root.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Root\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_q_daq_root}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String\+List \mbox{\hyperlink{class_q_daq_root_a19d2fc5d58382f34e40ec84180f070ed}{class\+Names}} ()
+\begin{DoxyCompactList}\small\item\em Return the names of registered object classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_root_abf207221733578a483f2c980c4e44130}{error}} (const \mbox{\hyperlink{struct_q_daq_error}{Q\+Daq\+Error}} \&e)
+\item 
+void \mbox{\hyperlink{class_q_daq_root_a5f0ce73ccb79285f3bc4ffa1f57313a0}{daq\+Windows\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Fired when a top level window is opened or closed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_daq_root_aca69ab8d663a6da03199d0757c289cc2}{object\+Attached}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Fired when object is attached. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_daq_root_a59f5aa9aad3720c018df0f6e2bd63c34}{object\+Detached}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Fired when object is detached. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_root_a2bd95b702a5dda7ebb70e60f9887be46}{Q\+Daq\+Root}} (void)
+\item 
+virtual \mbox{\hyperlink{class_q_daq_root_a4e8a355e90fb2d37eaadd0de41035a02}{$\sim$\+Q\+Daq\+Root}} (void)
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_root_a9dbeb50074b0f41324b52e8f1017e808}{root\+Dir}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_root_a4c26151c5398a8f484c579fbaa52d4ca}{log\+Dir}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_root_aed63fbf9776a491a379d49bccb6eccb0}{xml}} ()
+\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_root_af40c23aa9e873c090871687e6fee5de6}{create\+Object}} (const Q\+String \&name, const Q\+String \&class\+Name)
+\item 
+void \mbox{\hyperlink{class_q_daq_root_a38afee55a3f87dbe3f4f8a7cd369e9c8}{post\+Error}} (const \mbox{\hyperlink{struct_q_daq_error}{Q\+Daq\+Error}} \&e)
+\item 
+void \mbox{\hyperlink{class_q_daq_root_ae0d0d3304ce527daf6c4ea2113742252}{add\+Daq\+Window}} (Q\+Widget $\ast$w)
+\item 
+void \mbox{\hyperlink{class_q_daq_root_a4d9856738076f79706ce3264ccedb01f}{remove\+Daq\+Window}} (Q\+Widget $\ast$w)
+\item 
+Q\+Widget\+List \mbox{\hyperlink{class_q_daq_root_a8327ee29571ce28f9a069d92c0e0f7b8}{daq\+Windows}} () const
+\begin{DoxyCompactList}\small\item\em Return a list of \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} top level windows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_i_d_e}{Q\+Daq\+I\+DE}} $\ast$ \mbox{\hyperlink{class_q_daq_root_a15d85cbd31e3f7b566923b6cfd91f73e}{ide\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Return a pointer to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} I\+DE window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_i_d_e}{Q\+Daq\+I\+DE}} $\ast$ \mbox{\hyperlink{class_q_daq_root_a3707b37847c4dd3157ff35273527a2f9}{create\+Ide\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Create the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} I\+DE window and return a pointer to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_session}{Q\+Daq\+Session}} $\ast$ \mbox{\hyperlink{class_q_daq_root_ae5bed36b118927b2c910e8d7dba3fc10}{root\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the root script session. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_q_daq_error_queue}{Q\+Daq\+Error\+Queue}} $\ast$ \mbox{\hyperlink{class_q_daq_root_aabc3e6d597d770c3037b1da9c8f074d9}{error\+Queue}} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} error queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_daq_root_aa551d667891a6fe2923ee390823c63ae}{register\+Class}} (const Q\+Meta\+Object $\ast$meta\+Obj)
+\begin{DoxyCompactList}\small\item\em Register a Q\+Daq\+Object-\/derived class type Registered classes can be created by \mbox{\hyperlink{class_q_daq_root_af40c23aa9e873c090871687e6fee5de6}{create\+Object()}}. \end{DoxyCompactList}\item 
+Q\+List$<$ const Q\+Meta\+Object $\ast$ $>$ \mbox{\hyperlink{class_q_daq_root_ac019d1677c4747e60168bba7e448f7da}{registered\+Classes}} () const
+\begin{DoxyCompactList}\small\item\em Returns list of registered class meta\+Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_root_a4c4a50e35e68a2e10482a653ca3d8368}{root\+Dir\+\_\+}}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_root_ae41b273dd04bd7a4a6b97e0abcd86fe4}{log\+Dir\+\_\+}}
+\item 
+\mbox{\hyperlink{class_q_daq_log_file}{Q\+Daq\+Log\+File}} $\ast$ \mbox{\hyperlink{class_q_daq_root_aa4e1644aa8a2463dfcc5be26c119b3fb}{error\+Log\+\_\+}}
+\item 
+\mbox{\hyperlink{class_q_daq_i_d_e}{Q\+Daq\+I\+DE}} $\ast$ \mbox{\hyperlink{class_q_daq_root_a4789d8082aa0c5997ed5ed52740db0b7}{ide\+Window\+\_\+}}
+\item 
+\mbox{\hyperlink{class_q_daq_session}{Q\+Daq\+Session}} $\ast$ \mbox{\hyperlink{class_q_daq_root_a81cc6c25917aea0ed0f6c8d385ffa28b}{root\+Session\+\_\+}}
+\item 
+\mbox{\hyperlink{class_q_daq_error_queue}{Q\+Daq\+Error\+Queue}} \mbox{\hyperlink{class_q_daq_root_a278e1c503cbaba4e824a5c5beb67c2aa}{error\+\_\+queue\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_root_a4ca1e31f82fddc36ba2768b971cd1230}{root\+Dir}}
+\begin{DoxyCompactList}\small\item\em The application root directory. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_q_daq_root_afdf964a56897845ad2fc8150bcc2ebbf}{log\+Dir}}
+\begin{DoxyCompactList}\small\item\em The directory where log files are written. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} root object class.
+
+At the top of the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree structure there is an object of type \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}}. It is a subclass of \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}.
+
+The \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} root is a single static object which can be accessed by \mbox{\hyperlink{class_q_daq_object_a9f3d71496598a421c34fc099bcfcb1ae}{Q\+Daq\+Object\+::root()}}.
+
+The \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} root should be instantiated in the main function, after Q\+Application.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  QApplication app;}
+\DoxyCodeLine{  \mbox{\hyperlink{class_q_daq_root}{QDaqRoot}} qdaq;}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{comment}{// do something}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} app.exec();}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+The name of \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} root is \char`\"{}qdaq\char`\"{}.
+
+A number of static items available to all \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} objects are defined under \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}}\+:
+\begin{DoxyItemize}
+\item The error queue, available by \mbox{\hyperlink{class_q_daq_root_aabc3e6d597d770c3037b1da9c8f074d9}{error\+Queue()}}
+\item a list of all application windows can be obtained by calling \mbox{\hyperlink{class_q_daq_root_a8327ee29571ce28f9a069d92c0e0f7b8}{daq\+Windows()}}
+\item the I\+DE window can be obtained by \mbox{\hyperlink{class_q_daq_root_a15d85cbd31e3f7b566923b6cfd91f73e}{ide\+Window()}}
+\item the root script session, \mbox{\hyperlink{class_q_daq_root_ae5bed36b118927b2c910e8d7dba3fc10}{root\+Session()}} 
+\end{DoxyItemize}
+
+Definition at line 59 of file Q\+Daq\+Root.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_root_a2bd95b702a5dda7ebb70e60f9887be46}\label{class_q_daq_root_a2bd95b702a5dda7ebb70e60f9887be46}} 
+\index{QDaqRoot@{QDaqRoot}!QDaqRoot@{QDaqRoot}}
+\index{QDaqRoot@{QDaqRoot}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{QDaqRoot()}{QDaqRoot()}}
+{\footnotesize\ttfamily Q\+Daq\+Root\+::\+Q\+Daq\+Root (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_a4e8a355e90fb2d37eaadd0de41035a02}\label{class_q_daq_root_a4e8a355e90fb2d37eaadd0de41035a02}} 
+\index{QDaqRoot@{QDaqRoot}!````~QDaqRoot@{$\sim$QDaqRoot}}
+\index{````~QDaqRoot@{$\sim$QDaqRoot}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqRoot()}{~QDaqRoot()}}
+{\footnotesize\ttfamily Q\+Daq\+Root\+::$\sim$\+Q\+Daq\+Root (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 70 of file Q\+Daq\+Root.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_root_ae0d0d3304ce527daf6c4ea2113742252}\label{class_q_daq_root_ae0d0d3304ce527daf6c4ea2113742252}} 
+\index{QDaqRoot@{QDaqRoot}!addDaqWindow@{addDaqWindow}}
+\index{addDaqWindow@{addDaqWindow}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{addDaqWindow()}{addDaqWindow()}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::add\+Daq\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 144 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_a19d2fc5d58382f34e40ec84180f070ed}\label{class_q_daq_root_a19d2fc5d58382f34e40ec84180f070ed}} 
+\index{QDaqRoot@{QDaqRoot}!classNames@{classNames}}
+\index{classNames@{classNames}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{classNames}{classNames}}
+{\footnotesize\ttfamily Q\+String\+List Q\+Daq\+Root\+::class\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Return the names of registered object classes. 
+
+
+
+Definition at line 112 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_a3707b37847c4dd3157ff35273527a2f9}\label{class_q_daq_root_a3707b37847c4dd3157ff35273527a2f9}} 
+\index{QDaqRoot@{QDaqRoot}!createIdeWindow@{createIdeWindow}}
+\index{createIdeWindow@{createIdeWindow}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{createIdeWindow()}{createIdeWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_i_d_e}{Q\+Daq\+I\+DE}} $\ast$ Q\+Daq\+Root\+::create\+Ide\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} I\+DE window and return a pointer to it. 
+
+
+
+Definition at line 84 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_af40c23aa9e873c090871687e6fee5de6}\label{class_q_daq_root_af40c23aa9e873c090871687e6fee5de6}} 
+\index{QDaqRoot@{QDaqRoot}!createObject@{createObject}}
+\index{createObject@{createObject}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{createObject()}{createObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Root\+::create\+Object (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{const Q\+String \&}]{class\+Name }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} with name name and class class\+Name.
+
+Calls the constructor of class\+Name with name as the single argument.
+
+The class with name class\+Name must be previously be registered with register\+Class.
+
+Typically used by \mbox{\hyperlink{class_q_daq_script_engine}{Q\+Daq\+Script\+Engine}} to create \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} objects in script code. 
+
+Definition at line 98 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_a8327ee29571ce28f9a069d92c0e0f7b8}\label{class_q_daq_root_a8327ee29571ce28f9a069d92c0e0f7b8}} 
+\index{QDaqRoot@{QDaqRoot}!daqWindows@{daqWindows}}
+\index{daqWindows@{daqWindows}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{daqWindows()}{daqWindows()}}
+{\footnotesize\ttfamily Q\+Widget\+List Q\+Daq\+Root\+::daq\+Windows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a list of \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} top level windows. 
+
+
+
+Definition at line 107 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_a5f0ce73ccb79285f3bc4ffa1f57313a0}\label{class_q_daq_root_a5f0ce73ccb79285f3bc4ffa1f57313a0}} 
+\index{QDaqRoot@{QDaqRoot}!daqWindowsChanged@{daqWindowsChanged}}
+\index{daqWindowsChanged@{daqWindowsChanged}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{daqWindowsChanged}{daqWindowsChanged}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::daq\+Windows\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Fired when a top level window is opened or closed. 
+
+\mbox{\Hypertarget{class_q_daq_root_abf207221733578a483f2c980c4e44130}\label{class_q_daq_root_abf207221733578a483f2c980c4e44130}} 
+\index{QDaqRoot@{QDaqRoot}!error@{error}}
+\index{error@{error}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::error (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_q_daq_error}{Q\+Daq\+Error}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_q_daq_root_aabc3e6d597d770c3037b1da9c8f074d9}\label{class_q_daq_root_aabc3e6d597d770c3037b1da9c8f074d9}} 
+\index{QDaqRoot@{QDaqRoot}!errorQueue@{errorQueue}}
+\index{errorQueue@{errorQueue}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{errorQueue()}{errorQueue()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_q_daq_error_queue}{Q\+Daq\+Error\+Queue}}$\ast$ Q\+Daq\+Root\+::error\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} error queue. 
+
+
+
+Definition at line 119 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_a15d85cbd31e3f7b566923b6cfd91f73e}\label{class_q_daq_root_a15d85cbd31e3f7b566923b6cfd91f73e}} 
+\index{QDaqRoot@{QDaqRoot}!ideWindow@{ideWindow}}
+\index{ideWindow@{ideWindow}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{ideWindow()}{ideWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_i_d_e}{Q\+Daq\+I\+DE}}$\ast$ Q\+Daq\+Root\+::ide\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a pointer to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} I\+DE window. 
+
+
+
+Definition at line 110 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_a4c26151c5398a8f484c579fbaa52d4ca}\label{class_q_daq_root_a4c26151c5398a8f484c579fbaa52d4ca}} 
+\index{QDaqRoot@{QDaqRoot}!logDir@{logDir}}
+\index{logDir@{logDir}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{logDir()}{logDir()}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Root\+::log\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 80 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_aca69ab8d663a6da03199d0757c289cc2}\label{class_q_daq_root_aca69ab8d663a6da03199d0757c289cc2}} 
+\index{QDaqRoot@{QDaqRoot}!objectAttached@{objectAttached}}
+\index{objectAttached@{objectAttached}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{objectAttached}{objectAttached}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::object\+Attached (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Fired when object is attached. 
+
+\mbox{\Hypertarget{class_q_daq_root_a59f5aa9aad3720c018df0f6e2bd63c34}\label{class_q_daq_root_a59f5aa9aad3720c018df0f6e2bd63c34}} 
+\index{QDaqRoot@{QDaqRoot}!objectDetached@{objectDetached}}
+\index{objectDetached@{objectDetached}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{objectDetached}{objectDetached}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::object\+Detached (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Fired when object is detached. 
+
+\mbox{\Hypertarget{class_q_daq_root_a38afee55a3f87dbe3f4f8a7cd369e9c8}\label{class_q_daq_root_a38afee55a3f87dbe3f4f8a7cd369e9c8}} 
+\index{QDaqRoot@{QDaqRoot}!postError@{postError}}
+\index{postError@{postError}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{postError()}{postError()}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::post\+Error (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_q_daq_error}{Q\+Daq\+Error}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Called to post an error at the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} error queue.
+
+This function is thread safe. 
+
+Definition at line 101 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_aa551d667891a6fe2923ee390823c63ae}\label{class_q_daq_root_aa551d667891a6fe2923ee390823c63ae}} 
+\index{QDaqRoot@{QDaqRoot}!registerClass@{registerClass}}
+\index{registerClass@{registerClass}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{registerClass()}{registerClass()}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::register\+Class (\begin{DoxyParamCaption}\item[{const Q\+Meta\+Object $\ast$}]{meta\+Obj }\end{DoxyParamCaption})}
+
+
+
+Register a Q\+Daq\+Object-\/derived class type Registered classes can be created by \mbox{\hyperlink{class_q_daq_root_af40c23aa9e873c090871687e6fee5de6}{create\+Object()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meta\+Obj} & meta-\/object of the class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_ac019d1677c4747e60168bba7e448f7da}\label{class_q_daq_root_ac019d1677c4747e60168bba7e448f7da}} 
+\index{QDaqRoot@{QDaqRoot}!registeredClasses@{registeredClasses}}
+\index{registeredClasses@{registeredClasses}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{registeredClasses()}{registeredClasses()}}
+{\footnotesize\ttfamily Q\+List$<$ const Q\+Meta\+Object $\ast$ $>$ Q\+Daq\+Root\+::registered\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns list of registered class meta\+Objects. 
+
+
+
+Definition at line 125 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_a4d9856738076f79706ce3264ccedb01f}\label{class_q_daq_root_a4d9856738076f79706ce3264ccedb01f}} 
+\index{QDaqRoot@{QDaqRoot}!removeDaqWindow@{removeDaqWindow}}
+\index{removeDaqWindow@{removeDaqWindow}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{removeDaqWindow()}{removeDaqWindow()}}
+{\footnotesize\ttfamily void Q\+Daq\+Root\+::remove\+Daq\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file Q\+Daq\+Root.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_root_a9dbeb50074b0f41324b52e8f1017e808}\label{class_q_daq_root_a9dbeb50074b0f41324b52e8f1017e808}} 
+\index{QDaqRoot@{QDaqRoot}!rootDir@{rootDir}}
+\index{rootDir@{rootDir}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{rootDir()}{rootDir()}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Root\+::root\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 79 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_ae5bed36b118927b2c910e8d7dba3fc10}\label{class_q_daq_root_ae5bed36b118927b2c910e8d7dba3fc10}} 
+\index{QDaqRoot@{QDaqRoot}!rootSession@{rootSession}}
+\index{rootSession@{rootSession}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{rootSession()}{rootSession()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_session}{Q\+Daq\+Session}}$\ast$ Q\+Daq\+Root\+::root\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the root script session. 
+
+
+
+Definition at line 116 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_aed63fbf9776a491a379d49bccb6eccb0}\label{class_q_daq_root_aed63fbf9776a491a379d49bccb6eccb0}} 
+\index{QDaqRoot@{QDaqRoot}!xml@{xml}}
+\index{xml@{xml}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{xml()}{xml()}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Root\+::xml (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 92 of file Q\+Daq\+Root.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_root_a278e1c503cbaba4e824a5c5beb67c2aa}\label{class_q_daq_root_a278e1c503cbaba4e824a5c5beb67c2aa}} 
+\index{QDaqRoot@{QDaqRoot}!error\_queue\_@{error\_queue\_}}
+\index{error\_queue\_@{error\_queue\_}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{error\_queue\_}{error\_queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_error_queue}{Q\+Daq\+Error\+Queue}} Q\+Daq\+Root\+::error\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 73 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_aa4e1644aa8a2463dfcc5be26c119b3fb}\label{class_q_daq_root_aa4e1644aa8a2463dfcc5be26c119b3fb}} 
+\index{QDaqRoot@{QDaqRoot}!errorLog\_@{errorLog\_}}
+\index{errorLog\_@{errorLog\_}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{errorLog\_}{errorLog\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_log_file}{Q\+Daq\+Log\+File}}$\ast$ Q\+Daq\+Root\+::error\+Log\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 70 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_a4789d8082aa0c5997ed5ed52740db0b7}\label{class_q_daq_root_a4789d8082aa0c5997ed5ed52740db0b7}} 
+\index{QDaqRoot@{QDaqRoot}!ideWindow\_@{ideWindow\_}}
+\index{ideWindow\_@{ideWindow\_}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{ideWindow\_}{ideWindow\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_i_d_e}{Q\+Daq\+I\+DE}}$\ast$ Q\+Daq\+Root\+::ide\+Window\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 71 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_ae41b273dd04bd7a4a6b97e0abcd86fe4}\label{class_q_daq_root_ae41b273dd04bd7a4a6b97e0abcd86fe4}} 
+\index{QDaqRoot@{QDaqRoot}!logDir\_@{logDir\_}}
+\index{logDir\_@{logDir\_}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{logDir\_}{logDir\_}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Root\+::log\+Dir\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 69 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_a4c4a50e35e68a2e10482a653ca3d8368}\label{class_q_daq_root_a4c4a50e35e68a2e10482a653ca3d8368}} 
+\index{QDaqRoot@{QDaqRoot}!rootDir\_@{rootDir\_}}
+\index{rootDir\_@{rootDir\_}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{rootDir\_}{rootDir\_}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Root\+::root\+Dir\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 69 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_a81cc6c25917aea0ed0f6c8d385ffa28b}\label{class_q_daq_root_a81cc6c25917aea0ed0f6c8d385ffa28b}} 
+\index{QDaqRoot@{QDaqRoot}!rootSession\_@{rootSession\_}}
+\index{rootSession\_@{rootSession\_}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{rootSession\_}{rootSession\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_session}{Q\+Daq\+Session}}$\ast$ Q\+Daq\+Root\+::root\+Session\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 72 of file Q\+Daq\+Root.\+h.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_q_daq_root_afdf964a56897845ad2fc8150bcc2ebbf}\label{class_q_daq_root_afdf964a56897845ad2fc8150bcc2ebbf}} 
+\index{QDaqRoot@{QDaqRoot}!logDir@{logDir}}
+\index{logDir@{logDir}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{logDir}{logDir}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Root\+::log\+Dir\hspace{0.3cm}{\ttfamily [read]}}
+
+
+
+The directory where log files are written. 
+
+
+
+Definition at line 24 of file Q\+Daq\+Root.\+h.
+
+\mbox{\Hypertarget{class_q_daq_root_a4ca1e31f82fddc36ba2768b971cd1230}\label{class_q_daq_root_a4ca1e31f82fddc36ba2768b971cd1230}} 
+\index{QDaqRoot@{QDaqRoot}!rootDir@{rootDir}}
+\index{rootDir@{rootDir}!QDaqRoot@{QDaqRoot}}
+\doxysubsubsection{\texorpdfstring{rootDir}{rootDir}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Root\+::root\+Dir\hspace{0.3cm}{\ttfamily [read]}}
+
+
+
+The application root directory. 
+
+
+
+Definition at line 24 of file Q\+Daq\+Root.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_root_8h}{Q\+Daq\+Root.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_root_8cpp}{Q\+Daq\+Root.\+cpp}}\end{DoxyCompactItemize}

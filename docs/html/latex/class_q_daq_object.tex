@@ -1,0 +1,664 @@
+\hypertarget{class_q_daq_object}{}\doxysection{Q\+Daq\+Object Class Reference}
+\label{class_q_daq_object}\index{QDaqObject@{QDaqObject}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Object.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.000000cm]{class_q_daq_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_object_ac622c8d4f5c71143477916ab65b5b7e6}{error\+Backtrace}} (int max\+Items=10) const
+\begin{DoxyCompactList}\small\item\em Print a backtrace of recent errors in this \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_q_daq_object_abd559cf04ebd2b018cfa0d6e3d62e116}{path}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_object_a4161cdec80325cb5ecc465aa96b998f1}{object\+Tree}} () const
+\begin{DoxyCompactList}\small\item\em Output in a string the object hierarchy beneath this object. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_q_daq_object_afd869a8540ac9ede69d83633eb433aa9}{list\+Properties}} () const
+\begin{DoxyCompactList}\small\item\em List the objects properties. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_q_daq_object_aa0b77ff29d55753d262817a22c0b55e3}{list\+Functions}} () const
+\begin{DoxyCompactList}\small\item\em List the objects scriptable functions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_q_daq_object_a5fc96fd253d494cf91e9e066d0602e91}{set\+Q\+Daq\+Property}} (Q\+String name, const Q\+Script\+Value \&value)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ D\+OM Level 1 Node interface}\par
+{\em \label{class_q_daq_object_domapi}%
+\Hypertarget{class_q_daq_object_domapi}%
+ This group of \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} slots implement the \mbox{\hyperlink{class_node}{Node}} interface of D\+OM A\+PI Level 1.
+
+The functions are slots, thus available in script code. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a2cfad0ddd44601bc7feb37c7e27f97dc}{parent}} () const
+\item 
+\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} \mbox{\hyperlink{class_q_daq_object_a3d46894e19aac067f9d9b2c4455734d8}{children}} () const
+\begin{DoxyCompactList}\small\item\em Return a list of children of this object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_q_daq_object_abd4c5fedb56d7d4d380632ca9ee046e5}{has\+Children}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the object has children. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_ab84903e71ce8bcb762575019ace3ecd6}{append\+Child}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Adds a new child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}, as the last child and returns a pointer to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a139730f7b8c46faa432590b80eb825ec}{insert\+Before}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$newobj, \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$existingobj)
+\begin{DoxyCompactList}\small\item\em Adds a new child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}, before an existing child and returns a pointer to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a77fe9c543d6ba007122494e44d893a04}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Clone a \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} with its child objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a6e64486ad4ec8fb1f84fc4e702b779d9}{remove\+Child}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Remove a child and return a pointer to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a22b6a2f78605b8686c3e6953f02d4f85}{replace\+Child}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$newobj, \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$oldobj)
+\begin{DoxyCompactList}\small\item\em Replace a child and return a pointer to the old child. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_aa84b11b058e5c2eb0e2ad4ac1b9e4949}{find\+Child}} (const Q\+String \&name) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_object_a9f7bca76048cd5f6fe6b1078da3e3b33}{properties\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Fired when object properties have changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_daq_object_aededf89ebbc4b02e9d311cd73b6d13aa}{update\+Widgets}} ()
+\begin{DoxyCompactList}\small\item\em Fired when widgets need update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE \mbox{\hyperlink{class_q_daq_object_a4465264768a2810b149ba865dbb87eef}{Q\+Daq\+Object}} (const Q\+String \&name)
+\item 
+virtual \mbox{\hyperlink{class_q_daq_object_af3d68a573ecbcf240382048c35bc92d9}{$\sim$\+Q\+Daq\+Object}} (void)
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_object_a64d05b4fd5a191896b2a3b6606d01f2b}{attach}} ()
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_object_adb74c81344b891b2744cd3f86073d5a2}{detach}} ()
+\item 
+bool \mbox{\hyperlink{class_q_daq_object_ad3f0ba2f5abdf21fc8397793433f968f}{is\+Attached}} () const
+\begin{DoxyCompactList}\small\item\em Returns true is this object is attached to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_daq_object_a9b6653b7f516e814fec7e44fd822e650}{object\+Tree}} (Q\+String \&S, int level) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a9f3d71496598a421c34fc099bcfcb1ae}{root}} ()
+\begin{DoxyCompactList}\small\item\em Obtain a pointer to the one-\/and-\/only \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}} object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a9928408ef62b37acd5e91e8c2428dc98}{from\+Path}} (const Q\+String \&\mbox{\hyperlink{class_q_daq_object_abd559cf04ebd2b018cfa0d6e3d62e116}{path}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Mutex \mbox{\hyperlink{class_q_daq_object_a1efb30c5e6c5a1f414712a21ab2df609}{comm\+\_\+lock}}
+\begin{DoxyCompactList}\small\item\em A recursive mutex for synching thread access to this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_object_a80807b1974493aee926d86d31bcb36f8}{push\+Error}} (const Q\+String \&type, const Q\+String \&descr=Q\+String()) const
+\begin{DoxyCompactList}\small\item\em Push an error in the error queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_daq_object_ae166e61e159687e49b061d4bce687263}{throw\+Script\+Error}} (const Q\+String \&msg) const
+\begin{DoxyCompactList}\small\item\em Throw a script error with message msg. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_q_daq_object_a50c3007163d505a1306d983518293955}{check\+Name}} (const Q\+String \&name) const
+\item 
+bool \mbox{\hyperlink{class_q_daq_object_a73ba53a14077b24ac1494a337fa7756d}{is\+Name\+Unique}} (const Q\+String \&name) const
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_object_a0ae6d445c5b86bfae21ee5bf743f0d82}{writeh5}} (H5\+::\+Group $\ast$g, \mbox{\hyperlink{class_q_daq_h5_file}{Q\+Daq\+H5\+File}} $\ast$f) const
+\begin{DoxyCompactList}\small\item\em Write contents of the object to a \mbox{\hyperlink{namespace_h5}{H5}} group. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_object_a231024cc68e964105bd740f7ec3a9c0f}{readh5}} (H5\+::\+Group $\ast$g, \mbox{\hyperlink{class_q_daq_h5_file}{Q\+Daq\+H5\+File}} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Read contents of the object from a \mbox{\hyperlink{namespace_h5}{H5}} group. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_object_a32834781cf68011cb193c534eb518d02}{child\+Event}} (Q\+Child\+Event $\ast$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_q_daq_object_a26c590e8889369b4c4023c9d7f5437cf}{is\+Name\+Valid}} (const Q\+String \&name, int $\ast$code=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} \mbox{\hyperlink{class_q_daq_object_aa370445b6157352b181768c01c29ae3b}{children\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}} $\ast$ \mbox{\hyperlink{class_q_daq_object_a78ff56eef7dc2ede054d235392efca79}{root\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_q_daq_object_a3ea05b86e8a20a2c7dd9fbd513a5e64b}{Q\+Daq\+H5\+File}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class of all \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} objects.
+
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} is derived from Q\+Object and thus inherits all the Qt machinery, i.\+e., properties, meta-\/objects, signals \& slots, etc.
+
+\mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} objects are organized in a tree-\/like structure like Q\+Objects. However, the children of a \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} are ordered ,whereas those of a Q\+Object are not. The ordering is necessary for \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} because \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} objects take part in loops where the order of execution is essential.
+
+To create the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} object tree structure, the \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} class offers an interface similar to the \mbox{\hyperlink{class_node}{Node}} interface of Document Object Model (D\+OM) Level 1. The interface is defined by this \mbox{\hyperlink{class_q_daq_object_domapi}{group of functions}}.
+
+Initially a \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} is created without a parent and only its name needs to be specified. The object can than be incorporated into the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} hierarchy by one of the \mbox{\hyperlink{class_q_daq_object_domapi}{D\+OM A\+PI functions}}.
+
+There is a static single root object at the top of the tree structure. The root object is accesible by \mbox{\hyperlink{class_q_daq_object_a9f3d71496598a421c34fc099bcfcb1ae}{Q\+Daq\+Object\+::root()}} and it of type \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}}.
+
+Descendants of \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} can be serialized to \href{https://support.hdfgroup.org/HDF5/}{\texttt{ H\+D\+F5 files.}} A \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} object with its children can be written/read by means of h5write() and h5read(), respectively.
+
+H\+D\+F5 serialization is done according to the following rules\+:
+\begin{DoxyItemize}
+\item Each object is written in the H\+D\+F5 file as a \mbox{\hyperlink{namespace_h5}{H5}} group. The name of the object becomes the name of the group.
+\item Properties and data of the object are written as datasets of the group. \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} descendants reimplement \mbox{\hyperlink{class_q_daq_object_a0ae6d445c5b86bfae21ee5bf743f0d82}{writeh5()}}/readh5() where necessary.
+\item Child objects are written as sub-\/groups 
+\end{DoxyItemize}
+
+Definition at line 108 of file Q\+Daq\+Object.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_object_a4465264768a2810b149ba865dbb87eef}\label{class_q_daq_object_a4465264768a2810b149ba865dbb87eef}} 
+\index{QDaqObject@{QDaqObject}!QDaqObject@{QDaqObject}}
+\index{QDaqObject@{QDaqObject}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{QDaqObject()}{QDaqObject()}}
+{\footnotesize\ttfamily Q\+Daq\+Object\+::\+Q\+Daq\+Object (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Construct a \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} with a name.
+
+The name is actually the object\+Name property of the Q\+Object super-\/class. 
+
+Definition at line 25 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_af3d68a573ecbcf240382048c35bc92d9}\label{class_q_daq_object_af3d68a573ecbcf240382048c35bc92d9}} 
+\index{QDaqObject@{QDaqObject}!````~QDaqObject@{$\sim$QDaqObject}}
+\index{````~QDaqObject@{$\sim$QDaqObject}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqObject()}{~QDaqObject()}}
+{\footnotesize\ttfamily Q\+Daq\+Object\+::$\sim$\+Q\+Daq\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 32 of file Q\+Daq\+Object.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_object_ab84903e71ce8bcb762575019ace3ecd6}\label{class_q_daq_object_ab84903e71ce8bcb762575019ace3ecd6}} 
+\index{QDaqObject@{QDaqObject}!appendChild@{appendChild}}
+\index{appendChild@{appendChild}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{appendChild}{appendChild}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Object\+::append\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Adds a new child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}, as the last child and returns a pointer to it. 
+
+
+
+Definition at line 321 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a64d05b4fd5a191896b2a3b6606d01f2b}\label{class_q_daq_object_a64d05b4fd5a191896b2a3b6606d01f2b}} 
+\index{QDaqObject@{QDaqObject}!attach@{attach}}
+\index{attach@{attach}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::attach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Attach this \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+This function is called when the object becomes part of the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+In the base class implementation this function signals the root object that a new \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} has been inserted in the tree and then calls \mbox{\hyperlink{class_q_daq_object_a64d05b4fd5a191896b2a3b6606d01f2b}{attach()}} for each child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}.
+
+Subclasses may reimplement this function to perform specific initialization. 
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_job_ac9b174a843cbdaa9300a061686856f30}{Q\+Daq\+Job}}.
+
+
+
+Definition at line 45 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a50c3007163d505a1306d983518293955}\label{class_q_daq_object_a50c3007163d505a1306d983518293955}} 
+\index{QDaqObject@{QDaqObject}!checkName@{checkName}}
+\index{checkName@{checkName}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{checkName()}{checkName()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+::check\+Name (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Check if name is a legal name for an \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}. Names should start with a letter and contain letters, numbers or the underscore \+\_\+. This function also checks if there are any sibbling objects with the same name. 
+
+Definition at line 111 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a32834781cf68011cb193c534eb518d02}\label{class_q_daq_object_a32834781cf68011cb193c534eb518d02}} 
+\index{QDaqObject@{QDaqObject}!childEvent@{childEvent}}
+\index{childEvent@{childEvent}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{childEvent()}{childEvent()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::child\+Event (\begin{DoxyParamCaption}\item[{Q\+Child\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 457 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a3d46894e19aac067f9d9b2c4455734d8}\label{class_q_daq_object_a3d46894e19aac067f9d9b2c4455734d8}} 
+\index{QDaqObject@{QDaqObject}!children@{children}}
+\index{children@{children}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} Q\+Daq\+Object\+::children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Return a list of children of this object. 
+
+
+
+Definition at line 258 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_a77fe9c543d6ba007122494e44d893a04}\label{class_q_daq_object_a77fe9c543d6ba007122494e44d893a04}} 
+\index{QDaqObject@{QDaqObject}!clone@{clone}}
+\index{clone@{clone}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{clone}{clone}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Object\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Clone a \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} with its child objects. 
+
+
+
+Definition at line 536 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_adb74c81344b891b2744cd3f86073d5a2}\label{class_q_daq_object_adb74c81344b891b2744cd3f86073d5a2}} 
+\index{QDaqObject@{QDaqObject}!detach@{detach}}
+\index{detach@{detach}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Detach this \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} from the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+This function is called just before the object becomes detached from the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+In the base class implementation it first calls \mbox{\hyperlink{class_q_daq_object_adb74c81344b891b2744cd3f86073d5a2}{detach()}} for each child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} and then signal root that the object is removed from the qdaq tree.
+
+Subclasses may reimplement this function to perform needed actions before detaching. 
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_job_a6e18cb807e0d00d5ed3534b1411bde01}{Q\+Daq\+Job}}, \mbox{\hyperlink{class_q_daq_channel_a9306d8104fac8dc6ae93b2e5ae363787}{Q\+Daq\+Channel}}, \mbox{\hyperlink{class_q_daq_device_a85104e6fbae6f9d77afc7777d171943c}{Q\+Daq\+Device}}, and \mbox{\hyperlink{class_q_daq_interface_af8a15ade26a7cc57967a37d8c652036a}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 52 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_ac622c8d4f5c71143477916ab65b5b7e6}\label{class_q_daq_object_ac622c8d4f5c71143477916ab65b5b7e6}} 
+\index{QDaqObject@{QDaqObject}!errorBacktrace@{errorBacktrace}}
+\index{errorBacktrace@{errorBacktrace}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{errorBacktrace}{errorBacktrace}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Object\+::error\+Backtrace (\begin{DoxyParamCaption}\item[{int}]{max\+Items = {\ttfamily 10} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Print a backtrace of recent errors in this \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}. 
+
+
+
+Definition at line 67 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_aa84b11b058e5c2eb0e2ad4ac1b9e4949}\label{class_q_daq_object_aa84b11b058e5c2eb0e2ad4ac1b9e4949}} 
+\index{QDaqObject@{QDaqObject}!findChild@{findChild}}
+\index{findChild@{findChild}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{findChild}{findChild}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}$\ast$ Q\+Daq\+Object\+::find\+Child (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+Find the first child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} with object\+Name equal to name. 
+
+Definition at line 275 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_a9928408ef62b37acd5e91e8c2428dc98}\label{class_q_daq_object_a9928408ef62b37acd5e91e8c2428dc98}} 
+\index{QDaqObject@{QDaqObject}!fromPath@{fromPath}}
+\index{fromPath@{fromPath}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{fromPath()}{fromPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Object\+::from\+Path (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Return a pointer to an object given its full path in the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+If the specified path is invalid the function returns a null pointer. 
+
+Definition at line 179 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_abd4c5fedb56d7d4d380632ca9ee046e5}\label{class_q_daq_object_abd4c5fedb56d7d4d380632ca9ee046e5}} 
+\index{QDaqObject@{QDaqObject}!hasChildren@{hasChildren}}
+\index{hasChildren@{hasChildren}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{hasChildren}{hasChildren}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+::has\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Returns true if the object has children. 
+
+
+
+Definition at line 260 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_a139730f7b8c46faa432590b80eb825ec}\label{class_q_daq_object_a139730f7b8c46faa432590b80eb825ec}} 
+\index{QDaqObject@{QDaqObject}!insertBefore@{insertBefore}}
+\index{insertBefore@{insertBefore}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{insertBefore}{insertBefore}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Object\+::insert\+Before (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{newobj,  }\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{existingobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Adds a new child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}, before an existing child and returns a pointer to it. 
+
+
+
+Definition at line 339 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_ad3f0ba2f5abdf21fc8397793433f968f}\label{class_q_daq_object_ad3f0ba2f5abdf21fc8397793433f968f}} 
+\index{QDaqObject@{QDaqObject}!isAttached@{isAttached}}
+\index{isAttached@{isAttached}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{isAttached()}{isAttached()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+::is\+Attached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true is this object is attached to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree. 
+
+
+
+Definition at line 59 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a73ba53a14077b24ac1494a337fa7756d}\label{class_q_daq_object_a73ba53a14077b24ac1494a337fa7756d}} 
+\index{QDaqObject@{QDaqObject}!isNameUnique@{isNameUnique}}
+\index{isNameUnique@{isNameUnique}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{isNameUnique()}{isNameUnique()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+::is\+Name\+Unique (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 133 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a26c590e8889369b4c4023c9d7f5437cf}\label{class_q_daq_object_a26c590e8889369b4c4023c9d7f5437cf}} 
+\index{QDaqObject@{QDaqObject}!isNameValid@{isNameValid}}
+\index{isNameValid@{isNameValid}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{isNameValid()}{isNameValid()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+::is\+Name\+Valid (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{int $\ast$}]{code = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 146 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_aa0b77ff29d55753d262817a22c0b55e3}\label{class_q_daq_object_aa0b77ff29d55753d262817a22c0b55e3}} 
+\index{QDaqObject@{QDaqObject}!listFunctions@{listFunctions}}
+\index{listFunctions@{listFunctions}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{listFunctions}{listFunctions}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Object\+::list\+Functions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+List the objects scriptable functions. 
+
+
+
+Definition at line 313 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_afd869a8540ac9ede69d83633eb433aa9}\label{class_q_daq_object_afd869a8540ac9ede69d83633eb433aa9}} 
+\index{QDaqObject@{QDaqObject}!listProperties@{listProperties}}
+\index{listProperties@{listProperties}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{listProperties}{listProperties}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Object\+::list\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+List the objects properties. 
+
+
+
+Definition at line 255 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a4161cdec80325cb5ecc465aa96b998f1}\label{class_q_daq_object_a4161cdec80325cb5ecc465aa96b998f1}} 
+\index{QDaqObject@{QDaqObject}!objectTree@{objectTree}}
+\index{objectTree@{objectTree}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{objectTree}{objectTree}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Object\+::object\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Output in a string the object hierarchy beneath this object. 
+
+
+
+Definition at line 228 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_a9b6653b7f516e814fec7e44fd822e650}\label{class_q_daq_object_a9b6653b7f516e814fec7e44fd822e650}} 
+\index{QDaqObject@{QDaqObject}!objectTree@{objectTree}}
+\index{objectTree@{objectTree}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{objectTree()}{objectTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::object\+Tree (\begin{DoxyParamCaption}\item[{Q\+String \&}]{S,  }\item[{int}]{level }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 90 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a2cfad0ddd44601bc7feb37c7e27f97dc}\label{class_q_daq_object_a2cfad0ddd44601bc7feb37c7e27f97dc}} 
+\index{QDaqObject@{QDaqObject}!parent@{parent}}
+\index{parent@{parent}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}$\ast$ Q\+Daq\+Object\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+Return the object\textquotesingle{}s parent or null if the object does not have a parent. 
+
+Definition at line 256 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_abd559cf04ebd2b018cfa0d6e3d62e116}\label{class_q_daq_object_abd559cf04ebd2b018cfa0d6e3d62e116}} 
+\index{QDaqObject@{QDaqObject}!path@{path}}
+\index{path@{path}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Object\+::path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+Return the object\textquotesingle{}s path in the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+Example\+: qdaq.\+x.\+y.\+z.\+obj1 If the object is not attached to the tree, the function returns the name of the object. 
+
+Definition at line 166 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a9f7bca76048cd5f6fe6b1078da3e3b33}\label{class_q_daq_object_a9f7bca76048cd5f6fe6b1078da3e3b33}} 
+\index{QDaqObject@{QDaqObject}!propertiesChanged@{propertiesChanged}}
+\index{propertiesChanged@{propertiesChanged}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{propertiesChanged}{propertiesChanged}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::properties\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Fired when object properties have changed. 
+
+\mbox{\Hypertarget{class_q_daq_object_a80807b1974493aee926d86d31bcb36f8}\label{class_q_daq_object_a80807b1974493aee926d86d31bcb36f8}} 
+\index{QDaqObject@{QDaqObject}!pushError@{pushError}}
+\index{pushError@{pushError}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{pushError()}{pushError()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::push\+Error (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{type,  }\item[{const Q\+String \&}]{descr = {\ttfamily QString()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Push an error in the error queue. 
+
+
+
+Definition at line 202 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a231024cc68e964105bd740f7ec3a9c0f}\label{class_q_daq_object_a231024cc68e964105bd740f7ec3a9c0f}} 
+\index{QDaqObject@{QDaqObject}!readh5@{readh5}}
+\index{readh5@{readh5}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{readh5()}{readh5()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::readh5 (\begin{DoxyParamCaption}\item[{H5\+::\+Group $\ast$}]{g,  }\item[{\mbox{\hyperlink{class_q_daq_h5_file}{Q\+Daq\+H5\+File}} $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Read contents of the object from a \mbox{\hyperlink{namespace_h5}{H5}} group. 
+
+The base class implementation reads all properties (static \& dynamic) from corresponding datasets of the H\+D\+F5 file group.
+
+Reimplement in \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} descendants to read additional data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & H\+D\+F5 Group object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_data_buffer_ad8237c6e585dfddaf6a493a8061d3b6b}{Q\+Daq\+Data\+Buffer}}.
+
+
+
+Definition at line 17 of file Q\+Daq\+H5\+Serialize.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a6e64486ad4ec8fb1f84fc4e702b779d9}\label{class_q_daq_object_a6e64486ad4ec8fb1f84fc4e702b779d9}} 
+\index{QDaqObject@{QDaqObject}!removeChild@{removeChild}}
+\index{removeChild@{removeChild}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{removeChild}{removeChild}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Object\+::remove\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Remove a child and return a pointer to it. 
+
+
+
+Definition at line 479 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a22b6a2f78605b8686c3e6953f02d4f85}\label{class_q_daq_object_a22b6a2f78605b8686c3e6953f02d4f85}} 
+\index{QDaqObject@{QDaqObject}!replaceChild@{replaceChild}}
+\index{replaceChild@{replaceChild}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{replaceChild}{replaceChild}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Object\+::replace\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{newobj,  }\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{oldobj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Replace a child and return a pointer to the old child. 
+
+
+
+Definition at line 498 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_a9f3d71496598a421c34fc099bcfcb1ae}\label{class_q_daq_object_a9f3d71496598a421c34fc099bcfcb1ae}} 
+\index{QDaqObject@{QDaqObject}!root@{root}}
+\index{root@{root}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}}$\ast$ Q\+Daq\+Object\+::root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obtain a pointer to the one-\/and-\/only \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}} object. 
+
+
+
+Definition at line 168 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_a5fc96fd253d494cf91e9e066d0602e91}\label{class_q_daq_object_a5fc96fd253d494cf91e9e066d0602e91}} 
+\index{QDaqObject@{QDaqObject}!setQDaqProperty@{setQDaqProperty}}
+\index{setQDaqProperty@{setQDaqProperty}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{setQDaqProperty}{setQDaqProperty}}
+{\footnotesize\ttfamily bool Q\+Daq\+Object\+::set\+Q\+Daq\+Property (\begin{DoxyParamCaption}\item[{Q\+String}]{name,  }\item[{const Q\+Script\+Value \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 366 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_ae166e61e159687e49b061d4bce687263}\label{class_q_daq_object_ae166e61e159687e49b061d4bce687263}} 
+\index{QDaqObject@{QDaqObject}!throwScriptError@{throwScriptError}}
+\index{throwScriptError@{throwScriptError}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{throwScriptError()}{throwScriptError()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::throw\+Script\+Error (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{msg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Throw a script error with message msg. 
+
+
+
+Definition at line 82 of file Q\+Daq\+Object.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_object_aededf89ebbc4b02e9d311cd73b6d13aa}\label{class_q_daq_object_aededf89ebbc4b02e9d311cd73b6d13aa}} 
+\index{QDaqObject@{QDaqObject}!updateWidgets@{updateWidgets}}
+\index{updateWidgets@{updateWidgets}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{updateWidgets}{updateWidgets}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::update\+Widgets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Fired when widgets need update. 
+
+\mbox{\Hypertarget{class_q_daq_object_a0ae6d445c5b86bfae21ee5bf743f0d82}\label{class_q_daq_object_a0ae6d445c5b86bfae21ee5bf743f0d82}} 
+\index{QDaqObject@{QDaqObject}!writeh5@{writeh5}}
+\index{writeh5@{writeh5}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{writeh5()}{writeh5()}}
+{\footnotesize\ttfamily void Q\+Daq\+Object\+::writeh5 (\begin{DoxyParamCaption}\item[{H5\+::\+Group $\ast$}]{g,  }\item[{\mbox{\hyperlink{class_q_daq_h5_file}{Q\+Daq\+H5\+File}} $\ast$}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Write contents of the object to a \mbox{\hyperlink{namespace_h5}{H5}} group. 
+
+The base class implementation writes all properties (static \& dynamic) as datasets of the H\+D\+F5 file group.
+
+Reimplement in \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} descendants to write additional data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & H\+D\+F5 Group object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_data_buffer_a52bc461cb9b215ac8da88fe5e974392a}{Q\+Daq\+Data\+Buffer}}.
+
+
+
+Definition at line 12 of file Q\+Daq\+H5\+Serialize.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_q_daq_object_a3ea05b86e8a20a2c7dd9fbd513a5e64b}\label{class_q_daq_object_a3ea05b86e8a20a2c7dd9fbd513a5e64b}} 
+\index{QDaqObject@{QDaqObject}!QDaqH5File@{QDaqH5File}}
+\index{QDaqH5File@{QDaqH5File}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{QDaqH5File}{QDaqH5File}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_q_daq_h5_file}{Q\+Daq\+H5\+File}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 151 of file Q\+Daq\+Object.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_object_aa370445b6157352b181768c01c29ae3b}\label{class_q_daq_object_aa370445b6157352b181768c01c29ae3b}} 
+\index{QDaqObject@{QDaqObject}!children\_@{children\_}}
+\index{children\_@{children\_}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{children\_}{children\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} Q\+Daq\+Object\+::children\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 158 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_a1efb30c5e6c5a1f414712a21ab2df609}\label{class_q_daq_object_a1efb30c5e6c5a1f414712a21ab2df609}} 
+\index{QDaqObject@{QDaqObject}!comm\_lock@{comm\_lock}}
+\index{comm\_lock@{comm\_lock}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{comm\_lock}{comm\_lock}}
+{\footnotesize\ttfamily Q\+Mutex Q\+Daq\+Object\+::comm\+\_\+lock}
+
+
+
+A recursive mutex for synching thread access to this object. 
+
+
+
+Definition at line 165 of file Q\+Daq\+Object.\+h.
+
+\mbox{\Hypertarget{class_q_daq_object_a78ff56eef7dc2ede054d235392efca79}\label{class_q_daq_object_a78ff56eef7dc2ede054d235392efca79}} 
+\index{QDaqObject@{QDaqObject}!root\_@{root\_}}
+\index{root\_@{root\_}!QDaqObject@{QDaqObject}}
+\doxysubsubsection{\texorpdfstring{root\_}{root\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_root}{Q\+Daq\+Root}} $\ast$ Q\+Daq\+Object\+::root\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 161 of file Q\+Daq\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_object_8h}{Q\+Daq\+Object.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_h5_serialize_8cpp}{Q\+Daq\+H5\+Serialize.\+cpp}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_object_8cpp}{Q\+Daq\+Object.\+cpp}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_root_8cpp}{Q\+Daq\+Root.\+cpp}}\end{DoxyCompactItemize}

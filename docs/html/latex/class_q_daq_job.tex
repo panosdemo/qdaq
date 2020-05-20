@@ -1,0 +1,638 @@
+\hypertarget{class_q_daq_job}{}\doxysection{Q\+Daq\+Job Class Reference}
+\label{class_q_daq_job}\index{QDaqJob@{QDaqJob}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Job.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Job\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.196347cm]{class_q_daq_job}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_q_daq_job_1_1_job_list}{Job\+List}}
+\item 
+class \mbox{\hyperlink{class_q_daq_job_1_1_job_locker}{Job\+Locker}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_q_daq_job_a94167d7d5eff177039b16ea9cef35059}{armed}} ()
+\item 
+const Q\+String \& \mbox{\hyperlink{class_q_daq_job_af78a7ba23418f53521b3e860709ca3cc}{run\+Code}} () const
+\item 
+const Q\+String \& \mbox{\hyperlink{class_q_daq_job_a5b1fa0c49928d0681fe5a320c673fe96}{arm\+Code}} () const
+\item 
+const Q\+String \& \mbox{\hyperlink{class_q_daq_job_a77ffac25cccd1f8eaa744cd1d1fcf99b}{disarm\+Code}} () const
+\item 
+void \mbox{\hyperlink{class_q_daq_job_ac601dcc9aa14fd6be02518ae7a40da9a}{set\+Run\+Code}} (const Q\+String \&s)
+\item 
+void \mbox{\hyperlink{class_q_daq_job_a2bed6b505315e97549c7700fb508bac0}{set\+Arm\+Code}} (const Q\+String \&s)
+\item 
+void \mbox{\hyperlink{class_q_daq_job_aecb2459c1228170f702862e5494f1445}{set\+Disarm\+Code}} (const Q\+String \&s)
+\item 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE \mbox{\hyperlink{class_q_daq_job_a537e796bff55fe0db2ec11fa6769ba67}{Q\+Daq\+Job}} (const Q\+String \&name)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_q_daq_job_a53fa52681aa84b35814f431ec8d7a80c}{$\sim$\+Q\+Daq\+Job}} (void)
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_job_ac9b174a843cbdaa9300a061686856f30}{attach}} ()
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_job_a6e18cb807e0d00d5ed3534b1411bde01}{detach}} ()
+\item 
+\mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}} $\ast$ \mbox{\hyperlink{class_q_daq_job_a7063994d74b0484f8f80e90e01b45bcc}{top\+Loop}} () const
+\begin{DoxyCompactList}\small\item\em Returns the top level loop that this job belongs to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}} $\ast$ \mbox{\hyperlink{class_q_daq_job_aa3249a6c07b87ae8ac4e034a6274c95c}{loop}} () const
+\begin{DoxyCompactList}\small\item\em Returns the loop that this job belongs to. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_q_daq_script_engine}{Q\+Daq\+Script\+Engine}} $\ast$ \mbox{\hyperlink{class_q_daq_job_aba27ebc276314277e303cc8c97e9f439}{loop\+Engine}} () const
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{class_q_daq_script_engine}{Q\+Daq\+Script\+Engine}} of the top level loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_job_aad493e9880d26c4b25cebe4bacee1717}{arm\+\_\+}} ()
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_job_a5e6f51260c19f421bb4396720c2dc37b}{disarm\+\_\+}} ()
+\item 
+bool \mbox{\hyperlink{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}{set\+Armed}} (bool on)
+\begin{DoxyCompactList}\small\item\em Arms or disarms a job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_daq_job_a1e217f6f8704a9d0afb24d1a41779e67}{discover\+Jobs}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_job_a3e9b29b3d08db65e59fbf24f2c7be51c}{job\+Lock}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_job_a5d9d53f3d84c69bcefa7580b62a204eb}{job\+Unlock}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_job_a39c072085e85df73a1608e9d347fb518}{exec}} ()
+\begin{DoxyCompactList}\small\item\em Called when the job is executed. If armed is false, the function does nothing. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_q_daq_job_afe30e7c3f03deb124ae4338984544a7f}{run}} ()
+\begin{DoxyCompactList}\small\item\em This function performs the actual task of this \mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_q_daq_job_a84d8d4fe7cad2adceedd9acd35b1c981}{throw\+If\+Armed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_job_adbf853eaa6c124dbe1ae6d18661169ce}{run\+Code\+\_\+}}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_job_a1ece2201261df6f6a25b422f5d16b7d3}{arm\+Code\+\_\+}}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_job_afb403b6a2a9ecef039d05efb8fa64b68}{disarm\+Code\+\_\+}}
+\item 
+Q\+Script\+Program $\ast$ \mbox{\hyperlink{class_q_daq_job_a270e954ba80f8c1c7256f2d5f6ca9a80}{program\+\_\+}}
+\item 
+Q\+Pointer$<$ \mbox{\hyperlink{class_q_daq_script_engine}{Q\+Daq\+Script\+Engine}} $>$ \mbox{\hyperlink{class_q_daq_job_a4c5bd11391bb2ff676fe75e57bbbfa6b}{loop\+\_\+eng\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_q_daq_job_af4d7d3a3efe79161910d6b897280a6f1}{is\+Loop\+\_\+}}
+\item 
+\mbox{\hyperlink{class_q_daq_job_1_1_job_list}{Job\+List}} \mbox{\hyperlink{class_q_daq_job_a80db952e9ca54d033722f384ea90b095}{subjobs\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_q_daq_job_a34e09d865dca29970968bc84b8187787}{armed}}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_job_a24db9d090b8cffe7fc16beb0175c7059}{run\+Code}}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_job_a3b22c647265e4a21f249bc8dbad504ee}{arm\+Code}}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_job_a2e1ad0d169747111bedead44fb7e5c95}{disarm\+Code}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_q_daq_job_a9b6a79509fd2d819d7ad77638a785637}{Job\+List}}
+\item 
+class \mbox{\hyperlink{class_q_daq_job_ab043c5eb6e546cd0d8419493b7fcd405}{Job\+Locker}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for objects that perform a specific task reqursively.
+
+Jobs can be organized as children of a parent-\/job or children of the super-\/class \mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}}.
+
+When a \mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}} runs all its child jobs are executed by calling their \mbox{\hyperlink{class_q_daq_job_a39c072085e85df73a1608e9d347fb518}{exec()}} function. The \mbox{\hyperlink{class_q_daq_job_a39c072085e85df73a1608e9d347fb518}{exec()}} function first calls \mbox{\hyperlink{class_q_daq_job_afe30e7c3f03deb124ae4338984544a7f}{run()}} to perform the actual processing of this job (if there is any) and then calls \mbox{\hyperlink{class_q_daq_job_a39c072085e85df73a1608e9d347fb518}{exec()}} of each child job.
+
+To give an example of the order that jobs are executed, the following job tree\+: \begin{DoxyVerb}job0
+ |--job1
+ |   |--job11
+ |   |--job12
+ |--job2
+ |--job3\end{DoxyVerb}
+ will be executed with the following order\+: job0-\/job1-\/job11-\/job12-\/job2-\/job3
+
+Before the job can perform its task it must be \char`\"{}armed\char`\"{}. Arming does all the necessary initialization and is implemented in the function \mbox{\hyperlink{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}{set\+Armed()}}. 
+
+Definition at line 46 of file Q\+Daq\+Job.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_job_a537e796bff55fe0db2ec11fa6769ba67}\label{class_q_daq_job_a537e796bff55fe0db2ec11fa6769ba67}} 
+\index{QDaqJob@{QDaqJob}!QDaqJob@{QDaqJob}}
+\index{QDaqJob@{QDaqJob}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{QDaqJob()}{QDaqJob()}}
+{\footnotesize\ttfamily Q\+Daq\+Job\+::\+Q\+Daq\+Job (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a53fa52681aa84b35814f431ec8d7a80c}\label{class_q_daq_job_a53fa52681aa84b35814f431ec8d7a80c}} 
+\index{QDaqJob@{QDaqJob}!````~QDaqJob@{$\sim$QDaqJob}}
+\index{````~QDaqJob@{$\sim$QDaqJob}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqJob()}{~QDaqJob()}}
+{\footnotesize\ttfamily Q\+Daq\+Job\+::$\sim$\+Q\+Daq\+Job (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 9 of file Q\+Daq\+Job.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_job_aad493e9880d26c4b25cebe4bacee1717}\label{class_q_daq_job_aad493e9880d26c4b25cebe4bacee1717}} 
+\index{QDaqJob@{QDaqJob}!arm\_@{arm\_}}
+\index{arm\_@{arm\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{arm\_()}{arm\_()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::arm\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Performs internal initialization for the job.
+
+It is called by the \mbox{\hyperlink{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}{set\+Armed()}} function.
+
+This function can be reimplemented to perform specific initialization for a job. The parent class \mbox{\hyperlink{class_q_daq_job_aad493e9880d26c4b25cebe4bacee1717}{arm\+\_\+()}} function should be called afterwards.
+
+In the default implementation, if a \mbox{\hyperlink{class_q_daq_job_aba27ebc276314277e303cc8c97e9f439}{loop\+Engine()}} exists the script code is checked against the script engine for errors.
+
+If initialization is sucessfull it returns true, otherwise the function returns false. 
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_loop_a51463de8b6c7c519040a1bb954755cef}{Q\+Daq\+Loop}}, \mbox{\hyperlink{class_q_daq_channel_a46df9fec7eddf05d895897273ff163ec}{Q\+Daq\+Channel}}, \mbox{\hyperlink{class_q_daq_device_ac93ade30efbd57199449afae4b08ac8e}{Q\+Daq\+Device}}, and \mbox{\hyperlink{class_q_daq_filter_af11697b54b43bab5f8f5c2aa564c73bd}{Q\+Daq\+Filter}}.
+
+
+
+Definition at line 55 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a5b1fa0c49928d0681fe5a320c673fe96}\label{class_q_daq_job_a5b1fa0c49928d0681fe5a320c673fe96}} 
+\index{QDaqJob@{QDaqJob}!armCode@{armCode}}
+\index{armCode@{armCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{armCode()}{armCode()}}
+{\footnotesize\ttfamily const Q\+String\& Q\+Daq\+Job\+::arm\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 156 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a94167d7d5eff177039b16ea9cef35059}\label{class_q_daq_job_a94167d7d5eff177039b16ea9cef35059}} 
+\index{QDaqJob@{QDaqJob}!armed@{armed}}
+\index{armed@{armed}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{armed()}{armed()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::armed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 153 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_ac9b174a843cbdaa9300a061686856f30}\label{class_q_daq_job_ac9b174a843cbdaa9300a061686856f30}} 
+\index{QDaqJob@{QDaqJob}!attach@{attach}}
+\index{attach@{attach}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::attach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Attach this \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} to the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+This function is called when the object becomes part of the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+In the base class implementation this function signals the root object that a new \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} has been inserted in the tree and then calls \mbox{\hyperlink{class_q_daq_job_ac9b174a843cbdaa9300a061686856f30}{attach()}} for each child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}}.
+
+Subclasses may reimplement this function to perform specific initialization. 
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_object_a64d05b4fd5a191896b2a3b6606d01f2b}{Q\+Daq\+Object}}.
+
+
+
+Definition at line 12 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a6e18cb807e0d00d5ed3534b1411bde01}\label{class_q_daq_job_a6e18cb807e0d00d5ed3534b1411bde01}} 
+\index{QDaqJob@{QDaqJob}!detach@{detach}}
+\index{detach@{detach}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Detach this \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} from the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+This function is called just before the object becomes detached from the \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} tree.
+
+In the base class implementation it first calls \mbox{\hyperlink{class_q_daq_job_a6e18cb807e0d00d5ed3534b1411bde01}{detach()}} for each child \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} and then signal root that the object is removed from the qdaq tree.
+
+Subclasses may reimplement this function to perform needed actions before detaching. 
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_object_adb74c81344b891b2744cd3f86073d5a2}{Q\+Daq\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_channel_a9306d8104fac8dc6ae93b2e5ae363787}{Q\+Daq\+Channel}}, and \mbox{\hyperlink{class_q_daq_device_a85104e6fbae6f9d77afc7777d171943c}{Q\+Daq\+Device}}.
+
+
+
+Definition at line 16 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a5e6f51260c19f421bb4396720c2dc37b}\label{class_q_daq_job_a5e6f51260c19f421bb4396720c2dc37b}} 
+\index{QDaqJob@{QDaqJob}!disarm\_@{disarm\_}}
+\index{disarm\_@{disarm\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{disarm\_()}{disarm\_()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::disarm\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Performs internal de-\/initialization.
+
+It is called by the \mbox{\hyperlink{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}{set\+Armed()}} function.
+
+Can be reimplemented to define special behavior during dis-\/arming. The parent class \mbox{\hyperlink{class_q_daq_job_a5e6f51260c19f421bb4396720c2dc37b}{disarm\+\_\+()}} should be called. 
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_loop_a583744a8b79b3fd3450a54d9795281f6}{Q\+Daq\+Loop}}.
+
+
+
+Definition at line 91 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a77ffac25cccd1f8eaa744cd1d1fcf99b}\label{class_q_daq_job_a77ffac25cccd1f8eaa744cd1d1fcf99b}} 
+\index{QDaqJob@{QDaqJob}!disarmCode@{disarmCode}}
+\index{disarmCode@{disarmCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{disarmCode()}{disarmCode()}}
+{\footnotesize\ttfamily const Q\+String\& Q\+Daq\+Job\+::disarm\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 157 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a1e217f6f8704a9d0afb24d1a41779e67}\label{class_q_daq_job_a1e217f6f8704a9d0afb24d1a41779e67}} 
+\index{QDaqJob@{QDaqJob}!discoverJobs@{discoverJobs}}
+\index{discoverJobs@{discoverJobs}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{discoverJobs()}{discoverJobs()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::discover\+Jobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 112 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a39c072085e85df73a1608e9d347fb518}\label{class_q_daq_job_a39c072085e85df73a1608e9d347fb518}} 
+\index{QDaqJob@{QDaqJob}!exec@{exec}}
+\index{exec@{exec}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::exec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the job is executed. If armed is false, the function does nothing. 
+
+If armed is true, then this job\textquotesingle{}s \mbox{\hyperlink{class_q_daq_job_afe30e7c3f03deb124ae4338984544a7f}{run()}} is called and then the \mbox{\hyperlink{class_q_daq_job_a39c072085e85df73a1608e9d347fb518}{exec()}} of all sub-\/jobs.
+
+The function is called by the parent loop\textquotesingle{}s \mbox{\hyperlink{class_q_daq_loop_aae1fa092929e526545300c29a0501649}{Q\+Daq\+Loop\+::exec()}} function.
+
+\begin{DoxyReturn}{Returns}
+false if \mbox{\hyperlink{class_q_daq_job_afe30e7c3f03deb124ae4338984544a7f}{run()}} return false or some child-\/job returns false; true otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_loop_aae1fa092929e526545300c29a0501649}{Q\+Daq\+Loop}}.
+
+
+
+Definition at line 26 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a3e9b29b3d08db65e59fbf24f2c7be51c}\label{class_q_daq_job_a3e9b29b3d08db65e59fbf24f2c7be51c}} 
+\index{QDaqJob@{QDaqJob}!jobLock@{jobLock}}
+\index{jobLock@{jobLock}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{jobLock()}{jobLock()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::job\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 192 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a5d9d53f3d84c69bcefa7580b62a204eb}\label{class_q_daq_job_a5d9d53f3d84c69bcefa7580b62a204eb}} 
+\index{QDaqJob@{QDaqJob}!jobUnlock@{jobUnlock}}
+\index{jobUnlock@{jobUnlock}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{jobUnlock()}{jobUnlock()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::job\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 197 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_aa3249a6c07b87ae8ac4e034a6274c95c}\label{class_q_daq_job_aa3249a6c07b87ae8ac4e034a6274c95c}} 
+\index{QDaqJob@{QDaqJob}!loop@{loop}}
+\index{loop@{loop}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}} $\ast$ Q\+Daq\+Job\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the loop that this job belongs to. 
+
+
+
+Definition at line 216 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_aba27ebc276314277e303cc8c97e9f439}\label{class_q_daq_job_aba27ebc276314277e303cc8c97e9f439}} 
+\index{QDaqJob@{QDaqJob}!loopEngine@{loopEngine}}
+\index{loopEngine@{loopEngine}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{loopEngine()}{loopEngine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_script_engine}{Q\+Daq\+Script\+Engine}} $\ast$ Q\+Daq\+Job\+::loop\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the \mbox{\hyperlink{class_q_daq_script_engine}{Q\+Daq\+Script\+Engine}} of the top level loop. 
+
+
+
+Definition at line 227 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_afe30e7c3f03deb124ae4338984544a7f}\label{class_q_daq_job_afe30e7c3f03deb124ae4338984544a7f}} 
+\index{QDaqJob@{QDaqJob}!run@{run}}
+\index{run@{run}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This function performs the actual task of this \mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}}. 
+
+It can be reimplemented in subclasses to define the specific job that must be performed.
+
+In the base implementation, it executes the script code if available.
+
+\begin{DoxyReturn}{Returns}
+false if a serious error occured, true otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_channel_aee8bdb0e59a3e60c598ba1a764e60102}{Q\+Daq\+Channel}}, \mbox{\hyperlink{class_q_daq_data_buffer_abeb26dd8984748cf6b4203c0085b5f8d}{Q\+Daq\+Data\+Buffer}}, and \mbox{\hyperlink{class_q_daq_filter_a70d435dddd2207a850affd5e1efe0e8e}{Q\+Daq\+Filter}}.
+
+
+
+Definition at line 38 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_af78a7ba23418f53521b3e860709ca3cc}\label{class_q_daq_job_af78a7ba23418f53521b3e860709ca3cc}} 
+\index{QDaqJob@{QDaqJob}!runCode@{runCode}}
+\index{runCode@{runCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{runCode()}{runCode()}}
+{\footnotesize\ttfamily const Q\+String\& Q\+Daq\+Job\+::run\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 155 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a2bed6b505315e97549c7700fb508bac0}\label{class_q_daq_job_a2bed6b505315e97549c7700fb508bac0}} 
+\index{QDaqJob@{QDaqJob}!setArmCode@{setArmCode}}
+\index{setArmCode@{setArmCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{setArmCode()}{setArmCode()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::set\+Arm\+Code (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}\label{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}} 
+\index{QDaqJob@{QDaqJob}!setArmed@{setArmed}}
+\index{setArmed@{setArmed}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{setArmed()}{setArmed()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::set\+Armed (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Arms or disarms a job. 
+
+If on is true then \mbox{\hyperlink{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}{set\+Armed()}} is called for each child-\/\+Q\+Daq\+Job (not \mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}}) and finally \mbox{\hyperlink{class_q_daq_job_aad493e9880d26c4b25cebe4bacee1717}{arm\+\_\+()}} is called to initialize this job. If any of those calls return false the arming is aborted and false is returned.
+
+If on is false then \mbox{\hyperlink{class_q_daq_job_a5e6f51260c19f421bb4396720c2dc37b}{disarm\+\_\+()}} is called first and then \mbox{\hyperlink{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}{set\+Armed()}} with parameter false is called for each child job.
+
+This funtion is protected so that it cannot be called directly. \mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}} objects are armed by their parent \mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}}, when calling \mbox{\hyperlink{class_q_daq_loop_a87548dcf7b27cb4affbabd5908e0d17f}{Q\+Daq\+Loop\+::arm()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em on} & If true the job is armed otherwise it is disarmed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation was sucesfull. 
+\end{DoxyReturn}
+
+
+Definition at line 129 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_aecb2459c1228170f702862e5494f1445}\label{class_q_daq_job_aecb2459c1228170f702862e5494f1445}} 
+\index{QDaqJob@{QDaqJob}!setDisarmCode@{setDisarmCode}}
+\index{setDisarmCode@{setDisarmCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{setDisarmCode()}{setDisarmCode()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::set\+Disarm\+Code (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_ac601dcc9aa14fd6be02518ae7a40da9a}\label{class_q_daq_job_ac601dcc9aa14fd6be02518ae7a40da9a}} 
+\index{QDaqJob@{QDaqJob}!setRunCode@{setRunCode}}
+\index{setRunCode@{setRunCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{setRunCode()}{setRunCode()}}
+{\footnotesize\ttfamily void Q\+Daq\+Job\+::set\+Run\+Code (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a84d8d4fe7cad2adceedd9acd35b1c981}\label{class_q_daq_job_a84d8d4fe7cad2adceedd9acd35b1c981}} 
+\index{QDaqJob@{QDaqJob}!throwIfArmed@{throwIfArmed}}
+\index{throwIfArmed@{throwIfArmed}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{throwIfArmed()}{throwIfArmed()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::throw\+If\+Armed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file Q\+Daq\+Job.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_job_a7063994d74b0484f8f80e90e01b45bcc}\label{class_q_daq_job_a7063994d74b0484f8f80e90e01b45bcc}} 
+\index{QDaqJob@{QDaqJob}!topLoop@{topLoop}}
+\index{topLoop@{topLoop}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{topLoop()}{topLoop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_loop}{Q\+Daq\+Loop}} $\ast$ Q\+Daq\+Job\+::top\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the top level loop that this job belongs to. 
+
+
+
+Definition at line 204 of file Q\+Daq\+Job.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_q_daq_job_a9b6a79509fd2d819d7ad77638a785637}\label{class_q_daq_job_a9b6a79509fd2d819d7ad77638a785637}} 
+\index{QDaqJob@{QDaqJob}!JobList@{JobList}}
+\index{JobList@{JobList}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{JobList}{JobList}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_q_daq_job_1_1_job_list}{Job\+List}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 168 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_ab043c5eb6e546cd0d8419493b7fcd405}\label{class_q_daq_job_ab043c5eb6e546cd0d8419493b7fcd405}} 
+\index{QDaqJob@{QDaqJob}!JobLocker@{JobLocker}}
+\index{JobLocker@{JobLocker}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{JobLocker}{JobLocker}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_q_daq_job_1_1_job_locker}{Job\+Locker}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 181 of file Q\+Daq\+Job.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_job_a1ece2201261df6f6a25b422f5d16b7d3}\label{class_q_daq_job_a1ece2201261df6f6a25b422f5d16b7d3}} 
+\index{QDaqJob@{QDaqJob}!armCode\_@{armCode\_}}
+\index{armCode\_@{armCode\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{armCode\_}{armCode\_}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Job\+::arm\+Code\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 96 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_afb403b6a2a9ecef039d05efb8fa64b68}\label{class_q_daq_job_afb403b6a2a9ecef039d05efb8fa64b68}} 
+\index{QDaqJob@{QDaqJob}!disarmCode\_@{disarmCode\_}}
+\index{disarmCode\_@{disarmCode\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{disarmCode\_}{disarmCode\_}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Job\+::disarm\+Code\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 96 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_af4d7d3a3efe79161910d6b897280a6f1}\label{class_q_daq_job_af4d7d3a3efe79161910d6b897280a6f1}} 
+\index{QDaqJob@{QDaqJob}!isLoop\_@{isLoop\_}}
+\index{isLoop\_@{isLoop\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{isLoop\_}{isLoop\_}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::is\+Loop\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 102 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a4c5bd11391bb2ff676fe75e57bbbfa6b}\label{class_q_daq_job_a4c5bd11391bb2ff676fe75e57bbbfa6b}} 
+\index{QDaqJob@{QDaqJob}!loop\_eng\_@{loop\_eng\_}}
+\index{loop\_eng\_@{loop\_eng\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{loop\_eng\_}{loop\_eng\_}}
+{\footnotesize\ttfamily Q\+Pointer$<$\mbox{\hyperlink{class_q_daq_script_engine}{Q\+Daq\+Script\+Engine}}$>$ Q\+Daq\+Job\+::loop\+\_\+eng\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 100 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a270e954ba80f8c1c7256f2d5f6ca9a80}\label{class_q_daq_job_a270e954ba80f8c1c7256f2d5f6ca9a80}} 
+\index{QDaqJob@{QDaqJob}!program\_@{program\_}}
+\index{program\_@{program\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{program\_}{program\_}}
+{\footnotesize\ttfamily Q\+Script\+Program$\ast$ Q\+Daq\+Job\+::program\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 98 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_adbf853eaa6c124dbe1ae6d18661169ce}\label{class_q_daq_job_adbf853eaa6c124dbe1ae6d18661169ce}} 
+\index{QDaqJob@{QDaqJob}!runCode\_@{runCode\_}}
+\index{runCode\_@{runCode\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{runCode\_}{runCode\_}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Job\+::run\+Code\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 96 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a80db952e9ca54d033722f384ea90b095}\label{class_q_daq_job_a80db952e9ca54d033722f384ea90b095}} 
+\index{QDaqJob@{QDaqJob}!subjobs\_@{subjobs\_}}
+\index{subjobs\_@{subjobs\_}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{subjobs\_}{subjobs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_job_1_1_job_list}{Job\+List}} Q\+Daq\+Job\+::subjobs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 189 of file Q\+Daq\+Job.\+h.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_q_daq_job_a3b22c647265e4a21f249bc8dbad504ee}\label{class_q_daq_job_a3b22c647265e4a21f249bc8dbad504ee}} 
+\index{QDaqJob@{QDaqJob}!armCode@{armCode}}
+\index{armCode@{armCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{armCode}{armCode}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Job\+::arm\+Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+Script code executed by the job in the arming face.
+
+If code is empty then nothing will be executed.
+
+The script code is executed in the root engine, in the main application thread. 
+
+Definition at line 1 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a34e09d865dca29970968bc84b8187787}\label{class_q_daq_job_a34e09d865dca29970968bc84b8187787}} 
+\index{QDaqJob@{QDaqJob}!armed@{armed}}
+\index{armed@{armed}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{armed}{armed}}
+{\footnotesize\ttfamily bool Q\+Daq\+Job\+::armed\hspace{0.3cm}{\ttfamily [read]}}
+
+True if job is armed.
+
+An armed job is ready to run. If the armed \mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}} belongs to a loop it will execute its task.
+
+This property is read-\/only. 
+
+Definition at line 1 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a2e1ad0d169747111bedead44fb7e5c95}\label{class_q_daq_job_a2e1ad0d169747111bedead44fb7e5c95}} 
+\index{QDaqJob@{QDaqJob}!disarmCode@{disarmCode}}
+\index{disarmCode@{disarmCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{disarmCode}{disarmCode}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Job\+::disarm\+Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+Script code executed by the job in the dis-\/arming face.
+
+If code is empty then nothing will be executed.
+
+The script code is executed in the root engine, in the main application thread. 
+
+Definition at line 1 of file Q\+Daq\+Job.\+h.
+
+\mbox{\Hypertarget{class_q_daq_job_a24db9d090b8cffe7fc16beb0175c7059}\label{class_q_daq_job_a24db9d090b8cffe7fc16beb0175c7059}} 
+\index{QDaqJob@{QDaqJob}!runCode@{runCode}}
+\index{runCode@{runCode}!QDaqJob@{QDaqJob}}
+\doxysubsubsection{\texorpdfstring{runCode}{runCode}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Job\+::run\+Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+Script code executed by the job at each repetition.
+
+If code is empty then nothing will be executed.
+
+The script code is executed by the top loop script engine, which is obtained by \mbox{\hyperlink{class_q_daq_job_aba27ebc276314277e303cc8c97e9f439}{loop\+Engine()}}. This script engine lives in the top-\/loop thread. 
+
+Definition at line 1 of file Q\+Daq\+Job.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_job_8h}{Q\+Daq\+Job.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_job_8cpp}{Q\+Daq\+Job.\+cpp}}\end{DoxyCompactItemize}

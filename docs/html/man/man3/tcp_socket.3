@@ -1,0 +1,106 @@
+.TH "tcp_socket" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tcp_socket
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tcp_socket\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtcp_socket\fP ()"
+.br
+.ti -1c
+.RI "\fB~tcp_socket\fP ()"
+.br
+.ti -1c
+.RI "int \fBconnect\fP (const char *aip, int aport)"
+.br
+.ti -1c
+.RI "void \fBdisconnect\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_connected\fP () const"
+.br
+.ti -1c
+.RI "int \fBtimeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_timeout\fP (int ms)"
+.br
+.ti -1c
+.RI "int \fBsend\fP (const char *msg, int len)"
+.br
+.ti -1c
+.RI "int \fBreceive\fP (char *msg, int len)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fBstrerror\fP (int errnum)"
+.br
+.ti -1c
+.RI "static const char * \fBlastErrorStr\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 6 of file tcp_socket\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "tcp_socket::tcp_socket ()"
+
+.PP
+Definition at line 193 of file tcp_socket\&.cpp\&.
+.SS "tcp_socket::~tcp_socket ()"
+
+.PP
+Definition at line 200 of file tcp_socket\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int tcp_socket::connect (const char * aip, int aport)"
+
+.PP
+Definition at line 213 of file tcp_socket\&.cpp\&.
+.SS "void tcp_socket::disconnect ()"
+
+.PP
+Definition at line 294 of file tcp_socket\&.cpp\&.
+.SS "bool tcp_socket::is_connected () const\fC [inline]\fP"
+
+.PP
+Definition at line 28 of file tcp_socket\&.h\&.
+.SS "const char * tcp_socket::lastErrorStr ()\fC [static]\fP"
+
+.PP
+Definition at line 405 of file tcp_socket\&.cpp\&.
+.SS "int tcp_socket::receive (char * msg, int len)"
+
+.PP
+Definition at line 329 of file tcp_socket\&.cpp\&.
+.SS "int tcp_socket::send (const char * msg, int len)"
+
+.PP
+Definition at line 304 of file tcp_socket\&.cpp\&.
+.SS "void tcp_socket::set_timeout (int ms)"
+
+.PP
+Definition at line 205 of file tcp_socket\&.cpp\&.
+.SS "const char * tcp_socket::strerror (int errnum)\fC [static]\fP"
+
+.PP
+Definition at line 364 of file tcp_socket\&.cpp\&.
+.SS "int tcp_socket::timeout () const\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file tcp_socket\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

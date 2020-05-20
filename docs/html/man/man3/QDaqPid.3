@@ -1,0 +1,493 @@
+.TH "QDaqPid" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqPid
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qdaqpid\&.h>\fP
+.PP
+Inherits \fBQDaqFilter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqPid\fP (const QString &name)"
+.br
+.ti -1c
+.RI "virtual int \fBnInputChannels\fP () const"
+.br
+.ti -1c
+.RI "virtual int \fBnOutputChannels\fP () const"
+.br
+.ti -1c
+.RI "bool \fBautoMode\fP () const"
+.br
+.ti -1c
+.RI "double \fBmaxPower\fP () const"
+.br
+.ti -1c
+.RI "double \fBpower\fP () const"
+.br
+.ti -1c
+.RI "double \fBsamplingPeriod\fP () const"
+.br
+.ti -1c
+.RI "double \fBsetPoint\fP () const"
+.br
+.ti -1c
+.RI "double \fBgain\fP () const"
+.br
+.ti -1c
+.RI "double \fBTi\fP () const"
+.br
+.ti -1c
+.RI "double \fBTd\fP () const"
+.br
+.ti -1c
+.RI "double \fBTr\fP () const"
+.br
+.ti -1c
+.RI "uint \fBNd\fP () const"
+.br
+.ti -1c
+.RI "double \fBbeta\fP () const"
+.br
+.ti -1c
+.RI "double \fBrelayStep\fP () const"
+.br
+.ti -1c
+.RI "double \fBrelayOffset\fP () const"
+.br
+.ti -1c
+.RI "double \fBrelayThreshold\fP () const"
+.br
+.ti -1c
+.RI "int \fBrelayIterations\fP () const"
+.br
+.ti -1c
+.RI "double \fBKc\fP () const"
+.br
+.ti -1c
+.RI "double \fBTc\fP () const"
+.br
+.ti -1c
+.RI "bool \fBautoTune\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetAutoMode\fP (bool on)"
+.br
+.ti -1c
+.RI "void \fBsetMaxPower\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetPower\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetSamplingPeriod\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetSetPoint\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetGain\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetTi\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetTd\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetTr\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetNd\fP (uint v)"
+.br
+.ti -1c
+.RI "void \fBsetBeta\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetRelayStep\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetRelayOffset\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetRelayThreshold\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBsetRelayIterations\fP (int v)"
+.br
+.ti -1c
+.RI "void \fBsetAutoTune\fP (bool on)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBfilterinit\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBfilterfunc\fP (const double *vin, double *vout)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBauto_\fP"
+.br
+.ti -1c
+.RI "bool \fBautotune_\fP"
+.br
+.ti -1c
+.RI "double \fBTs_\fP"
+.br
+.ti -1c
+.RI "double \fBW_\fP"
+.br
+.ti -1c
+.RI "\fBisa_pid\fP< double > \fBpid\fP"
+.br
+.ti -1c
+.RI "\fBautotuner\fP< double > \fBtuner\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "double \fBsamplingPeriod\fP"
+.br
+.ti -1c
+.RI "double \fBmaxPower\fP"
+.br
+.ti -1c
+.RI "double \fBpower\fP"
+.br
+.ti -1c
+.RI "bool \fBautoMode\fP"
+.br
+.ti -1c
+.RI "double \fBsetPoint\fP"
+.br
+.ti -1c
+.RI "double \fBgain\fP"
+.br
+.ti -1c
+.RI "double \fBTi\fP"
+.br
+.ti -1c
+.RI "double \fBTd\fP"
+.br
+.ti -1c
+.RI "double \fBTr\fP"
+.br
+.ti -1c
+.RI "uint \fBNd\fP"
+.br
+.ti -1c
+.RI "double \fBbeta\fP"
+.br
+.ti -1c
+.RI "bool \fBautoTune\fP"
+.br
+.ti -1c
+.RI "double \fBrelayStep\fP"
+.br
+.ti -1c
+.RI "double \fBrelayOffset\fP"
+.br
+.ti -1c
+.RI "double \fBrelayThreshold\fP"
+.br
+.ti -1c
+.RI "int \fBrelayIterations\fP"
+.br
+.ti -1c
+.RI "double \fBKc\fP"
+.br
+.ti -1c
+.RI "double \fBTc\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file qdaqpid\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqPid::QDaqPid (const QString & name)\fC [explicit]\fP"
+
+.PP
+Definition at line 4 of file qdaqpid\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool QDaqPid::autoMode () const\fC [inline]\fP"
+
+.PP
+Definition at line 50 of file qdaqpid\&.h\&.
+.SS "bool QDaqPid::autoTune () const\fC [inline]\fP"
+
+.PP
+Definition at line 67 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::beta () const\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file qdaqpid\&.h\&.
+.SS "bool QDaqPid::filterfunc (const double * vin, double * vout)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 21 of file qdaqpid\&.cpp\&.
+.SS "bool QDaqPid::filterinit ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 13 of file qdaqpid\&.cpp\&.
+.SS "double QDaqPid::gain () const\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Kc () const\fC [inline]\fP"
+
+.PP
+Definition at line 65 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::maxPower () const\fC [inline]\fP"
+
+.PP
+Definition at line 51 of file qdaqpid\&.h\&.
+.SS "uint QDaqPid::Nd () const\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file qdaqpid\&.h\&.
+.SS "virtual int QDaqPid::nInputChannels () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 48 of file qdaqpid\&.h\&.
+.SS "virtual int QDaqPid::nOutputChannels () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 49 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::power () const\fC [inline]\fP"
+
+.PP
+Definition at line 52 of file qdaqpid\&.h\&.
+.SS "int QDaqPid::relayIterations () const\fC [inline]\fP"
+
+.PP
+Definition at line 64 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::relayOffset () const\fC [inline]\fP"
+
+.PP
+Definition at line 62 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::relayStep () const\fC [inline]\fP"
+
+.PP
+Definition at line 61 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::relayThreshold () const\fC [inline]\fP"
+
+.PP
+Definition at line 63 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::samplingPeriod () const\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file qdaqpid\&.h\&.
+.SS "void QDaqPid::setAutoMode (bool on)"
+
+.PP
+Definition at line 41 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setAutoTune (bool on)"
+
+.PP
+Definition at line 47 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setBeta (double v)"
+
+.PP
+Definition at line 110 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setGain (double v)"
+
+.PP
+Definition at line 80 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setMaxPower (double v)"
+
+.PP
+Definition at line 53 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setNd (uint v)"
+
+.PP
+Definition at line 104 of file qdaqpid\&.cpp\&.
+.SS "double QDaqPid::setPoint () const\fC [inline]\fP"
+
+.PP
+Definition at line 54 of file qdaqpid\&.h\&.
+.SS "void QDaqPid::setPower (double v)"
+
+.PP
+Definition at line 59 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setRelayIterations (int v)"
+
+.PP
+Definition at line 132 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setRelayOffset (double v)"
+
+.PP
+Definition at line 122 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setRelayStep (double v)"
+
+.PP
+Definition at line 116 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setRelayThreshold (double v)"
+
+.PP
+Definition at line 126 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setSamplingPeriod (double v)"
+
+.PP
+Definition at line 68 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setSetPoint (double v)"
+
+.PP
+Definition at line 74 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setTd (double v)"
+
+.PP
+Definition at line 92 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setTi (double v)"
+
+.PP
+Definition at line 86 of file qdaqpid\&.cpp\&.
+.SS "void QDaqPid::setTr (double v)"
+
+.PP
+Definition at line 98 of file qdaqpid\&.cpp\&.
+.SS "double QDaqPid::Tc () const\fC [inline]\fP"
+
+.PP
+Definition at line 66 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Td () const\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Ti () const\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Tr () const\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file qdaqpid\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool QDaqPid::auto_\fC [protected]\fP"
+
+.PP
+Definition at line 37 of file qdaqpid\&.h\&.
+.SS "bool QDaqPid::autotune_\fC [protected]\fP"
+
+.PP
+Definition at line 37 of file qdaqpid\&.h\&.
+.SS "\fBisa_pid\fP<double> QDaqPid::pid\fC [protected]\fP"
+
+.PP
+Definition at line 40 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Ts_\fC [protected]\fP"
+
+.PP
+Definition at line 38 of file qdaqpid\&.h\&.
+.SS "\fBautotuner\fP<double> QDaqPid::tuner\fC [protected]\fP"
+
+.PP
+Definition at line 41 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::W_\fC [protected]\fP"
+
+.PP
+Definition at line 38 of file qdaqpid\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "bool QDaqPid::autoMode\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "bool QDaqPid::autoTune\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::beta\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::gain\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Kc\fC [read]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::maxPower\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "uint QDaqPid::Nd\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::power\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "int QDaqPid::relayIterations\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::relayOffset\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::relayStep\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::relayThreshold\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::samplingPeriod\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::setPoint\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Tc\fC [read]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Td\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Ti\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+.SS "double QDaqPid::Tr\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqpid\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

@@ -1,0 +1,264 @@
+\hypertarget{class_vector_prototype}{}\doxysection{Vector\+Prototype Class Reference}
+\label{class_vector_prototype}\index{VectorPrototype@{VectorPrototype}}
+
+
+The prototype for the Vector class.  
+
+
+
+
+{\ttfamily \#include $<$vectorprototype.\+h$>$}
+
+Inheritance diagram for Vector\+Prototype\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vector_prototype}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_vector_prototype_a49fd6965d48757f0213a2839f3dade3f}{equals}} (const \mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} \&other)
+\begin{DoxyCompactList}\small\item\em Returns true if this Vector is equal to other. \end{DoxyCompactList}\item 
+Q\+Script\+Value \mbox{\hyperlink{class_vector_prototype_af38da9b737897e5a7bad2d7d8179d6e3}{value\+Of}} () const
+\begin{DoxyCompactList}\small\item\em Return the data stored by the object. \end{DoxyCompactList}\item 
+Q\+Script\+Value \mbox{\hyperlink{class_vector_prototype_a9cf5057061ba6681b1827f57399fbb6a}{to\+Array}} () const
+\item 
+void \mbox{\hyperlink{class_vector_prototype_a81cd321801240a044263e046e34cc493}{clear}} ()
+\item 
+void \mbox{\hyperlink{class_vector_prototype_ab5444e1e14437663d0c8ad643f1c3483}{push}} (const Q\+Script\+Value \&val)
+\begin{DoxyCompactList}\small\item\em Push a number, a Vector or a numeric Array at the end. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vector_prototype_a73ba2bb8a25119fe4e2550b7a1696297}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Remove the last element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vector_prototype_a8d3f5fd2cc587c4209507cb0188a38c3}{resize}} (int n)
+\begin{DoxyCompactList}\small\item\em Resize to n elements keeping the first n. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_vector_prototype_aea80b07d4262e0aef687b4227ddf7b68}{min}} () const
+\item 
+double \mbox{\hyperlink{class_vector_prototype_a2d8cd7a7bf0b36f30180afc356242f12}{max}} () const
+\item 
+double \mbox{\hyperlink{class_vector_prototype_ac61f80822c9d56f2ed1c0fbb2674f50c}{mean}} () const
+\item 
+double \mbox{\hyperlink{class_vector_prototype_adcfa65c5d6c314f10bb35987312d8835}{std}} () const
+\item 
+\mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} \mbox{\hyperlink{class_vector_prototype_aec3b6970c710588ed2676ff25828a2e7}{clone}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_vector_prototype_a85f516e02c9803e865c767305b6a1419}{to\+String}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector_prototype_af7785efebac16e8efd46c832160b13dd}{Vector\+Prototype}} (Q\+Object $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_vector_prototype_ae0f6fcd30a448acabd6b3150184ab5e3}{$\sim$\+Vector\+Prototype}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The prototype for the Vector class. 
+
+The Vector javascript class represents an array of floating point numbers. It is essentially a Qt\+Script wrapper for the \mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} C++ class. Thus, when Qt-\/slots of \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} classes are called from Qt\+Script code, a \mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} passed as an argument or as return value is converted to a JS object of class Vector.
+
+Elements of a Vector can be accesed by the \mbox{[}\mbox{]} operator and the \char`\"{}length\char`\"{} property gives the number of elements.
+
+New elements are added at the end of the Vector with the function \mbox{\hyperlink{class_vector_prototype_ab5444e1e14437663d0c8ad643f1c3483}{push()}}.
+
+The property called \char`\"{}capacity\char`\"{} defines for how many elements there is memory allocated.
+
+The \char`\"{}circular\char`\"{} property is a boolean value. If it is true then the Vector is a ring or circular buffer with maximum size equal to its capacity. In a circular vector, when the capacity has been reached, insertion of a new element causes deletion of the oldest element.
+
+A Vector can be created in \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} scripts by the new operator in 3 possible ways\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var x1 = new Vector(10); // An empty Vector of capacity 10}
+\DoxyCodeLine{var x2 = new Vector([1,2,3]); // A Vector from a numeric Array}
+\DoxyCodeLine{var x3 = new Vector(x2); // x3 is a copy of x2}
+\DoxyCodeLine{x2[0] // returns 1}
+\DoxyCodeLine{x3.length // returns 3}
+\end{DoxyCode}
+
+
+The \mbox{\hyperlink{class_vector_prototype}{Vector\+Prototype}} class defines a number of usefull functions for handling Vector objects in script code. 
+
+Definition at line 46 of file vectorprototype.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vector_prototype_af7785efebac16e8efd46c832160b13dd}\label{class_vector_prototype_af7785efebac16e8efd46c832160b13dd}} 
+\index{VectorPrototype@{VectorPrototype}!VectorPrototype@{VectorPrototype}}
+\index{VectorPrototype@{VectorPrototype}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{VectorPrototype()}{VectorPrototype()}}
+{\footnotesize\ttfamily Vector\+Prototype\+::\+Vector\+Prototype (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_ae0f6fcd30a448acabd6b3150184ab5e3}\label{class_vector_prototype_ae0f6fcd30a448acabd6b3150184ab5e3}} 
+\index{VectorPrototype@{VectorPrototype}!````~VectorPrototype@{$\sim$VectorPrototype}}
+\index{````~VectorPrototype@{$\sim$VectorPrototype}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{$\sim$VectorPrototype()}{~VectorPrototype()}}
+{\footnotesize\ttfamily Vector\+Prototype\+::$\sim$\+Vector\+Prototype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file vectorprototype.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vector_prototype_a81cd321801240a044263e046e34cc493}\label{class_vector_prototype_a81cd321801240a044263e046e34cc493}} 
+\index{VectorPrototype@{VectorPrototype}!clear@{clear}}
+\index{clear@{clear}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{clear}{clear}}
+{\footnotesize\ttfamily void Vector\+Prototype\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 76 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_aec3b6970c710588ed2676ff25828a2e7}\label{class_vector_prototype_aec3b6970c710588ed2676ff25828a2e7}} 
+\index{VectorPrototype@{VectorPrototype}!clone@{clone}}
+\index{clone@{clone}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{clone}{clone}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} Vector\+Prototype\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 78 of file vectorprototype.\+h.
+
+\mbox{\Hypertarget{class_vector_prototype_a49fd6965d48757f0213a2839f3dade3f}\label{class_vector_prototype_a49fd6965d48757f0213a2839f3dade3f}} 
+\index{VectorPrototype@{VectorPrototype}!equals@{equals}}
+\index{equals@{equals}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{equals}{equals}}
+{\footnotesize\ttfamily bool Vector\+Prototype\+::equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_daq_vector}{Q\+Daq\+Vector}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Returns true if this Vector is equal to other. 
+
+
+
+Definition at line 22 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_a2d8cd7a7bf0b36f30180afc356242f12}\label{class_vector_prototype_a2d8cd7a7bf0b36f30180afc356242f12}} 
+\index{VectorPrototype@{VectorPrototype}!max@{max}}
+\index{max@{max}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily double Vector\+Prototype\+::max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 85 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_ac61f80822c9d56f2ed1c0fbb2674f50c}\label{class_vector_prototype_ac61f80822c9d56f2ed1c0fbb2674f50c}} 
+\index{VectorPrototype@{VectorPrototype}!mean@{mean}}
+\index{mean@{mean}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{mean}{mean}}
+{\footnotesize\ttfamily double Vector\+Prototype\+::mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 89 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_aea80b07d4262e0aef687b4227ddf7b68}\label{class_vector_prototype_aea80b07d4262e0aef687b4227ddf7b68}} 
+\index{VectorPrototype@{VectorPrototype}!min@{min}}
+\index{min@{min}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily double Vector\+Prototype\+::min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 81 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_a73ba2bb8a25119fe4e2550b7a1696297}\label{class_vector_prototype_a73ba2bb8a25119fe4e2550b7a1696297}} 
+\index{VectorPrototype@{VectorPrototype}!pop@{pop}}
+\index{pop@{pop}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{pop}{pop}}
+{\footnotesize\ttfamily void Vector\+Prototype\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Remove the last element. 
+
+
+
+Definition at line 57 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_ab5444e1e14437663d0c8ad643f1c3483}\label{class_vector_prototype_ab5444e1e14437663d0c8ad643f1c3483}} 
+\index{VectorPrototype@{VectorPrototype}!push@{push}}
+\index{push@{push}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{push}{push}}
+{\footnotesize\ttfamily void Vector\+Prototype\+::push (\begin{DoxyParamCaption}\item[{const Q\+Script\+Value \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Push a number, a Vector or a numeric Array at the end. 
+
+
+
+Definition at line 32 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_a8d3f5fd2cc587c4209507cb0188a38c3}\label{class_vector_prototype_a8d3f5fd2cc587c4209507cb0188a38c3}} 
+\index{VectorPrototype@{VectorPrototype}!resize@{resize}}
+\index{resize@{resize}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{resize}{resize}}
+{\footnotesize\ttfamily void Vector\+Prototype\+::resize (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Resize to n elements keeping the first n. 
+
+
+
+Definition at line 62 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_adcfa65c5d6c314f10bb35987312d8835}\label{class_vector_prototype_adcfa65c5d6c314f10bb35987312d8835}} 
+\index{VectorPrototype@{VectorPrototype}!std@{std}}
+\index{std@{std}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{std}{std}}
+{\footnotesize\ttfamily double Vector\+Prototype\+::std (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 93 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_a9cf5057061ba6681b1827f57399fbb6a}\label{class_vector_prototype_a9cf5057061ba6681b1827f57399fbb6a}} 
+\index{VectorPrototype@{VectorPrototype}!toArray@{toArray}}
+\index{toArray@{toArray}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{toArray}{toArray}}
+{\footnotesize\ttfamily Q\+Script\+Value Vector\+Prototype\+::to\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 67 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_a85f516e02c9803e865c767305b6a1419}\label{class_vector_prototype_a85f516e02c9803e865c767305b6a1419}} 
+\index{VectorPrototype@{VectorPrototype}!toString@{toString}}
+\index{toString@{toString}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{toString}{toString}}
+{\footnotesize\ttfamily Q\+String Vector\+Prototype\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 27 of file vectorprototype.\+cpp.
+
+\mbox{\Hypertarget{class_vector_prototype_af38da9b737897e5a7bad2d7d8179d6e3}\label{class_vector_prototype_af38da9b737897e5a7bad2d7d8179d6e3}} 
+\index{VectorPrototype@{VectorPrototype}!valueOf@{valueOf}}
+\index{valueOf@{valueOf}!VectorPrototype@{VectorPrototype}}
+\doxysubsubsection{\texorpdfstring{valueOf}{valueOf}}
+{\footnotesize\ttfamily Q\+Script\+Value Vector\+Prototype\+::value\+Of (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Return the data stored by the object. 
+
+
+
+Definition at line 98 of file vectorprototype.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{vectorprototype_8h}{vectorprototype.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{vectorprototype_8cpp}{vectorprototype.\+cpp}}\end{DoxyCompactItemize}

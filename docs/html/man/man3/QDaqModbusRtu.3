@@ -1,0 +1,170 @@
+.TH "QDaqModbusRtu" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqModbusRtu \- A class for accesing a MODBUS/RTU connection\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qdaqmodbus\&.h>\fP
+.PP
+Inherits \fBQDaqSerial\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqModbusRtu\fP (const QString &name, const QString &\fBportName\fP=QString())"
+.br
+.RI "\fBQDaqModbusRtu\fP constructor\&. "
+.ti -1c
+.RI "virtual \fB~QDaqModbusRtu\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBread\fP (uint port, char *buff, int len, int eos=0)"
+.br
+.RI "Read data from a port\&. "
+.ti -1c
+.RI "virtual int \fBwrite\fP (uint port, const char *buff, int len, int eos=0)"
+.br
+.RI "Write data to a port\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBopen_\fP ()"
+.br
+.RI "Implementation of interface open\&. "
+.ti -1c
+.RI "virtual void \fBclose_\fP ()"
+.br
+.RI "Implementation of interface close\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "void * \fBctx_\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A class for accesing a MODBUS/RTU connection\&. 
+
+Used to access MODBUS devices connected to a serial port\&. A separate \fBQDaqModbusRtu\fP object must be used per device\&.
+.PP
+Implementation of MODBUS in \fBQDaq\fP is based on libmodbus\&. 
+.PP
+Definition at line 19 of file qdaqmodbus\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqModbusRtu::QDaqModbusRtu (const QString & name, const QString & portName = \fCQString()\fP)\fC [explicit]\fP"
+
+.PP
+\fBQDaqModbusRtu\fP constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBQDaqObject\fP name 
+.br
+\fIportName\fP OS name for the serial port, eg, 'COM1' in windows, '/dev/ttyS0' in linux\&. 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file qdaqmodbus\&.cpp\&.
+.SS "QDaqModbusRtu::~QDaqModbusRtu ()\fC [virtual]\fP"
+
+.PP
+Definition at line 10 of file qdaqmodbus\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqModbusRtu::close_ ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implementation of interface close\&. 
+.PP
+Reimplemented from \fBQDaqSerial\fP\&.
+.PP
+Definition at line 47 of file qdaqmodbus\&.cpp\&.
+.SS "bool QDaqModbusRtu::open_ ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implementation of interface open\&. 
+.PP
+Reimplemented from \fBQDaqSerial\fP\&.
+.PP
+Definition at line 14 of file qdaqmodbus\&.cpp\&.
+.SS "int QDaqModbusRtu::read (uint port, char * buff, int len, int eos = \fC0\fP)\fC [virtual]\fP"
+
+.PP
+Read data from a port\&. The meaning of the port parameter is different depending on the type of communication interface\&.
+.PP
+In message based communications (e\&.g\&. GPIB) the port is the instrument address\&.
+.PP
+In memory based interfaces (e\&.g\&. MODBUS) the port number represents the starting register address to access\&. The number of registers read/written depends on len, the size of the buffer in bytes\&. A MODBUS register is 16 bit, ie, occupies 2 bytes\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIport\fP Port number\&. 
+.br
+\fIbuff\fP Pointer to memory buffer\&. 
+.br
+\fIlen\fP Allocated number of bytes\&. 
+.br
+\fIeos\fP End of string byte 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of bytes read\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqSerial\fP\&.
+.PP
+Definition at line 61 of file qdaqmodbus\&.cpp\&.
+.SS "int QDaqModbusRtu::write (uint port, const char * buff, int len, int eos = \fC0\fP)\fC [virtual]\fP"
+
+.PP
+Write data to a port\&. The meaning of the port parameter is different depending on the type of communication interface\&.
+.PP
+In message based communications (e\&.g\&. GPIB) the port is the instrument address\&.
+.PP
+In memory based interfaces (e\&.g\&. MODBUS) the port number represents the starting register address to access\&. The number of registers read/written depends on len, the size of the buffer in bytes\&. A MODBUS register is 16 bit, ie, occupies 2 bytes\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Port number\&. 
+.br
+\fIbuff\fP Pointer to memory buffer\&. 
+.br
+\fIlen\fP Number of bytes to write\&. 
+.br
+\fIeos\fP End of string byte 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of bytes written\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqSerial\fP\&.
+.PP
+Definition at line 79 of file qdaqmodbus\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "void* QDaqModbusRtu::ctx_\fC [protected]\fP"
+
+.PP
+Definition at line 24 of file qdaqmodbus\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

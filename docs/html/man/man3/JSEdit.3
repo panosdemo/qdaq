@@ -1,0 +1,294 @@
+.TH "JSEdit" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JSEdit
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <jsedit\&.h>\fP
+.PP
+Inherits QPlainTextEdit\&.
+.PP
+Inherited by \fBQDaqScriptEditor\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBColorComponent\fP { \fBBackground\fP, \fBNormal\fP, \fBComment\fP, \fBNumber\fP, \fBString\fP, \fBOperator\fP, \fBIdentifier\fP, \fBKeyword\fP, \fBBuiltIn\fP, \fBSidebar\fP, \fBLineNumber\fP, \fBCursor\fP, \fBMarker\fP, \fBBracketMatch\fP, \fBBracketError\fP, \fBFoldIndicator\fP }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateSidebar\fP ()"
+.br
+.ti -1c
+.RI "void \fBmark\fP (const QString &str, Qt::CaseSensitivity sens=Qt::CaseInsensitive)"
+.br
+.ti -1c
+.RI "void \fBsetBracketsMatchingEnabled\fP (bool enable)"
+.br
+.ti -1c
+.RI "void \fBsetCodeFoldingEnabled\fP (bool enable)"
+.br
+.ti -1c
+.RI "void \fBsetLineNumbersVisible\fP (bool visible)"
+.br
+.ti -1c
+.RI "void \fBsetTextWrapEnabled\fP (bool enable)"
+.br
+.ti -1c
+.RI "void \fBfold\fP (int line)"
+.br
+.ti -1c
+.RI "void \fBunfold\fP (int line)"
+.br
+.ti -1c
+.RI "void \fBtoggleFold\fP (int line)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJSEdit\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~JSEdit\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (\fBColorComponent\fP component, const QColor &color)"
+.br
+.ti -1c
+.RI "QStringList \fBkeywords\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetKeywords\fP (const QStringList &\fBkeywords\fP)"
+.br
+.ti -1c
+.RI "QStringList \fBextraIDs\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddExtraIDs\fP (const QStringList &ids)"
+.br
+.ti -1c
+.RI "void \fBclearExtraIDs\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisBracketsMatchingEnabled\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisCodeFoldingEnabled\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisLineNumbersVisible\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisTextWrapEnabled\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisFoldable\fP (int line) const"
+.br
+.ti -1c
+.RI "bool \fBisFolded\fP (int line) const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBresizeEvent\fP (QResizeEvent *e)"
+.br
+.ti -1c
+.RI "void \fBwheelEvent\fP (QWheelEvent *e)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbracketsMatchingEnabled\fP"
+.br
+.ti -1c
+.RI "bool \fBcodeFoldingEnabled\fP"
+.br
+.ti -1c
+.RI "bool \fBlineNumbersVisible\fP"
+.br
+.ti -1c
+.RI "bool \fBtextWrapEnabled\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 40 of file jsedit\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJSEdit::ColorComponent\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBackground \fP\fP
+.TP
+\fB\fINormal \fP\fP
+.TP
+\fB\fIComment \fP\fP
+.TP
+\fB\fINumber \fP\fP
+.TP
+\fB\fIString \fP\fP
+.TP
+\fB\fIOperator \fP\fP
+.TP
+\fB\fIIdentifier \fP\fP
+.TP
+\fB\fIKeyword \fP\fP
+.TP
+\fB\fIBuiltIn \fP\fP
+.TP
+\fB\fISidebar \fP\fP
+.TP
+\fB\fILineNumber \fP\fP
+.TP
+\fB\fICursor \fP\fP
+.TP
+\fB\fIMarker \fP\fP
+.TP
+\fB\fIBracketMatch \fP\fP
+.TP
+\fB\fIBracketError \fP\fP
+.TP
+\fB\fIFoldIndicator \fP\fP
+.PP
+Definition at line 50 of file jsedit\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JSEdit::JSEdit (QWidget * parent = \fC0\fP)"
+
+.PP
+Definition at line 674 of file jsedit\&.cpp\&.
+.SS "JSEdit::~JSEdit ()"
+
+.PP
+Definition at line 708 of file jsedit\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void JSEdit::addExtraIDs (const QStringList & ids)"
+
+.PP
+Definition at line 771 of file jsedit\&.cpp\&.
+.SS "void JSEdit::clearExtraIDs ()"
+
+.PP
+Definition at line 766 of file jsedit\&.cpp\&.
+.SS "QStringList JSEdit::extraIDs () const"
+
+.PP
+Definition at line 761 of file jsedit\&.cpp\&.
+.SS "void JSEdit::fold (int line)\fC [slot]\fP"
+
+.PP
+Definition at line 864 of file jsedit\&.cpp\&.
+.SS "bool JSEdit::isBracketsMatchingEnabled () const"
+
+.PP
+Definition at line 798 of file jsedit\&.cpp\&.
+.SS "bool JSEdit::isCodeFoldingEnabled () const"
+
+.PP
+Definition at line 809 of file jsedit\&.cpp\&.
+.SS "bool JSEdit::isFoldable (int line) const"
+
+.PP
+Definition at line 842 of file jsedit\&.cpp\&.
+.SS "bool JSEdit::isFolded (int line) const"
+
+.PP
+Definition at line 853 of file jsedit\&.cpp\&.
+.SS "bool JSEdit::isLineNumbersVisible () const"
+
+.PP
+Definition at line 776 of file jsedit\&.cpp\&.
+.SS "bool JSEdit::isTextWrapEnabled () const"
+
+.PP
+Definition at line 787 of file jsedit\&.cpp\&.
+.SS "QStringList JSEdit::keywords () const"
+
+.PP
+Definition at line 751 of file jsedit\&.cpp\&.
+.SS "void JSEdit::mark (const QString & str, Qt::CaseSensitivity sens = \fCQt::CaseInsensitive\fP)\fC [slot]\fP"
+
+.PP
+Definition at line 1073 of file jsedit\&.cpp\&.
+.SS "void JSEdit::resizeEvent (QResizeEvent * e)\fC [protected]\fP"
+
+.PP
+Definition at line 916 of file jsedit\&.cpp\&.
+.SS "void JSEdit::setBracketsMatchingEnabled (bool enable)\fC [slot]\fP"
+
+.PP
+Definition at line 803 of file jsedit\&.cpp\&.
+.SS "void JSEdit::setCodeFoldingEnabled (bool enable)\fC [slot]\fP"
+
+.PP
+Definition at line 814 of file jsedit\&.cpp\&.
+.SS "void JSEdit::setColor (\fBColorComponent\fP component, const QColor & color)"
+
+.PP
+Definition at line 713 of file jsedit\&.cpp\&.
+.SS "void JSEdit::setKeywords (const QStringList & keywords)"
+
+.PP
+Definition at line 756 of file jsedit\&.cpp\&.
+.SS "void JSEdit::setLineNumbersVisible (bool visible)\fC [slot]\fP"
+
+.PP
+Definition at line 781 of file jsedit\&.cpp\&.
+.SS "void JSEdit::setTextWrapEnabled (bool enable)\fC [slot]\fP"
+
+.PP
+Definition at line 792 of file jsedit\&.cpp\&.
+.SS "void JSEdit::toggleFold (int line)\fC [slot]\fP"
+
+.PP
+Definition at line 908 of file jsedit\&.cpp\&.
+.SS "void JSEdit::unfold (int line)\fC [slot]\fP"
+
+.PP
+Definition at line 887 of file jsedit\&.cpp\&.
+.SS "void JSEdit::updateSidebar ()\fC [slot]\fP"
+
+.PP
+Definition at line 1016 of file jsedit\&.cpp\&.
+.SS "void JSEdit::wheelEvent (QWheelEvent * e)\fC [protected]\fP"
+
+.PP
+Definition at line 922 of file jsedit\&.cpp\&.
+.SH "Property Documentation"
+.PP 
+.SS "bool JSEdit::bracketsMatchingEnabled\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file jsedit\&.h\&.
+.SS "bool JSEdit::codeFoldingEnabled\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file jsedit\&.h\&.
+.SS "bool JSEdit::lineNumbersVisible\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file jsedit\&.h\&.
+.SS "bool JSEdit::textWrapEnabled\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file jsedit\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

@@ -1,0 +1,333 @@
+.TH "QDaqSerial" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqSerial \- A class for accesing a serial bus\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qdaqserial\&.h>\fP
+.PP
+Inherits \fBQDaqInterface\fP\&.
+.PP
+Inherited by \fBQDaqModbusRtu\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqSerial\fP (const QString &name, const QString &\fBportName\fP=QString())"
+.br
+.RI "\fBQDaqSerial\fP constructor\&. "
+.ti -1c
+.RI "QString \fBportName\fP () const"
+.br
+.ti -1c
+.RI "QSerialPort::BaudRate \fBbaud\fP () const"
+.br
+.ti -1c
+.RI "QSerialPort::Parity \fBparity\fP () const"
+.br
+.ti -1c
+.RI "QSerialPort::DataBits \fBdatabits\fP () const"
+.br
+.ti -1c
+.RI "QSerialPort::StopBits \fBstopbits\fP () const"
+.br
+.ti -1c
+.RI "QSerialPort::FlowControl \fBhandshake\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPortName\fP (const QString &aname)"
+.br
+.ti -1c
+.RI "void \fBsetBaud\fP (QSerialPort::BaudRate v)"
+.br
+.ti -1c
+.RI "void \fBsetParity\fP (QSerialPort::Parity v)"
+.br
+.ti -1c
+.RI "void \fBsetDatabits\fP (QSerialPort::DataBits v)"
+.br
+.ti -1c
+.RI "void \fBsetStopbits\fP (QSerialPort::StopBits v)"
+.br
+.ti -1c
+.RI "void \fBsetHandshake\fP (QSerialPort::FlowControl v)"
+.br
+.ti -1c
+.RI "virtual int \fBread\fP (uint port, char *buff, int len, int eos=0)"
+.br
+.RI "Read data from a port\&. "
+.ti -1c
+.RI "virtual int \fBwrite\fP (uint port, const char *buff, int len, int eos=0)"
+.br
+.RI "Write data to a port\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBopen_\fP ()"
+.br
+.RI "Implementation of interface open\&. "
+.ti -1c
+.RI "virtual void \fBclose_\fP ()"
+.br
+.RI "Implementation of interface close\&. "
+.ti -1c
+.RI "virtual void \fBclear_\fP ()"
+.br
+.RI "Implementation of interface clear\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QSerialPort * \fBport_\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QString \fBportName\fP"
+.br
+.RI "Name of the serial port, eg, 'COM1' in windows, '/dev/ttyS0' in linux\&. "
+.ti -1c
+.RI "QSerialPort::BaudRate \fBbaud\fP"
+.br
+.RI "Communication bit rate in baud\&. "
+.ti -1c
+.RI "QSerialPort::Parity \fBparity\fP"
+.br
+.RI "The parity to be used\&. "
+.ti -1c
+.RI "QSerialPort::DataBits \fBdatabits\fP"
+.br
+.RI "Number of data bits\&. "
+.ti -1c
+.RI "QSerialPort::StopBits \fBstopbits\fP"
+.br
+.RI "Number of stop bits\&. "
+.ti -1c
+.RI "QSerialPort::FlowControl \fBhandshake\fP"
+.br
+.RI "Type of flow control\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A class for accesing a serial bus\&. 
+
+\fBQDaqSerial\fP performs communications with devices connected to a serial port\&. It is essentially a wrapper for the QSerialPort class\&. Communications are performed in blocking mode, i\&.e\&., \fBQDaq\fP will wait for a message to be read/written to the serial port before it continues\&. This is because interfaces will be generally used in a \fBQDaqLoop\fP that runs in a separate thread and in most cases the information that must be transmitted/obtained from the serial port is essential for the loop to continue\&. 
+.PP
+Definition at line 26 of file qdaqserial\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqSerial::QDaqSerial (const QString & name, const QString & portName = \fCQString()\fP)\fC [explicit]\fP"
+
+.PP
+\fBQDaqSerial\fP constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBQDaqObject\fP name 
+.br
+\fIportName\fP OS name for the serial port, eg, 'COM1' in windows, '/dev/ttyS0' in linux 
+.RE
+.PP
+
+.PP
+Definition at line 3 of file qdaqserial\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "QSerialPort::BaudRate QDaqSerial::baud () const\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file qdaqserial\&.h\&.
+.SS "void QDaqSerial::clear_ ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implementation of interface clear\&. 
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Definition at line 138 of file qdaqserial\&.cpp\&.
+.SS "void QDaqSerial::close_ ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implementation of interface close\&. 
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusRtu\fP\&.
+.PP
+Definition at line 131 of file qdaqserial\&.cpp\&.
+.SS "QSerialPort::DataBits QDaqSerial::databits () const\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file qdaqserial\&.h\&.
+.SS "QSerialPort::FlowControl QDaqSerial::handshake () const\fC [inline]\fP"
+
+.PP
+Definition at line 61 of file qdaqserial\&.h\&.
+.SS "bool QDaqSerial::open_ ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implementation of interface open\&. 
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusRtu\fP\&.
+.PP
+Definition at line 119 of file qdaqserial\&.cpp\&.
+.SS "QSerialPort::Parity QDaqSerial::parity () const\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file qdaqserial\&.h\&.
+.SS "QString QDaqSerial::portName () const\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file qdaqserial\&.h\&.
+.SS "int QDaqSerial::read (uint port, char * buff, int len, int eos = \fC0\fP)\fC [virtual]\fP"
+
+.PP
+Read data from a port\&. The meaning of the port parameter is different depending on the type of communication interface\&.
+.PP
+In message based communications (e\&.g\&. GPIB) the port is the instrument address\&.
+.PP
+In memory based interfaces (e\&.g\&. MODBUS) the port number represents the starting register address to access\&. The number of registers read/written depends on len, the size of the buffer in bytes\&. A MODBUS register is 16 bit, ie, occupies 2 bytes\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIport\fP Port number\&. 
+.br
+\fIbuff\fP Pointer to memory buffer\&. 
+.br
+\fIlen\fP Allocated number of bytes\&. 
+.br
+\fIeos\fP End of string byte 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of bytes read\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusRtu\fP\&.
+.PP
+Definition at line 68 of file qdaqserial\&.cpp\&.
+.SS "void QDaqSerial::setBaud (QSerialPort::BaudRate v)"
+
+.PP
+Definition at line 22 of file qdaqserial\&.cpp\&.
+.SS "void QDaqSerial::setDatabits (QSerialPort::DataBits v)"
+
+.PP
+Definition at line 40 of file qdaqserial\&.cpp\&.
+.SS "void QDaqSerial::setHandshake (QSerialPort::FlowControl v)"
+
+.PP
+Definition at line 58 of file qdaqserial\&.cpp\&.
+.SS "void QDaqSerial::setParity (QSerialPort::Parity v)"
+
+.PP
+Definition at line 31 of file qdaqserial\&.cpp\&.
+.SS "void QDaqSerial::setPortName (const QString & aname)"
+
+.PP
+Definition at line 12 of file qdaqserial\&.cpp\&.
+.SS "void QDaqSerial::setStopbits (QSerialPort::StopBits v)"
+
+.PP
+Definition at line 49 of file qdaqserial\&.cpp\&.
+.SS "QSerialPort::StopBits QDaqSerial::stopbits () const\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file qdaqserial\&.h\&.
+.SS "int QDaqSerial::write (uint port, const char * buff, int len, int eos = \fC0\fP)\fC [virtual]\fP"
+
+.PP
+Write data to a port\&. The meaning of the port parameter is different depending on the type of communication interface\&.
+.PP
+In message based communications (e\&.g\&. GPIB) the port is the instrument address\&.
+.PP
+In memory based interfaces (e\&.g\&. MODBUS) the port number represents the starting register address to access\&. The number of registers read/written depends on len, the size of the buffer in bytes\&. A MODBUS register is 16 bit, ie, occupies 2 bytes\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Port number\&. 
+.br
+\fIbuff\fP Pointer to memory buffer\&. 
+.br
+\fIlen\fP Number of bytes to write\&. 
+.br
+\fIeos\fP End of string byte 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of bytes written\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusRtu\fP\&.
+.PP
+Definition at line 98 of file qdaqserial\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QSerialPort* QDaqSerial::port_\fC [protected]\fP"
+
+.PP
+Definition at line 44 of file qdaqserial\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "QSerialPort::BaudRate QDaqSerial::baud\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Communication bit rate in baud\&. 
+.PP
+Definition at line 1 of file qdaqserial\&.h\&.
+.SS "QSerialPort::DataBits QDaqSerial::databits\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Number of data bits\&. 
+.PP
+Definition at line 1 of file qdaqserial\&.h\&.
+.SS "QSerialPort::FlowControl QDaqSerial::handshake\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Type of flow control\&. 
+.PP
+Definition at line 1 of file qdaqserial\&.h\&.
+.SS "QSerialPort::Parity QDaqSerial::parity\fC [read]\fP, \fC [write]\fP"
+
+.PP
+The parity to be used\&. 
+.PP
+Definition at line 1 of file qdaqserial\&.h\&.
+.SS "QString QDaqSerial::portName\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Name of the serial port, eg, 'COM1' in windows, '/dev/ttyS0' in linux\&. 
+.PP
+Definition at line 1 of file qdaqserial\&.h\&.
+.SS "QSerialPort::StopBits QDaqSerial::stopbits\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Number of stop bits\&. 
+.PP
+Definition at line 1 of file qdaqserial\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

@@ -1,0 +1,393 @@
+\hypertarget{classmath_1_1buffer}{}\doxysection{math\+::buffer$<$ T $>$ Class Template Reference}
+\label{classmath_1_1buffer}\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$math\+\_\+util.\+h$>$}
+
+Inheritance diagram for math\+::buffer$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmath_1_1buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Q\+Vector$<$ T $>$ \mbox{\hyperlink{classmath_1_1buffer_ad8f5dfc899653436569ec692639a9622}{container\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmath_1_1buffer_a4253fe4eadb9846aea2730076b64d9da}{buffer}} (int acap=0)
+\item 
+\mbox{\hyperlink{classmath_1_1buffer_ad8435ff827ff216e09d9e88f55fe54af}{buffer}} (const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&rhs)
+\item 
+\mbox{\hyperlink{classmath_1_1buffer_a0d6b4e44ee82444629df945bc73bf676}{$\sim$buffer}} (void)
+\item 
+\mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \& \mbox{\hyperlink{classmath_1_1buffer_a1f02311d122e4678ed0f734771cda78d}{operator=}} (const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&rhs)
+\item 
+bool \mbox{\hyperlink{classmath_1_1buffer_a7ccb8046ed8abb4d5918e9e15320bff1}{operator==}} (const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classmath_1_1buffer_a1dfb12617cdc0dc283227f8ff1681bc8}{operator!=}} (const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&rhs) const
+\item 
+int \mbox{\hyperlink{classmath_1_1buffer_ad48be0af8c49333eadbd8e266e236092}{size}} () const
+\item 
+bool \mbox{\hyperlink{classmath_1_1buffer_ae9e2f05ece4cbf5a8d9226bcc3308d24}{is\+Circular}} () const
+\item 
+void \mbox{\hyperlink{classmath_1_1buffer_a0b07aba04a9a76694c88d8dcdafba674}{set\+Circular}} (bool on)
+\item 
+int \mbox{\hyperlink{classmath_1_1buffer_acbada4dcae4db644dd65df0f4200b6f7}{capacity}} () const
+\item 
+void \mbox{\hyperlink{classmath_1_1buffer_a5f34dcd07e23ce6ba4b3df248eadf375}{set\+Capacity}} (int c)
+\item 
+void \mbox{\hyperlink{classmath_1_1buffer_ae5bbec14660e147354fbade5efe39012}{set\+Size}} (int n)
+\item 
+void \mbox{\hyperlink{classmath_1_1buffer_a4308aac36e00469a901346967ec5c08f}{clear}} ()
+\item 
+T \& \mbox{\hyperlink{classmath_1_1buffer_a5a873bb544e737b9f9577695b1520df2}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+const T \& \mbox{\hyperlink{classmath_1_1buffer_a97efb08ea98d4f765985cf053d299249}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\item 
+const T \& \mbox{\hyperlink{classmath_1_1buffer_ae120f128c0939e41738ddaf4a8db38e9}{get}} (int i) const
+\item 
+void \mbox{\hyperlink{classmath_1_1buffer_a5ccb9a1eb96cbc31918e31913176f5e9}{push}} (const T \&v)
+\item 
+void \mbox{\hyperlink{classmath_1_1buffer_a45c4e59c2d96ca5d6910e873f29a197e}{push}} (const T $\ast$v, int n)
+\item 
+void \mbox{\hyperlink{classmath_1_1buffer_a87adf2b07c7fb9a64c41734438b7b69d}{pop}} ()
+\item 
+const T $\ast$ \mbox{\hyperlink{classmath_1_1buffer_a44184df65439cc50e9bd63bd7b27a1f2}{const\+Data}} () const
+\item 
+T $\ast$ \mbox{\hyperlink{classmath_1_1buffer_af360c0e1c9c171380ee0e02ff621d3c8}{data}} ()
+\item 
+\mbox{\hyperlink{classmath_1_1buffer_ad8f5dfc899653436569ec692639a9622}{container\+\_\+t}} \mbox{\hyperlink{classmath_1_1buffer_add486789b9dee4acb1a35e77808fbe7c}{vector}} () const
+\item 
+double \mbox{\hyperlink{classmath_1_1buffer_adda0fbeb271ebda10ac12ed3514ab834}{vmin}} () const
+\item 
+double \mbox{\hyperlink{classmath_1_1buffer_a7bb385351f6bce7325eeb90548e094a0}{vmax}} () const
+\item 
+double \mbox{\hyperlink{classmath_1_1buffer_ae6da67bf18725b51d7db162476a79612}{mean}} () const
+\item 
+double \mbox{\hyperlink{classmath_1_1buffer_a4c3b99abaec96566bb7d64fef81588c8}{std}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class math\+::buffer$<$ T $>$}
+
+
+
+Definition at line 156 of file math\+\_\+util.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classmath_1_1buffer_ad8f5dfc899653436569ec692639a9622}\label{classmath_1_1buffer_ad8f5dfc899653436569ec692639a9622}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!container\_t@{container\_t}}
+\index{container\_t@{container\_t}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{container\_t}{container\_t}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef Q\+Vector$<$T$>$ \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::\mbox{\hyperlink{classmath_1_1buffer_ad8f5dfc899653436569ec692639a9622}{container\+\_\+t}}}
+
+
+
+Definition at line 159 of file math\+\_\+util.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmath_1_1buffer_a4253fe4eadb9846aea2730076b64d9da}\label{classmath_1_1buffer_a4253fe4eadb9846aea2730076b64d9da}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!buffer@{buffer}}
+\index{buffer@{buffer}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::\mbox{\hyperlink{classmath_1_1buffer}{buffer}} (\begin{DoxyParamCaption}\item[{int}]{acap = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line 255 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_ad8435ff827ff216e09d9e88f55fe54af}\label{classmath_1_1buffer_ad8435ff827ff216e09d9e88f55fe54af}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!buffer@{buffer}}
+\index{buffer@{buffer}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::\mbox{\hyperlink{classmath_1_1buffer}{buffer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 260 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a0d6b4e44ee82444629df945bc73bf676}\label{classmath_1_1buffer_a0d6b4e44ee82444629df945bc73bf676}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!````~buffer@{$\sim$buffer}}
+\index{````~buffer@{$\sim$buffer}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$buffer()}{~buffer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classmath_1_1buffer}{buffer}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 265 of file math\+\_\+util.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmath_1_1buffer_acbada4dcae4db644dd65df0f4200b6f7}\label{classmath_1_1buffer_acbada4dcae4db644dd65df0f4200b6f7}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 309 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a4308aac36e00469a901346967ec5c08f}\label{classmath_1_1buffer_a4308aac36e00469a901346967ec5c08f}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 348 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a44184df65439cc50e9bd63bd7b27a1f2}\label{classmath_1_1buffer_a44184df65439cc50e9bd63bd7b27a1f2}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!constData@{constData}}
+\index{constData@{constData}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{constData()}{constData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T$\ast$ \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::const\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 417 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_af360c0e1c9c171380ee0e02ff621d3c8}\label{classmath_1_1buffer_af360c0e1c9c171380ee0e02ff621d3c8}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!data@{data}}
+\index{data@{data}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 422 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_ae120f128c0939e41738ddaf4a8db38e9}\label{classmath_1_1buffer_ae120f128c0939e41738ddaf4a8db38e9}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!get@{get}}
+\index{get@{get}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T\& \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 364 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_ae9e2f05ece4cbf5a8d9226bcc3308d24}\label{classmath_1_1buffer_ae9e2f05ece4cbf5a8d9226bcc3308d24}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!isCircular@{isCircular}}
+\index{isCircular@{isCircular}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isCircular()}{isCircular()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::is\+Circular (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 300 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_ae6da67bf18725b51d7db162476a79612}\label{classmath_1_1buffer_ae6da67bf18725b51d7db162476a79612}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!mean@{mean}}
+\index{mean@{mean}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mean()}{mean()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 444 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a1dfb12617cdc0dc283227f8ff1681bc8}\label{classmath_1_1buffer_a1dfb12617cdc0dc283227f8ff1681bc8}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 293 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a1f02311d122e4678ed0f734771cda78d}\label{classmath_1_1buffer_a1f02311d122e4678ed0f734771cda78d}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}}\& \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 269 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a7ccb8046ed8abb4d5918e9e15320bff1}\label{classmath_1_1buffer_a7ccb8046ed8abb4d5918e9e15320bff1}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmath_1_1buffer}{\+\_\+\+Self}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 282 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a5a873bb544e737b9f9577695b1520df2}\label{classmath_1_1buffer_a5a873bb544e737b9f9577695b1520df2}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\& \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 356 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a97efb08ea98d4f765985cf053d299249}\label{classmath_1_1buffer_a97efb08ea98d4f765985cf053d299249}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T\& \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 360 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a87adf2b07c7fb9a64c41734438b7b69d}\label{classmath_1_1buffer_a87adf2b07c7fb9a64c41734438b7b69d}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 410 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a5ccb9a1eb96cbc31918e31913176f5e9}\label{classmath_1_1buffer_a5ccb9a1eb96cbc31918e31913176f5e9}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!push@{push}}
+\index{push@{push}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const T \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 368 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a45c4e59c2d96ca5d6910e873f29a197e}\label{classmath_1_1buffer_a45c4e59c2d96ca5d6910e873f29a197e}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!push@{push}}
+\index{push@{push}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const T $\ast$}]{v,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 380 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a5f34dcd07e23ce6ba4b3df248eadf375}\label{classmath_1_1buffer_a5f34dcd07e23ce6ba4b3df248eadf375}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setCapacity()}{setCapacity()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::set\+Capacity (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 311 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a0b07aba04a9a76694c88d8dcdafba674}\label{classmath_1_1buffer_a0b07aba04a9a76694c88d8dcdafba674}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!setCircular@{setCircular}}
+\index{setCircular@{setCircular}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setCircular()}{setCircular()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::set\+Circular (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 301 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_ae5bbec14660e147354fbade5efe39012}\label{classmath_1_1buffer_ae5bbec14660e147354fbade5efe39012}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!setSize@{setSize}}
+\index{setSize@{setSize}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 338 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_ad48be0af8c49333eadbd8e266e236092}\label{classmath_1_1buffer_ad48be0af8c49333eadbd8e266e236092}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!size@{size}}
+\index{size@{size}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 298 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a4c3b99abaec96566bb7d64fef81588c8}\label{classmath_1_1buffer_a4c3b99abaec96566bb7d64fef81588c8}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!std@{std}}
+\index{std@{std}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{std()}{std()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::std (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 451 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_add486789b9dee4acb1a35e77808fbe7c}\label{classmath_1_1buffer_add486789b9dee4acb1a35e77808fbe7c}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmath_1_1buffer_ad8f5dfc899653436569ec692639a9622}{container\+\_\+t}} \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 427 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_a7bb385351f6bce7325eeb90548e094a0}\label{classmath_1_1buffer_a7bb385351f6bce7325eeb90548e094a0}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!vmax@{vmax}}
+\index{vmax@{vmax}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vmax()}{vmax()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::vmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 438 of file math\+\_\+util.\+h.
+
+\mbox{\Hypertarget{classmath_1_1buffer_adda0fbeb271ebda10ac12ed3514ab834}\label{classmath_1_1buffer_adda0fbeb271ebda10ac12ed3514ab834}} 
+\index{math::buffer$<$ T $>$@{math::buffer$<$ T $>$}!vmin@{vmin}}
+\index{vmin@{vmin}!math::buffer$<$ T $>$@{math::buffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vmin()}{vmin()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \mbox{\hyperlink{classmath_1_1buffer}{math\+::buffer}}$<$ T $>$\+::vmin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 432 of file math\+\_\+util.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{math__util_8h}{math\+\_\+util.\+h}}\end{DoxyCompactItemize}

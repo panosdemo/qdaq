@@ -1,0 +1,151 @@
+.TH "math::circular_buffer< T >" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+math::circular_buffer< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <math_util\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBcircular_buffer\fP< T > \fBself_t\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcircular_buffer\fP (unsigned int nmax=1)"
+.br
+.RI "Construct a \fBcircular_buffer\fP with capacity nmax\&. "
+.ti -1c
+.RI "\fB~circular_buffer\fP ()"
+.br
+.ti -1c
+.RI "void \fBalloc\fP (unsigned int nmax)"
+.br
+.RI "allocate memory for nmax elements (nmax is adjusted to 2^N)\&. "
+.ti -1c
+.RI "void \fBpush\fP (const T &v)"
+.br
+.RI "insert an element\&. "
+.ti -1c
+.RI "\fBself_t\fP & \fBoperator<<\fP (const T &v)"
+.br
+.RI "insertion operator is the same as \fBpush()\fP "
+.ti -1c
+.RI "void \fBpop\fP ()"
+.br
+.RI "remove the last inserted element "
+.ti -1c
+.RI "T & \fBoperator[]\fP (int i)"
+.br
+.RI "ref to the i-th element "
+.ti -1c
+.RI "const T & \fBoperator[]\fP (int i) const"
+.br
+.RI "const ref to the i-th element "
+.ti -1c
+.RI "const T & \fBlast\fP () const"
+.br
+.RI "const ref to last element inserted "
+.ti -1c
+.RI "unsigned int \fBcapacity\fP () const"
+.br
+.RI "return the buffer's capacity "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class math::circular_buffer< T >"
+A circular LIFO buffer class\&.
+.PP
+When the buffer becomes full, newer elements overwrite older ones\&.
+.PP
+The allocated memory for the buffer is always 2^N for maximum efficiency\&.
+.PP
+Data elements are inserted with \fBpush()\fP or with the insertion \fBoperator<<()\fP\&.
+.PP
+The stored elements can be recalled by the c-style array operator[]\&. The elements are stored in LIFO order: at index 0 is the last inserted element, at 1 the one before last, etc\&.
+.PP
+The class does not keep count of the number of elements that have been inserted\&. The user is responsible for the neccesary book-keeping\&. 
+.PP
+Definition at line 31 of file math_util\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<class T > typedef \fBcircular_buffer\fP<T> \fBmath::circular_buffer\fP< T >::\fBself_t\fP"
+
+.PP
+Definition at line 34 of file math_util\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBmath::circular_buffer\fP< T >::\fBcircular_buffer\fP (unsigned int nmax = \fC1\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Construct a \fBcircular_buffer\fP with capacity nmax\&. 
+.PP
+Definition at line 62 of file math_util\&.h\&.
+.SS "template<class T > \fBmath::circular_buffer\fP< T >::~\fBcircular_buffer\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line 67 of file math_util\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > void \fBmath::circular_buffer\fP< T >::alloc (unsigned int nmax)\fC [inline]\fP"
+
+.PP
+allocate memory for nmax elements (nmax is adjusted to 2^N)\&. 
+.PP
+Definition at line 73 of file math_util\&.h\&.
+.SS "template<class T > unsigned int \fBmath::circular_buffer\fP< T >::capacity () const\fC [inline]\fP"
+
+.PP
+return the buffer's capacity 
+.PP
+Definition at line 116 of file math_util\&.h\&.
+.SS "template<class T > const T& \fBmath::circular_buffer\fP< T >::last () const\fC [inline]\fP"
+
+.PP
+const ref to last element inserted 
+.PP
+Definition at line 111 of file math_util\&.h\&.
+.SS "template<class T > \fBself_t\fP& \fBmath::circular_buffer\fP< T >::operator<< (const T & v)\fC [inline]\fP"
+
+.PP
+insertion operator is the same as \fBpush()\fP 
+.PP
+Definition at line 91 of file math_util\&.h\&.
+.SS "template<class T > T& \fBmath::circular_buffer\fP< T >::operator[] (int i)\fC [inline]\fP"
+
+.PP
+ref to the i-th element 
+.PP
+Definition at line 101 of file math_util\&.h\&.
+.SS "template<class T > const T& \fBmath::circular_buffer\fP< T >::operator[] (int i) const\fC [inline]\fP"
+
+.PP
+const ref to the i-th element 
+.PP
+Definition at line 106 of file math_util\&.h\&.
+.SS "template<class T > void \fBmath::circular_buffer\fP< T >::pop ()\fC [inline]\fP"
+
+.PP
+remove the last inserted element 
+.PP
+Definition at line 96 of file math_util\&.h\&.
+.SS "template<class T > void \fBmath::circular_buffer\fP< T >::push (const T & v)\fC [inline]\fP"
+
+.PP
+insert an element\&. 
+.PP
+Definition at line 85 of file math_util\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

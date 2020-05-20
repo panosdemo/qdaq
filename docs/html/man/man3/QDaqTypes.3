@@ -1,0 +1,121 @@
+.TH "QDaqTypes" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqTypes
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqTypes\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBregisterWithJS\fP (QScriptEngine *eng)"
+.br
+.ti -1c
+.RI "static bool \fBisNumeric\fP (const QVariant &)"
+.br
+.ti -1c
+.RI "static bool \fBisString\fP (const QVariant &)"
+.br
+.ti -1c
+.RI "static bool \fBisBool\fP (const QVariant &)"
+.br
+.ti -1c
+.RI "static bool \fBisStringList\fP (const QVariant &)"
+.br
+.ti -1c
+.RI "static bool \fBisVector\fP (const QVariant &)"
+.br
+.ti -1c
+.RI "static QStringList \fBtoStringList\fP (const QVariant &)"
+.br
+.ti -1c
+.RI "static \fBQDaqVector\fP \fBtoVector\fP (const QVariant &)"
+.br
+.ti -1c
+.RI "static bool \fBisNumeric\fP (const QVariantList &)"
+.br
+.ti -1c
+.RI "static bool \fBisString\fP (const QVariantList &)"
+.br
+.ti -1c
+.RI "static bool \fBisBool\fP (const QVariantList &)"
+.br
+.ti -1c
+.RI "static QScriptValue \fBtoScriptValue\fP (QScriptEngine *eng, \fBQDaqObject\fP *const &obj, int ownership=2)"
+.br
+.ti -1c
+.RI "static QScriptValue \fBtoScriptValue\fP (QScriptEngine *eng, const QScriptValue &scriptObj, \fBQDaqObject\fP *const &obj, int ownership=2)"
+.br
+.ti -1c
+.RI "static void \fBfromScriptValue\fP (const QScriptValue &value, \fBQDaqObject\fP *&obj)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file QDaqTypes\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqTypes::fromScriptValue (const QScriptValue & value, \fBQDaqObject\fP *& obj)\fC [static]\fP"
+
+.PP
+Definition at line 76 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isBool (const QVariant & v)\fC [static]\fP"
+
+.PP
+Definition at line 122 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isBool (const QVariantList & L)\fC [static]\fP"
+
+.PP
+Definition at line 198 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isNumeric (const QVariant & v)\fC [static]\fP"
+
+.PP
+Definition at line 127 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isNumeric (const QVariantList & L)\fC [static]\fP"
+
+.PP
+Definition at line 206 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isString (const QVariant & v)\fC [static]\fP"
+
+.PP
+Definition at line 136 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isString (const QVariantList & L)\fC [static]\fP"
+
+.PP
+Definition at line 214 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isStringList (const QVariant & v)\fC [static]\fP"
+
+.PP
+Definition at line 144 of file QDaqTypes\&.cpp\&.
+.SS "bool QDaqTypes::isVector (const QVariant & v)\fC [static]\fP"
+
+.PP
+Definition at line 152 of file QDaqTypes\&.cpp\&.
+.SS "int QDaqTypes::registerWithJS (QScriptEngine * eng)\fC [static]\fP"
+
+.PP
+Definition at line 222 of file QDaqTypes\&.cpp\&.
+.SS "QScriptValue QDaqTypes::toScriptValue (QScriptEngine * eng, const QScriptValue & scriptObj, \fBQDaqObject\fP *const & obj, int ownership = \fC2\fP)\fC [static]\fP"
+
+.PP
+Definition at line 69 of file QDaqTypes\&.cpp\&.
+.SS "QScriptValue QDaqTypes::toScriptValue (QScriptEngine * eng, \fBQDaqObject\fP *const & obj, int ownership = \fC2\fP)\fC [static]\fP"
+
+.PP
+Definition at line 62 of file QDaqTypes\&.cpp\&.
+.SS "QStringList QDaqTypes::toStringList (const QVariant & v)\fC [static]\fP"
+
+.PP
+Definition at line 176 of file QDaqTypes\&.cpp\&.
+.SS "\fBQDaqVector\fP QDaqTypes::toVector (const QVariant & v)\fC [static]\fP"
+
+.PP
+Definition at line 160 of file QDaqTypes\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

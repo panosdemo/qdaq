@@ -1,0 +1,127 @@
+.TH "QDaqLinearCorrelator" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqLinearCorrelator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qdaqlinearcorrelator\&.h>\fP
+.PP
+Inherits \fBQDaqFilter\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqLinearCorrelator\fP (const QString &name)"
+.br
+.ti -1c
+.RI "uint \fBsize\fP () const"
+.br
+.ti -1c
+.RI "uint \fBlength\fP () const"
+.br
+.ti -1c
+.RI "virtual int \fBnInputChannels\fP () const"
+.br
+.ti -1c
+.RI "virtual int \fBnOutputChannels\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetSize\fP (uint sz)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBfilterinit\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBfilterfunc\fP (const double *vin, double *vout)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "uint \fBsize\fP"
+.br
+.ti -1c
+.RI "uint \fBlength\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file qdaqlinearcorrelator\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqLinearCorrelator::QDaqLinearCorrelator (const QString & name)\fC [explicit]\fP"
+
+.PP
+Definition at line 4 of file qdaqlinearcorrelator\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqLinearCorrelator::clear ()\fC [slot]\fP"
+
+.PP
+Definition at line 49 of file qdaqlinearcorrelator\&.cpp\&.
+.SS "bool QDaqLinearCorrelator::filterfunc (const double * vin, double * vout)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 34 of file qdaqlinearcorrelator\&.cpp\&.
+.SS "bool QDaqLinearCorrelator::filterinit ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 28 of file qdaqlinearcorrelator\&.cpp\&.
+.SS "uint QDaqLinearCorrelator::length () const\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file qdaqlinearcorrelator\&.h\&.
+.SS "virtual int QDaqLinearCorrelator::nInputChannels () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 33 of file qdaqlinearcorrelator\&.h\&.
+.SS "virtual int QDaqLinearCorrelator::nOutputChannels () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 34 of file qdaqlinearcorrelator\&.h\&.
+.SS "void QDaqLinearCorrelator::setSize (uint sz)"
+
+.PP
+Definition at line 13 of file qdaqlinearcorrelator\&.cpp\&.
+.SS "uint QDaqLinearCorrelator::size () const\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file qdaqlinearcorrelator\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "uint QDaqLinearCorrelator::length\fC [read]\fP"
+Number of data points in buffer\&. Actual number of past (x,y) data points currently stored in the buffer\&. 
+.PP
+Definition at line 1 of file qdaqlinearcorrelator\&.h\&.
+.SS "uint QDaqLinearCorrelator::size\fC [read]\fP, \fC [write]\fP"
+Size of data sample\&. Number of past (x,y) data points used in deriving correlation parameters\&. 
+.PP
+Definition at line 1 of file qdaqlinearcorrelator\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

@@ -1,0 +1,220 @@
+.TH "QDaqInterpolator" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqInterpolator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qdaqinterpolator\&.h>\fP
+.PP
+Inherits \fBQDaqFilter\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBInterpolationType\fP { \fBNone\fP, \fBLinear\fP, \fBPolynomial\fP, \fBCubicSpline\fP }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetTable\fP (const \fBQDaqVector\fP &\fBx\fP, const \fBQDaqVector\fP &\fBy\fP)"
+.br
+.ti -1c
+.RI "void \fBfromTextFile\fP (const QString &fname)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqInterpolator\fP (const QString &name)"
+.br
+.ti -1c
+.RI "virtual \fB~QDaqInterpolator\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBnInputChannels\fP () const"
+.br
+.ti -1c
+.RI "virtual int \fBnOutputChannels\fP () const"
+.br
+.ti -1c
+.RI "\fBInterpolationType\fP \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetType\fP (\fBInterpolationType\fP t)"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBx\fP () const"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBy\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBfilterinit\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBfilterfunc\fP (const double *vin, double *vout)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBInterpolationType\fP \fBtype_\fP"
+.br
+.ti -1c
+.RI "gsl_interp * \fBinterpolator_\fP"
+.br
+.ti -1c
+.RI "gsl_interp_accel * \fBaccel_\fP"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBxa\fP"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBya\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBInterpolationType\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBx\fP"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBy\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file qdaqinterpolator\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBQDaqInterpolator::InterpolationType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+.TP
+\fB\fILinear \fP\fP
+.TP
+\fB\fIPolynomial \fP\fP
+.TP
+\fB\fICubicSpline \fP\fP
+.PP
+Definition at line 22 of file qdaqinterpolator\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqInterpolator::QDaqInterpolator (const QString & name)\fC [explicit]\fP"
+
+.PP
+Definition at line 13 of file qdaqinterpolator\&.cpp\&.
+.SS "QDaqInterpolator::~QDaqInterpolator ()\fC [virtual]\fP"
+
+.PP
+Definition at line 22 of file qdaqinterpolator\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool QDaqInterpolator::filterfunc (const double * vin, double * vout)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 42 of file qdaqinterpolator\&.cpp\&.
+.SS "bool QDaqInterpolator::filterinit ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 28 of file qdaqinterpolator\&.cpp\&.
+.SS "void QDaqInterpolator::fromTextFile (const QString & fname)\fC [slot]\fP"
+
+.PP
+Definition at line 121 of file qdaqinterpolator\&.cpp\&.
+.SS "virtual int QDaqInterpolator::nInputChannels () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 41 of file qdaqinterpolator\&.h\&.
+.SS "virtual int QDaqInterpolator::nOutputChannels () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBQDaqFilter\fP\&.
+.PP
+Definition at line 42 of file qdaqinterpolator\&.h\&.
+.SS "void QDaqInterpolator::setTable (const \fBQDaqVector\fP & x, const \fBQDaqVector\fP & y)\fC [slot]\fP"
+
+.PP
+Definition at line 74 of file qdaqinterpolator\&.cpp\&.
+.SS "void QDaqInterpolator::setType (\fBInterpolationType\fP t)"
+
+.PP
+Definition at line 55 of file qdaqinterpolator\&.cpp\&.
+.SS "\fBInterpolationType\fP QDaqInterpolator::type () const\fC [inline]\fP"
+
+.PP
+Definition at line 44 of file qdaqinterpolator\&.h\&.
+.SS "\fBQDaqVector\fP QDaqInterpolator::x () const"
+
+.PP
+Definition at line 64 of file qdaqinterpolator\&.cpp\&.
+.SS "\fBQDaqVector\fP QDaqInterpolator::y () const"
+
+.PP
+Definition at line 69 of file qdaqinterpolator\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "gsl_interp_accel* QDaqInterpolator::accel_\fC [protected]\fP"
+
+.PP
+Definition at line 33 of file qdaqinterpolator\&.h\&.
+.SS "gsl_interp* QDaqInterpolator::interpolator_\fC [protected]\fP"
+
+.PP
+Definition at line 32 of file qdaqinterpolator\&.h\&.
+.SS "\fBInterpolationType\fP QDaqInterpolator::type_\fC [protected]\fP"
+
+.PP
+Definition at line 31 of file qdaqinterpolator\&.h\&.
+.SS "\fBQDaqVector\fP QDaqInterpolator::xa\fC [protected]\fP"
+
+.PP
+Definition at line 35 of file qdaqinterpolator\&.h\&.
+.SS "\fBQDaqVector\fP QDaqInterpolator::ya\fC [protected]\fP"
+
+.PP
+Definition at line 35 of file qdaqinterpolator\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "\fBInterpolationType\fP QDaqInterpolator::type\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Definition at line 1 of file qdaqinterpolator\&.h\&.
+.SS "\fBQDaqVector\fP QDaqInterpolator::x\fC [read]\fP"
+
+.PP
+Definition at line 1 of file qdaqinterpolator\&.h\&.
+.SS "\fBQDaqVector\fP QDaqInterpolator::y\fC [read]\fP"
+
+.PP
+Definition at line 1 of file qdaqinterpolator\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

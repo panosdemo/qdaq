@@ -1,0 +1,129 @@
+.TH "autotuner< T >" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+autotuner< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <relaytuner\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBautotuner\fP ()"
+.br
+.ti -1c
+.RI "\fB~autotuner\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBoperator()\fP (T sp, T pv, T &cv, bool &automode)"
+.br
+.ti -1c
+.RI "void \fBget_par\fP (T h, T &k, T &ti, T &td) const"
+.br
+.ti -1c
+.RI "void \fBget_par\fP (T h, T &k, T &ti) const"
+.br
+.ti -1c
+.RI "void \fBget_par\fP (T h, T &k) const"
+.br
+.ti -1c
+.RI "T \fBget_tc\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_kc\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_step\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_dy\fP () const"
+.br
+.ti -1c
+.RI "int \fBget_count\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_step\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_dy\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_count\fP (int v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class autotuner< T >"
+
+.PP
+Definition at line 9 of file relaytuner\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBautotuner\fP< T >::\fBautotuner\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file relaytuner\&.h\&.
+.SS "template<class T > \fBautotuner\fP< T >::~\fBautotuner\fP (void)\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file relaytuner\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > int \fBautotuner\fP< T >::get_count () const\fC [inline]\fP"
+
+.PP
+Definition at line 115 of file relaytuner\&.h\&.
+.SS "template<class T > T \fBautotuner\fP< T >::get_dy () const\fC [inline]\fP"
+
+.PP
+Definition at line 114 of file relaytuner\&.h\&.
+.SS "template<class T > T \fBautotuner\fP< T >::get_kc () const\fC [inline]\fP"
+
+.PP
+Definition at line 112 of file relaytuner\&.h\&.
+.SS "template<class T > void \fBautotuner\fP< T >::get_par (T h, T & k) const\fC [inline]\fP"
+
+.PP
+Definition at line 104 of file relaytuner\&.h\&.
+.SS "template<class T > void \fBautotuner\fP< T >::get_par (T h, T & k, T & ti) const\fC [inline]\fP"
+
+.PP
+Definition at line 99 of file relaytuner\&.h\&.
+.SS "template<class T > void \fBautotuner\fP< T >::get_par (T h, T & k, T & ti, T & td) const\fC [inline]\fP"
+
+.PP
+Definition at line 93 of file relaytuner\&.h\&.
+.SS "template<class T > T \fBautotuner\fP< T >::get_step () const\fC [inline]\fP"
+
+.PP
+Definition at line 113 of file relaytuner\&.h\&.
+.SS "template<class T > T \fBautotuner\fP< T >::get_tc () const\fC [inline]\fP"
+
+.PP
+Definition at line 111 of file relaytuner\&.h\&.
+.SS "template<class T > bool \fBautotuner\fP< T >::operator() (T sp, T pv, T & cv, bool & automode)\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file relaytuner\&.h\&.
+.SS "template<class T > void \fBautotuner\fP< T >::set_count (int v)\fC [inline]\fP"
+
+.PP
+Definition at line 120 of file relaytuner\&.h\&.
+.SS "template<class T > void \fBautotuner\fP< T >::set_dy (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 119 of file relaytuner\&.h\&.
+.SS "template<class T > void \fBautotuner\fP< T >::set_step (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 118 of file relaytuner\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

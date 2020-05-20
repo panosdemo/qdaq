@@ -1,0 +1,264 @@
+.TH "QDaqTcpip" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqTcpip \- A class for accesing a TCP/IP interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qdaqtcpip\&.h>\fP
+.PP
+Inherits \fBQDaqInterface\fP\&.
+.PP
+Inherited by \fBQDaqModbusTcp\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqTcpip\fP (const QString &name, const QString &ahost=QString(), uint portno=0)"
+.br
+.RI "\fBQDaqTcpip\fP constructor\&. "
+.ti -1c
+.RI "virtual \fB~QDaqTcpip\fP ()"
+.br
+.ti -1c
+.RI "uint \fBport\fP () const"
+.br
+.ti -1c
+.RI "QString \fBhost\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPort\fP (uint p)"
+.br
+.ti -1c
+.RI "void \fBsetHost\fP (const QString &h)"
+.br
+.ti -1c
+.RI "virtual bool \fBisValidPort\fP (uint i)"
+.br
+.RI "Returns true is i is a valid port number\&. "
+.ti -1c
+.RI "virtual int \fBread\fP (uint \fBport\fP, char *buff, int len, int eos=0)"
+.br
+.RI "Read data from a port\&. "
+.ti -1c
+.RI "virtual int \fBwrite\fP (uint \fBport\fP, const char *buff, int len, int eos=0)"
+.br
+.RI "Write data to a port\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBopen_\fP ()"
+.br
+.RI "Implementation of interface open\&. "
+.ti -1c
+.RI "virtual void \fBclose_\fP ()"
+.br
+.RI "Implementation of interface close\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint \fBport_\fP"
+.br
+.ti -1c
+.RI "QHostAddress \fBhost_\fP"
+.br
+.ti -1c
+.RI "\fBtcp_socket\fP * \fBsocket_\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "uint \fBport\fP"
+.br
+.RI "Tcp/ip port\&. "
+.ti -1c
+.RI "QString \fBhost\fP"
+.br
+.RI "Host IP address as string, eg '192\&.168\&.1\&.6'\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A class for accesing a TCP/IP interface\&. 
+
+\fBQDaqTcpip\fP performs communications with another host using a tcp socket connection to the specified host address and port\&. The port here means the tcp/ip port and is not to be confused with the ports of \fBQDaqInterface\fP\&.
+.PP
+\fBQDaqTcpip\fP can be used in order to communicate with a single device\&. For multiple devices connected on the ethernet bus, each with its own host ip address, a separate \fBQDaqTcpip\fP must be used per device\&.
+.PP
+If the same device with single ip address offers several ports for communication, then a separate \fBQDaqTcpip\fP must be used per device port\&. 
+.PP
+Definition at line 35 of file qdaqtcpip\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqTcpip::QDaqTcpip (const QString & name, const QString & ahost = \fCQString()\fP, uint portno = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+\fBQDaqTcpip\fP constructor\&. It initializes the object with the interface is in the closed state\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBQDaqObject\fP name 
+.br
+\fIahost\fP Host address 
+.br
+\fIportno\fP Port number where the host listens 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file qdaqtcpip\&.cpp\&.
+.SS "QDaqTcpip::~QDaqTcpip ()\fC [virtual]\fP"
+
+.PP
+Definition at line 16 of file qdaqtcpip\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqTcpip::close_ ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implementation of interface close\&. 
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusTcp\fP\&.
+.PP
+Definition at line 93 of file qdaqtcpip\&.cpp\&.
+.SS "QString QDaqTcpip::host () const\fC [inline]\fP"
+
+.PP
+Definition at line 66 of file qdaqtcpip\&.h\&.
+.SS "virtual bool QDaqTcpip::isValidPort (uint i)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Returns true is i is a valid port number\&. 
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Definition at line 73 of file qdaqtcpip\&.h\&.
+.SS "bool QDaqTcpip::open_ ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implementation of interface open\&. 
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusTcp\fP\&.
+.PP
+Definition at line 77 of file qdaqtcpip\&.cpp\&.
+.SS "uint QDaqTcpip::port () const\fC [inline]\fP"
+
+.PP
+Definition at line 65 of file qdaqtcpip\&.h\&.
+.SS "int QDaqTcpip::read (uint port, char * buff, int len, int eos = \fC0\fP)\fC [virtual]\fP"
+
+.PP
+Read data from a port\&. The meaning of the port parameter is different depending on the type of communication interface\&.
+.PP
+In message based communications (e\&.g\&. GPIB) the port is the instrument address\&.
+.PP
+In memory based interfaces (e\&.g\&. MODBUS) the port number represents the starting register address to access\&. The number of registers read/written depends on len, the size of the buffer in bytes\&. A MODBUS register is 16 bit, ie, occupies 2 bytes\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIport\fP Port number\&. 
+.br
+\fIbuff\fP Pointer to memory buffer\&. 
+.br
+\fIlen\fP Allocated number of bytes\&. 
+.br
+\fIeos\fP End of string byte 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of bytes read\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusTcp\fP\&.
+.PP
+Definition at line 40 of file qdaqtcpip\&.cpp\&.
+.SS "void QDaqTcpip::setHost (const QString & h)"
+
+.PP
+Definition at line 29 of file qdaqtcpip\&.cpp\&.
+.SS "void QDaqTcpip::setPort (uint p)"
+
+.PP
+Definition at line 20 of file qdaqtcpip\&.cpp\&.
+.SS "int QDaqTcpip::write (uint port, const char * buff, int len, int eos = \fC0\fP)\fC [virtual]\fP"
+
+.PP
+Write data to a port\&. The meaning of the port parameter is different depending on the type of communication interface\&.
+.PP
+In message based communications (e\&.g\&. GPIB) the port is the instrument address\&.
+.PP
+In memory based interfaces (e\&.g\&. MODBUS) the port number represents the starting register address to access\&. The number of registers read/written depends on len, the size of the buffer in bytes\&. A MODBUS register is 16 bit, ie, occupies 2 bytes\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Port number\&. 
+.br
+\fIbuff\fP Pointer to memory buffer\&. 
+.br
+\fIlen\fP Number of bytes to write\&. 
+.br
+\fIeos\fP End of string byte 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of bytes written\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqInterface\fP\&.
+.PP
+Reimplemented in \fBQDaqModbusTcp\fP\&.
+.PP
+Definition at line 58 of file qdaqtcpip\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QHostAddress QDaqTcpip::host_\fC [protected]\fP"
+
+.PP
+Definition at line 47 of file qdaqtcpip\&.h\&.
+.SS "uint QDaqTcpip::port_\fC [protected]\fP"
+
+.PP
+Definition at line 46 of file qdaqtcpip\&.h\&.
+.SS "\fBtcp_socket\fP* QDaqTcpip::socket_\fC [protected]\fP"
+
+.PP
+Definition at line 49 of file qdaqtcpip\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "QString QDaqTcpip::host\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Host IP address as string, eg '192\&.168\&.1\&.6'\&. 
+.PP
+Definition at line 1 of file qdaqtcpip\&.h\&.
+.SS "uint QDaqTcpip::port\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Tcp/ip port\&. 
+.PP
+Definition at line 1 of file qdaqtcpip\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

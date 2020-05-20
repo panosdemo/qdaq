@@ -1,0 +1,667 @@
+\hypertarget{class_q_daq_session}{}\doxysection{Q\+Daq\+Session Class Reference}
+\label{class_q_daq_session}\index{QDaqSession@{QDaqSession}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Session.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Session\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_q_daq_session}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_session_a8da1257d43cd98cbe2ca57a03c91da32}{version}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a32e2a6edca075b4c9606c831900d66f7}{quit}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_session_ad2d440a51d0863104ef3d5eaf727ccba}{exec}} (const Q\+String \&fname)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a8b7beafe2cc02d37f3cce2683606db52}{print}} (const Q\+String \&str)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_aa83c70db7789f409e6d447f8c8dd8f90}{wait}} (uint ms)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_ad719ba2c2348520363ec2b0fdfc02886}{text\+Save}} (const Q\+String \&str, const Q\+String \&fname)
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_session_af8f417903c8d852d71bdea754acc63e4}{text\+Load}} (const Q\+String \&fname)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_ab4bca543d666c03e7a609521bb718b0b}{beep}} ()
+\item 
+bool \mbox{\hyperlink{class_q_daq_session_a0d4d047273529036cd6d393a349bf758}{h5write}} (const \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$obj, const Q\+String \&fname)
+\item 
+\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ \mbox{\hyperlink{class_q_daq_session_a53472c99cbd1d65d8873de6e9414a5fd}{h5read}} (const Q\+String \&fname)
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_session_af7a035328e45aa59bb6749b0cdba2cbb}{pwd}} ()
+\item 
+bool \mbox{\hyperlink{class_q_daq_session_afb8d7e9b82088f78e5f70d49bbaefbf9}{cd}} (const Q\+String \&path)
+\item 
+Q\+String\+List \mbox{\hyperlink{class_q_daq_session_a9f410a31685a6507ed9b7d63db5d0cdd}{dir}} (const Q\+String\+List \&filters=Q\+String\+List())
+\item 
+Q\+String\+List \mbox{\hyperlink{class_q_daq_session_afea0af9383d9ba83a0bb9e8531aed906}{dir}} (const Q\+String \&filter)
+\item 
+bool \mbox{\hyperlink{class_q_daq_session_a8a0ff623e3f60e50a3fbbd6a66af57b4}{is\+Dir}} (const Q\+String \&name)
+\item 
+Q\+Widget $\ast$ \mbox{\hyperlink{class_q_daq_session_a0974fb53655e1cb2e56deaf60bd4421f}{load\+Ui}} (const Q\+String \&fname)
+\item 
+Q\+Widget $\ast$ \mbox{\hyperlink{class_q_daq_session_a29cbde7124a00cbf13aa7442d985aa9e}{load\+Top\+Level\+Ui}} (const Q\+String \&fname, const Q\+String \&ui\+Name)
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_session_a3d0b0b6d5499058c7c13bde345783e0d}{plugin\+Paths}} ()
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_session_a9d28a542698d1cb87124cc5d854c12aa}{available\+Widgets}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a88f56ffd5b544840cf4a1292f935f9bb}{bind}} (\mbox{\hyperlink{class_q_daq_channel}{Q\+Daq\+Channel}} $\ast$ch, Q\+Widget $\ast$w)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_ab464a457d62c49f36ccaaa1f332cdff7}{bind}} (\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$obj, const Q\+String \&property\+Name, Q\+Widget $\ast$w, bool read\+Only=false)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a87f117d25a2019672b7ef256895ce118}{add\+Items}} (Q\+Combo\+Box $\ast$cb, const Q\+String\+List \&lst)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_ab61d65977c7fbb31ac6603c1ed1c45f2}{add\+Items}} (Q\+List\+Widget $\ast$cb, const Q\+String\+List \&lst)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a4fa5c6e355601c67b2892ddf8e2e3a96}{delete\+Tab}} (int current\+Index)
+\item 
+int \mbox{\hyperlink{class_q_daq_session_a37a304ad674920462684f1025e6b4d98}{insert\+Tab}} (int \mbox{\hyperlink{class_q_daq_session_a46ccb8d4294d2cda294fd43308739d7c}{index}}, Q\+Widget $\ast$page, const Q\+String \&label)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_abf0d1344582f10f9dad324b4ef5cf0c2}{debug}} (bool on)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_afd5086eca3ed5e8b276da42a39137c2b}{tic}} ()
+\item 
+double \mbox{\hyperlink{class_q_daq_session_a84ff89e5af9357b8fd0f1666cf0f3f7a}{toc}} ()
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_session_a2b8ddf4f45c128914fee9402550a406c}{system}} (const Q\+String \&comm)
+\item 
+bool \mbox{\hyperlink{class_q_daq_session_ac8504606b59b677ae9037467ebcdf060}{ispc}} ()
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_session_a2f6c4c1a6f09f3ad0f1d9655126f10a8}{info}} (Q\+Script\+Value v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a1de21763ad016537db58b72904b5f189}{std\+Out}} (const Q\+String \&)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a5872dd5b430cb22f7b58f4e65187372c}{std\+Err}} (const Q\+String \&)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_ac9e312e4324d2a1c7d07713432040cf4}{end\+Session}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_session_aeb0593f01e60bc5b5ff9093f1ee27b8e}{Q\+Daq\+Session}} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_q_daq_session_aeb0593f01e60bc5b5ff9093f1ee27b8e}{Q\+Daq\+Session\+::\+Q\+Daq\+Session}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_q_daq_session_a836fc24756c5371afeb19658e4c89e21}{$\sim$\+Q\+Daq\+Session}} (void)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a1fb964028cc3d958c1f389700a2a1e5d}{evaluate}} (const Q\+String \&program)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_aa7de2d9a2f41f3671c57d1260eabbbf5}{abort\+Evaluation}} ()
+\item 
+int \mbox{\hyperlink{class_q_daq_session_a46ccb8d4294d2cda294fd43308739d7c}{index}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_q_daq_session_adf88bea9c09b9c01d372dd1480f4a5df}{next\+Available\+Index}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a0af84481add8d54dc93c87126084b959}{log\+\_\+in}} (const Q\+String \&str)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_aa2add95fd8d9a8f762858ea49432c9d3}{log\+\_\+out}} (const Q\+String \&str)
+\item 
+void \mbox{\hyperlink{class_q_daq_session_ac49676fdd9632a538d4bd65a07c0e5ce}{log\+\_\+err}} (const Q\+String \&str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_session_a1e5d40e686e33cdfd31e6bbcb790a82a}{log\+\_\+\+\_\+}} (int fd, const Q\+String \&str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Script\+Engine\+Debugger $\ast$ \mbox{\hyperlink{class_q_daq_session_a30aa4bcc06061b79e4855087160cab29}{debugger\+\_\+}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_q_daq_session_a564295064fa51a1b8f59418eff356ce3}{wait\+\_\+timer\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_q_daq_session_a5206e5a37bee92a0cd55be71cd567877}{wait\+\_\+aborted\+\_\+}}
+\item 
+Q\+Elapsed\+Timer \mbox{\hyperlink{class_q_daq_session_af6c6e6ccba4f35cbf487378db4223c1d}{watch\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_q_daq_session_a92c8e3f607ec5fe35ac494736095a88c}{idx\+\_\+}}
+\item 
+\mbox{\hyperlink{class_q_daq_log_file}{Q\+Daq\+Log\+File}} $\ast$ \mbox{\hyperlink{class_q_daq_session_abb83fa5cb0143eddf0b3faabbb629ba6}{log\+File\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+Set$<$ int $>$ \mbox{\hyperlink{class_q_daq_session_a2cf03cedf0e1c75fecfe7d00a45c942c}{idx\+\_\+set}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 52 of file Q\+Daq\+Session.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_session_aeb0593f01e60bc5b5ff9093f1ee27b8e}\label{class_q_daq_session_aeb0593f01e60bc5b5ff9093f1ee27b8e}} 
+\index{QDaqSession@{QDaqSession}!QDaqSession@{QDaqSession}}
+\index{QDaqSession@{QDaqSession}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{QDaqSession()}{QDaqSession()}}
+{\footnotesize\ttfamily Q\+Daq\+Session\+::\+Q\+Daq\+Session (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_q_daq_session_aeb0593f01e60bc5b5ff9093f1ee27b8e}{Q\+Daq\+Session\+::\+Q\+Daq\+Session}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 173 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a836fc24756c5371afeb19658e4c89e21}\label{class_q_daq_session_a836fc24756c5371afeb19658e4c89e21}} 
+\index{QDaqSession@{QDaqSession}!````~QDaqSession@{$\sim$QDaqSession}}
+\index{````~QDaqSession@{$\sim$QDaqSession}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqSession()}{~QDaqSession()}}
+{\footnotesize\ttfamily Q\+Daq\+Session\+::$\sim$\+Q\+Daq\+Session (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 206 of file Q\+Daq\+Session.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_session_aa7de2d9a2f41f3671c57d1260eabbbf5}\label{class_q_daq_session_aa7de2d9a2f41f3671c57d1260eabbbf5}} 
+\index{QDaqSession@{QDaqSession}!abortEvaluation@{abortEvaluation}}
+\index{abortEvaluation@{abortEvaluation}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{abortEvaluation()}{abortEvaluation()}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::abort\+Evaluation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 247 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a87f117d25a2019672b7ef256895ce118}\label{class_q_daq_session_a87f117d25a2019672b7ef256895ce118}} 
+\index{QDaqSession@{QDaqSession}!addItems@{addItems}}
+\index{addItems@{addItems}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{addItems}{addItems}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::add\+Items (\begin{DoxyParamCaption}\item[{Q\+Combo\+Box $\ast$}]{cb,  }\item[{const Q\+String\+List \&}]{lst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 522 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ab61d65977c7fbb31ac6603c1ed1c45f2}\label{class_q_daq_session_ab61d65977c7fbb31ac6603c1ed1c45f2}} 
+\index{QDaqSession@{QDaqSession}!addItems@{addItems}}
+\index{addItems@{addItems}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{addItems}{addItems}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::add\+Items (\begin{DoxyParamCaption}\item[{Q\+List\+Widget $\ast$}]{cb,  }\item[{const Q\+String\+List \&}]{lst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 527 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a9d28a542698d1cb87124cc5d854c12aa}\label{class_q_daq_session_a9d28a542698d1cb87124cc5d854c12aa}} 
+\index{QDaqSession@{QDaqSession}!availableWidgets@{availableWidgets}}
+\index{availableWidgets@{availableWidgets}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{availableWidgets}{availableWidgets}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Session\+::available\+Widgets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 465 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ab4bca543d666c03e7a609521bb718b0b}\label{class_q_daq_session_ab4bca543d666c03e7a609521bb718b0b}} 
+\index{QDaqSession@{QDaqSession}!beep@{beep}}
+\index{beep@{beep}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{beep}{beep}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::beep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 310 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a88f56ffd5b544840cf4a1292f935f9bb}\label{class_q_daq_session_a88f56ffd5b544840cf4a1292f935f9bb}} 
+\index{QDaqSession@{QDaqSession}!bind@{bind}}
+\index{bind@{bind}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{bind}{bind}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_channel}{Q\+Daq\+Channel}} $\ast$}]{ch,  }\item[{Q\+Widget $\ast$}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 470 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ab464a457d62c49f36ccaaa1f332cdff7}\label{class_q_daq_session_ab464a457d62c49f36ccaaa1f332cdff7}} 
+\index{QDaqSession@{QDaqSession}!bind@{bind}}
+\index{bind@{bind}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{bind}{bind}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{obj,  }\item[{const Q\+String \&}]{property\+Name,  }\item[{Q\+Widget $\ast$}]{w,  }\item[{bool}]{read\+Only = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 479 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_afb8d7e9b82088f78e5f70d49bbaefbf9}\label{class_q_daq_session_afb8d7e9b82088f78e5f70d49bbaefbf9}} 
+\index{QDaqSession@{QDaqSession}!cd@{cd}}
+\index{cd@{cd}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{cd}{cd}}
+{\footnotesize\ttfamily bool Q\+Daq\+Session\+::cd (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 325 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_abf0d1344582f10f9dad324b4ef5cf0c2}\label{class_q_daq_session_abf0d1344582f10f9dad324b4ef5cf0c2}} 
+\index{QDaqSession@{QDaqSession}!debug@{debug}}
+\index{debug@{debug}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::debug (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 346 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a4fa5c6e355601c67b2892ddf8e2e3a96}\label{class_q_daq_session_a4fa5c6e355601c67b2892ddf8e2e3a96}} 
+\index{QDaqSession@{QDaqSession}!deleteTab@{deleteTab}}
+\index{deleteTab@{deleteTab}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{deleteTab}{deleteTab}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::delete\+Tab (\begin{DoxyParamCaption}\item[{int}]{current\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 547 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_afea0af9383d9ba83a0bb9e8531aed906}\label{class_q_daq_session_afea0af9383d9ba83a0bb9e8531aed906}} 
+\index{QDaqSession@{QDaqSession}!dir@{dir}}
+\index{dir@{dir}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Q\+String\+List Q\+Daq\+Session\+::dir (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{filter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 337 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a9f410a31685a6507ed9b7d63db5d0cdd}\label{class_q_daq_session_a9f410a31685a6507ed9b7d63db5d0cdd}} 
+\index{QDaqSession@{QDaqSession}!dir@{dir}}
+\index{dir@{dir}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Q\+String\+List Q\+Daq\+Session\+::dir (\begin{DoxyParamCaption}\item[{const Q\+String\+List \&}]{filters = {\ttfamily QStringList()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 333 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ac9e312e4324d2a1c7d07713432040cf4}\label{class_q_daq_session_ac9e312e4324d2a1c7d07713432040cf4}} 
+\index{QDaqSession@{QDaqSession}!endSession@{endSession}}
+\index{endSession@{endSession}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{endSession}{endSession}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::end\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_q_daq_session_a1fb964028cc3d958c1f389700a2a1e5d}\label{class_q_daq_session_a1fb964028cc3d958c1f389700a2a1e5d}} 
+\index{QDaqSession@{QDaqSession}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::evaluate (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{program }\end{DoxyParamCaption})}
+
+
+
+Definition at line 224 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ad2d440a51d0863104ef3d5eaf727ccba}\label{class_q_daq_session_ad2d440a51d0863104ef3d5eaf727ccba}} 
+\index{QDaqSession@{QDaqSession}!exec@{exec}}
+\index{exec@{exec}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{exec}{exec}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::exec (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 253 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a53472c99cbd1d65d8873de6e9414a5fd}\label{class_q_daq_session_a53472c99cbd1d65d8873de6e9414a5fd}} 
+\index{QDaqSession@{QDaqSession}!h5read@{h5read}}
+\index{h5read@{h5read}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{h5read}{h5read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$ Q\+Daq\+Session\+::h5read (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 390 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a0d4d047273529036cd6d393a349bf758}\label{class_q_daq_session_a0d4d047273529036cd6d393a349bf758}} 
+\index{QDaqSession@{QDaqSession}!h5write@{h5write}}
+\index{h5write@{h5write}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{h5write}{h5write}}
+{\footnotesize\ttfamily bool Q\+Daq\+Session\+::h5write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} $\ast$}]{obj,  }\item[{const Q\+String \&}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 382 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a46ccb8d4294d2cda294fd43308739d7c}\label{class_q_daq_session_a46ccb8d4294d2cda294fd43308739d7c}} 
+\index{QDaqSession@{QDaqSession}!index@{index}}
+\index{index@{index}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily int Q\+Daq\+Session\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a2f6c4c1a6f09f3ad0f1d9655126f10a8}\label{class_q_daq_session_a2f6c4c1a6f09f3ad0f1d9655126f10a8}} 
+\index{QDaqSession@{QDaqSession}!info@{info}}
+\index{info@{info}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Session\+::info (\begin{DoxyParamCaption}\item[{Q\+Script\+Value}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 563 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a37a304ad674920462684f1025e6b4d98}\label{class_q_daq_session_a37a304ad674920462684f1025e6b4d98}} 
+\index{QDaqSession@{QDaqSession}!insertTab@{insertTab}}
+\index{insertTab@{insertTab}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{insertTab}{insertTab}}
+{\footnotesize\ttfamily int Q\+Daq\+Session\+::insert\+Tab (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{Q\+Widget $\ast$}]{page,  }\item[{const Q\+String \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 532 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a8a0ff623e3f60e50a3fbbd6a66af57b4}\label{class_q_daq_session_a8a0ff623e3f60e50a3fbbd6a66af57b4}} 
+\index{QDaqSession@{QDaqSession}!isDir@{isDir}}
+\index{isDir@{isDir}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{isDir}{isDir}}
+{\footnotesize\ttfamily bool Q\+Daq\+Session\+::is\+Dir (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 341 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ac8504606b59b677ae9037467ebcdf060}\label{class_q_daq_session_ac8504606b59b677ae9037467ebcdf060}} 
+\index{QDaqSession@{QDaqSession}!ispc@{ispc}}
+\index{ispc@{ispc}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{ispc}{ispc}}
+{\footnotesize\ttfamily bool Q\+Daq\+Session\+::ispc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 123 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a29cbde7124a00cbf13aa7442d985aa9e}\label{class_q_daq_session_a29cbde7124a00cbf13aa7442d985aa9e}} 
+\index{QDaqSession@{QDaqSession}!loadTopLevelUi@{loadTopLevelUi}}
+\index{loadTopLevelUi@{loadTopLevelUi}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{loadTopLevelUi}{loadTopLevelUi}}
+{\footnotesize\ttfamily Q\+Widget $\ast$ Q\+Daq\+Session\+::load\+Top\+Level\+Ui (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{fname,  }\item[{const Q\+String \&}]{ui\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 425 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a0974fb53655e1cb2e56deaf60bd4421f}\label{class_q_daq_session_a0974fb53655e1cb2e56deaf60bd4421f}} 
+\index{QDaqSession@{QDaqSession}!loadUi@{loadUi}}
+\index{loadUi@{loadUi}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{loadUi}{loadUi}}
+{\footnotesize\ttfamily Q\+Widget $\ast$ Q\+Daq\+Session\+::load\+Ui (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 400 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a1e5d40e686e33cdfd31e6bbcb790a82a}\label{class_q_daq_session_a1e5d40e686e33cdfd31e6bbcb790a82a}} 
+\index{QDaqSession@{QDaqSession}!log\_\_@{log\_\_}}
+\index{log\_\_@{log\_\_}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{log\_\_()}{log\_\_()}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::log\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{const Q\+String \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 362 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ac49676fdd9632a538d4bd65a07c0e5ce}\label{class_q_daq_session_ac49676fdd9632a538d4bd65a07c0e5ce}} 
+\index{QDaqSession@{QDaqSession}!log\_err@{log\_err}}
+\index{log\_err@{log\_err}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{log\_err}{log\_err}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::log\+\_\+err (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 138 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a0af84481add8d54dc93c87126084b959}\label{class_q_daq_session_a0af84481add8d54dc93c87126084b959}} 
+\index{QDaqSession@{QDaqSession}!log\_in@{log\_in}}
+\index{log\_in@{log\_in}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{log\_in}{log\_in}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::log\+\_\+in (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 136 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_aa2add95fd8d9a8f762858ea49432c9d3}\label{class_q_daq_session_aa2add95fd8d9a8f762858ea49432c9d3}} 
+\index{QDaqSession@{QDaqSession}!log\_out@{log\_out}}
+\index{log\_out@{log\_out}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{log\_out}{log\_out}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::log\+\_\+out (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 137 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_adf88bea9c09b9c01d372dd1480f4a5df}\label{class_q_daq_session_adf88bea9c09b9c01d372dd1480f4a5df}} 
+\index{QDaqSession@{QDaqSession}!nextAvailableIndex@{nextAvailableIndex}}
+\index{nextAvailableIndex@{nextAvailableIndex}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{nextAvailableIndex()}{nextAvailableIndex()}}
+{\footnotesize\ttfamily int Q\+Daq\+Session\+::next\+Available\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 217 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a3d0b0b6d5499058c7c13bde345783e0d}\label{class_q_daq_session_a3d0b0b6d5499058c7c13bde345783e0d}} 
+\index{QDaqSession@{QDaqSession}!pluginPaths@{pluginPaths}}
+\index{pluginPaths@{pluginPaths}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{pluginPaths}{pluginPaths}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Session\+::plugin\+Paths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 460 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a8b7beafe2cc02d37f3cce2683606db52}\label{class_q_daq_session_a8b7beafe2cc02d37f3cce2683606db52}} 
+\index{QDaqSession@{QDaqSession}!print@{print}}
+\index{print@{print}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{print}{print}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::print (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 281 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_af7a035328e45aa59bb6749b0cdba2cbb}\label{class_q_daq_session_af7a035328e45aa59bb6749b0cdba2cbb}} 
+\index{QDaqSession@{QDaqSession}!pwd@{pwd}}
+\index{pwd@{pwd}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{pwd}{pwd}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Session\+::pwd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 320 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a32e2a6edca075b4c9606c831900d66f7}\label{class_q_daq_session_a32e2a6edca075b4c9606c831900d66f7}} 
+\index{QDaqSession@{QDaqSession}!quit@{quit}}
+\index{quit@{quit}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{quit}{quit}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 315 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_a5872dd5b430cb22f7b58f4e65187372c}\label{class_q_daq_session_a5872dd5b430cb22f7b58f4e65187372c}} 
+\index{QDaqSession@{QDaqSession}!stdErr@{stdErr}}
+\index{stdErr@{stdErr}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{stdErr}{stdErr}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::std\+Err (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_q_daq_session_a1de21763ad016537db58b72904b5f189}\label{class_q_daq_session_a1de21763ad016537db58b72904b5f189}} 
+\index{QDaqSession@{QDaqSession}!stdOut@{stdOut}}
+\index{stdOut@{stdOut}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{stdOut}{stdOut}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::std\+Out (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_q_daq_session_a2b8ddf4f45c128914fee9402550a406c}\label{class_q_daq_session_a2b8ddf4f45c128914fee9402550a406c}} 
+\index{QDaqSession@{QDaqSession}!system@{system}}
+\index{system@{system}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{system}{system}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Session\+::system (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{comm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 351 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_af8f417903c8d852d71bdea754acc63e4}\label{class_q_daq_session_af8f417903c8d852d71bdea754acc63e4}} 
+\index{QDaqSession@{QDaqSession}!textLoad@{textLoad}}
+\index{textLoad@{textLoad}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{textLoad}{textLoad}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Session\+::text\+Load (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 297 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_ad719ba2c2348520363ec2b0fdfc02886}\label{class_q_daq_session_ad719ba2c2348520363ec2b0fdfc02886}} 
+\index{QDaqSession@{QDaqSession}!textSave@{textSave}}
+\index{textSave@{textSave}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{textSave}{textSave}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::text\+Save (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{str,  }\item[{const Q\+String \&}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 286 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_afd5086eca3ed5e8b276da42a39137c2b}\label{class_q_daq_session_afd5086eca3ed5e8b276da42a39137c2b}} 
+\index{QDaqSession@{QDaqSession}!tic@{tic}}
+\index{tic@{tic}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{tic}{tic}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::tic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 117 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a84ff89e5af9357b8fd0f1666cf0f3f7a}\label{class_q_daq_session_a84ff89e5af9357b8fd0f1666cf0f3f7a}} 
+\index{QDaqSession@{QDaqSession}!toc@{toc}}
+\index{toc@{toc}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{toc}{toc}}
+{\footnotesize\ttfamily double Q\+Daq\+Session\+::toc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 118 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a8da1257d43cd98cbe2ca57a03c91da32}\label{class_q_daq_session_a8da1257d43cd98cbe2ca57a03c91da32}} 
+\index{QDaqSession@{QDaqSession}!version@{version}}
+\index{version@{version}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Session\+::version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 651 of file Q\+Daq\+Session.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_session_aa83c70db7789f409e6d447f8c8dd8f90}\label{class_q_daq_session_aa83c70db7789f409e6d447f8c8dd8f90}} 
+\index{QDaqSession@{QDaqSession}!wait@{wait}}
+\index{wait@{wait}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{wait}{wait}}
+{\footnotesize\ttfamily void Q\+Daq\+Session\+::wait (\begin{DoxyParamCaption}\item[{uint}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 237 of file Q\+Daq\+Session.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_session_a30aa4bcc06061b79e4855087160cab29}\label{class_q_daq_session_a30aa4bcc06061b79e4855087160cab29}} 
+\index{QDaqSession@{QDaqSession}!debugger\_@{debugger\_}}
+\index{debugger\_@{debugger\_}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{debugger\_}{debugger\_}}
+{\footnotesize\ttfamily Q\+Script\+Engine\+Debugger$\ast$ Q\+Daq\+Session\+::debugger\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a92c8e3f607ec5fe35ac494736095a88c}\label{class_q_daq_session_a92c8e3f607ec5fe35ac494736095a88c}} 
+\index{QDaqSession@{QDaqSession}!idx\_@{idx\_}}
+\index{idx\_@{idx\_}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{idx\_}{idx\_}}
+{\footnotesize\ttfamily int Q\+Daq\+Session\+::idx\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 63 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a2cf03cedf0e1c75fecfe7d00a45c942c}\label{class_q_daq_session_a2cf03cedf0e1c75fecfe7d00a45c942c}} 
+\index{QDaqSession@{QDaqSession}!idx\_set@{idx\_set}}
+\index{idx\_set@{idx\_set}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{idx\_set}{idx\_set}}
+{\footnotesize\ttfamily Q\+Set$<$ int $>$ Q\+Daq\+Session\+::idx\+\_\+set\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 65 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_abb83fa5cb0143eddf0b3faabbb629ba6}\label{class_q_daq_session_abb83fa5cb0143eddf0b3faabbb629ba6}} 
+\index{QDaqSession@{QDaqSession}!logFile\_@{logFile\_}}
+\index{logFile\_@{logFile\_}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{logFile\_}{logFile\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_daq_log_file}{Q\+Daq\+Log\+File}}$\ast$ Q\+Daq\+Session\+::log\+File\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 67 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a5206e5a37bee92a0cd55be71cd567877}\label{class_q_daq_session_a5206e5a37bee92a0cd55be71cd567877}} 
+\index{QDaqSession@{QDaqSession}!wait\_aborted\_@{wait\_aborted\_}}
+\index{wait\_aborted\_@{wait\_aborted\_}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{wait\_aborted\_}{wait\_aborted\_}}
+{\footnotesize\ttfamily bool Q\+Daq\+Session\+::wait\+\_\+aborted\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 59 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_a564295064fa51a1b8f59418eff356ce3}\label{class_q_daq_session_a564295064fa51a1b8f59418eff356ce3}} 
+\index{QDaqSession@{QDaqSession}!wait\_timer\_@{wait\_timer\_}}
+\index{wait\_timer\_@{wait\_timer\_}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{wait\_timer\_}{wait\_timer\_}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Q\+Daq\+Session\+::wait\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file Q\+Daq\+Session.\+h.
+
+\mbox{\Hypertarget{class_q_daq_session_af6c6e6ccba4f35cbf487378db4223c1d}\label{class_q_daq_session_af6c6e6ccba4f35cbf487378db4223c1d}} 
+\index{QDaqSession@{QDaqSession}!watch\_@{watch\_}}
+\index{watch\_@{watch\_}!QDaqSession@{QDaqSession}}
+\doxysubsubsection{\texorpdfstring{watch\_}{watch\_}}
+{\footnotesize\ttfamily Q\+Elapsed\+Timer Q\+Daq\+Session\+::watch\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 60 of file Q\+Daq\+Session.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_session_8h}{Q\+Daq\+Session.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_session_8cpp}{Q\+Daq\+Session.\+cpp}}\end{DoxyCompactItemize}

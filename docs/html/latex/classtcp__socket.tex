@@ -1,0 +1,163 @@
+\hypertarget{classtcp__socket}{}\doxysection{tcp\+\_\+socket Class Reference}
+\label{classtcp__socket}\index{tcp\_socket@{tcp\_socket}}
+
+
+{\ttfamily \#include $<$tcp\+\_\+socket.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtcp__socket_a9a6f1dca8acefcc4e100ae50c320e1d2}{tcp\+\_\+socket}} ()
+\item 
+\mbox{\hyperlink{classtcp__socket_a75cc1727b9efa2b14bb290eb5083dcda}{$\sim$tcp\+\_\+socket}} ()
+\item 
+int \mbox{\hyperlink{classtcp__socket_a35266e5bacb7cd546e5daae2a84ca82c}{connect}} (const char $\ast$aip, int aport)
+\item 
+void \mbox{\hyperlink{classtcp__socket_a87c18b9fcebfa6431105f4eb568be3e1}{disconnect}} ()
+\item 
+bool \mbox{\hyperlink{classtcp__socket_a3d59439d89566489cc0702e54d6c5b4b}{is\+\_\+connected}} () const
+\item 
+int \mbox{\hyperlink{classtcp__socket_a241ee36c0a2172b0aa0a0eab668c76d5}{timeout}} () const
+\item 
+void \mbox{\hyperlink{classtcp__socket_a3416908ab6e09e49c0c276c2d4f1ebce}{set\+\_\+timeout}} (int ms)
+\item 
+int \mbox{\hyperlink{classtcp__socket_a16b008f94723e168754e330c39fa3ced}{send}} (const char $\ast$msg, int len)
+\item 
+int \mbox{\hyperlink{classtcp__socket_a337ef06267ad0b023ca6bd3329a53897}{receive}} (char $\ast$msg, int len)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{classtcp__socket_a3df4e27805f26b1032e8c023ab6a74e6}{strerror}} (int errnum)
+\item 
+static const char $\ast$ \mbox{\hyperlink{classtcp__socket_a37a70229f796dc512fbc1e6f8b9c4b04}{last\+Error\+Str}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file tcp\+\_\+socket.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtcp__socket_a9a6f1dca8acefcc4e100ae50c320e1d2}\label{classtcp__socket_a9a6f1dca8acefcc4e100ae50c320e1d2}} 
+\index{tcp\_socket@{tcp\_socket}!tcp\_socket@{tcp\_socket}}
+\index{tcp\_socket@{tcp\_socket}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{tcp\_socket()}{tcp\_socket()}}
+{\footnotesize\ttfamily tcp\+\_\+socket\+::tcp\+\_\+socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 193 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a75cc1727b9efa2b14bb290eb5083dcda}\label{classtcp__socket_a75cc1727b9efa2b14bb290eb5083dcda}} 
+\index{tcp\_socket@{tcp\_socket}!````~tcp\_socket@{$\sim$tcp\_socket}}
+\index{````~tcp\_socket@{$\sim$tcp\_socket}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{$\sim$tcp\_socket()}{~tcp\_socket()}}
+{\footnotesize\ttfamily tcp\+\_\+socket\+::$\sim$tcp\+\_\+socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 200 of file tcp\+\_\+socket.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtcp__socket_a35266e5bacb7cd546e5daae2a84ca82c}\label{classtcp__socket_a35266e5bacb7cd546e5daae2a84ca82c}} 
+\index{tcp\_socket@{tcp\_socket}!connect@{connect}}
+\index{connect@{connect}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily int tcp\+\_\+socket\+::connect (\begin{DoxyParamCaption}\item[{const char $\ast$}]{aip,  }\item[{int}]{aport }\end{DoxyParamCaption})}
+
+
+
+Definition at line 213 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a87c18b9fcebfa6431105f4eb568be3e1}\label{classtcp__socket_a87c18b9fcebfa6431105f4eb568be3e1}} 
+\index{tcp\_socket@{tcp\_socket}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void tcp\+\_\+socket\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a3d59439d89566489cc0702e54d6c5b4b}\label{classtcp__socket_a3d59439d89566489cc0702e54d6c5b4b}} 
+\index{tcp\_socket@{tcp\_socket}!is\_connected@{is\_connected}}
+\index{is\_connected@{is\_connected}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{is\_connected()}{is\_connected()}}
+{\footnotesize\ttfamily bool tcp\+\_\+socket\+::is\+\_\+connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 28 of file tcp\+\_\+socket.\+h.
+
+\mbox{\Hypertarget{classtcp__socket_a37a70229f796dc512fbc1e6f8b9c4b04}\label{classtcp__socket_a37a70229f796dc512fbc1e6f8b9c4b04}} 
+\index{tcp\_socket@{tcp\_socket}!lastErrorStr@{lastErrorStr}}
+\index{lastErrorStr@{lastErrorStr}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{lastErrorStr()}{lastErrorStr()}}
+{\footnotesize\ttfamily const char $\ast$ tcp\+\_\+socket\+::last\+Error\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 405 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a337ef06267ad0b023ca6bd3329a53897}\label{classtcp__socket_a337ef06267ad0b023ca6bd3329a53897}} 
+\index{tcp\_socket@{tcp\_socket}!receive@{receive}}
+\index{receive@{receive}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily int tcp\+\_\+socket\+::receive (\begin{DoxyParamCaption}\item[{char $\ast$}]{msg,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a16b008f94723e168754e330c39fa3ced}\label{classtcp__socket_a16b008f94723e168754e330c39fa3ced}} 
+\index{tcp\_socket@{tcp\_socket}!send@{send}}
+\index{send@{send}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily int tcp\+\_\+socket\+::send (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 304 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a3416908ab6e09e49c0c276c2d4f1ebce}\label{classtcp__socket_a3416908ab6e09e49c0c276c2d4f1ebce}} 
+\index{tcp\_socket@{tcp\_socket}!set\_timeout@{set\_timeout}}
+\index{set\_timeout@{set\_timeout}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{set\_timeout()}{set\_timeout()}}
+{\footnotesize\ttfamily void tcp\+\_\+socket\+::set\+\_\+timeout (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a3df4e27805f26b1032e8c023ab6a74e6}\label{classtcp__socket_a3df4e27805f26b1032e8c023ab6a74e6}} 
+\index{tcp\_socket@{tcp\_socket}!strerror@{strerror}}
+\index{strerror@{strerror}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{strerror()}{strerror()}}
+{\footnotesize\ttfamily const char $\ast$ tcp\+\_\+socket\+::strerror (\begin{DoxyParamCaption}\item[{int}]{errnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 364 of file tcp\+\_\+socket.\+cpp.
+
+\mbox{\Hypertarget{classtcp__socket_a241ee36c0a2172b0aa0a0eab668c76d5}\label{classtcp__socket_a241ee36c0a2172b0aa0a0eab668c76d5}} 
+\index{tcp\_socket@{tcp\_socket}!timeout@{timeout}}
+\index{timeout@{timeout}!tcp\_socket@{tcp\_socket}}
+\doxysubsubsection{\texorpdfstring{timeout()}{timeout()}}
+{\footnotesize\ttfamily int tcp\+\_\+socket\+::timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file tcp\+\_\+socket.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{tcp__socket_8h}{tcp\+\_\+socket.\+h}}\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{tcp__socket_8cpp}{tcp\+\_\+socket.\+cpp}}\end{DoxyCompactItemize}

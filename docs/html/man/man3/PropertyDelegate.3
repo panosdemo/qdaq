@@ -1,0 +1,116 @@
+.TH "PropertyDelegate" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PropertyDelegate
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqDelegates\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBobjectPropertyChange\fP ()"
+.br
+.ti -1c
+.RI "void \fBwidgetPropertyChange\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertyDelegate\fP (QWidget *w, \fBQDaqObject\fP *obj, QMetaProperty p, bool readOnly)"
+.br
+.ti -1c
+.RI "virtual \fB~PropertyDelegate\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QVariant \fBgetObjectValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWidgetValue\fP (const QVariant &v)"
+.br
+.ti -1c
+.RI "void \fBsetObjectValue\fP (const QVariant &v)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBQDaqObject\fP > \fBobj_\fP"
+.br
+.ti -1c
+.RI "QMetaProperty \fBproperty_\fP"
+.br
+.ti -1c
+.RI "\fBWidgetVariant\fP \fBwidget_\fP"
+.br
+.ti -1c
+.RI "bool \fBreadOnly_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 65 of file QDaqDelegates\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PropertyDelegate::PropertyDelegate (QWidget * w, \fBQDaqObject\fP * obj, QMetaProperty p, bool readOnly)"
+
+.PP
+Definition at line 205 of file QDaqDelegates\&.cpp\&.
+.SS "PropertyDelegate::~PropertyDelegate ()\fC [virtual]\fP"
+
+.PP
+Definition at line 218 of file QDaqDelegates\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "QVariant PropertyDelegate::getObjectValue ()\fC [protected]\fP"
+
+.PP
+Definition at line 230 of file QDaqDelegates\&.cpp\&.
+.SS "void PropertyDelegate::objectPropertyChange ()\fC [slot]\fP"
+
+.PP
+Definition at line 221 of file QDaqDelegates\&.cpp\&.
+.SS "void PropertyDelegate::setObjectValue (const QVariant & v)\fC [protected]\fP"
+
+.PP
+Definition at line 234 of file QDaqDelegates\&.cpp\&.
+.SS "void PropertyDelegate::setWidgetValue (const QVariant & v)\fC [protected]\fP"
+
+.SS "void PropertyDelegate::widgetPropertyChange ()\fC [slot]\fP"
+
+.PP
+Definition at line 225 of file QDaqDelegates\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointer<\fBQDaqObject\fP> PropertyDelegate::obj_\fC [protected]\fP"
+
+.PP
+Definition at line 73 of file QDaqDelegates\&.h\&.
+.SS "QMetaProperty PropertyDelegate::property_\fC [protected]\fP"
+
+.PP
+Definition at line 74 of file QDaqDelegates\&.h\&.
+.SS "bool PropertyDelegate::readOnly_\fC [protected]\fP"
+
+.PP
+Definition at line 76 of file QDaqDelegates\&.h\&.
+.SS "\fBWidgetVariant\fP PropertyDelegate::widget_\fC [protected]\fP"
+
+.PP
+Definition at line 75 of file QDaqDelegates\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

@@ -1,0 +1,228 @@
+.TH "QConsoleWidget" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QConsoleWidget \- A simple console for python scripting\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QConsoleWidget\&.h>\fP
+.PP
+Inherits QPlainTextEdit\&.
+.PP
+Inherited by \fBQDaqConsole\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBexecuteLine\fP (bool storeOnly)"
+.br
+.RI "execute current line "
+.ti -1c
+.RI "void \fBconsoleMessage\fP (const QString &message, const QTextCharFormat &fmt)"
+.br
+.RI "output from console "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "get history "
+.ti -1c
+.RI "virtual void \fBcut\fP ()"
+.br
+.RI "overridden to control which characters a user may delete "
+.ti -1c
+.RI "void \fBstdOut\fP (const QString &s)"
+.br
+.RI "output redirection "
+.ti -1c
+.RI "void \fBstdErr\fP (const QString &s)"
+.br
+.RI "output redirection "
+.ti -1c
+.RI "void \fBinsertCompletion\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBappendCommandPrompt\fP (bool storeOnly=false)"
+.br
+.RI "Appends a newline and command prompt at the end of the document\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQConsoleWidget\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~QConsoleWidget\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *e)"
+.br
+.RI "derived key press event "
+.ti -1c
+.RI "void \fBhandleTabCompletion\fP ()"
+.br
+.RI "handle the pressing of tab "
+.ti -1c
+.RI "int \fBcommandPromptPosition\fP ()"
+.br
+.RI "Returns the position of the command prompt\&. "
+.ti -1c
+.RI "bool \fBverifySelectionBeforeDeletion\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCurrentFont\fP (const QColor &color=QColor(0, 0, 0), bool bold=false)"
+.br
+.RI "Sets the current font\&. "
+.ti -1c
+.RI "void \fBreplaceCommandLine\fP (const QString &str)"
+.br
+.RI "change the history according to _historyPos "
+.ti -1c
+.RI "void \fBflushStdOut\fP ()"
+.br
+.RI "flush output that was not yet printed "
+.ti -1c
+.RI "QString \fBgetCurrentLine\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBexec\fP (const QString &code)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBcanEvaluate\fP (const QString &code)=0"
+.br
+.ti -1c
+.RI "virtual QStringList \fBintrospection\fP (const QString &lookup)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A simple console for python scripting\&. 
+.PP
+Definition at line 13 of file QConsoleWidget\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QConsoleWidget::QConsoleWidget (QWidget * parent = \fC0\fP)"
+
+.PP
+Definition at line 21 of file QConsoleWidget\&.cpp\&.
+.SS "QConsoleWidget::~QConsoleWidget ()"
+
+.PP
+Definition at line 92 of file QConsoleWidget\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QConsoleWidget::appendCommandPrompt (bool storeOnly = \fCfalse\fP)\fC [slot]\fP"
+
+.PP
+Appends a newline and command prompt at the end of the document\&. 
+.PP
+Definition at line 182 of file QConsoleWidget\&.cpp\&.
+.SS "virtual bool QConsoleWidget::canEvaluate (const QString & code)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBQDaqConsole\fP\&.
+.SS "void QConsoleWidget::clear ()\fC [slot]\fP"
+
+.PP
+get history set history clear the console 
+.PP
+Definition at line 99 of file QConsoleWidget\&.cpp\&.
+.SS "int QConsoleWidget::commandPromptPosition ()\fC [protected]\fP"
+
+.PP
+Returns the position of the command prompt\&. 
+.PP
+Definition at line 223 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::consoleMessage (const QString & message, const QTextCharFormat & fmt)\fC [slot]\fP"
+
+.PP
+output from console 
+.PP
+Definition at line 579 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::cut ()\fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+overridden to control which characters a user may delete 
+.PP
+Definition at line 483 of file QConsoleWidget\&.cpp\&.
+.SS "virtual void QConsoleWidget::exec (const QString & code)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBQDaqConsole\fP\&.
+.SS "void QConsoleWidget::executeLine (bool storeOnly)\fC [slot]\fP"
+
+.PP
+execute current line 
+.PP
+Definition at line 121 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::flushStdOut ()\fC [protected]\fP"
+
+.PP
+flush output that was not yet printed 
+.PP
+Definition at line 78 of file QConsoleWidget\&.cpp\&.
+.SS "QString QConsoleWidget::getCurrentLine ()\fC [protected]\fP"
+
+.PP
+Definition at line 107 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::handleTabCompletion ()\fC [protected]\fP"
+
+.PP
+handle the pressing of tab 
+.PP
+Definition at line 251 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::insertCompletion (const QString & completion)\fC [slot]\fP"
+
+.PP
+Definition at line 235 of file QConsoleWidget\&.cpp\&.
+.SS "virtual QStringList QConsoleWidget::introspection (const QString & lookup)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBQDaqConsole\fP\&.
+.SS "void QConsoleWidget::keyPressEvent (QKeyEvent * e)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+derived key press event 
+.PP
+Reimplemented in \fBQDaqConsole\fP\&.
+.PP
+Definition at line 311 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::replaceCommandLine (const QString & str)\fC [protected]\fP"
+
+.PP
+change the history according to _historyPos 
+.PP
+Definition at line 559 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::setCurrentFont (const QColor & color = \fCQColor(0,0,0)\fP, bool bold = \fCfalse\fP)\fC [protected]\fP"
+
+.PP
+Sets the current font\&. 
+.PP
+Definition at line 204 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::stdErr (const QString & s)\fC [slot]\fP"
+
+.PP
+output redirection 
+.PP
+Definition at line 67 of file QConsoleWidget\&.cpp\&.
+.SS "void QConsoleWidget::stdOut (const QString & s)\fC [slot]\fP"
+
+.PP
+output redirection 
+.PP
+Definition at line 56 of file QConsoleWidget\&.cpp\&.
+.SS "bool QConsoleWidget::verifySelectionBeforeDeletion ()\fC [protected]\fP"
+Returns if deletion is allowed at the current cursor (with and without selected text) 
+.PP
+Definition at line 495 of file QConsoleWidget\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

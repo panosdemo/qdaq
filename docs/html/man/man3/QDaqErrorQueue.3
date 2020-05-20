@@ -1,0 +1,76 @@
+.TH "QDaqErrorQueue" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqErrorQueue
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqObject\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBerrorAdded\fP ()"
+.br
+.ti -1c
+.RI "void \fBerrorRemoved\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqErrorQueue\fP (QObject *parent=0)"
+.br
+.ti -1c
+.RI "void \fBpush\fP (const \fBQDaqError\fP &item)"
+.br
+.ti -1c
+.RI "QList< \fBQDaqError\fP > \fBerrorQueue\fP () const"
+.br
+.ti -1c
+.RI "const \fBQDaqError\fP & \fBhead\fP () const"
+.br
+.ti -1c
+.RI "QList< \fBQDaqError\fP > \fBobjectBackTrace\fP (const \fBQDaqObject\fP *obj, int maxItems=4) const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 296 of file QDaqObject\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqErrorQueue::QDaqErrorQueue (QObject * parent = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+Definition at line 569 of file QDaqObject\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqErrorQueue::errorAdded ()\fC [signal]\fP"
+
+.SS "QList<\fBQDaqError\fP> QDaqErrorQueue::errorQueue () const\fC [inline]\fP"
+
+.PP
+Definition at line 304 of file QDaqObject\&.h\&.
+.SS "void QDaqErrorQueue::errorRemoved ()\fC [signal]\fP"
+
+.SS "const \fBQDaqError\fP& QDaqErrorQueue::head () const\fC [inline]\fP"
+
+.PP
+Definition at line 305 of file QDaqObject\&.h\&.
+.SS "QList< \fBQDaqError\fP > QDaqErrorQueue::objectBackTrace (const \fBQDaqObject\fP * obj, int maxItems = \fC4\fP) const"
+
+.PP
+Definition at line 584 of file QDaqObject\&.cpp\&.
+.SS "void QDaqErrorQueue::push (const \fBQDaqError\fP & item)"
+
+.PP
+Definition at line 574 of file QDaqObject\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

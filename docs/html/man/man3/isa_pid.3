@@ -1,0 +1,324 @@
+.TH "isa_pid< T >" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+isa_pid< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <isa_pid\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "T \fBlimitOut\fP (T u)"
+.br
+.ti -1c
+.RI "void \fBupdate_par\fP ()"
+.br
+.ti -1c
+.RI "\fBisa_pid\fP (T ats=1)"
+.br
+.ti -1c
+.RI "\fB~isa_pid\fP (void)"
+.br
+.ti -1c
+.RI "void \fBoperator()\fP (T sp, T pv, T &cv, bool automode=true)"
+.br
+.ti -1c
+.RI "void \fBset_h\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_k\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_ti\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_td\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_tr\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_N\fP (int v)"
+.br
+.ti -1c
+.RI "void \fBset_b\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_umin\fP (T v)"
+.br
+.ti -1c
+.RI "void \fBset_umax\fP (T v)"
+.br
+.ti -1c
+.RI "T \fBget_h\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_k\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_ti\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_td\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_tr\fP () const"
+.br
+.ti -1c
+.RI "int \fBget_N\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_b\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_umin\fP () const"
+.br
+.ti -1c
+.RI "T \fBget_umax\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "T \fBh\fP"
+.br
+.ti -1c
+.RI "T \fBk\fP"
+.br
+.ti -1c
+.RI "T \fBti\fP"
+.br
+.ti -1c
+.RI "T \fBtd\fP"
+.br
+.ti -1c
+.RI "T \fBtr\fP"
+.br
+.ti -1c
+.RI "T \fBb\fP"
+.br
+.ti -1c
+.RI "int \fBN\fP"
+.br
+.ti -1c
+.RI "T \fBumin\fP"
+.br
+.ti -1c
+.RI "T \fBumax\fP"
+.br
+.ti -1c
+.RI "T \fBui\fP"
+.br
+.ti -1c
+.RI "T \fBud\fP"
+.br
+.ti -1c
+.RI "T \fBpvp\fP"
+.br
+.ti -1c
+.RI "T \fBcvp\fP"
+.br
+.ti -1c
+.RI "bool \fBatp\fP"
+.br
+.ti -1c
+.RI "T \fBa1\fP"
+.br
+.ti -1c
+.RI "T \fBa2\fP"
+.br
+.ti -1c
+.RI "T \fBb1\fP"
+.br
+.ti -1c
+.RI "T \fBb2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class isa_pid< T >"
+
+.PP
+Definition at line 13 of file isa_pid\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBisa_pid\fP< T >::\fBisa_pid\fP (T ats = \fC1\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 61 of file isa_pid\&.h\&.
+.SS "template<class T > \fBisa_pid\fP< T >::~\fBisa_pid\fP (void)\fC [inline]\fP"
+
+.PP
+Definition at line 68 of file isa_pid\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > T \fBisa_pid\fP< T >::get_b () const\fC [inline]\fP"
+
+.PP
+Definition at line 118 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::get_h () const\fC [inline]\fP"
+
+.PP
+Definition at line 112 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::get_k () const\fC [inline]\fP"
+
+.PP
+Definition at line 113 of file isa_pid\&.h\&.
+.SS "template<class T > int \fBisa_pid\fP< T >::get_N () const\fC [inline]\fP"
+
+.PP
+Definition at line 117 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::get_td () const\fC [inline]\fP"
+
+.PP
+Definition at line 115 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::get_ti () const\fC [inline]\fP"
+
+.PP
+Definition at line 114 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::get_tr () const\fC [inline]\fP"
+
+.PP
+Definition at line 116 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::get_umax () const\fC [inline]\fP"
+
+.PP
+Definition at line 120 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::get_umin () const\fC [inline]\fP"
+
+.PP
+Definition at line 119 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::limitOut (T u)\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::operator() (T sp, T pv, T & cv, bool automode = \fCtrue\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 72 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_b (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 107 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_h (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 101 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_k (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 102 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_N (int v)\fC [inline]\fP"
+
+.PP
+Definition at line 106 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_td (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 104 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_ti (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 103 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_tr (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 105 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_umax (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 109 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::set_umin (T v)\fC [inline]\fP"
+
+.PP
+Definition at line 108 of file isa_pid\&.h\&.
+.SS "template<class T > void \fBisa_pid\fP< T >::update_par ()\fC [inline]\fP"
+
+.PP
+Definition at line 46 of file isa_pid\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<class T > T \fBisa_pid\fP< T >::a1"
+
+.PP
+Definition at line 37 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::a2"
+
+.PP
+Definition at line 37 of file isa_pid\&.h\&.
+.SS "template<class T > bool \fBisa_pid\fP< T >::atp"
+
+.PP
+Definition at line 34 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::b"
+
+.PP
+Definition at line 23 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::b1"
+
+.PP
+Definition at line 37 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::b2"
+
+.PP
+Definition at line 37 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::cvp"
+
+.PP
+Definition at line 33 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::h"
+
+.PP
+Definition at line 16 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::k"
+
+.PP
+Definition at line 19 of file isa_pid\&.h\&.
+.SS "template<class T > int \fBisa_pid\fP< T >::N"
+
+.PP
+Definition at line 24 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::pvp"
+
+.PP
+Definition at line 32 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::td"
+
+.PP
+Definition at line 21 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::ti"
+
+.PP
+Definition at line 20 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::tr"
+
+.PP
+Definition at line 22 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::ud"
+
+.PP
+Definition at line 31 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::ui"
+
+.PP
+Definition at line 30 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::umax"
+
+.PP
+Definition at line 27 of file isa_pid\&.h\&.
+.SS "template<class T > T \fBisa_pid\fP< T >::umin"
+
+.PP
+Definition at line 27 of file isa_pid\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

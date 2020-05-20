@@ -1,0 +1,72 @@
+.TH "QDaqPropertyBrowser" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqPropertyBrowser
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqObjectBrowser\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetQDaqObject\fP (\fBQDaqObject\fP *obj)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqPropertyBrowser\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~QDaqPropertyBrowser\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBeventFilter\fP (QObject *watched, QEvent *event)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqObjectController\fP * \fBobjectController\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 48 of file QDaqObjectBrowser\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqPropertyBrowser::QDaqPropertyBrowser (QWidget * parent = \fC0\fP)"
+
+.PP
+Definition at line 79 of file QDaqObjectBrowser\&.cpp\&.
+.SS "QDaqPropertyBrowser::~QDaqPropertyBrowser ()"
+
+.PP
+Definition at line 89 of file QDaqObjectBrowser\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool QDaqPropertyBrowser::eventFilter (QObject * watched, QEvent * event)\fC [virtual]\fP"
+
+.PP
+Definition at line 112 of file QDaqObjectBrowser\&.cpp\&.
+.SS "void QDaqPropertyBrowser::setQDaqObject (\fBQDaqObject\fP * obj)\fC [slot]\fP"
+
+.PP
+Definition at line 93 of file QDaqObjectBrowser\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQDaqObjectController\fP* QDaqPropertyBrowser::objectController\fC [protected]\fP"
+
+.PP
+Definition at line 64 of file QDaqObjectBrowser\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

@@ -1,0 +1,478 @@
+.TH "QDaqDataBuffer" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqDataBuffer \- A class that provides storage of channel or other data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqDataBuffer\&.h>\fP
+.PP
+Inherits \fBQDaqJob\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Clear all data\&. "
+.ti -1c
+.RI "void \fBaddChannels\fP (\fBQDaqObjectList\fP chlist)"
+.br
+.ti -1c
+.RI "void \fBremoveChannels\fP (\fBQDaqObjectList\fP chlist)"
+.br
+.ti -1c
+.RI "void \fBpush\fP (const \fBQDaqVector\fP &v)"
+.br
+.RI "Append a new row of values\&. "
+.ti -1c
+.RI "\fBQDaqVector\fP \fBget\fP (int i)"
+.br
+.RI "Return the i-th QDaqBuffer\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBdataReady\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqDataBuffer\fP (const QString &name)"
+.br
+.ti -1c
+.RI "uint \fBbackBufferDepth\fP () const"
+.br
+.ti -1c
+.RI "uint \fBcapacity\fP () const"
+.br
+.ti -1c
+.RI "uint \fBsize\fP () const"
+.br
+.ti -1c
+.RI "uint \fBcolumns\fP () const"
+.br
+.ti -1c
+.RI "bool \fBcircular\fP () const"
+.br
+.ti -1c
+.RI "\fBQDaqObjectList\fP \fBchannels\fP () const"
+.br
+.ti -1c
+.RI "QStringList \fBcolumnNames\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetBackBufferDepth\fP (uint d)"
+.br
+.ti -1c
+.RI "void \fBsetCapacity\fP (uint cap)"
+.br
+.ti -1c
+.RI "void \fBsetCircular\fP (bool on)"
+.br
+.ti -1c
+.RI "void \fBsetChannels\fP (\fBQDaqObjectList\fP chlist)"
+.br
+.ti -1c
+.RI "void \fBsetColumnNames\fP (QStringList collist)"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef QPointer< \fBQDaqChannel\fP > \fBchannel_t\fP"
+.br
+.ti -1c
+.RI "typedef QVector< \fBchannel_t\fP > \fBchannel_vector_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBQDaqVector\fP \fBvector_t\fP"
+.br
+.ti -1c
+.RI "typedef QVector< \fBvector_t\fP > \fBmatrix_t\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBwriteh5\fP (H5::Group *h5g, \fBQDaqH5File\fP *f) const"
+.br
+.RI "Write contents of the object to a \fBH5\fP group\&. "
+.ti -1c
+.RI "virtual void \fBreadh5\fP (H5::Group *h5g, \fBQDaqH5File\fP *f)"
+.br
+.RI "Read contents of the object from a \fBH5\fP group\&. "
+.ti -1c
+.RI "void \fBsetupBackBuffer\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBrun\fP ()"
+.br
+.RI "Perform the \fBQDaqDataBuffer\fP tasks within a loop\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint \fBbackBufferDepth_\fP"
+.br
+.ti -1c
+.RI "uint \fBcapacity_\fP"
+.br
+.ti -1c
+.RI "bool \fBcircular_\fP"
+.br
+.ti -1c
+.RI "\fBQDaqObjectList\fP \fBchannel_objects\fP"
+.br
+.ti -1c
+.RI "\fBchannel_vector_t\fP \fBchannel_ptrs\fP"
+.br
+.ti -1c
+.RI "QStringList \fBcolumnNames_\fP"
+.br
+.ti -1c
+.RI "QVector< double > \fBbackBuffer_\fP"
+.br
+.ti -1c
+.RI "QVector< double * > \fBbackPackets_\fP"
+.br
+.ti -1c
+.RI "QSemaphore \fBfreePackets_\fP"
+.br
+.ti -1c
+.RI "QSemaphore \fBusedPackets_\fP"
+.br
+.ti -1c
+.RI "uint \fBiFree_\fP"
+.br
+.ti -1c
+.RI "uint \fBiUsed_\fP"
+.br
+.ti -1c
+.RI "\fBmatrix_t\fP \fBdata_matrix\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "uint \fBbackBufferDepth\fP"
+.br
+.RI "Size of the back buffer in rows\&. "
+.ti -1c
+.RI "uint \fBcapacity\fP"
+.br
+.RI "Total capacity (allocated memory) of the data buffer in rows\&. "
+.ti -1c
+.RI "uint \fBsize\fP"
+.br
+.RI "Current size of the data buffer in rows\&. "
+.ti -1c
+.RI "uint \fBcolumns\fP"
+.br
+.RI "Number of data columns\&. "
+.ti -1c
+.RI "bool \fBcircular\fP"
+.br
+.RI "True if buffer is circular\&. "
+.ti -1c
+.RI "\fBQDaqObjectList\fP \fBchannels\fP"
+.br
+.RI "A QList of the channels monitored by this object\&. "
+.ti -1c
+.RI "QStringList \fBcolumnNames\fP"
+.br
+.RI "A list of column names\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A class that provides storage of channel or other data\&. 
+
+If \fBQDaqDataBuffer\fP is used within a \fBQDaqLoop\fP then at each repetition it will store the values of all channels that have been assigned to it\&. The data are stored internally as a matrix of QDaqBuffer objects, keeping one QDaqBuffer per channel\&. A new row of data is added at each loop repetition\&.
+.PP
+\fBQDaqDataBuffer\fP has an internal back buffer, where data generated in the loop thread are initially stored\&. The data is later transferred to the main buffer whenever possible and becomes available to the main application thread\&. The process is marshalled internally by a semaphore and the Qt signal/slot mechanism\&. Increasing the size of the back buffer can prevent data loss in fast loops\&.
+.PP
+The \fBQDaqDataBuffer\fP may be also used as a static object outside of a loop\&. Data may be appended by the \fBpush()\fP function\&. 
+.PP
+Definition at line 34 of file QDaqDataBuffer\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef QPointer<\fBQDaqChannel\fP> \fBQDaqDataBuffer::channel_t\fP\fC [protected]\fP"
+
+.PP
+Definition at line 55 of file QDaqDataBuffer\&.h\&.
+.SS "typedef QVector<\fBchannel_t\fP> \fBQDaqDataBuffer::channel_vector_t\fP\fC [protected]\fP"
+
+.PP
+Definition at line 56 of file QDaqDataBuffer\&.h\&.
+.SS "typedef QVector<\fBvector_t\fP> \fBQDaqDataBuffer::matrix_t\fP\fC [protected]\fP"
+
+.PP
+Definition at line 59 of file QDaqDataBuffer\&.h\&.
+.SS "typedef \fBQDaqVector\fP \fBQDaqDataBuffer::vector_t\fP\fC [protected]\fP"
+
+.PP
+Definition at line 57 of file QDaqDataBuffer\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqDataBuffer::QDaqDataBuffer (const QString & name)\fC [explicit]\fP"
+
+.PP
+Definition at line 7 of file QDaqDataBuffer\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqDataBuffer::addChannels (\fBQDaqObjectList\fP chlist)\fC [slot]\fP"
+
+.PP
+Definition at line 104 of file QDaqDataBuffer\&.cpp\&.
+.SS "uint QDaqDataBuffer::backBufferDepth () const\fC [inline]\fP"
+
+.PP
+Definition at line 103 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::capacity () const\fC [inline]\fP"
+
+.PP
+Definition at line 104 of file QDaqDataBuffer\&.h\&.
+.SS "\fBQDaqObjectList\fP QDaqDataBuffer::channels () const\fC [inline]\fP"
+
+.PP
+Definition at line 108 of file QDaqDataBuffer\&.h\&.
+.SS "bool QDaqDataBuffer::circular () const\fC [inline]\fP"
+
+.PP
+Definition at line 107 of file QDaqDataBuffer\&.h\&.
+.SS "void QDaqDataBuffer::clear ()\fC [slot]\fP"
+
+.PP
+Clear all data\&. 
+.PP
+Definition at line 349 of file QDaqDataBuffer\&.cpp\&.
+.SS "QStringList QDaqDataBuffer::columnNames () const\fC [inline]\fP"
+
+.PP
+Definition at line 109 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::columns () const"
+
+.PP
+Definition at line 323 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::dataReady ()\fC [signal]\fP"
+
+.SS "\fBQDaqVector\fP QDaqDataBuffer::get (int i)\fC [inline]\fP, \fC [slot]\fP"
+
+.PP
+Return the i-th QDaqBuffer\&. 
+.PP
+Definition at line 139 of file QDaqDataBuffer\&.h\&.
+.SS "void QDaqDataBuffer::push (const \fBQDaqVector\fP & v)\fC [slot]\fP"
+
+.PP
+Append a new row of values\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector of data values\&. v\&.size() must be equal to \fBsize()\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 357 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::readh5 (H5::Group * g, \fBQDaqH5File\fP * f)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Read contents of the object from a \fBH5\fP group\&. The base class implementation reads all properties (static & dynamic) from corresponding datasets of the HDF5 file group\&.
+.PP
+Reimplement in \fBQDaqObject\fP descendants to read additional data\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP HDF5 Group object 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqObject\fP\&.
+.PP
+Definition at line 46 of file QDaqH5Serialize\&.cpp\&.
+.SS "void QDaqDataBuffer::removeChannels (\fBQDaqObjectList\fP chlist)\fC [slot]\fP"
+
+.PP
+Definition at line 62 of file QDaqDataBuffer\&.cpp\&.
+.SS "bool QDaqDataBuffer::run ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Perform the \fBQDaqDataBuffer\fP tasks within a loop\&. The following tasks are performed at each loop repetition
+.IP "\(bu" 2
+the object tries to acquire a free back buffer packet
+.IP "\(bu" 2
+If succesfull it fills the packet with data from the assigned channels and signals the main thread to collect the packet\&.
+.IP "\(bu" 2
+otherwise it pushes a \fBQDaq\fP error that data got lost
+.PP
+.PP
+\fBReturns\fP
+.RS 4
+\fBQDaqJob::run()\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqJob\fP\&.
+.PP
+Definition at line 251 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::setBackBufferDepth (uint d)"
+
+.PP
+Definition at line 17 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::setCapacity (uint cap)"
+
+.PP
+Definition at line 328 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::setChannels (\fBQDaqObjectList\fP chlist)"
+
+.PP
+Definition at line 165 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::setCircular (bool on)"
+
+.PP
+Definition at line 340 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::setColumnNames (QStringList collist)"
+
+.PP
+Definition at line 216 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::setupBackBuffer ()\fC [protected]\fP"
+
+.PP
+Definition at line 34 of file QDaqDataBuffer\&.cpp\&.
+.SS "uint QDaqDataBuffer::size () const"
+
+.PP
+Definition at line 318 of file QDaqDataBuffer\&.cpp\&.
+.SS "void QDaqDataBuffer::writeh5 (H5::Group * g, \fBQDaqH5File\fP * f) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Write contents of the object to a \fBH5\fP group\&. The base class implementation writes all properties (static & dynamic) as datasets of the HDF5 file group\&.
+.PP
+Reimplement in \fBQDaqObject\fP descendants to write additional data\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP HDF5 Group object 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQDaqObject\fP\&.
+.PP
+Definition at line 22 of file QDaqH5Serialize\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QVector<double> QDaqDataBuffer::backBuffer_\fC [protected]\fP"
+
+.PP
+Definition at line 75 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::backBufferDepth_\fC [protected]\fP"
+
+.PP
+Definition at line 66 of file QDaqDataBuffer\&.h\&.
+.SS "QVector<double*> QDaqDataBuffer::backPackets_\fC [protected]\fP"
+
+.PP
+Definition at line 76 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::capacity_\fC [protected]\fP"
+
+.PP
+Definition at line 66 of file QDaqDataBuffer\&.h\&.
+.SS "\fBQDaqObjectList\fP QDaqDataBuffer::channel_objects\fC [protected]\fP"
+
+.PP
+Definition at line 70 of file QDaqDataBuffer\&.h\&.
+.SS "\fBchannel_vector_t\fP QDaqDataBuffer::channel_ptrs\fC [protected]\fP"
+
+.PP
+Definition at line 71 of file QDaqDataBuffer\&.h\&.
+.SS "bool QDaqDataBuffer::circular_\fC [protected]\fP"
+
+.PP
+Definition at line 69 of file QDaqDataBuffer\&.h\&.
+.SS "QStringList QDaqDataBuffer::columnNames_\fC [protected]\fP"
+
+.PP
+Definition at line 72 of file QDaqDataBuffer\&.h\&.
+.SS "\fBmatrix_t\fP QDaqDataBuffer::data_matrix\fC [protected]\fP"
+
+.PP
+Definition at line 81 of file QDaqDataBuffer\&.h\&.
+.SS "QSemaphore QDaqDataBuffer::freePackets_\fC [protected]\fP"
+
+.PP
+Definition at line 77 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::iFree_\fC [protected]\fP"
+
+.PP
+Definition at line 78 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::iUsed_\fC [protected]\fP"
+
+.PP
+Definition at line 78 of file QDaqDataBuffer\&.h\&.
+.SS "QSemaphore QDaqDataBuffer::usedPackets_\fC [protected]\fP"
+
+.PP
+Definition at line 77 of file QDaqDataBuffer\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "uint QDaqDataBuffer::backBufferDepth\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Size of the back buffer in rows\&. 
+.PP
+Definition at line 1 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::capacity\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Total capacity (allocated memory) of the data buffer in rows\&. 
+.PP
+Definition at line 1 of file QDaqDataBuffer\&.h\&.
+.SS "\fBQDaqObjectList\fP QDaqDataBuffer::channels\fC [read]\fP, \fC [write]\fP"
+
+.PP
+A QList of the channels monitored by this object\&. 
+.PP
+Definition at line 1 of file QDaqDataBuffer\&.h\&.
+.SS "bool QDaqDataBuffer::circular\fC [read]\fP, \fC [write]\fP"
+
+.PP
+True if buffer is circular\&. 
+.PP
+Definition at line 1 of file QDaqDataBuffer\&.h\&.
+.SS "QStringList QDaqDataBuffer::columnNames\fC [read]\fP, \fC [write]\fP"
+
+.PP
+A list of column names\&. 
+.PP
+Definition at line 1 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::columns\fC [read]\fP"
+
+.PP
+Number of data columns\&. 
+.PP
+Definition at line 1 of file QDaqDataBuffer\&.h\&.
+.SS "uint QDaqDataBuffer::size\fC [read]\fP"
+
+.PP
+Current size of the data buffer in rows\&. 
+.PP
+Definition at line 1 of file QDaqDataBuffer\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

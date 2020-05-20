@@ -1,0 +1,95 @@
+.TH "QDaqPlotData" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqPlotData
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits QwtSeriesData< QPointF >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqPlotData\fP (const \fBQDaqVector\fP &\fBx\fP, const \fBQDaqVector\fP &\fBy\fP)"
+.br
+.ti -1c
+.RI "\fBQDaqPlotData\fP (const \fBQDaqPlotData\fP &other)"
+.br
+.ti -1c
+.RI "virtual \fB~QDaqPlotData\fP ()"
+.br
+.ti -1c
+.RI "\fBQDaqPlotData\fP * \fBcopy\fP () const"
+.br
+.ti -1c
+.RI "virtual size_t \fBsize\fP () const"
+.br
+.ti -1c
+.RI "virtual QPointF \fBsample\fP (size_t i) const"
+.br
+.ti -1c
+.RI "double \fBx\fP (size_t i) const"
+.br
+.ti -1c
+.RI "double \fBy\fP (size_t i) const"
+.br
+.ti -1c
+.RI "virtual QRectF \fBboundingRect\fP () const"
+.br
+.ti -1c
+.RI "void \fBupdate\fP (const \fBQDaqPlotWidget\fP *w, const \fBQDaqVector\fP *v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 151 of file QDaqPlotWidget\&.cpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqPlotData::QDaqPlotData (const \fBQDaqVector\fP & x, const \fBQDaqVector\fP & y)\fC [inline]\fP"
+
+.PP
+Definition at line 157 of file QDaqPlotWidget\&.cpp\&.
+.SS "QDaqPlotData::QDaqPlotData (const \fBQDaqPlotData\fP & other)\fC [inline]\fP"
+
+.PP
+Definition at line 161 of file QDaqPlotWidget\&.cpp\&.
+.SS "virtual QDaqPlotData::~QDaqPlotData ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 164 of file QDaqPlotWidget\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual QRectF QDaqPlotData::boundingRect () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 180 of file QDaqPlotWidget\&.cpp\&.
+.SS "\fBQDaqPlotData\fP* QDaqPlotData::copy () const\fC [inline]\fP"
+
+.PP
+Definition at line 168 of file QDaqPlotWidget\&.cpp\&.
+.SS "virtual QPointF QDaqPlotData::sample (size_t i) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 175 of file QDaqPlotWidget\&.cpp\&.
+.SS "virtual size_t QDaqPlotData::size () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 174 of file QDaqPlotWidget\&.cpp\&.
+.SS "void QDaqPlotData::update (const \fBQDaqPlotWidget\fP * w, const \fBQDaqVector\fP * v)\fC [inline]\fP"
+
+.PP
+Definition at line 188 of file QDaqPlotWidget\&.cpp\&.
+.SS "double QDaqPlotData::x (size_t i) const\fC [inline]\fP"
+
+.PP
+Definition at line 177 of file QDaqPlotWidget\&.cpp\&.
+.SS "double QDaqPlotData::y (size_t i) const\fC [inline]\fP"
+
+.PP
+Definition at line 178 of file QDaqPlotWidget\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

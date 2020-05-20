@@ -1,0 +1,267 @@
+\hypertarget{class_q_daq_filter}{}\doxysection{Q\+Daq\+Filter Class Reference}
+\label{class_q_daq_filter}\index{QDaqFilter@{QDaqFilter}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Filter.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.794520cm]{class_q_daq_filter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_filter_ab457f6ebe7a317b44ca97fac3384d8df}{Q\+Daq\+Filter}} (const Q\+String \&name)
+\item 
+virtual int \mbox{\hyperlink{class_q_daq_filter_a64dcc71d047257bb6d2b239bdc340a85}{n\+Input\+Channels}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_q_daq_filter_a724bf9cbd3d879ee54c5b5decba2080c}{n\+Output\+Channels}} () const =0
+\item 
+\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} \mbox{\hyperlink{class_q_daq_filter_af65fe0459267d5bb93af8ab87df2b12c}{input\+Channels}} () const
+\item 
+\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} \mbox{\hyperlink{class_q_daq_filter_ade59e9af6b73e980900990746cd21187}{output\+Channels}} () const
+\item 
+void \mbox{\hyperlink{class_q_daq_filter_a1e0717ef657dce8303fb7d56bfbe8013}{set\+Input\+Channels}} (\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} lst)
+\item 
+void \mbox{\hyperlink{class_q_daq_filter_acded43151095cb0c3d7ba31c6ca4f8cf}{set\+Output\+Channels}} (\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} lst)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_filter_af11697b54b43bab5f8f5c2aa564c73bd}{arm\+\_\+}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_filter_a70d435dddd2207a850affd5e1efe0e8e}{run}} ()
+\begin{DoxyCompactList}\small\item\em This function performs the actual task of this \mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_q_daq_filter_aea04cc6d9a8cb9bea43d278912f8aa9a}{filterinit}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_filter_a038e95c89af29ee1c5f9eb7804a614fb}{filterfunc}} (const double $\ast$in, double $\ast$out)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_q_daq_filter_a00cf3d0f209274b1f98d855d52dc6ca5}{n\+Input\+Channels}}
+\begin{DoxyCompactList}\small\item\em Number of input channels for this filter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_q_daq_filter_a1d3f4b3947465fa40ae24a8d8309d496}{n\+Output\+Channels}}
+\begin{DoxyCompactList}\small\item\em Number of output channels for this filter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} \mbox{\hyperlink{class_q_daq_filter_a7286e7aa38fa918453c1da368bfe9f42}{input\+Channels}}
+\begin{DoxyCompactList}\small\item\em A Q\+List of the input channels for this filter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} \mbox{\hyperlink{class_q_daq_filter_a6a1757efaf59322328c023d3ded073bb}{output\+Channels}}
+\begin{DoxyCompactList}\small\item\em A Q\+List of the output channels for this filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 11 of file Q\+Daq\+Filter.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_filter_ab457f6ebe7a317b44ca97fac3384d8df}\label{class_q_daq_filter_ab457f6ebe7a317b44ca97fac3384d8df}} 
+\index{QDaqFilter@{QDaqFilter}!QDaqFilter@{QDaqFilter}}
+\index{QDaqFilter@{QDaqFilter}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{QDaqFilter()}{QDaqFilter()}}
+{\footnotesize\ttfamily Q\+Daq\+Filter\+::\+Q\+Daq\+Filter (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 4 of file Q\+Daq\+Filter.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_filter_af11697b54b43bab5f8f5c2aa564c73bd}\label{class_q_daq_filter_af11697b54b43bab5f8f5c2aa564c73bd}} 
+\index{QDaqFilter@{QDaqFilter}!arm\_@{arm\_}}
+\index{arm\_@{arm\_}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{arm\_()}{arm\_()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Filter\+::arm\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Performs internal initialization for the job.
+
+It is called by the \mbox{\hyperlink{class_q_daq_job_a3af371946f6916812fd6ad03904b2293}{set\+Armed()}} function.
+
+This function can be reimplemented to perform specific initialization for a job. The parent class \mbox{\hyperlink{class_q_daq_filter_af11697b54b43bab5f8f5c2aa564c73bd}{arm\+\_\+()}} function should be called afterwards.
+
+In the default implementation, if a \mbox{\hyperlink{class_q_daq_job_aba27ebc276314277e303cc8c97e9f439}{loop\+Engine()}} exists the script code is checked against the script engine for errors.
+
+If initialization is sucessfull it returns true, otherwise the function returns false. 
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_job_aad493e9880d26c4b25cebe4bacee1717}{Q\+Daq\+Job}}.
+
+
+
+Definition at line 106 of file Q\+Daq\+Filter.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_filter_a038e95c89af29ee1c5f9eb7804a614fb}\label{class_q_daq_filter_a038e95c89af29ee1c5f9eb7804a614fb}} 
+\index{QDaqFilter@{QDaqFilter}!filterfunc@{filterfunc}}
+\index{filterfunc@{filterfunc}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{filterfunc()}{filterfunc()}}
+{\footnotesize\ttfamily virtual bool Q\+Daq\+Filter\+::filterfunc (\begin{DoxyParamCaption}\item[{const double $\ast$}]{in,  }\item[{double $\ast$}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_daq_pid_af6cc1195b56ca6be771392277b256651}{Q\+Daq\+Pid}}, \mbox{\hyperlink{class_q_daq_interpolator_a2efefb52152b50f36f9d12a224033eff}{Q\+Daq\+Interpolator}}, \mbox{\hyperlink{class_q_daq_f_o_p_d_t_a8bbe2c7416bc70c347cb41470f1c6323}{Q\+Daq\+F\+O\+P\+DT}}, and \mbox{\hyperlink{class_q_daq_linear_correlator_a5bef65ffe8ef4cfea6a5cf3e7873870b}{Q\+Daq\+Linear\+Correlator}}.
+
+\mbox{\Hypertarget{class_q_daq_filter_aea04cc6d9a8cb9bea43d278912f8aa9a}\label{class_q_daq_filter_aea04cc6d9a8cb9bea43d278912f8aa9a}} 
+\index{QDaqFilter@{QDaqFilter}!filterinit@{filterinit}}
+\index{filterinit@{filterinit}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{filterinit()}{filterinit()}}
+{\footnotesize\ttfamily virtual bool Q\+Daq\+Filter\+::filterinit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_daq_pid_a8ddaa3cd5018bb1486bb3dde45de5a59}{Q\+Daq\+Pid}}, \mbox{\hyperlink{class_q_daq_interpolator_aeaf7a5cfb280db05edf92cc42a38ecbc}{Q\+Daq\+Interpolator}}, \mbox{\hyperlink{class_q_daq_f_o_p_d_t_a00ae5d1dfbc29de45950349b3daf5baf}{Q\+Daq\+F\+O\+P\+DT}}, and \mbox{\hyperlink{class_q_daq_linear_correlator_ab11456ecd979d01ff76542591b0003dc}{Q\+Daq\+Linear\+Correlator}}.
+
+\mbox{\Hypertarget{class_q_daq_filter_af65fe0459267d5bb93af8ab87df2b12c}\label{class_q_daq_filter_af65fe0459267d5bb93af8ab87df2b12c}} 
+\index{QDaqFilter@{QDaqFilter}!inputChannels@{inputChannels}}
+\index{inputChannels@{inputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{inputChannels()}{inputChannels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} Q\+Daq\+Filter\+::input\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 10 of file Q\+Daq\+Filter.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_filter_a64dcc71d047257bb6d2b239bdc340a85}\label{class_q_daq_filter_a64dcc71d047257bb6d2b239bdc340a85}} 
+\index{QDaqFilter@{QDaqFilter}!nInputChannels@{nInputChannels}}
+\index{nInputChannels@{nInputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{nInputChannels()}{nInputChannels()}}
+{\footnotesize\ttfamily virtual int Q\+Daq\+Filter\+::n\+Input\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_daq_pid_a1a91ae6aa2237af9ad8af9b7b4e96d33}{Q\+Daq\+Pid}}, \mbox{\hyperlink{class_q_daq_interpolator_a166b11f3251ed2fc509480a44352751b}{Q\+Daq\+Interpolator}}, \mbox{\hyperlink{class_q_daq_f_o_p_d_t_a0889065f61106c850e516754c2ebe29b}{Q\+Daq\+F\+O\+P\+DT}}, and \mbox{\hyperlink{class_q_daq_linear_correlator_a1e4cd794d421a97333bcfebf077ea680}{Q\+Daq\+Linear\+Correlator}}.
+
+\mbox{\Hypertarget{class_q_daq_filter_a724bf9cbd3d879ee54c5b5decba2080c}\label{class_q_daq_filter_a724bf9cbd3d879ee54c5b5decba2080c}} 
+\index{QDaqFilter@{QDaqFilter}!nOutputChannels@{nOutputChannels}}
+\index{nOutputChannels@{nOutputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{nOutputChannels()}{nOutputChannels()}}
+{\footnotesize\ttfamily virtual int Q\+Daq\+Filter\+::n\+Output\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_q_daq_pid_a31309453ad49488294893656141867e5}{Q\+Daq\+Pid}}, \mbox{\hyperlink{class_q_daq_interpolator_aa254b30d1a71cad25cbf274015484398}{Q\+Daq\+Interpolator}}, \mbox{\hyperlink{class_q_daq_f_o_p_d_t_a5130ae6f1143a1b40840f8cfee807251}{Q\+Daq\+F\+O\+P\+DT}}, and \mbox{\hyperlink{class_q_daq_linear_correlator_ab3bffae15565430d36d30b9a11e001c3}{Q\+Daq\+Linear\+Correlator}}.
+
+\mbox{\Hypertarget{class_q_daq_filter_ade59e9af6b73e980900990746cd21187}\label{class_q_daq_filter_ade59e9af6b73e980900990746cd21187}} 
+\index{QDaqFilter@{QDaqFilter}!outputChannels@{outputChannels}}
+\index{outputChannels@{outputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{outputChannels()}{outputChannels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} Q\+Daq\+Filter\+::output\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 17 of file Q\+Daq\+Filter.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_filter_a70d435dddd2207a850affd5e1efe0e8e}\label{class_q_daq_filter_a70d435dddd2207a850affd5e1efe0e8e}} 
+\index{QDaqFilter@{QDaqFilter}!run@{run}}
+\index{run@{run}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Filter\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This function performs the actual task of this \mbox{\hyperlink{class_q_daq_job}{Q\+Daq\+Job}}. 
+
+It can be reimplemented in subclasses to define the specific job that must be performed.
+
+In the base implementation, it executes the script code if available.
+
+\begin{DoxyReturn}{Returns}
+false if a serious error occured, true otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_job_afe30e7c3f03deb124ae4338984544a7f}{Q\+Daq\+Job}}.
+
+
+
+Definition at line 76 of file Q\+Daq\+Filter.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_filter_a1e0717ef657dce8303fb7d56bfbe8013}\label{class_q_daq_filter_a1e0717ef657dce8303fb7d56bfbe8013}} 
+\index{QDaqFilter@{QDaqFilter}!setInputChannels@{setInputChannels}}
+\index{setInputChannels@{setInputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{setInputChannels()}{setInputChannels()}}
+{\footnotesize\ttfamily void Q\+Daq\+Filter\+::set\+Input\+Channels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}}}]{lst }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file Q\+Daq\+Filter.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_filter_acded43151095cb0c3d7ba31c6ca4f8cf}\label{class_q_daq_filter_acded43151095cb0c3d7ba31c6ca4f8cf}} 
+\index{QDaqFilter@{QDaqFilter}!setOutputChannels@{setOutputChannels}}
+\index{setOutputChannels@{setOutputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{setOutputChannels()}{setOutputChannels()}}
+{\footnotesize\ttfamily void Q\+Daq\+Filter\+::set\+Output\+Channels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}}}]{lst }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file Q\+Daq\+Filter.\+cpp.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_q_daq_filter_a7286e7aa38fa918453c1da368bfe9f42}\label{class_q_daq_filter_a7286e7aa38fa918453c1da368bfe9f42}} 
+\index{QDaqFilter@{QDaqFilter}!inputChannels@{inputChannels}}
+\index{inputChannels@{inputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{inputChannels}{inputChannels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} Q\+Daq\+Filter\+::input\+Channels\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+A Q\+List of the input channels for this filter. 
+
+
+
+Definition at line 1 of file Q\+Daq\+Filter.\+h.
+
+\mbox{\Hypertarget{class_q_daq_filter_a00cf3d0f209274b1f98d855d52dc6ca5}\label{class_q_daq_filter_a00cf3d0f209274b1f98d855d52dc6ca5}} 
+\index{QDaqFilter@{QDaqFilter}!nInputChannels@{nInputChannels}}
+\index{nInputChannels@{nInputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{nInputChannels}{nInputChannels}}
+{\footnotesize\ttfamily int Q\+Daq\+Filter\+::n\+Input\+Channels\hspace{0.3cm}{\ttfamily [read]}}
+
+
+
+Number of input channels for this filter. 
+
+
+
+Definition at line 1 of file Q\+Daq\+Filter.\+h.
+
+\mbox{\Hypertarget{class_q_daq_filter_a1d3f4b3947465fa40ae24a8d8309d496}\label{class_q_daq_filter_a1d3f4b3947465fa40ae24a8d8309d496}} 
+\index{QDaqFilter@{QDaqFilter}!nOutputChannels@{nOutputChannels}}
+\index{nOutputChannels@{nOutputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{nOutputChannels}{nOutputChannels}}
+{\footnotesize\ttfamily int Q\+Daq\+Filter\+::n\+Output\+Channels\hspace{0.3cm}{\ttfamily [read]}}
+
+
+
+Number of output channels for this filter. 
+
+
+
+Definition at line 1 of file Q\+Daq\+Filter.\+h.
+
+\mbox{\Hypertarget{class_q_daq_filter_a6a1757efaf59322328c023d3ded073bb}\label{class_q_daq_filter_a6a1757efaf59322328c023d3ded073bb}} 
+\index{QDaqFilter@{QDaqFilter}!outputChannels@{outputChannels}}
+\index{outputChannels@{outputChannels}!QDaqFilter@{QDaqFilter}}
+\doxysubsubsection{\texorpdfstring{outputChannels}{outputChannels}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___core_ga59e5467b4815357c31076a2643ec2cbc}{Q\+Daq\+Object\+List}} Q\+Daq\+Filter\+::output\+Channels\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+A Q\+List of the output channels for this filter. 
+
+
+
+Definition at line 1 of file Q\+Daq\+Filter.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_filter_8h}{Q\+Daq\+Filter.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/core/\mbox{\hyperlink{_q_daq_filter_8cpp}{Q\+Daq\+Filter.\+cpp}}\end{DoxyCompactItemize}

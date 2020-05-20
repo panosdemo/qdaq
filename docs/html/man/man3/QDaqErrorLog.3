@@ -1,0 +1,83 @@
+.TH "QDaqErrorLog" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqErrorLog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqErrorLog\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBonError\fP (const \fBQDaqError\fP &err)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqErrorLog\fP (QWidget *p=0)"
+.br
+.ti -1c
+.RI "virtual \fB~QDaqErrorLog\fP (void)"
+.br
+.in -1c
+.SS "Protected Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QTableWidget * \fBtableWidget\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBclearButton\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file QDaqErrorLog\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqErrorLog::QDaqErrorLog (QWidget * p = \fC0\fP)"
+
+.PP
+Definition at line 11 of file QDaqErrorLog\&.cpp\&.
+.SS "QDaqErrorLog::~QDaqErrorLog (void)\fC [virtual]\fP"
+
+.PP
+Definition at line 65 of file QDaqErrorLog\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqErrorLog::clear ()\fC [protected]\fP, \fC [slot]\fP"
+
+.PP
+Definition at line 80 of file QDaqErrorLog\&.cpp\&.
+.SS "void QDaqErrorLog::onError (const \fBQDaqError\fP & err)\fC [slot]\fP"
+
+.PP
+Definition at line 70 of file QDaqErrorLog\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QPushButton* QDaqErrorLog::clearButton\fC [protected]\fP"
+
+.PP
+Definition at line 26 of file QDaqErrorLog\&.h\&.
+.SS "QTableWidget* QDaqErrorLog::tableWidget\fC [protected]\fP"
+
+.PP
+Definition at line 25 of file QDaqErrorLog\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

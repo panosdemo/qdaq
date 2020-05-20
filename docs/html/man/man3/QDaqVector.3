@@ -1,0 +1,314 @@
+.TH "QDaqVector" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqVector \- A buffer for storing double numbers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqVector\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqVector\fP (int n=0)"
+.br
+.RI "Create a buffer with n elements, initially filled with 0\&. "
+.ti -1c
+.RI "\fBQDaqVector\fP (const \fBQDaqVector\fP &other)"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP & \fBoperator=\fP (const \fBQDaqVector\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBQDaqVector\fP \fBclone\fP () const"
+.br
+.ti -1c
+.RI "int \fBsize\fP () const"
+.br
+.RI "Return the number of elememts stored in the buffer\&. "
+.ti -1c
+.RI "void \fBsetSize\fP (int n)"
+.br
+.RI "set the size "
+.ti -1c
+.RI "void \fBresize\fP (int n)"
+.br
+.ti -1c
+.RI "bool \fBisCircular\fP () const"
+.br
+.RI "Return true if Circular\&. "
+.ti -1c
+.RI "void \fBsetCircular\fP (bool on)"
+.br
+.RI "Set circular on or off\&. "
+.ti -1c
+.RI "int \fBcapacity\fP () const"
+.br
+.RI "Return the currently allocated memory capacity (in number of elements)\&. "
+.ti -1c
+.RI "void \fBsetCapacity\fP (int c)"
+.br
+.RI "Set the capacity\&. "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Empty the buffer\&. "
+.ti -1c
+.RI "double \fBget\fP (int i) const"
+.br
+.RI "Get the i-th element\&. "
+.ti -1c
+.RI "double \fBoperator[]\fP (int i) const"
+.br
+.RI "Return the i-th element\&. "
+.ti -1c
+.RI "double & \fBoperator[]\fP (int i)"
+.br
+.RI "Return the i-th element\&. "
+.ti -1c
+.RI "void \fBpush\fP (double v)"
+.br
+.ti -1c
+.RI "void \fBpush\fP (const double *v, int n)"
+.br
+.RI "Append n values stored in memory location v to the buffer\&. "
+.ti -1c
+.RI "void \fBpush\fP (const \fBQDaqVector\fP &v)"
+.br
+.RI "Append another vector\&. "
+.ti -1c
+.RI "void \fBpop\fP ()"
+.br
+.RI "Remove the last point\&. "
+.ti -1c
+.RI "\fBQDaqVector\fP & \fBoperator<<\fP (const double &v)"
+.br
+.RI "Append a value to the buffer\&. "
+.ti -1c
+.RI "\fBQDaqVector\fP & \fBoperator<<\fP (const \fBQDaqVector\fP &v)"
+.br
+.RI "Append another vector\&. "
+.ti -1c
+.RI "const double * \fBconstData\fP () const"
+.br
+.RI "Return a const pointer to the data\&. "
+.ti -1c
+.RI "double * \fBdata\fP ()"
+.br
+.RI "Return a pointer to the data\&. "
+.ti -1c
+.RI "double \fBvmin\fP () const"
+.br
+.RI "Minimum value in the buffer\&. "
+.ti -1c
+.RI "double \fBvmax\fP () const"
+.br
+.RI "Maximum value in the buffer\&. "
+.ti -1c
+.RI "double \fBmean\fP () const"
+.br
+.RI "Mean value in the buffer\&. "
+.ti -1c
+.RI "double \fBstd\fP () const"
+.br
+.RI "Standard deviation the buffer values\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBQDaqVector\fP &other) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBQDaqVector\fP &other) const"
+.br
+.ti -1c
+.RI "bool \fBisEmpty\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A buffer for storing double numbers\&. 
+
+It is used for storing data from \fBQDaqChannel\fP objects\&.
+.PP
+The buffer has 3 modes, according to its StorageType property: it can be circular, i\&.e\&., new data overwrite old data, it can have fixed size or it can be expandable\&.
+.PP
+Data are inserted at the end of the buffer by the function \fBpush()\fP or the \fBoperator<<()\fP\&. The contents can be read by the function \fBget()\fP or the \fBoperator[]()\fP\&. The class provides read-only access to the data\&. It is not possible to change the value of a stored element\&.
+.PP
+The class defines functions for getting the min/max value, the mean and std deviation\&. The calculation of these quantities is stored internally and multiple calls to these functions do not cause a recalculation (except if the buffer contents have changed)\&.
+.PP
+The buffer is explicitly shared, i\&.e\&., multiple instances share the same underlying data\&. This is used primarily for displaying real-time plots of data without copying the buffer\&. 
+.PP
+Definition at line 40 of file QDaqVector\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqVector::QDaqVector (int n = \fC0\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Create a buffer with n elements, initially filled with 0\&. 
+.PP
+Definition at line 46 of file QDaqVector\&.h\&.
+.SS "QDaqVector::QDaqVector (const \fBQDaqVector\fP & other)\fC [inline]\fP"
+
+.PP
+Definition at line 50 of file QDaqVector\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int QDaqVector::capacity () const\fC [inline]\fP"
+
+.PP
+Return the currently allocated memory capacity (in number of elements)\&. 
+.PP
+Definition at line 73 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::clear ()\fC [inline]\fP"
+
+.PP
+Empty the buffer\&. 
+.PP
+Definition at line 77 of file QDaqVector\&.h\&.
+.SS "\fBQDaqVector\fP QDaqVector::clone () const\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file QDaqVector\&.h\&.
+.SS "const double* QDaqVector::constData () const\fC [inline]\fP"
+
+.PP
+Return a const pointer to the data\&. 
+.PP
+Definition at line 98 of file QDaqVector\&.h\&.
+.SS "double* QDaqVector::data ()\fC [inline]\fP"
+
+.PP
+Return a pointer to the data\&. 
+.PP
+Definition at line 100 of file QDaqVector\&.h\&.
+.SS "double QDaqVector::get (int i) const\fC [inline]\fP"
+
+.PP
+Get the i-th element\&. 
+.PP
+Definition at line 79 of file QDaqVector\&.h\&.
+.SS "bool QDaqVector::isCircular () const\fC [inline]\fP"
+
+.PP
+Return true if Circular\&. 
+.PP
+Definition at line 69 of file QDaqVector\&.h\&.
+.SS "bool QDaqVector::isEmpty () const\fC [inline]\fP"
+
+.PP
+Definition at line 118 of file QDaqVector\&.h\&.
+.SS "double QDaqVector::mean () const\fC [inline]\fP"
+
+.PP
+Mean value in the buffer\&. 
+.PP
+Definition at line 106 of file QDaqVector\&.h\&.
+.SS "bool QDaqVector::operator!= (const \fBQDaqVector\fP & other) const\fC [inline]\fP"
+
+.PP
+Definition at line 114 of file QDaqVector\&.h\&.
+.SS "\fBQDaqVector\fP& QDaqVector::operator<< (const double & v)\fC [inline]\fP"
+
+.PP
+Append a value to the buffer\&. 
+.PP
+Definition at line 94 of file QDaqVector\&.h\&.
+.SS "\fBQDaqVector\fP& QDaqVector::operator<< (const \fBQDaqVector\fP & v)\fC [inline]\fP"
+
+.PP
+Append another vector\&. 
+.PP
+Definition at line 96 of file QDaqVector\&.h\&.
+.SS "\fBQDaqVector\fP& QDaqVector::operator= (const \fBQDaqVector\fP & rhs)\fC [inline]\fP"
+
+.PP
+Definition at line 52 of file QDaqVector\&.h\&.
+.SS "bool QDaqVector::operator== (const \fBQDaqVector\fP & other) const\fC [inline]\fP"
+
+.PP
+Definition at line 110 of file QDaqVector\&.h\&.
+.SS "double& QDaqVector::operator[] (int i)\fC [inline]\fP"
+
+.PP
+Return the i-th element\&. 
+.PP
+Definition at line 83 of file QDaqVector\&.h\&.
+.SS "double QDaqVector::operator[] (int i) const\fC [inline]\fP"
+
+.PP
+Return the i-th element\&. 
+.PP
+Definition at line 81 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::pop ()\fC [inline]\fP"
+
+.PP
+Remove the last point\&. 
+.PP
+Definition at line 92 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::push (const double * v, int n)\fC [inline]\fP"
+
+.PP
+Append n values stored in memory location v to the buffer\&. 
+.PP
+Definition at line 88 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::push (const \fBQDaqVector\fP & v)\fC [inline]\fP"
+
+.PP
+Append another vector\&. 
+.PP
+Definition at line 90 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::push (double v)\fC [inline]\fP"
+Append a value to the buffer\&. Pushing to a circular vector of 0 capacity 0 leads to an error\&. 
+.PP
+Definition at line 86 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::resize (int n)\fC [inline]\fP"
+
+.PP
+Definition at line 67 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::setCapacity (int c)\fC [inline]\fP"
+
+.PP
+Set the capacity\&. 
+.PP
+Definition at line 75 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::setCircular (bool on)\fC [inline]\fP"
+
+.PP
+Set circular on or off\&. 
+.PP
+Definition at line 71 of file QDaqVector\&.h\&.
+.SS "void QDaqVector::setSize (int n)\fC [inline]\fP"
+
+.PP
+set the size 
+.PP
+Definition at line 66 of file QDaqVector\&.h\&.
+.SS "int QDaqVector::size () const\fC [inline]\fP"
+
+.PP
+Return the number of elememts stored in the buffer\&. 
+.PP
+Definition at line 64 of file QDaqVector\&.h\&.
+.SS "double QDaqVector::std () const\fC [inline]\fP"
+
+.PP
+Standard deviation the buffer values\&. 
+.PP
+Definition at line 108 of file QDaqVector\&.h\&.
+.SS "double QDaqVector::vmax () const\fC [inline]\fP"
+
+.PP
+Maximum value in the buffer\&. 
+.PP
+Definition at line 104 of file QDaqVector\&.h\&.
+.SS "double QDaqVector::vmin () const\fC [inline]\fP"
+
+.PP
+Minimum value in the buffer\&. 
+.PP
+Definition at line 102 of file QDaqVector\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

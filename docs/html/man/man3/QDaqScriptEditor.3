@@ -1,0 +1,95 @@
+.TH "QDaqScriptEditor" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqScriptEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqScriptEditor\&.h>\fP
+.PP
+Inherits \fBJSEdit\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQDaqScriptEditor\fP ()"
+.br
+.ti -1c
+.RI "void \fBnewFile\fP ()"
+.br
+.ti -1c
+.RI "bool \fBloadFile\fP (const QString &fileName)"
+.br
+.ti -1c
+.RI "bool \fBsave\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsaveAs\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsaveFile\fP (const QString &fileName)"
+.br
+.ti -1c
+.RI "QString \fBuserFriendlyCurrentFile\fP ()"
+.br
+.ti -1c
+.RI "QString \fBcurrentFile\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcloseEvent\fP (QCloseEvent *event)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file QDaqScriptEditor\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqScriptEditor::QDaqScriptEditor ()"
+
+.PP
+Definition at line 10 of file QDaqScriptEditor\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void QDaqScriptEditor::closeEvent (QCloseEvent * event)\fC [protected]\fP"
+
+.PP
+Definition at line 113 of file QDaqScriptEditor\&.cpp\&.
+.SS "QString QDaqScriptEditor::currentFile ()\fC [inline]\fP"
+
+.PP
+Definition at line 21 of file QDaqScriptEditor\&.h\&.
+.SS "bool QDaqScriptEditor::loadFile (const QString & fileName)"
+
+.PP
+Definition at line 37 of file QDaqScriptEditor\&.cpp\&.
+.SS "void QDaqScriptEditor::newFile ()"
+
+.PP
+Definition at line 25 of file QDaqScriptEditor\&.cpp\&.
+.SS "bool QDaqScriptEditor::save ()"
+
+.PP
+Definition at line 61 of file QDaqScriptEditor\&.cpp\&.
+.SS "bool QDaqScriptEditor::saveAs ()"
+
+.PP
+Definition at line 70 of file QDaqScriptEditor\&.cpp\&.
+.SS "bool QDaqScriptEditor::saveFile (const QString & fileName)"
+
+.PP
+Definition at line 88 of file QDaqScriptEditor\&.cpp\&.
+.SS "QString QDaqScriptEditor::userFriendlyCurrentFile ()"
+
+.PP
+Definition at line 108 of file QDaqScriptEditor\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

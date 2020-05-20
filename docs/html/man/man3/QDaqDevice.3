@@ -1,0 +1,675 @@
+.TH "QDaqDevice" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqDevice \- A class representing a DAQ device\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqDevice\&.h>\fP
+.PP
+Inherits \fBQDaqJob\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "bool \fBon\fP ()"
+.br
+.RI "Try to bring the device online and return true if succesfull\&. "
+.ti -1c
+.RI "void \fBoff\fP ()"
+.br
+.RI "Bring the device offline\&. "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Call \fBQDaqInterface::clear_port()\fP\&. Depends on type of interface\&. "
+.ti -1c
+.RI "int \fBstatusByte\fP ()"
+.br
+.RI "Call \fBQDaqInterface::readStatusByte()\fP\&. Return value depends on type of interface\&. "
+.ti -1c
+.RI "void \fBtrigger\fP ()"
+.br
+.RI "Trigger the device (Must be supported by the interface, e\&.g\&. GPIB) "
+.in -1c
+.PP
+.RI "\fBFunctions for message based communication\&.\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "int \fBwrite\fP (const QString &msg)"
+.br
+.RI "Write a string message to the device\&. Return number of characters written\&. "
+.ti -1c
+.RI "bool \fBwrite\fP (const QStringList &msgs)"
+.br
+.RI "Write a list of string message to the device\&. Return true if succesfull\&. "
+.ti -1c
+.RI "int \fBwriteBytes\fP (const QByteArray &msg)"
+.br
+.RI "Write a byte array to the device\&. Return number of bytes written\&. "
+.ti -1c
+.RI "QString \fBread\fP ()"
+.br
+.RI "Read a string from the device\&. On error return empty string and emit \fBQDaqError\fP\&. "
+.ti -1c
+.RI "QByteArray \fBreadBytes\fP ()"
+.br
+.RI "Read bytes from the device\&. On error return empty array and emit \fBQDaqError\fP\&. "
+.ti -1c
+.RI "QString \fBquery\fP (const QString &msg)"
+.br
+.RI "Send message and return the answer, ie, read and write in one command\&. "
+.in -1c
+.in -1c
+.PP
+.RI "\fBFunctions for register based communication (eg, MODBUS)\&.\fP"
+.br
+A register holds a 16-bit unsigned integer\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "int \fBwrite\fP (int reg, int val)"
+.br
+.RI "Write a value at a device register\&. "
+.ti -1c
+.RI "int \fBwrite\fP (int start_reg, int n, const QByteArray &msg)"
+.br
+.RI "Write to a number of consecutive device registers\&. "
+.ti -1c
+.RI "int \fBread\fP (int reg)"
+.br
+.RI "Return the value of the device register at address reg\&. "
+.ti -1c
+.RI "QByteArray \fBread\fP (int reg, int n)"
+.br
+.RI "Read a number of consecutive device registers\&. "
+.in -1c
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqDevice\fP (const QString &name)"
+.br
+.RI "\fBQDaqDevice\fP constructor\&. "
+.ti -1c
+.RI "virtual \fB~QDaqDevice\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdetach\fP ()"
+.br
+.ti -1c
+.RI "unsigned int \fBbufferSize\fP () const"
+.br
+.ti -1c
+.RI "int \fBaddress\fP () const"
+.br
+.ti -1c
+.RI "bool \fBonline\fP () const"
+.br
+.ti -1c
+.RI "int \fBeot\fP () const"
+.br
+.ti -1c
+.RI "int \fBeos\fP () const"
+.br
+.ti -1c
+.RI "int \fBinputChannels\fP () const"
+.br
+.ti -1c
+.RI "int \fBoutputChannels\fP () const"
+.br
+.ti -1c
+.RI "\fBQDaqObject\fP * \fBinterface\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetBufferSize\fP (unsigned int sz)"
+.br
+.ti -1c
+.RI "void \fBsetOnline\fP (bool a)"
+.br
+.ti -1c
+.RI "void \fBsetAddress\fP (int a)"
+.br
+.ti -1c
+.RI "void \fBsetEot\fP (int e)"
+.br
+.ti -1c
+.RI "void \fBsetEos\fP (int a)"
+.br
+.ti -1c
+.RI "void \fBsetInterface\fP (\fBQDaqObject\fP *i)"
+.br
+.ti -1c
+.RI "\fBQDaqChannel\fP * \fBgetInputChannel\fP (int i)"
+.br
+.ti -1c
+.RI "\fBQDaqChannel\fP * \fBgetOutputChannel\fP (int i)"
+.br
+.ti -1c
+.RI "int \fBwrite\fP (const char *msg, int len)"
+.br
+.RI "Write a C-string message to the device, returns the number of characters written\&. "
+.ti -1c
+.RI "int \fBwrite\fP (const char *msg)"
+.br
+.RI "Write a zero terminated C-string message to the device, returns the number of characters written\&. "
+.ti -1c
+.RI "int \fBwrite\fP (const QByteArray &msg)"
+.br
+.RI "Write a byte array to the device, returns the number of bytes written\&. "
+.ti -1c
+.RI "bool \fBwrite\fP (const QList< QByteArray > &msglist)"
+.br
+.RI "Write a list byte arrays to the device, returns true if succesfull\&. "
+.ti -1c
+.RI "virtual void \fBcheckError\fP (const char *msg, int len)"
+.br
+.ti -1c
+.RI "void \fBforcedOffline\fP (const QString &reason=QString())"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBarm_\fP ()"
+.br
+.ti -1c
+.RI "bool \fBthrowIfOffline\fP ()"
+.br
+.RI "Thow \fBQDaqError\fP and script error if called with device offline\&. "
+.ti -1c
+.RI "bool \fBthrowIfOnline\fP ()"
+.br
+.RI "Thow \fBQDaqError\fP and script error if called with device online\&. "
+.ti -1c
+.RI "virtual bool \fBsetOnline_\fP (bool \fBon\fP)"
+.br
+.RI "Implements specific procedures for bringing device on- or offline\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBaddr_\fP"
+.br
+.ti -1c
+.RI "bool \fBonline_\fP"
+.br
+.ti -1c
+.RI "int \fBeot_\fP"
+.br
+.ti -1c
+.RI "int \fBeos_\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBQDaqInterface\fP > \fBifc_\fP"
+.br
+.ti -1c
+.RI "QVector< \fBQDaqChannel\fP * > \fBinputChannels_\fP"
+.br
+.ti -1c
+.RI "QVector< \fBQDaqChannel\fP * > \fBoutputChannels_\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "uint \fBbufferSize\fP"
+.br
+.RI "Size of the internal communication buffer\&. "
+.ti -1c
+.RI "int \fBaddress\fP"
+.br
+.RI "Device address (depends on type of interface)\&. "
+.ti -1c
+.RI "bool \fBonline\fP"
+.br
+.RI "True when device is online\&. "
+.ti -1c
+.RI "int \fBeot\fP"
+.br
+.RI "End of transmition code\&. "
+.ti -1c
+.RI "int \fBeos\fP"
+.br
+.RI "End of string code\&. "
+.ti -1c
+.RI "int \fBinputChannels\fP"
+.br
+.ti -1c
+.RI "int \fBoutputChannels\fP"
+.br
+.ti -1c
+.RI "\fBQDaqObject\fP \fBinterface\fP"
+.br
+.RI "The underlying \fBQDaqInterface\fP used for communication\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A class representing a DAQ device\&. 
+
+It is used in combination with a \fBQDaqInterface\fP in order to communicate with the device\&.
+.PP
+In order to start communications with a device, first instantiate the interface and device objects, asign the interface to the device and then open() the interface and bring the device online with \fBon()\fP\&. 
+.PP
+.nf
+QDaqRoot qdaq;
+QDaqTcpip* tcp = new QDaqTcpip("tcp",'192\&.168\&.1\&.6',5000);
+QDaqDevice* dev = new QDaqDevice("dev");
+qdaq\&.appendChild(tcp);
+qdaq\&.appendChild(dev);
+
+dev->setInterface(tcp);
+if (tcp->open() && dev->on())
+  cout << "Device online!";
+else
+  cout << qdaq\&.errorBacktrace();
+
+.fi
+.PP
+.PP
+After the device is online the communication functions can be used either for message based or register based communication\&. 
+.PP
+Definition at line 44 of file QDaqDevice\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqDevice::QDaqDevice (const QString & name)\fC [explicit]\fP"
+
+.PP
+\fBQDaqDevice\fP constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The \fBQDaqObject\fP name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 3 of file QDaqDevice\&.cpp\&.
+.SS "QDaqDevice::~QDaqDevice ()\fC [virtual]\fP"
+
+.PP
+Definition at line 13 of file QDaqDevice\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int QDaqDevice::address () const\fC [inline]\fP"
+
+.PP
+Definition at line 101 of file QDaqDevice\&.h\&.
+.SS "bool QDaqDevice::arm_ ()\fC [protected]\fP, \fC [virtual]\fP"
+Performs internal initialization for the job\&.
+.PP
+It is called by the \fBsetArmed()\fP function\&.
+.PP
+This function can be reimplemented to perform specific initialization for a job\&. The parent class \fBarm_()\fP function should be called afterwards\&.
+.PP
+In the default implementation, if a \fBloopEngine()\fP exists the script code is checked against the script engine for errors\&.
+.PP
+If initialization is sucessfull it returns true, otherwise the function returns false\&. 
+.PP
+Reimplemented from \fBQDaqJob\fP\&.
+.PP
+Definition at line 127 of file QDaqDevice\&.cpp\&.
+.SS "unsigned int QDaqDevice::bufferSize () const\fC [inline]\fP"
+
+.PP
+Definition at line 100 of file QDaqDevice\&.h\&.
+.SS "virtual void QDaqDevice::checkError (const char * msg, int len)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 131 of file QDaqDevice\&.h\&.
+.SS "void QDaqDevice::clear ()\fC [slot]\fP"
+
+.PP
+Call \fBQDaqInterface::clear_port()\fP\&. Depends on type of interface\&. 
+.PP
+Definition at line 256 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::detach ()\fC [virtual]\fP"
+Detach this \fBQDaqObject\fP from the \fBQDaq\fP tree\&.
+.PP
+This function is called just before the object becomes detached from the \fBQDaq\fP tree\&.
+.PP
+In the base class implementation it first calls \fBdetach()\fP for each child \fBQDaqObject\fP and then signal root that the object is removed from the qdaq tree\&.
+.PP
+Subclasses may reimplement this function to perform needed actions before detaching\&. 
+.PP
+Reimplemented from \fBQDaqJob\fP\&.
+.PP
+Definition at line 16 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::eos () const\fC [inline]\fP"
+
+.PP
+Definition at line 104 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::eot () const\fC [inline]\fP"
+
+.PP
+Definition at line 103 of file QDaqDevice\&.h\&.
+.SS "void QDaqDevice::forcedOffline (const QString & reason = \fCQString()\fP)"
+
+.PP
+Definition at line 56 of file QDaqDevice\&.cpp\&.
+.SS "\fBQDaqChannel\fP* QDaqDevice::getInputChannel (int i)\fC [inline]\fP"
+
+.PP
+Definition at line 118 of file QDaqDevice\&.h\&.
+.SS "\fBQDaqChannel\fP* QDaqDevice::getOutputChannel (int i)\fC [inline]\fP"
+
+.PP
+Definition at line 119 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::inputChannels () const\fC [inline]\fP"
+
+.PP
+Definition at line 105 of file QDaqDevice\&.h\&.
+.SS "\fBQDaqObject\fP* QDaqDevice::interface () const\fC [inline]\fP"
+
+.PP
+Definition at line 107 of file QDaqDevice\&.h\&.
+.SS "void QDaqDevice::off ()\fC [slot]\fP"
+
+.PP
+Bring the device offline\&. 
+.PP
+Definition at line 37 of file QDaqDevice\&.cpp\&.
+.SS "bool QDaqDevice::on ()\fC [slot]\fP"
+
+.PP
+Try to bring the device online and return true if succesfull\&. 
+.PP
+Definition at line 32 of file QDaqDevice\&.cpp\&.
+.SS "bool QDaqDevice::online () const\fC [inline]\fP"
+
+.PP
+Definition at line 102 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::outputChannels () const\fC [inline]\fP"
+
+.PP
+Definition at line 106 of file QDaqDevice\&.h\&.
+.SS "QString QDaqDevice::query (const QString & msg)\fC [slot]\fP"
+
+.PP
+Send message and return the answer, ie, read and write in one command\&. 
+.PP
+Definition at line 241 of file QDaqDevice\&.cpp\&.
+.SS "QString QDaqDevice::read ()\fC [slot]\fP"
+
+.PP
+Read a string from the device\&. On error return empty string and emit \fBQDaqError\fP\&. 
+.PP
+Definition at line 212 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::read (int reg)\fC [slot]\fP"
+
+.PP
+Return the value of the device register at address reg\&. 
+.PP
+Definition at line 218 of file QDaqDevice\&.cpp\&.
+.SS "QByteArray QDaqDevice::read (int reg, int n)\fC [slot]\fP"
+
+.PP
+Read a number of consecutive device registers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP Starting register address\&. 
+.br
+\fIn\fP Number of registers\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Register data in a byte array of length 2*n\&. 
+.RE
+.PP
+
+.PP
+Definition at line 230 of file QDaqDevice\&.cpp\&.
+.SS "QByteArray QDaqDevice::readBytes ()\fC [slot]\fP"
+
+.PP
+Read bytes from the device\&. On error return empty array and emit \fBQDaqError\fP\&. 
+.PP
+Definition at line 201 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::setAddress (int a)"
+
+.PP
+Definition at line 75 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::setBufferSize (unsigned int sz)"
+
+.PP
+Definition at line 67 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::setEos (int a)"
+
+.PP
+Definition at line 88 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::setEot (int e)"
+
+.PP
+Definition at line 82 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::setInterface (\fBQDaqObject\fP * i)"
+
+.PP
+Definition at line 94 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::setOnline (bool a)"
+
+.PP
+Definition at line 22 of file QDaqDevice\&.cpp\&.
+.SS "bool QDaqDevice::setOnline_ (bool on)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements specific procedures for bringing device on- or offline\&. This function is called to change the online property\&.
+.PP
+Reimplement this function to define additional procedures needed in devices classes that inherit \fBQDaqDevice\fP\&.
+.PP
+In the base class implementation, \fBQDaqInterface::open_port()\fP is called with the address passed as the port number\&. If this returns true, then \fBQDaqInterface::clear_port()\fP is also called\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIon\fP True for making device online, false for offline\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if succesful\&. 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::statusByte ()\fC [slot]\fP"
+
+.PP
+Call \fBQDaqInterface::readStatusByte()\fP\&. Return value depends on type of interface\&. 
+.PP
+Definition at line 250 of file QDaqDevice\&.cpp\&.
+.SS "bool QDaqDevice::throwIfOffline ()\fC [protected]\fP"
+
+.PP
+Thow \fBQDaqError\fP and script error if called with device offline\&. 
+.PP
+Definition at line 115 of file QDaqDevice\&.cpp\&.
+.SS "bool QDaqDevice::throwIfOnline ()\fC [protected]\fP"
+
+.PP
+Thow \fBQDaqError\fP and script error if called with device online\&. 
+.PP
+Definition at line 121 of file QDaqDevice\&.cpp\&.
+.SS "void QDaqDevice::trigger ()\fC [slot]\fP"
+
+.PP
+Trigger the device (Must be supported by the interface, e\&.g\&. GPIB) 
+.PP
+Definition at line 263 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::write (const char * msg)"
+
+.PP
+Write a zero terminated C-string message to the device, returns the number of characters written\&. 
+.PP
+Definition at line 141 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::write (const char * msg, int len)"
+
+.PP
+Write a C-string message to the device, returns the number of characters written\&. 
+.PP
+Definition at line 133 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::write (const QByteArray & msg)"
+
+.PP
+Write a byte array to the device, returns the number of bytes written\&. 
+.PP
+Definition at line 145 of file QDaqDevice\&.cpp\&.
+.SS "bool QDaqDevice::write (const QList< QByteArray > & msglist)"
+
+.PP
+Write a list byte arrays to the device, returns true if succesfull\&. 
+.PP
+Definition at line 149 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::write (const QString & msg)\fC [slot]\fP"
+
+.PP
+Write a string message to the device\&. Return number of characters written\&. 
+.PP
+Definition at line 158 of file QDaqDevice\&.cpp\&.
+.SS "bool QDaqDevice::write (const QStringList & msgs)\fC [slot]\fP"
+
+.PP
+Write a list of string message to the device\&. Return true if succesfull\&. 
+.PP
+Definition at line 163 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::write (int reg, int val)\fC [slot]\fP"
+
+.PP
+Write a value at a device register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP Register address\&. 
+.br
+\fIval\fP Value to write\&. Will be truncated to 16-bit (max 0xFFFF)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Non-zero on success\&. 
+.RE
+.PP
+
+.PP
+Definition at line 179 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::write (int start_reg, int n, const QByteArray & msg)\fC [slot]\fP"
+
+.PP
+Write to a number of consecutive device registers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart_reg\fP Starting register address\&. 
+.br
+\fIn\fP Number of registers\&. 
+.br
+\fImsg\fP Buffer containing data to write\&. Must hold at least 2*n bytes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Bytes written\&. 
+.RE
+.PP
+
+.PP
+Definition at line 187 of file QDaqDevice\&.cpp\&.
+.SS "int QDaqDevice::writeBytes (const QByteArray & msg)\fC [slot]\fP"
+
+.PP
+Write a byte array to the device\&. Return number of bytes written\&. 
+.PP
+Definition at line 174 of file QDaqDevice\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int QDaqDevice::addr_\fC [protected]\fP"
+
+.PP
+Definition at line 65 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::eos_\fC [protected]\fP"
+
+.PP
+Definition at line 68 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::eot_\fC [protected]\fP"
+
+.PP
+Definition at line 67 of file QDaqDevice\&.h\&.
+.SS "QPointer<\fBQDaqInterface\fP> QDaqDevice::ifc_\fC [protected]\fP"
+
+.PP
+Definition at line 77 of file QDaqDevice\&.h\&.
+.SS "QVector<\fBQDaqChannel\fP*> QDaqDevice::inputChannels_\fC [protected]\fP"
+
+.PP
+Definition at line 79 of file QDaqDevice\&.h\&.
+.SS "bool QDaqDevice::online_\fC [protected]\fP"
+
+.PP
+Definition at line 66 of file QDaqDevice\&.h\&.
+.SS "QVector<\fBQDaqChannel\fP*> QDaqDevice::outputChannels_\fC [protected]\fP"
+
+.PP
+Definition at line 80 of file QDaqDevice\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "int QDaqDevice::address\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Device address (depends on type of interface)\&. 
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+.SS "uint QDaqDevice::bufferSize\fC [read]\fP, \fC [write]\fP"
+
+.PP
+Size of the internal communication buffer\&. 
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::eos\fC [read]\fP, \fC [write]\fP"
+
+.PP
+End of string code\&. 
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::eot\fC [read]\fP, \fC [write]\fP"
+
+.PP
+End of transmition code\&. 
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::inputChannels\fC [read]\fP"
+
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+.SS "\fBQDaqObject\fP QDaqDevice::interface\fC [read]\fP, \fC [write]\fP"
+
+.PP
+The underlying \fBQDaqInterface\fP used for communication\&. 
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+.SS "bool QDaqDevice::online\fC [read]\fP, \fC [write]\fP"
+
+.PP
+True when device is online\&. 
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+.SS "int QDaqDevice::outputChannels\fC [read]\fP"
+
+.PP
+Definition at line 1 of file QDaqDevice\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

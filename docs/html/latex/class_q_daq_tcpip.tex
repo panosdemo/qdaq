@@ -1,0 +1,372 @@
+\hypertarget{class_q_daq_tcpip}{}\doxysection{Q\+Daq\+Tcpip Class Reference}
+\label{class_q_daq_tcpip}\index{QDaqTcpip@{QDaqTcpip}}
+
+
+A class for accesing a T\+C\+P/\+IP interface.  
+
+
+
+
+{\ttfamily \#include $<$qdaqtcpip.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Tcpip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_q_daq_tcpip}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE \mbox{\hyperlink{class_q_daq_tcpip_ad4eee6bba140f4efe5dea23c74827698}{Q\+Daq\+Tcpip}} (const Q\+String \&name, const Q\+String \&ahost=Q\+String(), uint portno=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_q_daq_tcpip}{Q\+Daq\+Tcpip}} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_q_daq_tcpip_a0b29fff9a6d7af68aec18a6e53c4be15}{$\sim$\+Q\+Daq\+Tcpip}} ()
+\item 
+uint \mbox{\hyperlink{class_q_daq_tcpip_a5073d6b3274426261b42a5ec255844bd}{port}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_daq_tcpip_acafd2af8c3621301d33de35e168b95d2}{host}} () const
+\item 
+void \mbox{\hyperlink{class_q_daq_tcpip_a9543bcf94b95e48f4279cc6144d85e2b}{set\+Port}} (uint p)
+\item 
+void \mbox{\hyperlink{class_q_daq_tcpip_a5edc00701f05765e162048fdc19f801c}{set\+Host}} (const Q\+String \&h)
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_tcpip_af1b29dc4a51358efc80118dbe07ff036}{is\+Valid\+Port}} (uint i)
+\begin{DoxyCompactList}\small\item\em Returns true is i is a valid port number. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_q_daq_tcpip_a41d300ab185c7f81b1f35c229c991f38}{read}} (uint \mbox{\hyperlink{class_q_daq_tcpip_aca4b601136dcd60b5a95a407a4d0c3bb}{port}}, char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Read data from a port. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_q_daq_tcpip_aa7b22b23275264d2372fa01a2997d22d}{write}} (uint \mbox{\hyperlink{class_q_daq_tcpip_aca4b601136dcd60b5a95a407a4d0c3bb}{port}}, const char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Write data to a port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_tcpip_a4345f770cff76bcbba8c2643dafdc57f}{open\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface open. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_tcpip_af901e41f0bed3f286c16428212ecc281}{close\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface close. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_q_daq_tcpip_a7e62849606bef913496a1bb8278b7fb4}{port\+\_\+}}
+\item 
+Q\+Host\+Address \mbox{\hyperlink{class_q_daq_tcpip_a4d5481f50551704246bde0d18636cdec}{host\+\_\+}}
+\item 
+\mbox{\hyperlink{classtcp__socket}{tcp\+\_\+socket}} $\ast$ \mbox{\hyperlink{class_q_daq_tcpip_ac82e4f0afd17032582eda44ee3cd7bfc}{socket\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_q_daq_tcpip_aca4b601136dcd60b5a95a407a4d0c3bb}{port}}
+\begin{DoxyCompactList}\small\item\em Tcp/ip port. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_q_daq_tcpip_aedb1e251b0bbbcd1ea961e51522170a0}{host}}
+\begin{DoxyCompactList}\small\item\em Host IP address as string, eg \textquotesingle{}192.\+168.\+1.\+6\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class for accesing a T\+C\+P/\+IP interface. 
+
+\mbox{\hyperlink{class_q_daq_tcpip}{Q\+Daq\+Tcpip}} performs communications with another host using a tcp socket connection to the specified host address and port. The port here means the tcp/ip port and is not to be confused with the ports of \mbox{\hyperlink{class_q_daq_interface}{Q\+Daq\+Interface}}.
+
+\mbox{\hyperlink{class_q_daq_tcpip}{Q\+Daq\+Tcpip}} can be used in order to communicate with a single device. For multiple devices connected on the ethernet bus, each with its own host ip address, a separate \mbox{\hyperlink{class_q_daq_tcpip}{Q\+Daq\+Tcpip}} must be used per device.
+
+If the same device with single ip address offers several ports for communication, then a separate \mbox{\hyperlink{class_q_daq_tcpip}{Q\+Daq\+Tcpip}} must be used per device port. 
+
+Definition at line 35 of file qdaqtcpip.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_tcpip_ad4eee6bba140f4efe5dea23c74827698}\label{class_q_daq_tcpip_ad4eee6bba140f4efe5dea23c74827698}} 
+\index{QDaqTcpip@{QDaqTcpip}!QDaqTcpip@{QDaqTcpip}}
+\index{QDaqTcpip@{QDaqTcpip}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{QDaqTcpip()}{QDaqTcpip()}}
+{\footnotesize\ttfamily Q\+Daq\+Tcpip\+::\+Q\+Daq\+Tcpip (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{const Q\+String \&}]{ahost = {\ttfamily QString()},  }\item[{uint}]{portno = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_q_daq_tcpip}{Q\+Daq\+Tcpip}} constructor. 
+
+It initializes the object with the interface is in the closed state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} name \\
+\hline
+{\em ahost} & Host address \\
+\hline
+{\em portno} & Port number where the host listens \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file qdaqtcpip.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_a0b29fff9a6d7af68aec18a6e53c4be15}\label{class_q_daq_tcpip_a0b29fff9a6d7af68aec18a6e53c4be15}} 
+\index{QDaqTcpip@{QDaqTcpip}!````~QDaqTcpip@{$\sim$QDaqTcpip}}
+\index{````~QDaqTcpip@{$\sim$QDaqTcpip}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqTcpip()}{~QDaqTcpip()}}
+{\footnotesize\ttfamily Q\+Daq\+Tcpip\+::$\sim$\+Q\+Daq\+Tcpip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 16 of file qdaqtcpip.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_tcpip_af901e41f0bed3f286c16428212ecc281}\label{class_q_daq_tcpip_af901e41f0bed3f286c16428212ecc281}} 
+\index{QDaqTcpip@{QDaqTcpip}!close\_@{close\_}}
+\index{close\_@{close\_}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{close\_()}{close\_()}}
+{\footnotesize\ttfamily void Q\+Daq\+Tcpip\+::close\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface close. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_aa8a35bd09fba868cc6d4d5f8db6d8c66}{Q\+Daq\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_modbus_tcp_ad8ff53b3f8b25e5ec92dfceb74f3400f}{Q\+Daq\+Modbus\+Tcp}}.
+
+
+
+Definition at line 93 of file qdaqtcpip.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_acafd2af8c3621301d33de35e168b95d2}\label{class_q_daq_tcpip_acafd2af8c3621301d33de35e168b95d2}} 
+\index{QDaqTcpip@{QDaqTcpip}!host@{host}}
+\index{host@{host}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{host()}{host()}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Tcpip\+::host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 66 of file qdaqtcpip.\+h.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_af1b29dc4a51358efc80118dbe07ff036}\label{class_q_daq_tcpip_af1b29dc4a51358efc80118dbe07ff036}} 
+\index{QDaqTcpip@{QDaqTcpip}!isValidPort@{isValidPort}}
+\index{isValidPort@{isValidPort}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{isValidPort()}{isValidPort()}}
+{\footnotesize\ttfamily virtual bool Q\+Daq\+Tcpip\+::is\+Valid\+Port (\begin{DoxyParamCaption}\item[{uint}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns true is i is a valid port number. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a325628a69b7476117a87e89470bf183d}{Q\+Daq\+Interface}}.
+
+
+
+Definition at line 73 of file qdaqtcpip.\+h.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_a4345f770cff76bcbba8c2643dafdc57f}\label{class_q_daq_tcpip_a4345f770cff76bcbba8c2643dafdc57f}} 
+\index{QDaqTcpip@{QDaqTcpip}!open\_@{open\_}}
+\index{open\_@{open\_}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{open\_()}{open\_()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Tcpip\+::open\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface open. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a608f956ab9ba20af92eaf405ae01a984}{Q\+Daq\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_modbus_tcp_a8a89401032ed41db72222977f6ac2663}{Q\+Daq\+Modbus\+Tcp}}.
+
+
+
+Definition at line 77 of file qdaqtcpip.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_a5073d6b3274426261b42a5ec255844bd}\label{class_q_daq_tcpip_a5073d6b3274426261b42a5ec255844bd}} 
+\index{QDaqTcpip@{QDaqTcpip}!port@{port}}
+\index{port@{port}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{port()}{port()}}
+{\footnotesize\ttfamily uint Q\+Daq\+Tcpip\+::port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 65 of file qdaqtcpip.\+h.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_a41d300ab185c7f81b1f35c229c991f38}\label{class_q_daq_tcpip_a41d300ab185c7f81b1f35c229c991f38}} 
+\index{QDaqTcpip@{QDaqTcpip}!read@{read}}
+\index{read@{read}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Q\+Daq\+Tcpip\+::read (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read data from a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Allocated number of bytes. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes read. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_ad9cc492d038f54a52845c16ab2c4882c}{Q\+Daq\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_modbus_tcp_ae926cabbd83f81c223451141f66ab354}{Q\+Daq\+Modbus\+Tcp}}.
+
+
+
+Definition at line 40 of file qdaqtcpip.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_a5edc00701f05765e162048fdc19f801c}\label{class_q_daq_tcpip_a5edc00701f05765e162048fdc19f801c}} 
+\index{QDaqTcpip@{QDaqTcpip}!setHost@{setHost}}
+\index{setHost@{setHost}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{setHost()}{setHost()}}
+{\footnotesize\ttfamily void Q\+Daq\+Tcpip\+::set\+Host (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file qdaqtcpip.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_a9543bcf94b95e48f4279cc6144d85e2b}\label{class_q_daq_tcpip_a9543bcf94b95e48f4279cc6144d85e2b}} 
+\index{QDaqTcpip@{QDaqTcpip}!setPort@{setPort}}
+\index{setPort@{setPort}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{setPort()}{setPort()}}
+{\footnotesize\ttfamily void Q\+Daq\+Tcpip\+::set\+Port (\begin{DoxyParamCaption}\item[{uint}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file qdaqtcpip.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_aa7b22b23275264d2372fa01a2997d22d}\label{class_q_daq_tcpip_aa7b22b23275264d2372fa01a2997d22d}} 
+\index{QDaqTcpip@{QDaqTcpip}!write@{write}}
+\index{write@{write}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily int Q\+Daq\+Tcpip\+::write (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{const char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write data to a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Number of bytes to write. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes written. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_interface_a2bbbb99c82c05732fcba5065bf717c1b}{Q\+Daq\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_q_daq_modbus_tcp_a3031b2acdea131374cd0fef5a573ee38}{Q\+Daq\+Modbus\+Tcp}}.
+
+
+
+Definition at line 58 of file qdaqtcpip.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_tcpip_a4d5481f50551704246bde0d18636cdec}\label{class_q_daq_tcpip_a4d5481f50551704246bde0d18636cdec}} 
+\index{QDaqTcpip@{QDaqTcpip}!host\_@{host\_}}
+\index{host\_@{host\_}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{host\_}{host\_}}
+{\footnotesize\ttfamily Q\+Host\+Address Q\+Daq\+Tcpip\+::host\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file qdaqtcpip.\+h.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_a7e62849606bef913496a1bb8278b7fb4}\label{class_q_daq_tcpip_a7e62849606bef913496a1bb8278b7fb4}} 
+\index{QDaqTcpip@{QDaqTcpip}!port\_@{port\_}}
+\index{port\_@{port\_}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{port\_}{port\_}}
+{\footnotesize\ttfamily uint Q\+Daq\+Tcpip\+::port\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file qdaqtcpip.\+h.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_ac82e4f0afd17032582eda44ee3cd7bfc}\label{class_q_daq_tcpip_ac82e4f0afd17032582eda44ee3cd7bfc}} 
+\index{QDaqTcpip@{QDaqTcpip}!socket\_@{socket\_}}
+\index{socket\_@{socket\_}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{socket\_}{socket\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtcp__socket}{tcp\+\_\+socket}}$\ast$ Q\+Daq\+Tcpip\+::socket\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 49 of file qdaqtcpip.\+h.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_q_daq_tcpip_aedb1e251b0bbbcd1ea961e51522170a0}\label{class_q_daq_tcpip_aedb1e251b0bbbcd1ea961e51522170a0}} 
+\index{QDaqTcpip@{QDaqTcpip}!host@{host}}
+\index{host@{host}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily Q\+String Q\+Daq\+Tcpip\+::host\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Host IP address as string, eg \textquotesingle{}192.\+168.\+1.\+6\textquotesingle{}. 
+
+
+
+Definition at line 1 of file qdaqtcpip.\+h.
+
+\mbox{\Hypertarget{class_q_daq_tcpip_aca4b601136dcd60b5a95a407a4d0c3bb}\label{class_q_daq_tcpip_aca4b601136dcd60b5a95a407a4d0c3bb}} 
+\index{QDaqTcpip@{QDaqTcpip}!port@{port}}
+\index{port@{port}!QDaqTcpip@{QDaqTcpip}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily uint Q\+Daq\+Tcpip\+::port\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+Tcp/ip port. 
+
+
+
+Definition at line 1 of file qdaqtcpip.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{qdaqtcpip_8h}{qdaqtcpip.\+h}}\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{qdaqtcpip_8cpp}{qdaqtcpip.\+cpp}}\end{DoxyCompactItemize}

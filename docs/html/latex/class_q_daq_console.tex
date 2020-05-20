@@ -1,0 +1,168 @@
+\hypertarget{class_q_daq_console}{}\doxysection{Q\+Daq\+Console Class Reference}
+\label{class_q_daq_console}\index{QDaqConsole@{QDaqConsole}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Console.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Console\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_q_daq_console}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_console_a760e48e5679266fe9422c22b8907633f}{end\+Session}} ()
+\item 
+void \mbox{\hyperlink{class_q_daq_console_ace8abccbe67641474a5307c9dc51bbed}{flush}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_daq_console_a3dd0b758cf2cfb5ddcbcb1207f13f7c9}{Q\+Daq\+Console}} (\mbox{\hyperlink{class_q_daq_session}{Q\+Daq\+Session}} $\ast$s, Q\+Widget $\ast$parent=0)
+\item 
+virtual \mbox{\hyperlink{class_q_daq_console_a391de8358803639a0bd43403459f356f}{$\sim$\+Q\+Daq\+Console}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_daq_console_a81ced7833b6cd112aff3c35d8cd9fe64}{exec}} (const Q\+String \&code)
+\item 
+bool \mbox{\hyperlink{class_q_daq_console_aa65b6f913dd7f1b81c053a85dc71e5b5}{can\+Evaluate}} (const Q\+String \&code)
+\item 
+Q\+String\+List \mbox{\hyperlink{class_q_daq_console_a5663c97454b1cc8e10d4b4b69654769e}{introspection}} (const Q\+String \&lookup)
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_console_a506e854976e08f2c2309a9aabfa9b706}{close\+Event}} (Q\+Close\+Event $\ast$event)
+\item 
+virtual void \mbox{\hyperlink{class_q_daq_console_a349665b975680b307076ca2bf4e1979b}{key\+Press\+Event}} (Q\+Key\+Event $\ast$e)
+\begin{DoxyCompactList}\small\item\em derived key press event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 11 of file Q\+Daq\+Console.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_console_a3dd0b758cf2cfb5ddcbcb1207f13f7c9}\label{class_q_daq_console_a3dd0b758cf2cfb5ddcbcb1207f13f7c9}} 
+\index{QDaqConsole@{QDaqConsole}!QDaqConsole@{QDaqConsole}}
+\index{QDaqConsole@{QDaqConsole}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{QDaqConsole()}{QDaqConsole()}}
+{\footnotesize\ttfamily Q\+Daq\+Console\+::\+Q\+Daq\+Console (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_daq_session}{Q\+Daq\+Session}} $\ast$}]{s,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file Q\+Daq\+Console.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_console_a391de8358803639a0bd43403459f356f}\label{class_q_daq_console_a391de8358803639a0bd43403459f356f}} 
+\index{QDaqConsole@{QDaqConsole}!````~QDaqConsole@{$\sim$QDaqConsole}}
+\index{````~QDaqConsole@{$\sim$QDaqConsole}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqConsole()}{~QDaqConsole()}}
+{\footnotesize\ttfamily Q\+Daq\+Console\+::$\sim$\+Q\+Daq\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 45 of file Q\+Daq\+Console.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_console_aa65b6f913dd7f1b81c053a85dc71e5b5}\label{class_q_daq_console_aa65b6f913dd7f1b81c053a85dc71e5b5}} 
+\index{QDaqConsole@{QDaqConsole}!canEvaluate@{canEvaluate}}
+\index{canEvaluate@{canEvaluate}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{canEvaluate()}{canEvaluate()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Console\+::can\+Evaluate (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_q_console_widget_a4c1e98c93837efbe897a2ec471104308}{Q\+Console\+Widget}}.
+
+
+
+Definition at line 54 of file Q\+Daq\+Console.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_console_a506e854976e08f2c2309a9aabfa9b706}\label{class_q_daq_console_a506e854976e08f2c2309a9aabfa9b706}} 
+\index{QDaqConsole@{QDaqConsole}!closeEvent@{closeEvent}}
+\index{closeEvent@{closeEvent}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{closeEvent()}{closeEvent()}}
+{\footnotesize\ttfamily void Q\+Daq\+Console\+::close\+Event (\begin{DoxyParamCaption}\item[{Q\+Close\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 65 of file Q\+Daq\+Console.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_console_a760e48e5679266fe9422c22b8907633f}\label{class_q_daq_console_a760e48e5679266fe9422c22b8907633f}} 
+\index{QDaqConsole@{QDaqConsole}!endSession@{endSession}}
+\index{endSession@{endSession}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{endSession}{endSession}}
+{\footnotesize\ttfamily void Q\+Daq\+Console\+::end\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line 59 of file Q\+Daq\+Console.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_console_a81ced7833b6cd112aff3c35d8cd9fe64}\label{class_q_daq_console_a81ced7833b6cd112aff3c35d8cd9fe64}} 
+\index{QDaqConsole@{QDaqConsole}!exec@{exec}}
+\index{exec@{exec}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily void Q\+Daq\+Console\+::exec (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_q_console_widget_aafe173410c3f0c1dec704c763b1b354b}{Q\+Console\+Widget}}.
+
+
+
+Definition at line 50 of file Q\+Daq\+Console.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_console_ace8abccbe67641474a5307c9dc51bbed}\label{class_q_daq_console_ace8abccbe67641474a5307c9dc51bbed}} 
+\index{QDaqConsole@{QDaqConsole}!flush@{flush}}
+\index{flush@{flush}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{flush}{flush}}
+{\footnotesize\ttfamily void Q\+Daq\+Console\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 25 of file Q\+Daq\+Console.\+h.
+
+\mbox{\Hypertarget{class_q_daq_console_a5663c97454b1cc8e10d4b4b69654769e}\label{class_q_daq_console_a5663c97454b1cc8e10d4b4b69654769e}} 
+\index{QDaqConsole@{QDaqConsole}!introspection@{introspection}}
+\index{introspection@{introspection}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{introspection()}{introspection()}}
+{\footnotesize\ttfamily Q\+String\+List Q\+Daq\+Console\+::introspection (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{lookup }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_q_console_widget_a48abdf25d9c2c0aa22aba68e602e6543}{Q\+Console\+Widget}}.
+
+
+
+Definition at line 129 of file Q\+Daq\+Console.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_console_a349665b975680b307076ca2bf4e1979b}\label{class_q_daq_console_a349665b975680b307076ca2bf4e1979b}} 
+\index{QDaqConsole@{QDaqConsole}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!QDaqConsole@{QDaqConsole}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Q\+Daq\+Console\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Key\+Event $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+derived key press event 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_console_widget_a4399040fef41744da5f6b410146e490d}{Q\+Console\+Widget}}.
+
+
+
+Definition at line 105 of file Q\+Daq\+Console.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/gui/\mbox{\hyperlink{_q_daq_console_8h}{Q\+Daq\+Console.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/gui/\mbox{\hyperlink{_q_daq_console_8cpp}{Q\+Daq\+Console.\+cpp}}\end{DoxyCompactItemize}

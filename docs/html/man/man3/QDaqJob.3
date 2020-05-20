@@ -1,0 +1,451 @@
+.TH "QDaqJob" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QDaqJob
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QDaqJob\&.h>\fP
+.PP
+Inherits \fBQDaqObject\fP\&.
+.PP
+Inherited by \fBQDaqChannel\fP, \fBQDaqDataBuffer\fP, \fBQDaqDevice\fP, \fBQDaqFilter\fP, and \fBQDaqLoop\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBJobList\fP"
+.br
+.ti -1c
+.RI "class \fBJobLocker\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBarmed\fP ()"
+.br
+.ti -1c
+.RI "const QString & \fBrunCode\fP () const"
+.br
+.ti -1c
+.RI "const QString & \fBarmCode\fP () const"
+.br
+.ti -1c
+.RI "const QString & \fBdisarmCode\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetRunCode\fP (const QString &s)"
+.br
+.ti -1c
+.RI "void \fBsetArmCode\fP (const QString &s)"
+.br
+.ti -1c
+.RI "void \fBsetDisarmCode\fP (const QString &s)"
+.br
+.ti -1c
+.RI "Q_INVOKABLE \fBQDaqJob\fP (const QString &name)"
+.br
+.RI "\fBQDaqJob\fP constructor\&. "
+.ti -1c
+.RI "virtual \fB~QDaqJob\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBattach\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdetach\fP ()"
+.br
+.ti -1c
+.RI "\fBQDaqLoop\fP * \fBtopLoop\fP () const"
+.br
+.RI "Returns the top level loop that this job belongs to\&. "
+.ti -1c
+.RI "\fBQDaqLoop\fP * \fBloop\fP () const"
+.br
+.RI "Returns the loop that this job belongs to\&. "
+.ti -1c
+.RI "virtual \fBQDaqScriptEngine\fP * \fBloopEngine\fP () const"
+.br
+.RI "Returns the \fBQDaqScriptEngine\fP of the top level loop\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBarm_\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdisarm_\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsetArmed\fP (bool on)"
+.br
+.RI "Arms or disarms a job\&. "
+.ti -1c
+.RI "void \fBdiscoverJobs\fP ()"
+.br
+.ti -1c
+.RI "void \fBjobLock\fP ()"
+.br
+.ti -1c
+.RI "void \fBjobUnlock\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBexec\fP ()"
+.br
+.RI "Called when the job is executed\&. If armed is false, the function does nothing\&. "
+.ti -1c
+.RI "virtual bool \fBrun\fP ()"
+.br
+.RI "This function performs the actual task of this \fBQDaqJob\fP\&. "
+.ti -1c
+.RI "bool \fBthrowIfArmed\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBrunCode_\fP"
+.br
+.ti -1c
+.RI "QString \fBarmCode_\fP"
+.br
+.ti -1c
+.RI "QString \fBdisarmCode_\fP"
+.br
+.ti -1c
+.RI "QScriptProgram * \fBprogram_\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBQDaqScriptEngine\fP > \fBloop_eng_\fP"
+.br
+.ti -1c
+.RI "bool \fBisLoop_\fP"
+.br
+.ti -1c
+.RI "\fBJobList\fP \fBsubjobs_\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "bool \fBarmed\fP"
+.br
+.ti -1c
+.RI "QString \fBrunCode\fP"
+.br
+.ti -1c
+.RI "QString \fBarmCode\fP"
+.br
+.ti -1c
+.RI "QString \fBdisarmCode\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBJobList\fP"
+.br
+.ti -1c
+.RI "class \fBJobLocker\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Base class for objects that perform a specific task reqursively\&.
+.PP
+Jobs can be organized as children of a parent-job or children of the super-class \fBQDaqLoop\fP\&.
+.PP
+When a \fBQDaqLoop\fP runs all its child jobs are executed by calling their \fBexec()\fP function\&. The \fBexec()\fP function first calls \fBrun()\fP to perform the actual processing of this job (if there is any) and then calls \fBexec()\fP of each child job\&.
+.PP
+To give an example of the order that jobs are executed, the following job tree: 
+.PP
+.nf
+job0
+ |--job1
+ |   |--job11
+ |   |--job12
+ |--job2
+ |--job3
+.fi
+.PP
+ will be executed with the following order: job0-job1-job11-job12-job2-job3
+.PP
+Before the job can perform its task it must be 'armed'\&. Arming does all the necessary initialization and is implemented in the function \fBsetArmed()\fP\&. 
+.PP
+Definition at line 46 of file QDaqJob\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QDaqJob::QDaqJob (const QString & name)\fC [explicit]\fP"
+
+.PP
+\fBQDaqJob\fP constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The \fBQDaqObject\fP name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file QDaqJob\&.cpp\&.
+.SS "QDaqJob::~QDaqJob (void)\fC [virtual]\fP"
+
+.PP
+Definition at line 9 of file QDaqJob\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool QDaqJob::arm_ ()\fC [protected]\fP, \fC [virtual]\fP"
+Performs internal initialization for the job\&.
+.PP
+It is called by the \fBsetArmed()\fP function\&.
+.PP
+This function can be reimplemented to perform specific initialization for a job\&. The parent class \fBarm_()\fP function should be called afterwards\&.
+.PP
+In the default implementation, if a \fBloopEngine()\fP exists the script code is checked against the script engine for errors\&.
+.PP
+If initialization is sucessfull it returns true, otherwise the function returns false\&. 
+.PP
+Reimplemented in \fBQDaqLoop\fP, \fBQDaqChannel\fP, \fBQDaqDevice\fP, and \fBQDaqFilter\fP\&.
+.PP
+Definition at line 55 of file QDaqJob\&.cpp\&.
+.SS "const QString& QDaqJob::armCode () const\fC [inline]\fP"
+
+.PP
+Definition at line 156 of file QDaqJob\&.h\&.
+.SS "bool QDaqJob::armed ()\fC [inline]\fP"
+
+.PP
+Definition at line 153 of file QDaqJob\&.h\&.
+.SS "void QDaqJob::attach ()\fC [virtual]\fP"
+Attach this \fBQDaqObject\fP to the \fBQDaq\fP tree\&.
+.PP
+This function is called when the object becomes part of the \fBQDaq\fP tree\&.
+.PP
+In the base class implementation this function signals the root object that a new \fBQDaqObject\fP has been inserted in the tree and then calls \fBattach()\fP for each child \fBQDaqObject\fP\&.
+.PP
+Subclasses may reimplement this function to perform specific initialization\&. 
+.PP
+Reimplemented from \fBQDaqObject\fP\&.
+.PP
+Definition at line 12 of file QDaqJob\&.cpp\&.
+.SS "void QDaqJob::detach ()\fC [virtual]\fP"
+Detach this \fBQDaqObject\fP from the \fBQDaq\fP tree\&.
+.PP
+This function is called just before the object becomes detached from the \fBQDaq\fP tree\&.
+.PP
+In the base class implementation it first calls \fBdetach()\fP for each child \fBQDaqObject\fP and then signal root that the object is removed from the qdaq tree\&.
+.PP
+Subclasses may reimplement this function to perform needed actions before detaching\&. 
+.PP
+Reimplemented from \fBQDaqObject\fP\&.
+.PP
+Reimplemented in \fBQDaqChannel\fP, and \fBQDaqDevice\fP\&.
+.PP
+Definition at line 16 of file QDaqJob\&.cpp\&.
+.SS "void QDaqJob::disarm_ ()\fC [protected]\fP, \fC [virtual]\fP"
+Performs internal de-initialization\&.
+.PP
+It is called by the \fBsetArmed()\fP function\&.
+.PP
+Can be reimplemented to define special behavior during dis-arming\&. The parent class \fBdisarm_()\fP should be called\&. 
+.PP
+Reimplemented in \fBQDaqLoop\fP\&.
+.PP
+Definition at line 91 of file QDaqJob\&.cpp\&.
+.SS "const QString& QDaqJob::disarmCode () const\fC [inline]\fP"
+
+.PP
+Definition at line 157 of file QDaqJob\&.h\&.
+.SS "void QDaqJob::discoverJobs ()\fC [protected]\fP"
+
+.PP
+Definition at line 112 of file QDaqJob\&.cpp\&.
+.SS "bool QDaqJob::exec ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called when the job is executed\&. If armed is false, the function does nothing\&. If armed is true, then this job's \fBrun()\fP is called and then the \fBexec()\fP of all sub-jobs\&.
+.PP
+The function is called by the parent loop's \fBQDaqLoop::exec()\fP function\&.
+.PP
+\fBReturns\fP
+.RS 4
+false if \fBrun()\fP return false or some child-job returns false; true otherwise\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBQDaqLoop\fP\&.
+.PP
+Definition at line 26 of file QDaqJob\&.cpp\&.
+.SS "void QDaqJob::jobLock ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 192 of file QDaqJob\&.h\&.
+.SS "void QDaqJob::jobUnlock ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 197 of file QDaqJob\&.h\&.
+.SS "\fBQDaqLoop\fP * QDaqJob::loop () const"
+
+.PP
+Returns the loop that this job belongs to\&. 
+.PP
+Definition at line 216 of file QDaqJob\&.cpp\&.
+.SS "\fBQDaqScriptEngine\fP * QDaqJob::loopEngine () const\fC [virtual]\fP"
+
+.PP
+Returns the \fBQDaqScriptEngine\fP of the top level loop\&. 
+.PP
+Definition at line 227 of file QDaqJob\&.cpp\&.
+.SS "bool QDaqJob::run ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+This function performs the actual task of this \fBQDaqJob\fP\&. It can be reimplemented in subclasses to define the specific job that must be performed\&.
+.PP
+In the base implementation, it executes the script code if available\&.
+.PP
+\fBReturns\fP
+.RS 4
+false if a serious error occured, true otherwise\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBQDaqChannel\fP, \fBQDaqDataBuffer\fP, and \fBQDaqFilter\fP\&.
+.PP
+Definition at line 38 of file QDaqJob\&.cpp\&.
+.SS "const QString& QDaqJob::runCode () const\fC [inline]\fP"
+
+.PP
+Definition at line 155 of file QDaqJob\&.h\&.
+.SS "void QDaqJob::setArmCode (const QString & s)"
+
+.PP
+Definition at line 192 of file QDaqJob\&.cpp\&.
+.SS "bool QDaqJob::setArmed (bool on)\fC [protected]\fP"
+
+.PP
+Arms or disarms a job\&. If on is true then \fBsetArmed()\fP is called for each child-QDaqJob (not \fBQDaqLoop\fP) and finally \fBarm_()\fP is called to initialize this job\&. If any of those calls return false the arming is aborted and false is returned\&.
+.PP
+If on is false then \fBdisarm_()\fP is called first and then \fBsetArmed()\fP with parameter false is called for each child job\&.
+.PP
+This funtion is protected so that it cannot be called directly\&. \fBQDaqJob\fP objects are armed by their parent \fBQDaqLoop\fP, when calling \fBQDaqLoop::arm()\fP\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIon\fP If true the job is armed otherwise it is disarmed\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the operation was sucesfull\&. 
+.RE
+.PP
+
+.PP
+Definition at line 129 of file QDaqJob\&.cpp\&.
+.SS "void QDaqJob::setDisarmCode (const QString & s)"
+
+.PP
+Definition at line 198 of file QDaqJob\&.cpp\&.
+.SS "void QDaqJob::setRunCode (const QString & s)"
+
+.PP
+Definition at line 172 of file QDaqJob\&.cpp\&.
+.SS "bool QDaqJob::throwIfArmed ()\fC [protected]\fP"
+
+.PP
+Definition at line 21 of file QDaqJob\&.cpp\&.
+.SS "\fBQDaqLoop\fP * QDaqJob::topLoop () const"
+
+.PP
+Returns the top level loop that this job belongs to\&. 
+.PP
+Definition at line 204 of file QDaqJob\&.cpp\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBJobList\fP\fC [friend]\fP"
+
+.PP
+Definition at line 168 of file QDaqJob\&.h\&.
+.SS "friend class \fBJobLocker\fP\fC [friend]\fP"
+
+.PP
+Definition at line 181 of file QDaqJob\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QString QDaqJob::armCode_\fC [protected]\fP"
+
+.PP
+Definition at line 96 of file QDaqJob\&.h\&.
+.SS "QString QDaqJob::disarmCode_\fC [protected]\fP"
+
+.PP
+Definition at line 96 of file QDaqJob\&.h\&.
+.SS "bool QDaqJob::isLoop_\fC [protected]\fP"
+
+.PP
+Definition at line 102 of file QDaqJob\&.h\&.
+.SS "QPointer<\fBQDaqScriptEngine\fP> QDaqJob::loop_eng_\fC [protected]\fP"
+
+.PP
+Definition at line 100 of file QDaqJob\&.h\&.
+.SS "QScriptProgram* QDaqJob::program_\fC [protected]\fP"
+
+.PP
+Definition at line 98 of file QDaqJob\&.h\&.
+.SS "QString QDaqJob::runCode_\fC [protected]\fP"
+
+.PP
+Definition at line 96 of file QDaqJob\&.h\&.
+.SS "\fBJobList\fP QDaqJob::subjobs_\fC [protected]\fP"
+
+.PP
+Definition at line 189 of file QDaqJob\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "QString QDaqJob::armCode\fC [read]\fP, \fC [write]\fP"
+Script code executed by the job in the arming face\&.
+.PP
+If code is empty then nothing will be executed\&.
+.PP
+The script code is executed in the root engine, in the main application thread\&. 
+.PP
+Definition at line 1 of file QDaqJob\&.h\&.
+.SS "bool QDaqJob::armed\fC [read]\fP"
+True if job is armed\&.
+.PP
+An armed job is ready to run\&. If the armed \fBQDaqJob\fP belongs to a loop it will execute its task\&.
+.PP
+This property is read-only\&. 
+.PP
+Definition at line 1 of file QDaqJob\&.h\&.
+.SS "QString QDaqJob::disarmCode\fC [read]\fP, \fC [write]\fP"
+Script code executed by the job in the dis-arming face\&.
+.PP
+If code is empty then nothing will be executed\&.
+.PP
+The script code is executed in the root engine, in the main application thread\&. 
+.PP
+Definition at line 1 of file QDaqJob\&.h\&.
+.SS "QString QDaqJob::runCode\fC [read]\fP, \fC [write]\fP"
+Script code executed by the job at each repetition\&.
+.PP
+If code is empty then nothing will be executed\&.
+.PP
+The script code is executed by the top loop script engine, which is obtained by \fBloopEngine()\fP\&. This script engine lives in the top-loop thread\&. 
+.PP
+Definition at line 1 of file QDaqJob\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

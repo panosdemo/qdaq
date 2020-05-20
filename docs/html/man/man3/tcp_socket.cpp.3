@@ -1,0 +1,77 @@
+.TH "D:/tixt/corona/qdaq/plugins/interfaces/tcp_socket.cpp" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/tixt/corona/qdaq/plugins/interfaces/tcp_socket.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'tcp_socket\&.h'\fP
+.br
+\fC#include <cerrno>\fP
+.br
+\fC#include <cstring>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <sys/ioctl\&.h>\fP
+.br
+\fC#include <netinet/in\&.h>\fP
+.br
+\fC#include <netinet/ip\&.h>\fP
+.br
+\fC#include <netinet/tcp\&.h>\fP
+.br
+\fC#include <arpa/inet\&.h>\fP
+.br
+\fC#include <netdb\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMSG_NOSIGNAL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTCP_ENOBASE\fP   112345678"
+.br
+.ti -1c
+.RI "#define \fBEBADDATA\fP   (\fBTCP_ENOBASE\fP + 1)"
+.br
+.ti -1c
+.RI "#define \fB_RESPONSE_TIMEOUT\fP   500000"
+.br
+.ti -1c
+.RI "#define \fB_BYTE_TIMEOUT\fP   500000"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define _BYTE_TIMEOUT   500000"
+
+.PP
+Definition at line 50 of file tcp_socket\&.cpp\&.
+.SS "#define _RESPONSE_TIMEOUT   500000"
+
+.PP
+Definition at line 49 of file tcp_socket\&.cpp\&.
+.SS "#define EBADDATA   (\fBTCP_ENOBASE\fP + 1)"
+
+.PP
+Definition at line 46 of file tcp_socket\&.cpp\&.
+.SS "#define MSG_NOSIGNAL   0"
+
+.PP
+Definition at line 39 of file tcp_socket\&.cpp\&.
+.SS "#define TCP_ENOBASE   112345678"
+
+.PP
+Definition at line 44 of file tcp_socket\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

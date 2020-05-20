@@ -1,0 +1,45 @@
+\mbox{\hyperlink{qdaq_app}{qdaq}} is an application that can be used for both developing and running \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} scripts.
+
+It provides basically a script interpreter that evaluates the scripts. Evaluation can be done interactively on a console window or in the background.
+
+\mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} scripts can create windows (see the functions load\+Widget and load\+Top\+Level\+Widget) and thus a complete windowed application can be made solely with script code. Then \mbox{\hyperlink{qdaq_app}{qdaq}} can used to run the script application.
+
+A very helpfull tool for developing \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} script applications is the \mbox{\hyperlink{qdaq_app_qdaqide}{Q\+Daq I\+DE}}. Typically script development will be done with the I\+DE, so that the developer can browse all objects and their properties and test commands and procedures. Once the application script is finalized, it may be passed to \mbox{\hyperlink{qdaq_app}{qdaq}} at the command line and the application starts like a normal windowed application.\hypertarget{qdaq_app_running}{}\doxysection{Running qdaq}\label{qdaq_app_running}
+You can run qdaq either from the command line or by clicking the application icon.
+
+Giving the option --help at the command line displays the following
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ qdaq -\/-\/help}
+\DoxyCodeLine{Usage: qdaq [options] script}
+\DoxyCodeLine{}
+\DoxyCodeLine{Options:}
+\DoxyCodeLine{  -\/c, -\/-\/console  Start a script console window.}
+\DoxyCodeLine{  -\/d, -\/-\/debug    Start in script-\/debugging mode.}
+\DoxyCodeLine{  -\/h, -\/-\/help     Displays \textcolor{keyword}{this} help.}
+\DoxyCodeLine{  -\/v, -\/-\/version  Displays version information.}
+\DoxyCodeLine{}
+\DoxyCodeLine{Arguments:}
+\DoxyCodeLine{  script         A .js script to run at startup.}
+\end{DoxyCode}
+
+
+If the program is invoked without any options the \mbox{\hyperlink{qdaq_app_qdaqide}{Q\+Daq I\+DE}} is started.
+
+If it is invoked with a script file as argument, then the script file is parsed and executed. If the script creates application windows, then qdaq proceeds as a normal window application until the user closes the window.
+
+All application windows created by \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} have a special menu which can be invoked by pressing Ctrl-\/\+F8. From the menu one can either open the \mbox{\hyperlink{qdaq_app_qdaqide}{Q\+Daq I\+DE}} or just a script console. This may be used for debugging an application or running some script command. All qdaq objects are accesible from the I\+DE or console.\hypertarget{qdaq_app_qdaqide}{}\doxysection{Q\+Daq I\+DE}\label{qdaq_app_qdaqide}
+\mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} includes a simple I\+DE (Integrated Development Environment).
+
+
+
+The I\+DE provides the following features\+:
+\begin{DoxyItemize}
+\item Script console for interactive command control of \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} objects, with syntax highlighting (T\+O\+DO) and object introspection
+\item Script editor with syntax highlighting
+\item \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} object/property browser which allows on-\/line editing of object properties
+\item \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} window browser (T\+O\+DO)
+\item \mbox{\hyperlink{class_q_daq_channel}{Q\+Daq\+Channel}} viewer -\/ display of all channels (T\+O\+DO)
+\item Error queue browser 
+\end{DoxyItemize}

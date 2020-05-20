@@ -1,0 +1,273 @@
+\hypertarget{class_widget_variant}{}\doxysection{Widget\+Variant Class Reference}
+\label{class_widget_variant}\index{WidgetVariant@{WidgetVariant}}
+
+
+{\ttfamily \#include $<$Q\+Daq\+Delegates.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}{Widget\+Type}} \{ \newline
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdab42728ede72e8a4f93d37333da88e000}{q\+None}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdae60bf29f17a54e6bda2649b1ef196f97}{q\+Unsupported}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac75652340449c16a9d73df20762a1e50}{q\+Abstract\+Button}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac62d77fec6a553fb5999ba0acf331515}{q\+Abstract\+Slider}}, 
+\newline
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda22c536f38b7aaf45210c2e4621c5d859}{q\+Spin\+Box}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda3e1ac41dc8e04594606c780a26835109}{q\+Double\+Spin\+Box}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda907e04ea7a9e20c21fad3b0a64f5caa6}{q\+Line\+Edit}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda5e1169d1576f7181d0a7025a55609ae7}{q\+Combo\+Box}}, 
+\newline
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdad427fc4abd1a85942063ed5d8557e506}{q\+Label}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac2f176c54c026bdd753416e0d137f776}{q\+L\+C\+D\+Number}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda306de2d3881bdd4eb4d0eef04ac00cc8}{qwt\+Thermo}}, 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda3da58762b2a9fe9d2b8455091bf08d5c}{qdaq\+Led}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_widget_variant_a80c056b13703fe197363ee45eadbd4b6}{Widget\+Variant}} (Q\+Widget $\ast$w=0)
+\item 
+bool \mbox{\hyperlink{class_widget_variant_a866441c0a6493c936ebca5f667cf0824}{is\+Readable}} () const
+\item 
+bool \mbox{\hyperlink{class_widget_variant_a0dc58c7c5573be65a6e5062abf55ce8e}{is\+Text}} () const
+\item 
+bool \mbox{\hyperlink{class_widget_variant_a56648f43bdc953516904c4311fa2b004}{is\+Valid}} () const
+\item 
+bool \mbox{\hyperlink{class_widget_variant_a49a7ffcee84d9bf6f734be8b58caea6b}{is\+Null}} () const
+\item 
+bool \mbox{\hyperlink{class_widget_variant_a15cbec52d633584c54eaddd6629ef12e}{can\+Convert}} (Q\+Variant\+::\+Type t) const
+\item 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}{Widget\+Type}} \mbox{\hyperlink{class_widget_variant_a0d93d53421454f95bb2b6768ac4a5bc0}{type}} () const
+\item 
+Q\+Widget $\ast$ \mbox{\hyperlink{class_widget_variant_ad609ff9d331b434fe574ba025fcca556}{widget}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{class_widget_variant_a79a068126255670b93202d3619f83926}{widget\+Signal}} () const
+\item 
+Q\+Variant \mbox{\hyperlink{class_widget_variant_ae984eca5ebd7d494244ecb18f6fcfbe7}{read}} ()
+\item 
+void \mbox{\hyperlink{class_widget_variant_a1329483edba308d659cd8b36d32923c8}{write}} (const Q\+Variant \&v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Pointer$<$ Q\+Widget $>$ \mbox{\hyperlink{class_widget_variant_a6c2db4648d1384a126804da16ac27584}{widget\+\_\+}}
+\item 
+\mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}{Widget\+Type}} \mbox{\hyperlink{class_widget_variant_ad41ab334a9d93cce9e859bc1e79b0166}{type\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file Q\+Daq\+Delegates.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}} 
+\index{WidgetVariant@{WidgetVariant}!WidgetType@{WidgetType}}
+\index{WidgetType@{WidgetType}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{WidgetType}{WidgetType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}{Widget\+Variant\+::\+Widget\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qNone@{qNone}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qNone@{qNone}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdab42728ede72e8a4f93d37333da88e000}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdab42728ede72e8a4f93d37333da88e000}} 
+q\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qUnsupported@{qUnsupported}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qUnsupported@{qUnsupported}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdae60bf29f17a54e6bda2649b1ef196f97}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdae60bf29f17a54e6bda2649b1ef196f97}} 
+q\+Unsupported&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qAbstractButton@{qAbstractButton}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qAbstractButton@{qAbstractButton}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac75652340449c16a9d73df20762a1e50}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac75652340449c16a9d73df20762a1e50}} 
+q\+Abstract\+Button&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qAbstractSlider@{qAbstractSlider}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qAbstractSlider@{qAbstractSlider}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac62d77fec6a553fb5999ba0acf331515}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac62d77fec6a553fb5999ba0acf331515}} 
+q\+Abstract\+Slider&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qSpinBox@{qSpinBox}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qSpinBox@{qSpinBox}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda22c536f38b7aaf45210c2e4621c5d859}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda22c536f38b7aaf45210c2e4621c5d859}} 
+q\+Spin\+Box&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qDoubleSpinBox@{qDoubleSpinBox}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qDoubleSpinBox@{qDoubleSpinBox}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda3e1ac41dc8e04594606c780a26835109}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda3e1ac41dc8e04594606c780a26835109}} 
+q\+Double\+Spin\+Box&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qLineEdit@{qLineEdit}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qLineEdit@{qLineEdit}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda907e04ea7a9e20c21fad3b0a64f5caa6}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda907e04ea7a9e20c21fad3b0a64f5caa6}} 
+q\+Line\+Edit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qComboBox@{qComboBox}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qComboBox@{qComboBox}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda5e1169d1576f7181d0a7025a55609ae7}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda5e1169d1576f7181d0a7025a55609ae7}} 
+q\+Combo\+Box&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qLabel@{qLabel}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qLabel@{qLabel}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdad427fc4abd1a85942063ed5d8557e506}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdad427fc4abd1a85942063ed5d8557e506}} 
+q\+Label&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qLCDNumber@{qLCDNumber}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qLCDNumber@{qLCDNumber}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac2f176c54c026bdd753416e0d137f776}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fdac2f176c54c026bdd753416e0d137f776}} 
+q\+L\+C\+D\+Number&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qwtThermo@{qwtThermo}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qwtThermo@{qwtThermo}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda306de2d3881bdd4eb4d0eef04ac00cc8}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda306de2d3881bdd4eb4d0eef04ac00cc8}} 
+qwt\+Thermo&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{qdaqLed@{qdaqLed}!WidgetVariant@{WidgetVariant}}\index{WidgetVariant@{WidgetVariant}!qdaqLed@{qdaqLed}}}\mbox{\Hypertarget{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda3da58762b2a9fe9d2b8455091bf08d5c}\label{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fda3da58762b2a9fe9d2b8455091bf08d5c}} 
+qdaq\+Led&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 16 of file Q\+Daq\+Delegates.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_widget_variant_a80c056b13703fe197363ee45eadbd4b6}\label{class_widget_variant_a80c056b13703fe197363ee45eadbd4b6}} 
+\index{WidgetVariant@{WidgetVariant}!WidgetVariant@{WidgetVariant}}
+\index{WidgetVariant@{WidgetVariant}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{WidgetVariant()}{WidgetVariant()}}
+{\footnotesize\ttfamily Widget\+Variant\+::\+Widget\+Variant (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{w = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Q\+Daq\+Delegates.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_widget_variant_a15cbec52d633584c54eaddd6629ef12e}\label{class_widget_variant_a15cbec52d633584c54eaddd6629ef12e}} 
+\index{WidgetVariant@{WidgetVariant}!canConvert@{canConvert}}
+\index{canConvert@{canConvert}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{canConvert()}{canConvert()}}
+{\footnotesize\ttfamily bool Widget\+Variant\+::can\+Convert (\begin{DoxyParamCaption}\item[{Q\+Variant\+::\+Type}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 34 of file Q\+Daq\+Delegates.\+cpp.
+
+\mbox{\Hypertarget{class_widget_variant_a49a7ffcee84d9bf6f734be8b58caea6b}\label{class_widget_variant_a49a7ffcee84d9bf6f734be8b58caea6b}} 
+\index{WidgetVariant@{WidgetVariant}!isNull@{isNull}}
+\index{isNull@{isNull}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{isNull()}{isNull()}}
+{\footnotesize\ttfamily bool Widget\+Variant\+::is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file Q\+Daq\+Delegates.\+h.
+
+\mbox{\Hypertarget{class_widget_variant_a866441c0a6493c936ebca5f667cf0824}\label{class_widget_variant_a866441c0a6493c936ebca5f667cf0824}} 
+\index{WidgetVariant@{WidgetVariant}!isReadable@{isReadable}}
+\index{isReadable@{isReadable}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{isReadable()}{isReadable()}}
+{\footnotesize\ttfamily bool Widget\+Variant\+::is\+Readable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file Q\+Daq\+Delegates.\+h.
+
+\mbox{\Hypertarget{class_widget_variant_a0dc58c7c5573be65a6e5062abf55ce8e}\label{class_widget_variant_a0dc58c7c5573be65a6e5062abf55ce8e}} 
+\index{WidgetVariant@{WidgetVariant}!isText@{isText}}
+\index{isText@{isText}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{isText()}{isText()}}
+{\footnotesize\ttfamily bool Widget\+Variant\+::is\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file Q\+Daq\+Delegates.\+h.
+
+\mbox{\Hypertarget{class_widget_variant_a56648f43bdc953516904c4311fa2b004}\label{class_widget_variant_a56648f43bdc953516904c4311fa2b004}} 
+\index{WidgetVariant@{WidgetVariant}!isValid@{isValid}}
+\index{isValid@{isValid}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Widget\+Variant\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 40 of file Q\+Daq\+Delegates.\+h.
+
+\mbox{\Hypertarget{class_widget_variant_ae984eca5ebd7d494244ecb18f6fcfbe7}\label{class_widget_variant_ae984eca5ebd7d494244ecb18f6fcfbe7}} 
+\index{WidgetVariant@{WidgetVariant}!read@{read}}
+\index{read@{read}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily Q\+Variant Widget\+Variant\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Q\+Daq\+Delegates.\+cpp.
+
+\mbox{\Hypertarget{class_widget_variant_a0d93d53421454f95bb2b6768ac4a5bc0}\label{class_widget_variant_a0d93d53421454f95bb2b6768ac4a5bc0}} 
+\index{WidgetVariant@{WidgetVariant}!type@{type}}
+\index{type@{type}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}{Widget\+Type}} Widget\+Variant\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file Q\+Daq\+Delegates.\+h.
+
+\mbox{\Hypertarget{class_widget_variant_ad609ff9d331b434fe574ba025fcca556}\label{class_widget_variant_ad609ff9d331b434fe574ba025fcca556}} 
+\index{WidgetVariant@{WidgetVariant}!widget@{widget}}
+\index{widget@{widget}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{widget()}{widget()}}
+{\footnotesize\ttfamily Q\+Widget$\ast$ Widget\+Variant\+::widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 44 of file Q\+Daq\+Delegates.\+h.
+
+\mbox{\Hypertarget{class_widget_variant_a79a068126255670b93202d3619f83926}\label{class_widget_variant_a79a068126255670b93202d3619f83926}} 
+\index{WidgetVariant@{WidgetVariant}!widgetSignal@{widgetSignal}}
+\index{widgetSignal@{widgetSignal}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{widgetSignal()}{widgetSignal()}}
+{\footnotesize\ttfamily const char $\ast$ Widget\+Variant\+::widget\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 157 of file Q\+Daq\+Delegates.\+cpp.
+
+\mbox{\Hypertarget{class_widget_variant_a1329483edba308d659cd8b36d32923c8}\label{class_widget_variant_a1329483edba308d659cd8b36d32923c8}} 
+\index{WidgetVariant@{WidgetVariant}!write@{write}}
+\index{write@{write}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Widget\+Variant\+::write (\begin{DoxyParamCaption}\item[{const Q\+Variant \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Definition at line 108 of file Q\+Daq\+Delegates.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_widget_variant_ad41ab334a9d93cce9e859bc1e79b0166}\label{class_widget_variant_ad41ab334a9d93cce9e859bc1e79b0166}} 
+\index{WidgetVariant@{WidgetVariant}!type\_@{type\_}}
+\index{type\_@{type\_}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{type\_}{type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_widget_variant_aa95ddd0b68fe0aba7df329588e60f4fd}{Widget\+Type}} Widget\+Variant\+::type\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Q\+Daq\+Delegates.\+h.
+
+\mbox{\Hypertarget{class_widget_variant_a6c2db4648d1384a126804da16ac27584}\label{class_widget_variant_a6c2db4648d1384a126804da16ac27584}} 
+\index{WidgetVariant@{WidgetVariant}!widget\_@{widget\_}}
+\index{widget\_@{widget\_}!WidgetVariant@{WidgetVariant}}
+\doxysubsubsection{\texorpdfstring{widget\_}{widget\_}}
+{\footnotesize\ttfamily Q\+Pointer$<$Q\+Widget$>$ Widget\+Variant\+::widget\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Q\+Daq\+Delegates.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/lib/gui/\mbox{\hyperlink{_q_daq_delegates_8h}{Q\+Daq\+Delegates.\+h}}\item 
+D\+:/tixt/corona/qdaq/lib/gui/\mbox{\hyperlink{_q_daq_delegates_8cpp}{Q\+Daq\+Delegates.\+cpp}}\end{DoxyCompactItemize}

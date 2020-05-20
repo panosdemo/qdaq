@@ -1,0 +1,141 @@
+.TH "ByteArrayClass" 3 "Wed May 20 2020" "Version 0.2.6" "qdaq" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ByteArrayClass
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bytearrayclass\&.h>\fP
+.PP
+Inherits QObject, and QScriptClass\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBByteArrayClass\fP (QScriptEngine *engine)"
+.br
+.RI "[0] "
+.ti -1c
+.RI "\fB~ByteArrayClass\fP ()"
+.br
+.RI "[0] "
+.ti -1c
+.RI "QScriptValue \fBconstructor\fP ()"
+.br
+.ti -1c
+.RI "QScriptValue \fBnewInstance\fP (int size=0)"
+.br
+.RI "[10] "
+.ti -1c
+.RI "QScriptValue \fBnewInstance\fP (const QByteArray &ba)"
+.br
+.RI "[10] "
+.ti -1c
+.RI "QueryFlags \fBqueryProperty\fP (const QScriptValue &object, const QScriptString &\fBname\fP, QueryFlags flags, uint *id)"
+.br
+.RI "[3] "
+.ti -1c
+.RI "QScriptValue \fBproperty\fP (const QScriptValue &object, const QScriptString &\fBname\fP, uint id)"
+.br
+.RI "[3] "
+.ti -1c
+.RI "void \fBsetProperty\fP (QScriptValue &object, const QScriptString &\fBname\fP, uint id, const QScriptValue &value)"
+.br
+.RI "[4] "
+.ti -1c
+.RI "QScriptValue::PropertyFlags \fBpropertyFlags\fP (const QScriptValue &object, const QScriptString &\fBname\fP, uint id)"
+.br
+.RI "[5] "
+.ti -1c
+.RI "QScriptClassPropertyIterator * \fBnewIterator\fP (const QScriptValue &object)"
+.br
+.RI "[6] "
+.ti -1c
+.RI "QString \fBname\fP () const"
+.br
+.RI "[7] "
+.ti -1c
+.RI "QScriptValue \fBprototype\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file bytearrayclass\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ByteArrayClass::ByteArrayClass (QScriptEngine * engine)"
+
+.PP
+[0] 
+.PP
+Definition at line 36 of file bytearrayclass\&.cpp\&.
+.SS "ByteArrayClass::~ByteArrayClass ()"
+
+.PP
+[0] 
+.PP
+Definition at line 56 of file bytearrayclass\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "QScriptValue ByteArrayClass::constructor ()"
+
+.PP
+Definition at line 152 of file bytearrayclass\&.cpp\&.
+.SS "QString ByteArrayClass::name () const"
+
+.PP
+[7] 
+.PP
+Definition at line 142 of file bytearrayclass\&.cpp\&.
+.SS "QScriptValue ByteArrayClass::newInstance (const QByteArray & ba)"
+
+.PP
+[10] [1] 
+.PP
+Definition at line 166 of file bytearrayclass\&.cpp\&.
+.SS "QScriptValue ByteArrayClass::newInstance (int size = \fC0\fP)"
+
+.PP
+[10] 
+.PP
+Definition at line 158 of file bytearrayclass\&.cpp\&.
+.SS "QScriptClassPropertyIterator * ByteArrayClass::newIterator (const QScriptValue & object)"
+
+.PP
+[6] [7] 
+.PP
+Definition at line 136 of file bytearrayclass\&.cpp\&.
+.SS "QScriptValue ByteArrayClass::property (const QScriptValue & object, const QScriptString & name, uint id)"
+
+.PP
+[3] [4] 
+.PP
+Definition at line 84 of file bytearrayclass\&.cpp\&.
+.SS "QScriptValue::PropertyFlags ByteArrayClass::propertyFlags (const QScriptValue & object, const QScriptString & name, uint id)"
+
+.PP
+[5] [6] 
+.PP
+Definition at line 124 of file bytearrayclass\&.cpp\&.
+.SS "QScriptValue ByteArrayClass::prototype () const"
+
+.PP
+Definition at line 147 of file bytearrayclass\&.cpp\&.
+.SS "QScriptClass::QueryFlags ByteArrayClass::queryProperty (const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id)"
+
+.PP
+[3] 
+.PP
+Definition at line 61 of file bytearrayclass\&.cpp\&.
+.SS "void ByteArrayClass::setProperty (QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value)"
+
+.PP
+[4] [5] 
+.PP
+Definition at line 103 of file bytearrayclass\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for qdaq from the source code\&.

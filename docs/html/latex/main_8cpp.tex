@@ -1,0 +1,83 @@
+\hypertarget{main_8cpp}{}\doxysection{D\+:/tixt/corona/qdaq/qdaq/main.cpp File Reference}
+\label{main_8cpp}\index{D:/tixt/corona/qdaq/qdaq/main.cpp@{D:/tixt/corona/qdaq/qdaq/main.cpp}}
+{\ttfamily \#include $<$Q\+Application$>$}\newline
+{\ttfamily \#include $<$Q\+File$>$}\newline
+{\ttfamily \#include $<$Q\+Text\+Stream$>$}\newline
+{\ttfamily \#include $<$Q\+Command\+Line\+Parser$>$}\newline
+{\ttfamily \#include $<$Q\+Message\+Box$>$}\newline
+{\ttfamily \#include $<$Q\+Script\+Engine$>$}\newline
+{\ttfamily \#include $<$Q\+Library\+Info$>$}\newline
+{\ttfamily \#include \char`\"{}Q\+Daq\+Root.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Q\+Daq\+Session.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Q\+Daq\+Ide.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Q\+Daq\+Console.\+h\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1}{Command\+Line\+Parse\+Result}} \{ \mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1af6ab746b57ba5c20ecff6c885e2b76ab}{Command\+Line\+Ok}}, 
+\mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1af274517ccf36c5b3b7d2741b55958885}{Command\+Line\+Error}}, 
+\mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1ae161ba27ff6e571a82571e4e9ab68d14}{Command\+Line\+Version\+Requested}}, 
+\mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1aaa9ebab32d0ecb360abd306d13a57f79}{Command\+Line\+Help\+Requested}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1}{Command\+Line\+Parse\+Result}} \mbox{\hyperlink{main_8cpp_a64a706ed46c22f902b46d99989afcef7}{parse\+Command\+Line}} (Q\+Command\+Line\+Parser \&parser, Q\+String \&startup\+Script, bool \&console, bool \&debug, Q\+String \&error\+Message)
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1}\label{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1}} 
+\index{main.cpp@{main.cpp}!CommandLineParseResult@{CommandLineParseResult}}
+\index{CommandLineParseResult@{CommandLineParseResult}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CommandLineParseResult}{CommandLineParseResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1}{Command\+Line\+Parse\+Result}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CommandLineOk@{CommandLineOk}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!CommandLineOk@{CommandLineOk}}}\mbox{\Hypertarget{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1af6ab746b57ba5c20ecff6c885e2b76ab}\label{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1af6ab746b57ba5c20ecff6c885e2b76ab}} 
+Command\+Line\+Ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CommandLineError@{CommandLineError}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!CommandLineError@{CommandLineError}}}\mbox{\Hypertarget{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1af274517ccf36c5b3b7d2741b55958885}\label{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1af274517ccf36c5b3b7d2741b55958885}} 
+Command\+Line\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CommandLineVersionRequested@{CommandLineVersionRequested}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!CommandLineVersionRequested@{CommandLineVersionRequested}}}\mbox{\Hypertarget{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1ae161ba27ff6e571a82571e4e9ab68d14}\label{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1ae161ba27ff6e571a82571e4e9ab68d14}} 
+Command\+Line\+Version\+Requested&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CommandLineHelpRequested@{CommandLineHelpRequested}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!CommandLineHelpRequested@{CommandLineHelpRequested}}}\mbox{\Hypertarget{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1aaa9ebab32d0ecb360abd306d13a57f79}\label{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1aaa9ebab32d0ecb360abd306d13a57f79}} 
+Command\+Line\+Help\+Requested&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 15 of file main.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a64a706ed46c22f902b46d99989afcef7}\label{main_8cpp_a64a706ed46c22f902b46d99989afcef7}} 
+\index{main.cpp@{main.cpp}!parseCommandLine@{parseCommandLine}}
+\index{parseCommandLine@{parseCommandLine}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{parseCommandLine()}{parseCommandLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8cpp_a83069b8d17cda4fa0ffc701e0e900bc1}{Command\+Line\+Parse\+Result}} parse\+Command\+Line (\begin{DoxyParamCaption}\item[{Q\+Command\+Line\+Parser \&}]{parser,  }\item[{Q\+String \&}]{startup\+Script,  }\item[{bool \&}]{console,  }\item[{bool \&}]{debug,  }\item[{Q\+String \&}]{error\+Message }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file main.\+cpp.
+

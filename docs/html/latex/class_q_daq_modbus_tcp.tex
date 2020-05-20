@@ -1,0 +1,226 @@
+\hypertarget{class_q_daq_modbus_tcp}{}\doxysection{Q\+Daq\+Modbus\+Tcp Class Reference}
+\label{class_q_daq_modbus_tcp}\index{QDaqModbusTcp@{QDaqModbusTcp}}
+
+
+A class for accesing a M\+O\+D\+B\+U\+S/\+T\+CP connection.  
+
+
+
+
+{\ttfamily \#include $<$qdaqmodbus.\+h$>$}
+
+Inheritance diagram for Q\+Daq\+Modbus\+Tcp\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_q_daq_modbus_tcp}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE \mbox{\hyperlink{class_q_daq_modbus_tcp_a2fa49da90307220579ffce66170516b9}{Q\+Daq\+Modbus\+Tcp}} (const Q\+String \&name, const Q\+String \&ahost=Q\+String(), uint portno=502)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_q_daq_modbus_tcp}{Q\+Daq\+Modbus\+Tcp}} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_q_daq_modbus_tcp_a7977c36b5d0b37a03613237077254274}{$\sim$\+Q\+Daq\+Modbus\+Tcp}} ()
+\item 
+virtual int \mbox{\hyperlink{class_q_daq_modbus_tcp_ae926cabbd83f81c223451141f66ab354}{read}} (uint \mbox{\hyperlink{class_q_daq_tcpip_aca4b601136dcd60b5a95a407a4d0c3bb}{port}}, char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Read data from a port. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_q_daq_modbus_tcp_a3031b2acdea131374cd0fef5a573ee38}{write}} (uint \mbox{\hyperlink{class_q_daq_tcpip_aca4b601136dcd60b5a95a407a4d0c3bb}{port}}, const char $\ast$buff, int len, int eos=0)
+\begin{DoxyCompactList}\small\item\em Write data to a port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_q_daq_modbus_tcp_a8a89401032ed41db72222977f6ac2663}{open\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface open. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_q_daq_modbus_tcp_ad8ff53b3f8b25e5ec92dfceb74f3400f}{close\+\_\+}} ()
+\begin{DoxyCompactList}\small\item\em Implementation of interface close. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{class_q_daq_modbus_tcp_a6a8db5b1b5456e889928dd0cbc3891fe}{ctx\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class for accesing a M\+O\+D\+B\+U\+S/\+T\+CP connection. 
+
+Used to access M\+O\+D\+B\+US devices with the T\+C\+P/\+IP protocol. A separate \mbox{\hyperlink{class_q_daq_modbus_tcp}{Q\+Daq\+Modbus\+Tcp}} object must be used per device.
+
+Port number is typically 502.
+
+\mbox{\hyperlink{class_q_daq_modbus_tcp}{Q\+Daq\+Modbus\+Tcp}} can read/write only M\+O\+D\+B\+US registers, i.\+e. 16 bit words.
+
+Implementation of M\+O\+D\+B\+US in \mbox{\hyperlink{namespace_q_daq}{Q\+Daq}} is based on libmodbus. 
+
+Definition at line 60 of file qdaqmodbus.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_daq_modbus_tcp_a2fa49da90307220579ffce66170516b9}\label{class_q_daq_modbus_tcp_a2fa49da90307220579ffce66170516b9}} 
+\index{QDaqModbusTcp@{QDaqModbusTcp}!QDaqModbusTcp@{QDaqModbusTcp}}
+\index{QDaqModbusTcp@{QDaqModbusTcp}!QDaqModbusTcp@{QDaqModbusTcp}}
+\doxysubsubsection{\texorpdfstring{QDaqModbusTcp()}{QDaqModbusTcp()}}
+{\footnotesize\ttfamily Q\+Daq\+Modbus\+Tcp\+::\+Q\+Daq\+Modbus\+Tcp (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{const Q\+String \&}]{ahost = {\ttfamily QString()},  }\item[{uint}]{portno = {\ttfamily 502} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_q_daq_modbus_tcp}{Q\+Daq\+Modbus\+Tcp}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The \mbox{\hyperlink{class_q_daq_object}{Q\+Daq\+Object}} name \\
+\hline
+{\em ahost} & Host address as string, eg, \textquotesingle{}192.\+168.\+1.\+2\textquotesingle{} \\
+\hline
+{\em portno} & port number, typically 502 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 99 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_tcp_a7977c36b5d0b37a03613237077254274}\label{class_q_daq_modbus_tcp_a7977c36b5d0b37a03613237077254274}} 
+\index{QDaqModbusTcp@{QDaqModbusTcp}!````~QDaqModbusTcp@{$\sim$QDaqModbusTcp}}
+\index{````~QDaqModbusTcp@{$\sim$QDaqModbusTcp}!QDaqModbusTcp@{QDaqModbusTcp}}
+\doxysubsubsection{\texorpdfstring{$\sim$QDaqModbusTcp()}{~QDaqModbusTcp()}}
+{\footnotesize\ttfamily Q\+Daq\+Modbus\+Tcp\+::$\sim$\+Q\+Daq\+Modbus\+Tcp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 104 of file qdaqmodbus.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_daq_modbus_tcp_ad8ff53b3f8b25e5ec92dfceb74f3400f}\label{class_q_daq_modbus_tcp_ad8ff53b3f8b25e5ec92dfceb74f3400f}} 
+\index{QDaqModbusTcp@{QDaqModbusTcp}!close\_@{close\_}}
+\index{close\_@{close\_}!QDaqModbusTcp@{QDaqModbusTcp}}
+\doxysubsubsection{\texorpdfstring{close\_()}{close\_()}}
+{\footnotesize\ttfamily void Q\+Daq\+Modbus\+Tcp\+::close\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface close. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_tcpip_af901e41f0bed3f286c16428212ecc281}{Q\+Daq\+Tcpip}}.
+
+
+
+Definition at line 143 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_tcp_a8a89401032ed41db72222977f6ac2663}\label{class_q_daq_modbus_tcp_a8a89401032ed41db72222977f6ac2663}} 
+\index{QDaqModbusTcp@{QDaqModbusTcp}!open\_@{open\_}}
+\index{open\_@{open\_}!QDaqModbusTcp@{QDaqModbusTcp}}
+\doxysubsubsection{\texorpdfstring{open\_()}{open\_()}}
+{\footnotesize\ttfamily bool Q\+Daq\+Modbus\+Tcp\+::open\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of interface open. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_tcpip_a4345f770cff76bcbba8c2643dafdc57f}{Q\+Daq\+Tcpip}}.
+
+
+
+Definition at line 108 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_tcp_ae926cabbd83f81c223451141f66ab354}\label{class_q_daq_modbus_tcp_ae926cabbd83f81c223451141f66ab354}} 
+\index{QDaqModbusTcp@{QDaqModbusTcp}!read@{read}}
+\index{read@{read}!QDaqModbusTcp@{QDaqModbusTcp}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int Q\+Daq\+Modbus\+Tcp\+::read (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read data from a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Allocated number of bytes. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes read. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_tcpip_a41d300ab185c7f81b1f35c229c991f38}{Q\+Daq\+Tcpip}}.
+
+
+
+Definition at line 157 of file qdaqmodbus.\+cpp.
+
+\mbox{\Hypertarget{class_q_daq_modbus_tcp_a3031b2acdea131374cd0fef5a573ee38}\label{class_q_daq_modbus_tcp_a3031b2acdea131374cd0fef5a573ee38}} 
+\index{QDaqModbusTcp@{QDaqModbusTcp}!write@{write}}
+\index{write@{write}!QDaqModbusTcp@{QDaqModbusTcp}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily int Q\+Daq\+Modbus\+Tcp\+::write (\begin{DoxyParamCaption}\item[{uint}]{port,  }\item[{const char $\ast$}]{buff,  }\item[{int}]{len,  }\item[{int}]{eos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write data to a port. 
+
+The meaning of the port parameter is different depending on the type of communication interface.
+
+In message based communications (e.\+g. G\+P\+IB) the port is the instrument address.
+
+In memory based interfaces (e.\+g. M\+O\+D\+B\+US) the port number represents the starting register address to access. The number of registers read/written depends on len, the size of the buffer in bytes. A M\+O\+D\+B\+US register is 16 bit, ie, occupies 2 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Port number. \\
+\hline
+{\em buff} & Pointer to memory buffer. \\
+\hline
+{\em len} & Number of bytes to write. \\
+\hline
+{\em eos} & End of string byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes written. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_q_daq_tcpip_aa7b22b23275264d2372fa01a2997d22d}{Q\+Daq\+Tcpip}}.
+
+
+
+Definition at line 175 of file qdaqmodbus.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_daq_modbus_tcp_a6a8db5b1b5456e889928dd0cbc3891fe}\label{class_q_daq_modbus_tcp_a6a8db5b1b5456e889928dd0cbc3891fe}} 
+\index{QDaqModbusTcp@{QDaqModbusTcp}!ctx\_@{ctx\_}}
+\index{ctx\_@{ctx\_}!QDaqModbusTcp@{QDaqModbusTcp}}
+\doxysubsubsection{\texorpdfstring{ctx\_}{ctx\_}}
+{\footnotesize\ttfamily void$\ast$ Q\+Daq\+Modbus\+Tcp\+::ctx\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 65 of file qdaqmodbus.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{qdaqmodbus_8h}{qdaqmodbus.\+h}}\item 
+D\+:/tixt/corona/qdaq/plugins/interfaces/\mbox{\hyperlink{qdaqmodbus_8cpp}{qdaqmodbus.\+cpp}}\end{DoxyCompactItemize}
